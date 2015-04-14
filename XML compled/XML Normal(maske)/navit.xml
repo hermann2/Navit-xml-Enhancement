@@ -194,21 +194,21 @@
 	<roadprofile item_types="living_street"		speed="7" route_weight="5">		<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
 	<roadprofile item_types="street_parking_lane" speed="10" route_weight="5">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
 	<roadprofile item_types="street_service"	speed="20" route_weight="10">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="track_gravelled"	speed="20" route_weight="10">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="track_unpaved"		speed="15" route_weight="10">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="track_paved"		speed="20" route_weight="20">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_0"			speed="25" route_weight="20">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_1_city"		speed="30" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="track_gravelled"	speed="20" route_weight="15">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="track_unpaved"		speed="15" route_weight="20">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="track_paved"		speed="20" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_0"			speed="25" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_1_city"		speed="30" route_weight="40">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
 	<roadprofile item_types="street_2_city"		speed="35" route_weight="50">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_3_city"		speed="40" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_4_city"		speed="50" route_weight="80">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="highway_city"		speed="70" route_weight="120">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_3_city"		speed="40" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_4_city"		speed="50" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="highway_city"		speed="70" route_weight="80">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
 	<roadprofile item_types="street_1_land"		speed="40" route_weight="50">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_2_land"		speed="50" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_3_land"		speed="55" route_weight="80">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_4_land"		speed="60" route_weight="90">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_n_lanes"	speed="80" route_weight="120">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="highway_land"		speed="90" route_weight="120">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_2_land"		speed="50" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_3_land"		speed="55" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_4_land"		speed="60" route_weight="80">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_n_lanes"	speed="80" route_weight="90">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="highway_land"		speed="90" route_weight="100">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
 	<roadprofile item_types="ramp"				speed="30" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
 	<roadprofile item_types="roundabout"		speed="30" route_weight="60">	<announcement level="0" />	<announcement level="1" />	</roadprofile>
 	<roadprofile item_types="ferry" speed="10" route_weight="20" />
@@ -219,25 +219,25 @@
 	<profile_option name="pedantic" route_depth="18:25%,18:40000" />
 	</vehicleprofile>
 	<vehicleprofile name="car_shortest" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="0" route_mode="0" static_speed="5" static_distance="25">
-	<roadprofile item_types="living_street" speed="7" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="living_street"		speed="7" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
 	<roadprofile item_types="street_parking_lane" speed="10" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_service" speed="20" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="track_gravelled" speed="20" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="track_unpaved" speed="15" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="track_paved" speed="20" route_weight="40">		<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_0" speed="25" route_weight="40">		<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_1_city" speed="30" route_weight="40">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_2_city" speed="40" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_3_city" speed="50" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_4_city" speed="50" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="highway_city" speed="80" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_1_land" speed="40" route_weight="40">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_2_land" speed="50" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_3_land" speed="60" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_4_land" speed="70" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="street_n_lanes" speed="80" route_weight="80">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="highway_land" speed="90" route_weight="80">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
-	<roadprofile item_types="ramp" speed="30" route_weight="30">			<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_service"	speed="20" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="track_gravelled"	speed="20" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="track_unpaved"		speed="15" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="track_paved"		speed="20" route_weight="40">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_0"			speed="25" route_weight="40">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_1_city"		speed="30" route_weight="40">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_2_city"		speed="40" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_3_city"		speed="50" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_4_city"		speed="50" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="highway_city"		speed="80" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_1_land"		speed="40" route_weight="40">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_2_land"		speed="50" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_3_land"		speed="60" route_weight="60">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_4_land"		speed="70" route_weight="70">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="street_n_lanes"	speed="80" route_weight="80">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="highway_land"		speed="90" route_weight="80">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
+	<roadprofile item_types="ramp"				speed="30" route_weight="30">	<announcement level="0" />	<announcement level="1" />	<announcement level="2" />	</roadprofile>
 	<roadprofile item_types="roundabout" speed="30" route_weight="60" />
 	<roadprofile item_types="ferry" speed="20" route_weight="60" />
 	</vehicleprofile>
@@ -1368,7 +1368,7 @@
 	<itemgra item_types="street_n_lanes" order="13">	<polyline color="#8888AA" width="12" />		<text text_size="10" color="#FFFFFF" background_color="#00FF55" /></itemgra>
 	<itemgra item_types="street_n_lanes" order="14">	<polyline color="#8888AA" width="16" />		<text text_size="18" color="#FFFFFF" background_color="#00FF55" />	</itemgra>
 	<itemgra item_types="street_n_lanes" order="15">	<polyline color="#8888AA" width="22" />		<polyline color="#FFFFFF" width="1" dash="28" />	<text text_size="26" color="#FFFFFF" background_color="#00FF55" />	</itemgra>
-	<itemgra item_types="street_n_lanes" order="16">	<polyline color="#8888AA" width="32" />		<polyline color="#FFFFFF" width="1" dash="40" />	<text text_size="36" color="#FFFFFF" background_color="#00FF55" />	</itemgra>
+	<itemgra item_types="street_n_lanes" order="16">	<polyline color="#8888AA" width="36" />		<polyline color="#FFFFFF" width="1" dash="40" />	<text text_size="36" color="#FFFFFF" background_color="#00FF55" />	</itemgra>
 	<itemgra item_types="street_n_lanes" order="17">	<polyline color="#8888AA" width="62" />		<polyline color="#FFFFFF" width="1" dash="50" />	<text text_size="46" color="#FFFFFF" background_color="#00FF55" />	</itemgra>
 	<itemgra item_types="street_n_lanes" order="18-">	<polyline color="#8888AA" width="126" />	<polyline color="#FFFFFF" width="1" dash="60" />	<text text_size="60" color="#FFFFFF" background_color="#00FF55" />	</itemgra>
 	<itemgra item_types="track_grass" order="13">	<polyline color="#AAC277" width="6" />	</itemgra>
@@ -1435,7 +1435,7 @@
 	<itemgra item_types="highway_land,highway_city" order="13">	<polyline color="#777788" width="14" />		<text text_size="10" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="14">	<polyline color="#777788" width="18" />		<polyline color="#FFFFFF" width="1" dash="20" />	<text text_size="18" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="15">	<polyline color="#777788" width="24" />		<polyline color="#FFFFFF" width="1" dash="30" />	<text text_size="26" color="#FFFFFF" />	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="16">	<polyline color="#777788" width="34" />		<polyline color="#FFFFFF" width="1" dash="40" />	<text text_size="36" color="#FFFFFF" />	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="16">	<polyline color="#777788" width="38" />		<polyline color="#FFFFFF" width="1" dash="40" />	<text text_size="36" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="17">	<polyline color="#777788" width="64" />		<polyline color="#FFFFFF" width="1" dash="50" />	<text text_size="46" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="18-">	<polyline color="#777788" width="128" />	<polyline color="#FFFFFF" width="1" dash="60" />	<text text_size="60" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="poly_car_parking" order="12-14">	<polygon color="#F0F0CCBB" />	<polyline color="#707EFF" width="4" />	</itemgra>
