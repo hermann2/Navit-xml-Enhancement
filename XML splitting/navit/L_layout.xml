@@ -1,0 +1,11 @@
+	<!-- Nach löschen vom Layout <layout name="DUMMY"> kann hier ein Layout eingefügt werden. 
+	Wird bei Start von Navit verwendet durch active="1" <layout name="EINGEFÜGT" color="#EINGEFÜGT" active="1"> (Button POI LAYER TOWN sind nur nach Anpassung im Layout wirksam)
+	After deleting the layout <layout name="DUMMY"> can be inserted here a layout.
+	If at the start of Navit used by active="1" <layout name="INSERTED" color="#INSERTED" active="1"> (Button POI LAYER TOWN are effective only after adjusting the layout)
+	-->
+<layout name="DUMMY" color="#FFFFFF">
+	<cursor w="154" h="150">
+		<itemgra speed_range="0-">	<icon src="unknown" w="154" h="150" />	</itemgra>
+	</cursor>
+</layout>
+

@@ -1,0 +1,16 @@
+	<mapset>
+	<map type="binfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/austria.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Österreich.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/*.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Deutschland.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Frankreich.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Schweiz.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Italien.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Tschechien.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Ungarn.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/England.bin" />
+	<map type="binfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Polen.bin" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/bookmark.txt" />
+	<map type="csv" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/speedcam.txt" item_type="tec_common" attr_types="position_longitude,position_latitude,tec_type,maxspeed,tec_dirtype,tec_direction" />
+	</mapset>

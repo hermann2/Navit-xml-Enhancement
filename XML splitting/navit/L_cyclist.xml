@@ -1,0 +1,37 @@
+	<layout name="CYCLIST" color="#D0F0D0">
+	<cursor w="154" h="150" interval="10000" sequence_range="-1">
+	<itemgra speed_range="-2">						<icon src="$NAVIT_USER_DATADIR/maske/cursor_b" w="94" h="136" x="47" y="68" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b0" w="94" h="136" x="47" y="68" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b1" w="94" h="136" x="47" y="68" />	</itemgra>
+	</cursor>
+	<layer name="poly" ref="poly" />
+	<layer name="poly_1" ref="poly_1" active="1" />
+	<layer name="poly_2" ref="poly_2" active="1" />
+	<layer name="water" ref="water" />
+	<layer name="poly_icon" ref="poly_icon" active="0" />
+	<layer name="under_street" ref="under_street" active="0" />
+	<layer name="rail" ref="rail" active="1" />
+	<layer name="line_selected" ref="line_selected" />
+	<layer name="wayside" ref="wayside" active="1" />
+	<layer name="highway" ref="highway" />
+	<layer name="highway_1" ref="highway_1" />
+	<layer name="streets" ref="streets" />
+	<layer name="way" ref="way" />
+	<layer name="line_1" ref="line_1" active="1" />
+	<layer name="hiking_way" ref="hiking_way" active="1" />
+	<layer name="up_street" ref="up_street" active="1" />
+	<layer name="POI Symbols" ref="POI Symbols" active="1" />
+	<layer name="wintersport" ref="wintersport" active="0" />
+	<layer name="POI-Icons-full" ref="POI-Icons-full" active="0" />
+	<layer name="hiking" ref="hiking" active="1" />
+	<layer name="leisure" ref="leisure" active="0" />
+	<layer name="sport" ref="sport" active="0" />
+	<layer name="gastro" ref="gastro" active="0" />
+	<layer name="shop" ref="shop" active="0" />
+	<layer name="line" ref="line" active="0" />
+	<layer name="station" ref="station" active="1" />
+	<layer name="poly_icon_label" ref="poly_icon_label" active="0" />
+	<layer name="Internal" ref="Internal" />
+	<layer name="labels_bevore" ref="labels_bevore" active="0" />
+	<layer name="labels" ref="labels" />
+	</layout>
