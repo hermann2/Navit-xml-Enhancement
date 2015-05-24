@@ -391,9 +391,9 @@
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="64" h="64" x="32" y="32" />	<circle text_size="38" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="96" h="96" x="48" y="48" />		<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="17-">		<icon src="cursor_still" w="128" h="128" x="64" y="64" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="7-10">	<icon src="$NAVIT_USER_DATADIR/Maske/nav_destination" w="64" h="64" x="0" y="64" />		<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Maske/nav_destination" w="96" h="96" x="0" y="96" />		<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/Maske/nav_destination" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="7-10">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="64" h="64" x="0" y="64" />		<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="96" h="96" x="0" y="96" />		<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="route_end" order="7-10">	<icon src="flag_bl_wh" w="64" h="64" x="0" y="64" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="route_end" order="11-16">	<icon src="flag_bl_wh" w="96" h="96" x="0" y="96" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="route_end" order="17-">	<icon src="flag_bl_wh" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>

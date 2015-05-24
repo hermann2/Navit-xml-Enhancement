@@ -36,16 +36,16 @@
 	<img cond='navit.speech.active==0' src='gui_stop' onclick='navit.speech.active=1;navit.say(&quot;Sprache ein&quot;);back_to_map()'><text>Sprache</text></img>
 	<img cond='navit.speech.active!=0' src='gui_active' onclick='navit.speech.active=0;back_to_map()'><text>Sprache</text></img>
 	<img src='gui_town' onclick='town()'><text>ZIEL eingeben</text></img>
-	<img src='car_dealer' onclick='navit.layout_name=&quot;MOTORIST&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Autofahrer</text></img>
+	<img src='car_dealer' onclick='navit.layout_name=&quot;MOTORIST&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;car&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Autofahrer</text></img>
 	<img src='gui_bookmark' onclick='bookmarks()'><text>Lesezeichen</text></img>
-	<img src='bicycle_shop' onclick='navit.layout_name=&quot;CYCLIST&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Radfahrer</text></img>
+	<img src='bicycle_shop' onclick='navit.layout_name=&quot;CYCLIST&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;bike&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Radfahrer</text></img>
 	<img src='gui_vehicle' onclick='setting_vehicle()'><text>PROFIL ändern</text></img>
-	<img src='gui_vehicle_pedestrian' onclick='navit.layout_name=&quot;WALKER_no_select&quot;;navit.set_int_var(&quot;verkehr&quot;,1);redraw_map();back_to_map()'><text>Fußgänger</text></img>
+	<img src='gui_vehicle_pedestrian' onclick='navit.layout_name=&quot;WALKER_no_select&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;pedestrian&quot;;navit.set_int_var(&quot;verkehr&quot;,1);redraw_map();back_to_map()'><text>Fußgänger</text></img>
 	<img src='gui_map' onclick='navit.say(&quot;weitere Karten&quot;);setting_maps()'><text>Maps</text></img>
 	<a href='#Route'><img src='$NAVIT_USER_DATADIR/maske/tool'><text>ROUTE-DATEN</text></img></a>
 	<a href='#Settings'><img src='$NAVIT_USER_DATADIR/maske/setting'><text>EINSTELLUNG</text></img></a>
 	<img cond='navit.route.route_status&amp;1' src='gui_quit' onclick='navit.say(&quot;navigieren beendet&quot;);abort_navigation();refresh();redraw_map()'><text>AUS navigieren</text></img>
-	<img src='gui_quit' onclick='quit()'><text>NAVIT beenden</text></img>
+	<img src='gui_quit' onclick='quit()'><text>Quit</text></img>
 </a>
 <a name='Route'><text>ROUTE - DATEN</text>
 	<img src='gui_formerdests' onclick='navit.say(&quot;Zielwahl aus vorherigen&quot;);formerdests()'><text>Letzte Ziele</text></img>
@@ -69,8 +69,8 @@
 	<img src='gui_about' onclick='about()'><text>About</text></img>
 	<img cond='fullscreen==0' src='gui_fullscreen' onclick='navit.say(&quot;Vollbild&quot;);fullscreen=1'><text>Vollbild</text></img>
 	<img cond='fullscreen==1' src='gui_leave_fullscreen' onclick='navit.say(&quot;Statuszeile oben sichtbar&quot;);fullscreen=0'><text>Fensterbild</text></img>
-	<img src='car_dealer' onclick='navit.layout_name=&quot;MOTORIST1&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Cursor1</text></img>
-	<img src='gui_vehicle' onclick='navit.layout_name=&quot;DARKGLOW&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Nachtansicht</text></img>
+	<img src='car_dealer' onclick='navit.layout_name=&quot;MOTORIST1&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;car&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Cursor1</text></img>
+	<img src='gui_vehicle' onclick='navit.layout_name=&quot;DARKGLOW&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;car&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Nachtansicht</text></img>
 	<img src='gui_display' onclick='setting_layout()'><text>Layout</text></img>
 	<img src='gui_bookmark' onclick='navit.say(&quot;aktuelle Landkennung&quot;);locale()'><text>Landkennung</text></img>
 </a>
@@ -99,6 +99,7 @@
 </a>
 <a name='poi_on'>
 <script>
+	navit.say(&quot;o&quot;);
 	navit.get_int_var(&quot;icon&quot;)==1		?(navit.toggle_layer(&quot;poly_icon&quot;),navit.toggle_layer(&quot;poly_icon_label&quot;),navit.toggle_layer(&quot;line&quot;),navit.set_int_var(&quot;icon&quot;,0)):&quot;&quot;;
 	navit.get_int_var(&quot;wanderung&quot;)==1 ?(navit.toggle_layer(&quot;hiking&quot;),navit.toggle_layer(&quot;hiking_way&quot;),navit.set_int_var(&quot;wanderung&quot;,0)):&quot;&quot;;
 	navit.get_int_var(&quot;winter&quot;)==1	?(navit.toggle_layer(&quot;wintersport&quot;),navit.set_int_var(&quot;winter&quot;,0)):&quot;&quot;;
@@ -112,6 +113,7 @@
 </a>
 <a name='poi_off'>
 <script>
+	navit.say(&quot;o&quot;);
 	navit.get_int_var(&quot;icon&quot;)==0		?(navit.toggle_layer(&quot;poly_icon&quot;),navit.toggle_layer(&quot;poly_icon_label&quot;),navit.toggle_layer(&quot;line&quot;),navit.set_int_var(&quot;icon&quot;,1)):&quot;&quot;;
 	navit.get_int_var(&quot;wanderung&quot;)==0 ?(navit.toggle_layer(&quot;hiking&quot;),navit.toggle_layer(&quot;hiking_way&quot;),navit.set_int_var(&quot;wanderung&quot;,1)):&quot;&quot;;
 	navit.get_int_var(&quot;winter&quot;)==0	?(navit.toggle_layer(&quot;wintersport&quot;),navit.set_int_var(&quot;winter&quot;,1)):&quot;&quot;;
@@ -151,38 +153,42 @@
 </html>
 ]]></gui>
 
-	<log enabled="no" type="textfile_debug" data="$NAVIT_USER_DATADIR/debug/debug_%Y%m%d-%i.txt" flush_size="1000" flush_time="30" />
+	<log enabled="no" type="textfile_debug" data="$NAVIT_USER_DATADIR/debug_%Y%m%d-%i.txt" flush_size="1000" flush_time="30" />
 
-	<osd x="-1" y="-1"	type="cmd_interface" update_period="2" command='follow&gt;1 ?(tracking=0,pitch=0,orientation=0):(tracking=1,pitch=10,orientation=-1)' />
+	<osd x="1" y="-1"		type="cmd_interface" update_period="2" command='follow&gt;1 ?(tracking=0,pitch=0,orientation=0):(tracking=1,pitch=10,orientation=-1)' />
 	<osd x="0" y="-1860"	type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1080_480.png" command="" enable_expression="tracking==1" />
-	<osd x="0" y="0" w="1260" h="60" font_size="750" type="text" label='${navit.messages}' enable_expression="route.route_status&amp;48" background_color="#00000090" align="5" text_color="#00FF00" />
-	<osd x="0" y="60" w="1260" h="70" font_size="1000" type="text" label='${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}'
-	enable_expression="route.route_status&amp;48" background_color="#00000090" align="6" text_color="#00FF00" />
-	<osd x="0" y="340" w="210" h="80" font_size="1300" type="text" label='${navigation.item[1].length[value]}' enable_expression="route.route_status&amp;48" background_color="#FFFFFFAA" align="0" text_color="#0000FF" />
-	<osd x="-160" y="0" w="160" h="140" font_size="650" type="text" label='[TOWN] \n' command='say(&quot;m&quot;);toggle_layer(&quot;labels_bevore&quot;)' background_color="#FFFFFF00" align="0" text_color="#903686" />
-	<osd x="0" y="0" w="160" h="140" font_size="650" type="text" label='[POI]\n' command='gui.menu(&quot;#POI-Icons&quot;)' background_color="#FFFFFF00" align="0" text_color="#903686" />
-	<osd x="0" y="130" w="210" h="210" type="navigation_next_turn" icon_src="%s_wh_210_210.png" command='route.route_status&amp;48?(say(&quot;route&quot;),follow=80000,zoom_to_route())' background_color="#00000000" />
-	<osd x="0" y="130" w="210" h="210" font_size="100" type="text" label=" " enable_expression="route.route_status&amp;48" background_color="#00000090" />
-	<osd x="0" y="-430" w="210" h="210" font_size="1400" type="speed_warner" label='images' speed_exceed_limit_offset="5" speed_exceed_limit_percent="10" announce_on="1" enable_expression="route.route_status&amp;48" background_color="00000090" idle_color="#FF000000" />
-	<osd x="0" y="-220" w="230" h="100" font_size="1700" type="text" label="${vehicle.position_speed[value]}" enable_expression="route.route_status&amp;48" background_color="#0000FF90" align="0" text_color="#FF9900" />
-	<osd x="0" y="-120" w="230" h="60" font_size="840" type="text" label='${navigation.item.destination_length[named]} ' enable_expression="route.route_status&amp;48" background_color="#00000090" align="8" text_color="#00FF00" />
-	<osd x="0" y="-60" w="230" h="60" font_size="840" type="text" label=' t~ ${navigation.item.destination_time[remaining]}' enable_expression="route.route_status&amp;48" background_color="#00000090" align="0" text_color="#00FF00" />
-	<osd x="225" y="-65" w="1040" h="60" font_size="1000" type="text" label='${navigation.item.street_name_systematic} ${navigation.item.street_name}' enable_expression="route.route_status&amp;48" background_color="#FFFFFFBB" align="4" text_color="#0000FF" />
-	<osd x="0" y="-140" w="160" h="140" font_size="650" type="text" label='\n[LAYER]' command='say(&quot;l&quot;);get_int_var(&quot;verkehr&quot;)==1
-	?(layout_name=&quot;PAX_no_select&quot;,gui.menu(&quot;#b_b&quot;)):(toggle_layer(&quot;poly_1&quot;),toggle_layer(&quot;poly_2&quot;),toggle_layer(&quot;wayside&quot;),toggle_layer(&quot;line_1&quot;))' background_color="#FFFFFF00" align="0" text_color="#903686" />
-	<osd x="270" y="-180"	type="button" src="$NAVIT_USER_DATADIR/maske/zp_180_180.png" command="zoom_in()" />
-	<osd x="-440" y="-180"	type="button" src="$NAVIT_USER_DATADIR/maske/zm_180_180.png" command="zoom_out()" />
-	<osd x="-190" y="-190"	type="button" src="gui_menu_128_128.png" command='gui.menu_on_map_click=0;gui.menu(1)' />
-	<osd x="-210" y="-420" w="210" h="220" font_size="750" type="text" label='CENTER\nCURSOR' command="follow=0;zoom=4;set_center_cursor()" enable_expression="follow&gt;1" background_color="#56FF00BB" align="4" text_color="#000000" />
-	<osd x="-210" y="-420" w="210" h="260" font_size="750" type="compass" enable_expression="route.route_status&amp;48" background_color="#00000090" />
-	<osd x="-210" y="-160" w="210" h="40" font_size="750" type="text" label='${vehicle.position_height}NN' enable_expression="route.route_status&amp;48" background_color="#00000090" align="0" text_color="#FFFFFF" />
-	<osd x="-635" y="-190" w="200" h="120" font_size="800" type="scale" background_color="#C4C4C4DD" />
-	<osd x="0" y="-510" w="270" h="70" font_size="1200" type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" text_color="#E5E5E5" />
-	<!-- <osd x="250" y="150" w="800" h="110" font_size="840" type="text" label='${vehicle.position_coord_geo[pos_deg]}\nNord: ${vehicle.position_direction} °' background_color="#00000000" align="4" text_color="#002FFF" osd_configuration="2" />
-	<osd x="-340" y="220" w="340" h="200" font_size="750" type="odometer" label='${max_spd}km/h -Max&#10;${avg_spd}km/h ~Spd&#10;${distance} -Dst&#10;${time} Time' name="odo_reset" background_color="#00000090" idle_color="#FF9900" text_color="#E5E5E5" autostart="0" osd_configuration="2" />
-	 -->
+	<osd x="0" y="0" w="1290" h="60" 		font_size="750" type="text" label='${navit.messages}' enable_expression="route.route_status&amp;48" background_color="#FFAAFFDD" align="5" text_color="#000000" />
+	<osd x="0" y="60" w="1379" h="80"		font_size="1000" type="text" label="${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}"
+	enable_expression="route.route_status&amp;48"	background_color="#00000000" align="4" text_color="#FFFFFF" />
+	<osd x="0" y="137" w="220" h="100"		font_size="1300" type="text" label="${navigation.item[1].length[value]}" background_color="#00000000" align="0" text_color="#000099" />
+	<osd x="20" y="236" w="220" h="220"		type="navigation_next_turn" icon_src="%s_wh_220_220.png" background_color="#00000000" />
+	<osd x="0" y="60" w="1292" h="180"		type="navigation_next_turn" icon_src="$NAVIT_USER_DATADIR/Heard/lo.png" background_color="#00000000" />
+	<osd x="0" y="240" w="256" h="252"		type="navigation_next_turn" icon_src="$NAVIT_USER_DATADIR/Heard/lo1.png" command='route.route_status&amp;48 ?(say(&quot;route&quot;),follow=80000,zoom_to_route())' background_color="#00000000" />
+	<osd x="-160" y="0" w="160" h="140"		font_size="650" type="text" label='[TOWN] \n' command='say(&quot;m&quot;);toggle_layer(&quot;labels_bevore&quot;)' background_color="#FFFFFF00" align="0" text_color="#FFAAFF" />
+	<osd x="0" y="0" w="160" h="140"		font_size="650" type="text" label='[POI]\n' command='gui.menu(&quot;#POI-Icons&quot;)' background_color="#FFFFFF00" align="0" text_color="#FFAAFF" />
+	<osd x="0" y="-395" w="210" h="210"		type="navigation_next_turn" icon_src="$NAVIT_USER_DATADIR/Heard/set_cursor_210_210.png" command="follow=0;zoom=4;set_center_cursor()" enable_expression="follow&gt;1" background_color="#56FF0090" />
+	<osd x="5" y="-412" w="250" h="250"		font_size="1500" type="speed_warner" label='images' speed_exceed_limit_offset="5" speed_exceed_limit_percent="10" announce_on="1" enable_expression="route.route_status&amp;48"	background_color="#00000000" idle_color="#FF0000" />
+	<osd x="0" y="-120" w="250" h="110"		font_size="1800" type="text" label="${vehicle.position_speed[value]}" enable_expression="route.route_status&amp;48"	background_color="#00000000" align="0" text_color="#400040" />
+	<osd x="0" y="-414" w="248" h="414"		type="navigation_next_turn" icon_src="$NAVIT_USER_DATADIR/Heard/lu_248_414.png" background_color="#00000000" />
+	<osd x="0" y="-140" w="160" h="140"		font_size="650" type="text" label='\n[LAYER]' command='say(&quot;l&quot;);get_int_var(&quot;verkehr&quot;)==1
+	?(layout_name=&quot;PAX_no_select&quot;,gui.menu(&quot;#b_b&quot;)):(toggle_layer(&quot;poly_1&quot;),toggle_layer(&quot;poly_2&quot;),toggle_layer(&quot;wayside&quot;),toggle_layer(&quot;line_1&quot;)' background_color="#FFFFFF00" align="0" text_color="#FFAAFF" />
+	<osd x="250" y="-70" w="1140" h="65"	font_size="900" type="text" label="${navigation.item.street_name_systematic} ${navigation.item.street_name}" enable_expression="route.route_status&amp;48" background_color="#00000000" align="4" text_color="#FFFFFF" />
+	<osd x="248" y="-73" w="1052" h="73"	type="navigation_next_turn" icon_src="$NAVIT_USER_DATADIR/Heard/um_1052_73.png" background_color="#00000000" />
+	<osd x="270" y="-180"					type="button" src="$NAVIT_USER_DATADIR/Heard/z_p_180_180.png" command="zoom_in()" />
+	<osd x="-450" y="-180"					type="button" src="$NAVIT_USER_DATADIR/Heard/z_m_180_180.png" command="zoom_out()" />
+	<osd x="-240" y="-552" w="240" h="60"	font_size="940" type="text" label="${navigation.item.destination_time[remaining]}" enable_expression="route.route_status&amp;48" background_color="#00000000" align="4" text_color="#000000" />
+	<osd x="-240" y="-490" w="240" h="60"	font_size="850" type="text" label="${navigation.item.destination_length[named]}" enable_expression="route.route_status&amp;48" background_color="#00000000" align="4" text_color="#000000" />
+	<osd x="-180" y="-180"					type="button" src="$NAVIT_USER_DATADIR/Heard/menue_180_180.png" command='gui.menu_on_map_click=0;gui.menu()' />
+	<osd x="-265" y="-445" w="265" h="340"	font_size="900" type="compass" enable_expression="route.route_status&amp;48" background_color="#00000000" />
+	<osd x="-210" y="-130" w="210" h="56"	font_size="850" type="text" label="${vehicle.position_height}NN" enable_expression="route.route_status&amp;48" background_color="#00000000" align="0" text_color="#000000" />
+	<osd x="-240" y="-653" w="240" h="653"	type="navigation_next_turn" icon_src="$NAVIT_USER_DATADIR/Heard/ru_240_653.png" background_color="#00000000" />
+	<osd x="-650" y="-190" w="200" h="120"	font_size="800" type="scale" background_color="#FBB8DBCC" />
+	<osd x="0" y="-485" w="300" h="70"		font_size="1200" type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" text_color="#E5E5E5" />
+	<osd x="-840" y="145" w="760" h="110"	font_size="800" type="text" label="${vehicle.position_coord_geo[pos_deg]}\n/ Koordinate /   Nord: ${vehicle.position_direction} °" background_color="#00000000" align="4" text_color="#002FFF" osd_configuration="2" />
+	<osd x="-360" y="250" w="360" h="200"	font_size="700" name="odo_reset" type="odometer" label='${max_spd}km/h -Max&#10;${avg_spd}km/h ~Spd&#10;${distance} -Dst&#10;${time} Time' background_color="#FFAAFFDD" idle_color="#0000FF" text_color="#400040" autostart="0" osd_configuration="2" />
+
 	<vehicle name="Local GPS" profilename="car" enabled="yes" active="yes" source="android:" follow="1" follow_cursor="1" lag="15">
-	<log enabled="no" type="gpx" attr_types="position_time_iso8601,position_direction,position_speed,profilename,position_radius" data="track_%Y%m%d-%%i.gpx" flush_size="1000" flush_time="30" />
+	<log enabled="no" type="gpx" attr_types="position_time_iso8601,position_direction,position_speed,profilename,position_radius" data="$NAVIT_USER_DATADIR/track_%Y%m%d-%%i.gpx" flush_size="1000" flush_time="30" />
 	</vehicle>
 	<!-- <vehicle name="Demo" profilename="car" enabled="no" active="yes" source="demo://" /> -->
 
@@ -1691,12 +1697,12 @@
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="48" h="48" x="24" y="24" />		<circle text_size="34" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="64" h="64" x="32" y="32" />		<circle text_size="42" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="17-">		<icon src="cursor_still" w="96" h="96" x="48" y="48" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="6-10">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="96" h="96" x="8" y="96" />		<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="128" h="128" x="16" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="192" h="192" x="32" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="route_end" order="6-12">	<icon src="flag_bl_wh" w="96" h="96" x="8" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="route_end" order="13-17">	<icon src="flag_bl_wh" w="128" h="128" x="16" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="route_end" order="18-">	<icon src="flag_bl_wh" w="192" h="192" x="32" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="6-10">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="96" h="96" x="8" y="96" />		<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="128" h="128" x="16" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="192" h="192" x="32" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="route_end" order="6-12">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="96" h="96" x="8" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="route_end" order="13-17">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="128" h="128" x="16" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="route_end" order="18-">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="192" h="192" x="32" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
 	<itemgra item_types="nav_none" order="9-10">	<icon src="unknown" w="32" h="32" x="16" y="16" />	</itemgra>
 	<itemgra item_types="nav_none" order="11-14">	<icon src="unknown" w="48" h="48" x="24" y="24" />	</itemgra>
 	<itemgra item_types="nav_none" order="15-">		<icon src="unknown" w="64" h="64" x="32" y="32" />	</itemgra>
@@ -1733,19 +1739,19 @@
 	<itemgra item_types="town_label_1e5" order="5">		<circle text_size="36" color="#000000" radius="10" width="3" />	</itemgra>
 	<itemgra item_types="town_label_2e5" order="5">		<circle text_size="36" color="#000000" radius="10" width="3" />	</itemgra>
 	<itemgra item_types="town_label_5e5" order="4">		<circle text_size="36" color="#000000" radius="12" width="3" />	</itemgra>
-	<itemgra item_types="district_label,district_label_0e0" order="12">		<circle text_size="32" color="FFFFFF" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="12">	<circle text_size="38" color="FFFFFF" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="12">	<circle text_size="46" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="11">	<circle text_size="34" color="FFFFFF" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2" order="12">	<circle text_size="52" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="10">	<circle text_size="34" color="FFFFFF" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="11">	<circle text_size="42" color="FFFFFF" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label,district_label_0e0" order="12">		<circle text_size="32" color="#FFFFFF" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="12">	<circle text_size="38" color="#FFFFFF" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="12">	<circle text_size="46" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="11">	<circle text_size="34" color="#FFFFFF" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2" order="12">	<circle text_size="52" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="10">	<circle text_size="34" color="#FFFFFF" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="11">	<circle text_size="42" color="#FFFFFF" background_color="#AA0000" />	</itemgra>
 	<itemgra item_types="district_label_5e4" order="9">	<circle text_size="34" color="FFFFFF" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="10">	<circle text_size="42" color="FFFFFF" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_2e5,district_label_5e5" order="8">	<circle text_size="36" color="FFFFFF" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="10">	<circle text_size="42" color="#FFFFFF" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_2e5,district_label_5e5" order="8">	<circle text_size="36" color="#FFFFFF" background_color="#AA0000" />	</itemgra>
 	<itemgra item_types="district_label_1e5" order="9">	<circle text_size="36" color="FFFFFF" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="7">	<circle text_size="36" color="FFFFFF" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e7" order="6-7">	<circle text_size="42" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="7">	<circle text_size="36" color="#FFFFFF" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e7" order="6-7">	<circle text_size="42" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
 	</layer>
 	<!-- 	<itemgra item_types="port_label" order="0-">	<circle text_size="96" color="FF0000" background_color="#FF0000" />	</itemgra>
 	<itemgra item_types="label_unkn" order="0-">	<circle text_size="96" color="FF0000" background_color="#FF0000" />	</itemgra>
@@ -1754,29 +1760,29 @@
 	<itemgra item_types="street_unkn" order="16">	<text text_size="26" />	</itemgra>
 	<itemgra item_types="street_unkn" order="17-">	<text text_size="32" />	</itemgra>
 	<itemgra item_types="house_number" order="18-">	<circle text_size="38" background_color="#930093" />	</itemgra>
-	<itemgra item_types="district_label" order="13">	<circle text_size="36" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label" order="14-15">	<circle text_size="42" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label" order="16-">	<circle text_size="56" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="13-15">	<circle text_size="42" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="16-">		<circle text_size="60" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-16">	<circle text_size="52" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-16">	<circle text_size="56" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="12">		<circle text_size="46" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="13-16">	<circle text_size="60" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="11">		<circle text_size="46" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12">		<circle text_size="52" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="13-15">	<circle text_size="64" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="10">		<circle text_size="46" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="11">		<circle text_size="52" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="12">		<circle text_size="60" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="72" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="8-9">		<circle text_size="42" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="10-11">	<circle text_size="60" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12">		<circle text_size="64" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="13-15">	<circle text_size="78" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e7" order="8-9">	<circle text_size="48" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e7" order="10-11">	<circle text_size="64" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="84" color="FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label" order="13">	<circle text_size="36" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label" order="14-15">	<circle text_size="42" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label" order="16-">	<circle text_size="56" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="13-15">	<circle text_size="42" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="16-">		<circle text_size="60" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-16">	<circle text_size="52" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-16">	<circle text_size="56" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="12">		<circle text_size="46" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="13-16">	<circle text_size="60" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="11">		<circle text_size="46" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12">		<circle text_size="52" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="13-15">	<circle text_size="64" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="10">		<circle text_size="46" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="11">		<circle text_size="52" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="12">		<circle text_size="60" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="72" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="8-9">		<circle text_size="42" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="10-11">	<circle text_size="60" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12">		<circle text_size="64" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="13-15">	<circle text_size="78" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e7" order="8-9">	<circle text_size="48" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e7" order="10-11">	<circle text_size="64" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="84" color="#FFFFFF00" background_color="#AA0000" />	</itemgra>
 	<itemgra item_types="place_label" order="15-">	<circle text_size="32" color="#006565" />	</itemgra>
 	<itemgra item_types="town_label" order="14-">	<circle text_size="32" color="#000000" />	</itemgra>
 	<itemgra item_types="town_label_0e0,town_label_1e0,town_label_2e0" order="14-">	<circle text_size="34" color="#000000" />	</itemgra>
@@ -1814,12 +1820,13 @@
 <!-- Ende Universelle Layer -->
 
 	<layout name="MOTORIST" nightlayout="DARKGLOW" color="#FFFFFF">
-	<cursor w="154" h="150" interval="10000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_aa" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="80" h="98" x="24" y="49" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_aa" w="80" h="98" x="24" y="49" />	</itemgra>
+	<cursor w="190" h="190" interval="30000" sequence_range="-1">
+	<itemgra sequence_range="0" speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s1" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s1" w="134" h="123" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="134" h="123" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -1855,7 +1862,7 @@
 	</layout>
 
 	<layout name="MOTORIST_1" nightlayout="DARKGLOW" color="#FFFFFF">
-	<cursor w="154" h="150">
+	<cursor w="190" h="190">
 	<itemgra speed_range="-2">
 		<polyline color="#0055BB" radius="0" width="12">	<coord x="0" y="0"/>	</polyline>
 		<circle color="#004080" radius="27" width="9">		<coord x="0" y="0"/>	</circle>
@@ -1904,10 +1911,10 @@
 	</layout>
 
 	<layout name="WALKER_no_select" color="#F0F0CC">
-	<cursor w="154" h="150" interval="30000" sequence_range="-1">
-	<itemgra speed_range="-1">		<icon src="$NAVIT_USER_DATADIR/maske/cursor_w" w="96" h="140" x="48" y="70" />	</itemgra>
-	<itemgra sequence_range="0">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w0" w="96" h="140" x="48" y="70" />	</itemgra>
-	<itemgra sequence_range="1">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w1" w="96" h="140" x="48" y="70" />	</itemgra>
+	<cursor w="190" h="190" interval="30000" sequence_range="-1">
+	<itemgra speed_range="-1">		<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w" w="96" h="140" x="48" y="70" />	</itemgra>
+	<itemgra sequence_range="0">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w0" w="96" h="140" x="48" y="70" />	</itemgra>
+	<itemgra sequence_range="1">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w1" w="96" h="140" x="48" y="70" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -1943,7 +1950,7 @@
 	</layout>
 
 	<layout name="PAX_no_select" color="#FFDFBF" order_delta="2">
-	<cursor w="154" h="150">
+	<cursor w="190" h="190">
 	<itemgra speed_range="-2">
 	<polyline color="#00BC00" radius="0" width="12">	<coord x="0" y="0"/>	</polyline>
 	<circle color="#008500" radius="27" width="9">		<coord x="0" y="0"/>	</circle>
@@ -2092,7 +2099,6 @@
 	<itemgra item_types="track_paved" order="18">	<polyline color="#CCDDEE" width="18" />	<text text_size="24" color="#008778" background_color="#000000" />	</itemgra>
 	<itemgra item_types="track_paved" order="19">	<polyline color="#CCDDEE" width="38" />	<text text_size="32" color="#008778" background_color="#000000" />	</itemgra>
 	<itemgra item_types="track_paved" order="20-">	<polyline color="#CCDDEE" width="84" />	<text text_size="42" color="#008778" background_color="#000000" />	</itemgra>
-	<itemgra item_types="ramp" order="11-12">	<polyline color="#8080AA" width="4" />	</itemgra>	<!-- LÖSCHEN -->
 	<itemgra item_types="ramp" order="13-14">	<polyline color="#8080AA" width="4" />	</itemgra>
 	<itemgra item_types="ramp" order="15">	<polyline color="#8080AA" width="6" />	</itemgra>
 	<itemgra item_types="ramp" order="16">	<polyline color="#8080AA" width="8" />	</itemgra>
@@ -2335,12 +2341,12 @@
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="64" h="64" x="32" y="32" />	<circle text_size="38" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="96" h="96" x="48" y="48" />		<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="17-">		<icon src="cursor_still" w="128" h="128" x="64" y="64" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="7-10">	<icon src="$NAVIT_USER_DATADIR/Maske/nav_destination" w="64" h="64" x="0" y="64" />		<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Maske/nav_destination" w="96" h="96" x="0" y="96" />		<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/Maske/nav_destination" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="route_end" order="7-10">	<icon src="flag_bl_wh" w="64" h="64" x="0" y="64" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="route_end" order="11-16">	<icon src="flag_bl_wh" w="96" h="96" x="0" y="96" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="route_end" order="17-">	<icon src="flag_bl_wh" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="7-10">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="64" h="64" x="0" y="64" />		<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="96" h="96" x="0" y="96" />		<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="route_end" order="7-10">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="64" h="64" x="0" y="64" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="route_end" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="96" h="96" x="0" y="96" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="route_end" order="17-">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="nav_none" order="9-10">	<icon src="unknown" w="32" h="32" x="16" y="16" />	</itemgra>
 	<itemgra item_types="nav_none" order="11-14">	<icon src="unknown" w="48" h="48" x="24" y="24" />	</itemgra>
 	<itemgra item_types="nav_none" order="15-">		<icon src="unknown" w="64" h="64" x="32" y="32" />	</itemgra>
@@ -2368,7 +2374,7 @@
 	<itemgra item_types="town_label_1e5" order="7">		<circle text_size="36" color="#000000" radius="10" width="3" />	</itemgra>
 	<itemgra item_types="town_label_2e5" order="7">		<circle text_size="36" color="#000000" radius="10" width="3" />	</itemgra>
 	<itemgra item_types="town_label_5e5" order="6">		<circle text_size="36" color="#000000" radius="12" width="3" />	</itemgra>
-	<itemgra item_types="district_label,district_label_0e0" order="13">		<circle text_size="32" color="#FF00FF" background_color="#000000" />	</itemgra> 000000
+	<itemgra item_types="district_label,district_label_0e0" order="13">		<circle text_size="32" color="#FF00FF" background_color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="13">	<circle text_size="38" color="#FF00FF" background_color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13">	<circle text_size="46" color="#FF00FF" background_color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="12">	<circle text_size="34" color="#FF00FF" background_color="#000000" />	</itemgra>
@@ -2447,10 +2453,10 @@
 	</layout>
 
 	<layout name="CYCLIST" color="#D0F0D0">
-	<cursor w="154" h="150" interval="10000" sequence_range="-1">
-	<itemgra speed_range="-2">						<icon src="$NAVIT_USER_DATADIR/maske/cursor_b" w="94" h="136" x="47" y="68" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b0" w="94" h="136" x="47" y="68" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b1" w="94" h="136" x="47" y="68" />	</itemgra>
+	<cursor w="190" h="190" interval="10000" sequence_range="-1">
+	<itemgra speed_range="-2">						<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b" w="106" h="150" x="54" y="68" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b0" w="94" h="150" x="46" y="68" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b1" w="94" h="150" x="46" y="68" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -2485,12 +2491,12 @@
 	</layout>
 
 	<layout name="DARKGLOW" color="#191919" daylayout="MOTORIST">
-	<cursor w="154" h="150" interval="20000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="71" h="130" x="20" y="54" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="71" h="130" x="20" y="54" />	</itemgra>
+	<cursor w="190" h="190" interval="20000" sequence_range="-1">
+	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l" w="140" h="150" x="28" y="74" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l0" w="140" h="150" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l1" w="140" h="150" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l0" w="121" h="130" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l1" w="121" h="130" />	</itemgra>
 	</cursor>
 	<layer name="poly_1" active="1">
 	<itemgra item_types="poly_place5" order="10-13">	<polygon color="#50635090" />	</itemgra>
@@ -2746,18 +2752,18 @@
 	<itemgra item_types="town_label_1e5" order="5">		<circle text_size="36" color="#FFFFFF" radius="10" width="3" />	</itemgra>
 	<itemgra item_types="town_label_2e5" order="5">		<circle text_size="36" color="#FFFFFF" radius="10" width="3" />	</itemgra>
 	<itemgra item_types="town_label_5e5" order="4">		<circle text_size="36" color="#FFFFFF" radius="12" width="3" />	</itemgra>
-	<itemgra item_types="district_label,district_label_0e0" order="12">		<circle text_size="32" color="FF99BB" background_color="#AA0000" />	</itemgra>
-	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="12">	<circle text_size="38" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="12">	<circle text_size="46" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="11">	<circle text_size="34" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2" order="12">	<circle text_size="52" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="10">	<circle text_size="34" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="11">	<circle text_size="42" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label,district_label_0e0" order="12">		<circle text_size="32" color="#FF99BB" background_color="#AA0000" />	</itemgra>
+	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="12">	<circle text_size="38" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="12">	<circle text_size="46" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="11">	<circle text_size="34" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2" order="12">	<circle text_size="52" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="10">	<circle text_size="34" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="11">	<circle text_size="42" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_5e4" order="9">	<circle text_size="34" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="10">	<circle text_size="42" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_2e5,district_label_5e5" order="8">	<circle text_size="36" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="10">	<circle text_size="42" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_2e5,district_label_5e5" order="8">	<circle text_size="36" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e5" order="9">	<circle text_size="36" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="7">	<circle text_size="36" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="7">	<circle text_size="36" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e7" order="6-7">	<circle text_size="42" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
 	</layer>
 	<layer name="labels">
@@ -2765,29 +2771,29 @@
 	<itemgra item_types="street_unkn" order="17-">	<text text_size="32" />	</itemgra>
 	<itemgra item_types="house_number" order="18">	<circle text_size="38" background_color="#930093" />	</itemgra>
 	<itemgra item_types="house_number" order="19-">	<circle text_size="42" background_color="#930093" />	</itemgra>
-	<itemgra item_types="district_label" order="13">	<circle text_size="36" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label" order="14-15">	<circle text_size="42" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label" order="16-">	<circle text_size="56" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="13-15">	<circle text_size="42" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="16-">		<circle text_size="60" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-16">	<circle text_size="52" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-16">	<circle text_size="56" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="12">		<circle text_size="46" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="13-16">	<circle text_size="60" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="11">	<circle text_size="46" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12">		<circle text_size="52" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="13-15">	<circle text_size="64" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="10">		<circle text_size="46" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="11">		<circle text_size="52" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="12">		<circle text_size="60" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="72" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="8-9">		<circle text_size="42" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="10-11">	<circle text_size="60" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12">		<circle text_size="64" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="13-15">	<circle text_size="78" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e7" order="8-9">	<circle text_size="48" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e7" order="10-11">	<circle text_size="64" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="84" color="FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label" order="13">	<circle text_size="36" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label" order="14-15">	<circle text_size="42" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label" order="16-">	<circle text_size="56" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="13-15">	<circle text_size="42" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="16-">		<circle text_size="60" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-16">	<circle text_size="52" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-16">	<circle text_size="56" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="12">		<circle text_size="46" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="13-16">	<circle text_size="60" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="11">		<circle text_size="46" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12">		<circle text_size="52" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="13-15">	<circle text_size="64" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="10">		<circle text_size="46" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="11">		<circle text_size="52" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="12">		<circle text_size="60" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="72" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="8-9">		<circle text_size="42" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="10-11">	<circle text_size="60" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12">		<circle text_size="64" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="13-15">	<circle text_size="78" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e7" order="8-9">	<circle text_size="48" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e7" order="10-11">	<circle text_size="64" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="84" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="place_label" order="15-">	<circle text_size="32" color="#00B3B3" />	</itemgra>
 	<itemgra item_types="town_label" order="14-">	<circle text_size="32" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="town_label_0e0,town_label_1e0,town_label_2e0" order="14-">	<circle text_size="34" color="#FFFFFF" />	</itemgra>

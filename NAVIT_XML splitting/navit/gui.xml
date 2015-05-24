@@ -4,16 +4,16 @@
 	<img cond='navit.speech.active==0' src='gui_stop' onclick='navit.speech.active=1;navit.say(&quot;Sprache ein&quot;);back_to_map()'><text>Sprache</text></img>
 	<img cond='navit.speech.active!=0' src='gui_active' onclick='navit.speech.active=0;back_to_map()'><text>Sprache</text></img>
 	<img src='gui_town' onclick='town()'><text>ZIEL eingeben</text></img>
-	<img src='car_dealer' onclick='navit.layout_name=&quot;MOTORIST&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Autofahrer</text></img>
+	<img src='car_dealer' onclick='navit.layout_name=&quot;MOTORIST&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;car&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Autofahrer</text></img>
 	<img src='gui_bookmark' onclick='bookmarks()'><text>Lesezeichen</text></img>
-	<img src='bicycle_shop' onclick='navit.layout_name=&quot;CYCLIST&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Radfahrer</text></img>
+	<img src='bicycle_shop' onclick='navit.layout_name=&quot;CYCLIST&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;bike&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Radfahrer</text></img>
 	<img src='gui_vehicle' onclick='setting_vehicle()'><text>PROFIL ändern</text></img>
-	<img src='gui_vehicle_pedestrian' onclick='navit.layout_name=&quot;WALKER_no_select&quot;;navit.set_int_var(&quot;verkehr&quot;,1);redraw_map();back_to_map()'><text>Fußgänger</text></img>
+	<img src='gui_vehicle_pedestrian' onclick='navit.layout_name=&quot;WALKER_no_select&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;pedestrian&quot;;navit.set_int_var(&quot;verkehr&quot;,1);redraw_map();back_to_map()'><text>Fußgänger</text></img>
 	<img src='gui_map' onclick='navit.say(&quot;weitere Karten&quot;);setting_maps()'><text>Maps</text></img>
 	<a href='#Route'><img src='$NAVIT_USER_DATADIR/maske/tool'><text>ROUTE-DATEN</text></img></a>
 	<a href='#Settings'><img src='$NAVIT_USER_DATADIR/maske/setting'><text>EINSTELLUNG</text></img></a>
 	<img cond='navit.route.route_status&amp;1' src='gui_quit' onclick='navit.say(&quot;navigieren beendet&quot;);abort_navigation();refresh();redraw_map()'><text>AUS navigieren</text></img>
-	<img src='gui_quit' onclick='quit()'><text>NAVIT beenden</text></img>
+	<img src='gui_quit' onclick='quit()'><text>Quit</text></img>
 </a>
 <a name='Route'><text>ROUTE - DATEN</text>
 	<img src='gui_formerdests' onclick='navit.say(&quot;Zielwahl aus vorherigen&quot;);formerdests()'><text>Letzte Ziele</text></img>
@@ -37,8 +37,8 @@
 	<img src='gui_about' onclick='about()'><text>About</text></img>
 	<img cond='fullscreen==0' src='gui_fullscreen' onclick='navit.say(&quot;Vollbild&quot;);fullscreen=1'><text>Vollbild</text></img>
 	<img cond='fullscreen==1' src='gui_leave_fullscreen' onclick='navit.say(&quot;Statuszeile oben sichtbar&quot;);fullscreen=0'><text>Fensterbild</text></img>
-	<img src='car_dealer' onclick='navit.layout_name=&quot;MOTORIST1&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Cursor1</text></img>
-	<img src='gui_vehicle' onclick='navit.layout_name=&quot;DARKGLOW&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Nachtansicht</text></img>
+	<img src='car_dealer' onclick='navit.layout_name=&quot;MOTORIST1&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;car&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Cursor1</text></img>
+	<img src='gui_vehicle' onclick='navit.layout_name=&quot;DARKGLOW&quot;;navit.vehicle[@name=&quot;Local GPS&quot;].profilename=&quot;car&quot;;navit.set_int_var(&quot;verkehr&quot;,0);redraw_map();back_to_map()'><text>Nachtansicht</text></img>
 	<img src='gui_display' onclick='setting_layout()'><text>Layout</text></img>
 	<img src='gui_bookmark' onclick='navit.say(&quot;aktuelle Landkennung&quot;);locale()'><text>Landkennung</text></img>
 </a>
@@ -67,6 +67,7 @@
 </a>
 <a name='poi_on'>
 <script>
+	navit.say(&quot;o&quot;);
 	navit.get_int_var(&quot;icon&quot;)==1		?(navit.toggle_layer(&quot;poly_icon&quot;),navit.toggle_layer(&quot;poly_icon_label&quot;),navit.toggle_layer(&quot;line&quot;),navit.set_int_var(&quot;icon&quot;,0)):&quot;&quot;;
 	navit.get_int_var(&quot;wanderung&quot;)==1 ?(navit.toggle_layer(&quot;hiking&quot;),navit.toggle_layer(&quot;hiking_way&quot;),navit.set_int_var(&quot;wanderung&quot;,0)):&quot;&quot;;
 	navit.get_int_var(&quot;winter&quot;)==1	?(navit.toggle_layer(&quot;wintersport&quot;),navit.set_int_var(&quot;winter&quot;,0)):&quot;&quot;;
@@ -80,6 +81,7 @@
 </a>
 <a name='poi_off'>
 <script>
+	navit.say(&quot;o&quot;);
 	navit.get_int_var(&quot;icon&quot;)==0		?(navit.toggle_layer(&quot;poly_icon&quot;),navit.toggle_layer(&quot;poly_icon_label&quot;),navit.toggle_layer(&quot;line&quot;),navit.set_int_var(&quot;icon&quot;,1)):&quot;&quot;;
 	navit.get_int_var(&quot;wanderung&quot;)==0 ?(navit.toggle_layer(&quot;hiking&quot;),navit.toggle_layer(&quot;hiking_way&quot;),navit.set_int_var(&quot;wanderung&quot;,1)):&quot;&quot;;
 	navit.get_int_var(&quot;winter&quot;)==0	?(navit.toggle_layer(&quot;wintersport&quot;),navit.set_int_var(&quot;winter&quot;,1)):&quot;&quot;;
