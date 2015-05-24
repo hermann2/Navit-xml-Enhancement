@@ -267,10 +267,10 @@
 	<itemgra item_types="district_label_1e2,district_label_2e2" order="12">	<circle text_size="52" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="10">	<circle text_size="34" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="11">	<circle text_size="42" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_5e4" order="9">	<circle text_size="34" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_5e4" order="9">	<circle text_size="34" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="10">	<circle text_size="42" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_2e5,district_label_5e5" order="8">	<circle text_size="36" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
-	<itemgra item_types="district_label_1e5" order="9">	<circle text_size="36" color="FFFFFF" background_color="#FF99BB" />	</itemgra>
+	<itemgra item_types="district_label_1e5" order="9">	<circle text_size="36" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="7">	<circle text_size="36" color="#FFFFFF" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e7" order="6-7">	<circle text_size="42" color="#FFFFFF00" background_color="#FF99BB" />	</itemgra>
 	</layer>
