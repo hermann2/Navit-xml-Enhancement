@@ -1697,18 +1697,6 @@
 	<itemgra item_types="street_route" order="17">		<polyline color="#00FF00" width="160" />	</itemgra>
 	<itemgra item_types="street_route" order="18-">		<polyline color="#00FF00" width="300" />	</itemgra>
 	</layer>
-	<!-- 
-	<itemgra item_types="tracking_0" order="0-">	<polyline color="#000000" width="8" />	</itemgra>
-	<itemgra item_types="tracking_10" order="0-">	<polyline color="#191919" width="8" />	</itemgra>
-	<itemgra item_types="tracking_20" order="0-">	<polyline color="#333333" width="8" />	</itemgra>
-	<itemgra item_types="tracking_30" order="0-">	<polyline color="#4c4c4c" width="8" />	</itemgra>
-	<itemgra item_types="tracking_40" order="0-">	<polyline color="#666666" width="8" />	</itemgra>
-	<itemgra item_types="tracking_50" order="0-">	<polyline color="#7f7f7f" width="8" />	</itemgra>
-	<itemgra item_types="tracking_60" order="0-">	<polyline color="#999999" width="8" />	</itemgra>
-	<itemgra item_types="tracking_70" order="0-">	<polyline color="#b2b2b2" width="8" />	</itemgra>
-	<itemgra item_types="tracking_80" order="0-">	<polyline color="#cccccc" width="8" />	</itemgra>
-	<itemgra item_types="tracking_90" order="0-">	<polyline color="#e5e5e5" width="8" />	</itemgra>
-	<itemgra item_types="tracking_100" order="0-">	<polyline color="#ffffff" width="8" />	</itemgra> -->
 	<layer name="Internal">
 	<itemgra item_types="track" order="9-10">	<polyline color="#158000" width="4" />	</itemgra>
 	<itemgra item_types="track" order="11-14">	<polyline color="#158000" width="4" />	</itemgra>
@@ -1725,14 +1713,14 @@
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="48" h="48" x="24" y="24" />	<circle text_size="34" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="64" h="64" x="32" y="32" />	<circle text_size="42" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="17-">		<icon src="cursor_still" w="96" h="96" x="48" y="48" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="3-5">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="48" h="48" x="24" y="48" />	<circle text_size="32" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="waypoint" order="6-10">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="96" h="96" x="48" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="128" h="128" x="64" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="192" h="192" x="96" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="route_end" order="3-5">	<icon src="flag_bl_wh" w="48" h="48" x="8" y="48" />	<circle text_size="32" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="route_end" order="6-12">	<icon src="flag_bl_wh" w="96" h="96" x="8" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="route_end" order="13-17">	<icon src="flag_bl_wh" w="128" h="128" x="16" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="route_end" order="18-">	<icon src="flag_bl_wh" w="192" h="192" x="32" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="3-5">		<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="48" h="48" x="24" y="48" />	<circle text_size="32" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="6-10">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="96" h="96" x="48" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="128" h="128" x="64" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="192" h="192" x="96" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="route_end" order="3-5">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="48" h="48" x="8" y="48" />	<circle text_size="32" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="route_end" order="6-12">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="96" h="96" x="8" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="route_end" order="13-17">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="128" h="128" x="16" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="route_end" order="18-">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="192" h="192" x="32" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
 	<itemgra item_types="nav_none" order="9-10">	<icon src="unknown" w="32" h="32" x="16" y="16" />	</itemgra>
 	<itemgra item_types="nav_none" order="11-14">	<icon src="unknown" w="48" h="48" x="24" y="24" />	</itemgra>
 	<itemgra item_types="nav_none" order="15-">		<icon src="unknown" w="64" h="64" x="32" y="32" />	</itemgra>
@@ -1849,12 +1837,13 @@
 	<!-- Ende Universelle Layer -->
 
 	<layout name="MOTORIST" nightlayout="DARKGLOW" color="#FFFFFF">
-	<cursor w="154" h="150" interval="10000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_aa" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="80" h="98" x="24" y="49" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_aa" w="80" h="98" x="24" y="49" />	</itemgra>
+	<cursor w="190" h="190" interval="30000" sequence_range="-1">
+	<itemgra sequence_range="0" speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s1" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s1" w="134" h="123" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="134" h="123" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -1939,10 +1928,10 @@
 	</layout>
 
 	<layout name="WALKER_no_select" color="#F0F0CC">
-	<cursor w="154" h="150" interval="30000" sequence_range="-1">
-	<itemgra speed_range="-1">		<icon src="$NAVIT_USER_DATADIR/maske/cursor_w" w="96" h="140" x="48" y="70" />	</itemgra>
-	<itemgra sequence_range="0">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w0" w="96" h="140" x="48" y="70" />	</itemgra>
-	<itemgra sequence_range="1">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w1" w="96" h="140" x="48" y="70" />	</itemgra>
+	<cursor w="190" h="190" interval="30000" sequence_range="-1">
+	<itemgra speed_range="-1">		<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w" w="96" h="140" x="48" y="70" />	</itemgra>
+	<itemgra sequence_range="0">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w0" w="96" h="140" x="48" y="70" />	</itemgra>
+	<itemgra sequence_range="1">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w1" w="96" h="140" x="48" y="70" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -2373,12 +2362,12 @@
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="64" h="64" x="32" y="32" />	<circle text_size="38" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="96" h="96" x="48" y="48" />		<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="17-">		<icon src="cursor_still" w="128" h="128" x="64" y="64" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="7-10">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="64" h="64" x="32" y="64" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="96" h="96" x="48" y="96" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="128" h="128" x="64" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="route_end" order="7-10">	<icon src="flag_bl_wh" w="64" h="64" x="0" y="64" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="route_end" order="11-16">	<icon src="flag_bl_wh" w="96" h="96" x="0" y="96" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="route_end" order="17-">	<icon src="flag_bl_wh" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="7-10">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="64" h="64" x="32" y="64" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="96" h="96" x="48" y="96" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="128" h="128" x="64" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="route_end" order="7-10">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="64" h="64" x="0" y="64" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="route_end" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="96" h="96" x="0" y="96" />	<circle text_size="60" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
+	<itemgra item_types="route_end" order="17-">	<icon src="$NAVIT_USER_DATADIR/Heard/flag" w="128" h="128" x="0" y="128" />	<circle text_size="98" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="nav_none" order="9-10">	<icon src="unknown" w="32" h="32" x="16" y="16" />	</itemgra>
 	<itemgra item_types="nav_none" order="11-14">	<icon src="unknown" w="48" h="48" x="24" y="24" />	</itemgra>
 	<itemgra item_types="nav_none" order="15-">		<icon src="unknown" w="64" h="64" x="32" y="32" />	</itemgra>
@@ -2485,10 +2474,10 @@
 	</layout>
 
 	<layout name="CYCLIST" color="#D0F0D0">
-	<cursor w="154" h="150" interval="10000" sequence_range="-1">
-	<itemgra speed_range="-2">						<icon src="$NAVIT_USER_DATADIR/maske/cursor_b" w="94" h="136" x="47" y="68" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b0" w="94" h="136" x="47" y="68" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b1" w="94" h="136" x="47" y="68" />	</itemgra>
+	<cursor w="190" h="190" interval="10000" sequence_range="-1">
+	<itemgra speed_range="-2">						<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b" w="106" h="150" x="54" y="68" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b0" w="94" h="150" x="46" y="68" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b1" w="94" h="150" x="46" y="68" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -2523,12 +2512,12 @@
 	</layout>
 
 	<layout name="DARKGLOW" color="#191919" daylayout="MOTORIST">
-	<cursor w="154" h="150" interval="20000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="71" h="130" x="20" y="54" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="71" h="130" x="20" y="54" />	</itemgra>
+	<cursor w="190" h="190" interval="20000" sequence_range="-1">
+	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l" w="140" h="150" x="28" y="74" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l0" w="140" h="150" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l1" w="140" h="150" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l0" w="121" h="130" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l1" w="121" h="130" />	</itemgra>
 	</cursor>
 	<layer name="poly_1" active="1">
 	<itemgra item_types="image" order="0-7">	<image/>	</itemgra>
