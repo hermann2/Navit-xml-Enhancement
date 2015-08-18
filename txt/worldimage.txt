@@ -1,4 +1,30 @@
+14.1 47.6 type=poi_customc label="Austria" icon_src="country_at"
+17.1 44.4 type=poi_customc label="Bosnia and" icon_src="country_ba"
+17.1 44.2 type=poi_customc label="Herzegovina"
+3.8 50.5 type=poi_customc label="Belgium" icon_src="country_be"
+7.6 46.7 type=poi_customc label="Suisse" icon_src="country_ch"
+-8.9 53.2 type=poi_customc label="Eire" icon_src="country_ci"
+14.3 49.6 type=poi_customc label="Czech Republic" icon_src="country_cz"
+9.5 50.6 type=poi_customc label="Germany" icon_src="country_de"
+9.7 55.6 type=poi_customc label="Denmark" icon_src="country_dk"
+-4.1 39.3 type=poi_customc label="Spain" icon_src="country_es"
+1.9 46.9 type=poi_customc label="France" icon_src="country_fr"
+-3.7 55.1 type=poi_customc label="United Kingdom" icon_src="country_gb"
+18.8 46.9 type=poi_customc label="Hungary" icon_src="country_hu"
+14.3 44.8 type=poi_customc label="Croatia" icon_src="country_hr"
+7.4 43.7 type=poi_customc label="Monaco" icon_src="country_id"
+12.4 43.1 type=poi_customc label="Italia" icon_src="country_it"
+19.1 48.7 type=poi_customc label="Slowakia" icon_src="country_sk"
+9.6 47.1 type=poi_customc label="Liechten-" icon_src="country_li"
+9.6 46.9 type=poi_customc label="stein"
+5.6 49.6 type=poi_customc label="Luxenbourg" icon_src="country_lu"
+4.3 51.8 type=poi_customc label="Netherlands" icon_src="country_ne"
+18.1 52.8 type=poi_customc label="Poland" icon_src="country_pl"
+14.2 46.0 type=poi_customc label="Slovenia" icon_src="country_sl"
+12.5 43.9 type=poi_customc label="San Marino" icon_src="country_sm"
+
 type=image label=$NAVIT_USER_DATADIR/maske/worldimage.png
 -180.0 85.0511
 180.0 85.0511
 -180.0 -85.0511
+
