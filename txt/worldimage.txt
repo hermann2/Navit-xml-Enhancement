@@ -1,8 +1,8 @@
 1.5 42.5 type=poi_customc label="Andorra" icon_src="country_ad"
 52.9 23.8 type=poi_customc label="United Arab Emirates" icon_src="country_ae"
 63.8 33.6 type=poi_customc label="Afghanistan" icon_src="country_af"
--132.0 -79.0 type=poi_customc label="Antartica"
-32.0 -79 type=poi_customc label="Antartica"
+-104.0 -77.0 type=poi_customc label="Antartica"
+70.0 -77.0 type=poi_customc label="Antartica"
 -61.6 17.2 type=poi_customc label="Antigua and Barbuda" icon_src="country_ag"
 -63.0 18.2 type=poi_customc label="Anguilla" icon_src="country_ai"
 19.3 40.8 type=poi_customc label="Albania" icon_src="country_al"
@@ -12,17 +12,16 @@
 16.8 -12.4 type=poi_customc label="Angola" icon_src="country_ao"
 -0.1 -75.2 type=poi_customc label="Antarctica" icon_src="country_aq"
 -66.7 -35.6 type=poi_customc label="Argentina" icon_src="country_ar"
--170.8 -14.3 type=poi_customc label="American Samoa" icon_src="country_as"
+-170.8 -14.5 type=poi_customc label="American Samoa" icon_src="country_as"
 14.1 47.6 type=poi_customc label="Austria" icon_src="country_at"
 132.8 -25.1 type=poi_customc label="Australia" icon_src="country_au"
 -70.1 12.7 type=poi_customc label="Aruba" icon_src="country_aw"
 19.5 60.3 type=poi_customc label="Åland Islands" icon_src="country_ax"
 47.4 40.3 type=poi_customc label="Azerbaijan" icon_src="country_az"
 45.3 39.2 type=poi_customc label="(AZ)" icon_src="country_az"
-
--59.4 13.2 type=poi_customc label="Barbados"
 16.9 44.4 type=poi_customc label="Bosnia and" icon_src="country_ba"
 16.9 44.0 type=poi_customc label="Herzegovina"
+-59.4 12.7 type=poi_customc label="Barbados" icon_src="country_bb"
 89.3 24.0 type=poi_customc label="Bangladesh" icon_src="country_bd"
 3.8 50.5 type=poi_customc label="Belgium" icon_src="country_be"
 -2.1 12.2 type=poi_customc label="Burkina Faso" icon_src="country_bf"
@@ -40,7 +39,6 @@
 22.6 -22.2 type=poi_customc label="Botswana" icon_src="country_bw"
 26.8 53.1 type=poi_customc label="Belarus" icon_src="country_by"
 -89.1 16.8 type=poi_customc label="Belize" icon_src="country_bz"
-
 -106.3 56.1 type=poi_customc label="Canada" icon_src="country_ca"
 96.7 -12.1 type=poi_customc label="Cocos(Keeling)Islands" icon_src="country_cc"
 14.7 -0.9 type=poi_customc label="Congo(Zaire)" icon_src="country_cd"
@@ -60,7 +58,6 @@
 105.5 -10.4 type=poi_customc label="Christmas Island" icon_src="country_cx"
 32.6 34.9 type=poi_customc label="Cyprus" icon_src="country_cy"
 13.4 49.5 type=poi_customc label="Czech Republic" icon_src="country_cz"
-
 9.5 50.6 type=poi_customc label="Germany" icon_src="country_de"
 42.3 11.7 type=poi_customc label="Djibouti" icon_src="country_dj"
 9.7 55.6 type=poi_customc label="Denmark" icon_src="country_dk"
@@ -68,7 +65,6 @@
 -71.2 18.8 type=poi_customc label="Dominican" icon_src="country_do"
 -71.2 18.2 type=poi_customc label="Republic"
 1.3 27.9 type=poi_customc label="Algeria" icon_src="country_dz"
-
 -79.6 -1.7 type=poi_customc label="Ecuador" icon_src="country_ec"
 -91.7 -0.5 type=poi_customc label="Galapagos(EC)"
 24.6 58.6 type=poi_customc label="Estonia" icon_src="country_ee"
@@ -79,14 +75,13 @@
 -17.5 28.7 type=poi_customc label="Las Palmas de"
 -17.5 28.1 type=poi_customc label="Gran Canaria(ES)"
 37.4 8.0 type=poi_customc label="Ethiopia" icon_src="country_et"
-
 24.6 63.2 type=poi_customc label="Finland" icon_src="country_fi"
 177.4 -18.0 type=poi_customc label="Fiji" icon_src="country_fj"
+-179.8 -17.5 type=poi_customc label="Fiji" icon_src="country_fj"
 -59.6 -51.8 type=poi_customc label="Falkland Islands" icon_src="country_fk"
 157.7 6.8 type=poi_customc label="Micronesia" icon_src="country_fm"
 -7.4 62.1 type=poi_customc label="Faroe Islands" icon_src="country_fo"
 1.9 46.9 type=poi_customc label="France" icon_src="country_fr"
-
 11.1 -0.7 type=poi_customc label="Gabon" icon_src="country_ga"
 -3.7 55.1 type=poi_customc label="United Kingdom" icon_src="country_gb"
 -61.0 12.0 type=poi_customc label="Grenada" icon_src="country_gd"
@@ -107,14 +102,12 @@
 144.5 13.4 type=poi_customc label="Guam" icon_src="country_gu"
 -16.3 11.4 type=poi_customc label="Guinea-Bissau" icon_src="country_gw"
 -59.4 4.8 type=poi_customc label="Guyana" icon_src="country_gy"
-
 114.1 22.2 type=poi_customc label="Hong Kong" icon_src="country_hk"
 73.3 -53.1 type=poi_customc label="Heard and McDonald Islands" icon_src="country_hm"
 -87.6 14.7 type=poi_customc label="Honduras" icon_src="country_hn"
 14.3 44.8 type=poi_customc label="Croatia" icon_src="country_hr"
 -73.5 18.7 type=poi_customc label="Haiti" icon_src="country_ht"
 18.6 46.9 type=poi_customc label="Hungary" icon_src="country_hu"
-
 118.9 -4.4 type=poi_customc label="Indonesia" icon_src="country_id"
 -8.7 53.1 type=poi_customc label="Ireland" icon_src="country_ie"
 34.4 31.0 type=poi_customc label="Israel" icon_src="country_il"
@@ -125,13 +118,11 @@
 42.0 32.8 type=poi_customc label="Iraq" icon_src="country_iq"
 53.7 32.4 type=poi_customc label="Iran" icon_src="country_ir"
 -19.9 64.9 type=poi_customc label="Iceland" icon_src="country_is"
-12.4 42.8 type=poi_customc label="Italia" icon_src="country_it"
-
+12.0 42.8 type=poi_customc label="Italia" icon_src="country_it"
 -2.3 49.1 type=poi_customc label="Jersey" icon_src="country_je"
 -78.0 18.0 type=poi_customc label="Jamaica" icon_src="country_jm"
 35.9 31.3 type=poi_customc label="Jordan" icon_src="country_jo"
 137.0 35.7 type=poi_customc label="Japan" icon_src="country_jp"
-
 36.6 -0.4 type=poi_customc label="Kenia" icon_src="country_ke"
 72.9 41.1 type=poi_customc label="Kyrgyzstan" icon_src="country_kg"
 103.7 12.1 type=poi_customc label="Cambodia" icon_src="country_kh"
@@ -144,7 +135,6 @@
 47.2 29.1 type=poi_customc label="Kuwait" icon_src="country_kw"
 -81.8 19.3 type=poi_customc label="Cayman Islands" icon_src="country_ky"
 65.3 48.0 type=poi_customc label="Kazakhstan" icon_src="country_kz"
-
 102.0 18.6 type=poi_customc label="Laos" icon_src="country_la"
 35.1 33.8 type=poi_customc label="Lebanon" icon_src="country_lb"
 -60.8 13.7 type=poi_customc label="Saint Lucia" icon_src="country_lc"
@@ -156,7 +146,6 @@
 5.6 49.6 type=poi_customc label="Luxenbourg" icon_src="country_lu"
 25.3 57.0 type=poi_customc label="Latvia" icon_src="country_lv"
 13.8 26.8 type=poi_customc label="Libyan Arab Jamahiriya" icon_src="country_ly"
-
 -9.0 31.4 type=poi_customc label="Morocco" icon_src="country_ma"
 -14.7 24.6 type=poi_customc label="Western"
 -14.7 24.1 type=poi_customc label="Sahara"
@@ -182,9 +171,8 @@
 33.4 -13.6 type=poi_customc label="Malawi" icon_src="country_mw"
 -104.6 23.7 type=poi_customc label="Mexico" icon_src="country_mx"
 111.9 2.5 type=poi_customc label="Malaysia" icon_src="country_my"
-102.0 3.2 type=poi_customc label="Malaysia" icon_src="country_my"
+101.0 3.8 type=poi_customc label="Malaysia" icon_src="country_my"
 34.3 -18.9 type=poi_customc label="Mozambique" icon_src="country_mz"
-
 16.3 -22.2 type=poi_customc label="Namibia" icon_src="country_na"
 164.6 -21.3 type=poi_customc label="New Caledonia" icon_src="country_nc"
 7.0 17.0 type=poi_customc label="Niger" icon_src="country_ne"
@@ -197,9 +185,7 @@
 166.9 -0.5 type=poi_customc label="Nauru" icon_src="country_nr"
 -169.9 -19.0 type=poi_customc label="Niue" icon_src="country_nu"
 171.4 -41.9 type=poi_customc label="New Zealand" icon_src="country_nz"
-
 56.0 20.4 type=poi_customc label="Oman" icon_src="country_om"
-
 -81.2 8.1 type=poi_customc label="Panama" icon_src="country_pa"
 -77.1 -11.0 type=poi_customc label="Peru" icon_src="country_pe"
 -149.7 -17.7 type=poi_customc label="French Polynesia" icon_src="country_pf"
@@ -217,16 +203,14 @@
 -17.2 32.8 type=poi_customc label="Madeira(PT)"
 134.4 7.4 type=poi_customc label="Palau" icon_src="country_pw"
 -59.2 -23.2 type=poi_customc label="Paraguay" icon_src="country_py"
-
 50.8 24.9 type=poi_customc label="Quatar" icon_src="country_qa"
-
-55.6 -21.6 type=poi_customc label="Reunion" icon_src="country_re"
+55.6 -21.3 type=poi_customc label="Reunion" icon_src="country_re"
 24.0 45.8 type=poi_customc label="Romania" icon_src="country_ro"
 20.2 43.7 type=poi_customc label="Serbia" icon_src="country_rs"
 97.7 62.1 type=poi_customc label="Russia" icon_src="country_ru"
-20.0 54.8 type=poi_customc label="(RU)" icon_src="country_ru"
+-178.0 67.0 type=poi_customc label="Russia" icon_src="country_ru"
+20.0 54.8 type=poi_customc label="Kaliningrad" icon_src="country_ru"
 29.3 -2.0 type=poi_customc label="Rwanda" icon_src="country_rw"
-
 43.1 22.9 type=poi_customc label="Saudi Arabia" icon_src="country_sa"
 159.2 -9.7 type=poi_customc label="Solomon Islands" icon_src="country_sb"
 54.5 -4.7 type=poi_customc label="Seychelles" icon_src="country_sc"
@@ -247,7 +231,6 @@
 -89.8 13.5 type=poi_customc label="El Salvador" icon_src="country_sv"
 37.8 34.8 type=poi_customc label="Syrian Arab Republic" icon_src="country_sy"
 31.0 -27.0 type=poi_customc label="Swaziland" icon_src="country_sz"
-
 -72.4 21.7 type=poi_customc label="The Turks and" icon_src="country_tc"
 -72.4 21.3 type=poi_customc label="Caicos Islands"
 17.7 14.6 type=poi_customc label="Chad" icon_src="country_td"
@@ -265,18 +248,16 @@
 178.5 -8.5 type=poi_customc label="Tuvalu" icon_src="country_tv"
 120.4 23.6 type=poi_customc label="Taiwan" icon_src="country_tw"
 33.8 -6.5 type=poi_customc label="Tanzania" icon_src="country_tz"
-
 30.6 49.0 type=poi_customc label="Ukraine" icon_src="country_ua"
 31.4 1.3 type=poi_customc label="Uganda" icon_src="country_ug"
 166.0 19.3 type=poi_customc label="United States Minor" icon_src="country_um"
 166.0 18.8 type=poi_customc label="Outlying Islands"
 -105.2 38.6 type=poi_customc label="United States" icon_src="country_us"
--154.1 64.6 type=poi_customc label="Alaska(US)"
+-159.8 19.9 type=poi_customc label="Hawaii" icon_src="country_us"
+-154.1 64.6 type=poi_customc label="Alaska" icon_src="country_us"
 -57.5 -34.0 type=poi_customc label="Uruguay" icon_src="country_uy"
 60.9 41.7 type=poi_customc label="Uzbekistan" icon_src="country_uz"
-
 12.4 41.9 type=poi_customc label="Vatican" icon_src="country_va"
-
 -64.5 13.0 type=poi_customc label="Saint Vincent"
 -62.0 13.0 type=poi_customc label="  -->" icon_src="country_vc"
 -64.0 12.5 type=poi_customc label="and the"
@@ -289,19 +270,18 @@
 -65.9 16.5 type=poi_customc label="Islands U.S"
 107.8 14.2 type=poi_customc label="Vietnam" icon_src="country_vn"
 166.5 -15.3 type=poi_customc label="Vanuatu" icon_src="country_vu"
-
--178.4 14.2 type=poi_customc label="Wallis and Futuna Islands" icon_src="country_wf"
+-178.4 -14.2 type=poi_customc label="Wallis and" icon_src="country_wf"
+-178.4 -14.8 type=poi_customc label="Futuna Islands"
 -172.8 -13.7 type=poi_customc label="Samoa" icon_src="country_ws"
-
 47.0 15.5 type=poi_customc label="Yemen" icon_src="country_ye"
 44.8 -12.8 type=poi_customc label="Mayotte" icon_src="country_yt"
-
 22.1 -30.9 type=poi_customc label="South Africa" icon_src="country_za"
 26.7 -13.9 type=poi_customc label="Zambia" icon_src="country_zm"
 28.7 -19.1 type=poi_customc label="Zimbabwe" icon_src="country_zw"
 
-36.0 83.0 type=poi_customc label="Artic Ocean"
--147.0 78.0 type=poi_customc label="Artic Ocean"
+24.0 82.0 type=poi_customc label="Artic Ocean"
+-156.0 82.0 type=poi_customc label="Artic Ocean"
+142.0 82.0 type=poi_customc label="Artic Ocean"
 -164.5 33.2 type=poi_customc label="North Pacific Ocean"
 149.0 31.0 type=poi_customc label="North Pacific Ocean"
 -147.3 -26.9 type=poi_customc label="South Pacific Ocean"
@@ -310,9 +290,10 @@
 72.8 -19.0 type=poi_customc label="Indian Ocean"
 -26.0 -26.6 type=poi_customc label="South Atlantic Ocean"
 -50.0 38.7 type=poi_customc label="North Atlantic Ocean"
-
+14.0 43.0 type=poi_customc label="Adriatic Sea"
 61.4 11.8 type=poi_customc label="Arabian Sea"
 135.0 -9.0 type=poi_customc label="Arufa Sea"
+1.0 40.0 type=poi_customc label="Balearic Sea"
 18.5 58.5 type=poi_customc label="Baltic Sea"
 31.0 75.0 type=poi_customc label="Barents Sea"
 -176.0 55.0 type=poi_customc label="Bering Sea"
@@ -337,13 +318,17 @@
 112.0 16.2 type=poi_customc label="South China Sea"
 158.0 -41.0 type=poi_customc label="Tasman Sea"
 126.0 -11.3 type=poi_customc label="Timor Sea"
-
+10.5 40.0 type=poi_customc label="Tyrrhenian Sea"
 84.2 13.4 type=poi_customc label="Bay of Bengal"
+-5.5.2 44.5 type=poi_customc label="Bay of Biscay"
 -71.0 74.0 type=poi_customc label="Buffin Bay"
 -87.5 59.7 type=poi_customc label="Hudson Bay"
 50.0 27.5 type=poi_customc label="Persian Gulf"
 -93.0 25.0 type=poi_customc label="Gulf of Mexiko"
 47.0 12.6 type=poi_customc label="Gulf of Aden"
+-145.0 58.5 type=poi_customc label="Gulf of Alaska"
+1.7 3.7 type=poi_customc label="Gulf of Guinea"
+18.7 62.0 type=poi_customc label="Gulf of Bothnia"
 
 type=image label=$NAVIT_USER_DATADIR/maske/worldimage.png
 -180.0 85.0511
