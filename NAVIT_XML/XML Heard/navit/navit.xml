@@ -12,9 +12,6 @@
 
 	<mapset>
 	<map type="binfile" active="yes" data="/mnt/extSdCard/navit/austria.bin" />
-	<map type="binfile" enabled="yes" active="no" data="/mnt/extSdCard/navit/Asien.bin" />
-	<map type="binfile" enabled="yes" active="no" data="/mnt/extSdCard/navit/nord.bin" />
-	<map type="binfile" enabled="yes" active="no" data="/mnt/extSdCard/navit/süd.bin" />
 	<map type="binfile" enabled="yes" active="no" data="/mnt/extSdCard/navit/Deutschland.bin" />
 	<map type="textfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/txt/worldimage.txt" />
 	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt" />
@@ -27,11 +24,11 @@
 	</vehicle>
 	<!-- <vehicle name="Demo" profilename="car" enabled="no" active="yes" source="demo://" speed="80" /> -->
 
-	<gui type="internal" menu_on_map_click="0" background_color="#FFCC33" background_color2="#CC9311" text_background="#FFCC33" text_color="#002050" font_size="900" icon_xs="128" icon_s="128" icon_l="128" spacing="6"><![CDATA[
+	<gui type="internal" menu_on_map_click="0" background_color="#FFDDFF" background_color2="#FF80FF" text_background="#400040" text_color="#002772" font_size="900" icon_xs="128" icon_s="128" icon_l="160" spacing="6"><![CDATA[
 <html>
-<a name='Main Menu'><text>  H A U P T M E N Ü</text>
-	<img cond='navit.speech.active==0' src='gui_stop' onclick='navit.speech.active=1;navit.say("Sprache ein");back_to_map()'><text>   Sprache   </text></img>
-	<img cond='navit.speech.active!=0' src='gui_active' onclick='navit.speech.active=0;back_to_map()'><text>   Sprache   </text></img>
+<a name='Main Menu'><text>H A U P T M E N Ü</text>
+	<img cond='navit.speech.active==0' src='gui_stop' onclick='navit.speech.active=1;navit.say("Sprache an");back_to_map()'><text>Sprache</text></img>
+	<img cond='navit.speech.active!=0' src='gui_active' onclick='navit.speech.active=0;back_to_map()'><text>Sprache</text></img>
 	<img src='gui_town' onclick='town()'><text>ZIEL eingeben</text></img>
 	<img src='gui_vehicle' onclick='navit.layout_name="MOTORIST";navit.set_int_var("verkehr",0);redraw_map();navit.say("wähle Profil");setting_vehicle()'><text>Autofahrer</text></img>
 	<img src='gui_bookmark' onclick='bookmarks()'><text>Lesezeichen</text></img>
@@ -62,10 +59,10 @@
 	<img cond='navit.autozoom_active==0' src='gui_stop' onclick='navit.say("autozoom aktiv");navit.autozoom_active=1;back_to_map()'><text>Autozoom</text></img>
 	<img cond='navit.autozoom_active!=0' src='gui_zoom_in' onclick='navit.say("autozoom aus");navit.autozoom_active=0;back_to_map()'><text>Autozoom</text></img>
 	<img src='gui_settings' onclick='navit.say("Regeln vorgeben");setting_rules()'><text>Regeln setzen</text></img>
-	<img cond='navit.osd_configuration==1' src='gui_stop' onclick='navit.say("aktiv nach klick auf das Feld");navit.odometer_reset("odo_reset");navit.osd_configuration=2;redraw_map();back_to_map()'><text>     Statistik</text></img>
-	<img cond='navit.osd_configuration==2' src='gui_log' onclick='navit.say("ist aus");navit.osd_configuration=1;refresh()'><text>     Statistik</text></img>
-	<img cond='fullscreen==0' src='gui_fullscreen' onclick='navit.say("Vollbild");fullscreen=1;refresh()'><text>    Vollbild</text></img>
-	<img cond='fullscreen==1' src='gui_leave_fullscreen' onclick='navit.say("Statuszeile oben sichtbar");fullscreen=0;refresh()'><text> Fensterbild</text></img>
+	<img cond='navit.osd_configuration==1' src='gui_stop' onclick='navit.say("aktiv nach klick auf das Feld");navit.odometer_reset("odo_reset");navit.osd_configuration=2;redraw_map();back_to_map()'><text>Statistik</text></img>
+	<img cond='navit.osd_configuration==2' src='gui_log' onclick='navit.say("ist aus");navit.osd_configuration=1;refresh()'><text>Statistik</text></img>
+	<img cond='fullscreen==0' src='gui_fullscreen' onclick='navit.say("Vollbild");fullscreen=1'><text>Vollbild</text></img>
+	<img cond='fullscreen==1' src='gui_leave_fullscreen' onclick='navit.say("Statuszeile oben sichtbar");fullscreen=0'><text>Fensterbild</text></img>
 	<img src='gui_display' onclick='setting_layout()'><text>Layout</text></img>
 	<img src='cursor' onclick='navit.layout_name="MOTORIST_1";navit.set_int_var("verkehr",0);redraw_map();back_to_map()'><text>Cursor1</text></img>
 	<img src='gui_vehicle' onclick='navit.layout_name="DARKGLOW";navit.set_int_var("verkehr",0);redraw_map();back_to_map()'><text>Nachtansicht</text></img>
@@ -149,34 +146,37 @@
 
 	<osd x="-1" y="-1" w="1" h="1" type="cmd_interface" update_period="1" command='follow&gt;1 || zoom>64?(tracking=0,pitch=0,orientation=0):(get_int_var("verkehr")==1?(tracking=0,pitch=0,orientation=-1):(tracking=1,pitch=10,orientation=-1))' />
 	<osd x="0" y="-1860" type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1080_480.png" command="" enable_expression="tracking==1" />
-	<osd x="0" y="0" w="1260" h="60" font_size="750" type="text" label='${navit.messages}' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="5" text_color="#00FF00" />
-	<osd x="0" y="60" w="1260" h="70" font_size="950" type="text" label='${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}'
-	enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="6" text_color="#00FF00" />
-	<osd x="0" y="340" w="210" h="80" font_size="1300" type="text" label='${navigation.item[1].length[value]}' enable_expression="navigation.nav_status&gt;=3" background_color="#FFFFFFAA" align="0" text_color="#0000FF" />
-	<osd x="-160" y="0" w="160" h="140" font_size="650" type="text" label='[TOWN] \n' command='say("m");toggle_layer("labels_bevore")' background_color="#FFFFFF00" align="0" text_color="#902080" />
-	<osd x="0" y="0" w="160" h="140" font_size="650" type="text" label='[POI]\n' command='gui.menu("#POI_Icons")' background_color="#FFFFFF00" align="0" text_color="#902080" />
-	<osd x="0" y="-450" w="230" h="230" font_size="750" type="text" label='CENTER\nCURSOR' command='follow=0;zoom=4;set_center_cursor()' enable_expression="follow&gt;1" background_color="#56FF00BB" align="4" text_color="#000000" />
-	<osd x="0" y="-450" w="230" h="230" font_size="1300" type="speed_warner" label='images' speed_exceed_limit_offset="5" speed_exceed_limit_percent="10" announce_on="1" enable_expression="navigation.nav_status&gt;=3" background_color="#FFFFFF90" />
-	<osd x="0" y="-220" w="230" h="100" font_size="1700" type="text" label="${vehicle.position_speed[value]}" enable_expression="navigation.nav_status&gt;=3" background_color="#0000FF90" align="0" text_color="#FF9900" />
-	<osd x="0" y="-120" w="230" h="60" font_size="840" type="text" label='${navigation.item.destination_length[named]} ' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="8" text_color="#00FF00" />
-	<osd x="0" y="-60" w="230" h="60" font_size="840" type="text" label=' t~ ${navigation.item.destination_time[remaining]}' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="0" text_color="#00FF00" />
-	<osd x="225" y="-65" w="1040" h="60" font_size="1000" type="text" label='${navigation.item.street_name_systematic} ${navigation.item.street_name}' enable_expression="navigation.nav_status&gt;=3" background_color="#FFFFFFBB" align="4" text_color="#0000FF" />
+	<osd x="0" y="0" w="1370" h="60" font_size="700" type="text" label='${navit.messages}' enable_expression="navigation.nav_status&gt;=3" background_color="#FFAAFFDD" align="5" text_color="#000000" />
+	<osd x="0" y="60" w="1370" h="80" font_size="1000" type="text" label='${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}'
+	enable_expression="navigation.nav_status&gt;=3" background_color="#0022CC" align="6" text_color="#FFFFFF" />
+	<osd x="0" y="137" w="250" h="100" font_size="1300" type="text" label="${navigation.item[1].length[value]}" enable_expression="navigation.nav_status&gt;=3" background_color="#FFFFFF" align="0" text_color="#000099" />
+	<osd x="-160" y="0" w="160" h="140" font_size="650" type="text" label='[TOWN] \n' command='say("m");toggle_layer("labels_bevore")' background_color="#FFFFFF00" align="0" text_color="#FFAAFF" />
+	<osd x="0" y="0" w="160" h="140" font_size="650" type="text" label='[POI]\n' command='gui.menu("#POI_Icons")' background_color="#FFFFFF00" align="0" text_color="#FFAAFF" />
+	<osd x="0" y="-415" w="250" h="250" font_size="750" type="text" label='CENTER\nCURSOR' command='follow=0;zoom=4;set_center_cursor()' enable_expression="follow&gt;1" background_color="#56FF00BB" align="4" text_color="#000000" />
+	<osd x="5" y="-415" w="250" h="250" font_size="1400" type="speed_warner" label='images' speed_exceed_limit_offset="5" speed_exceed_limit_percent="10" announce_on="1" enable_expression="navigation.nav_status&gt;=3"	background_color="#FFFFFFBB" idle_color="#FF0000" />
+	<osd x="0" y="-125" w="250" h="125" font_size="1800" type="text" label="${vehicle.position_speed[value]}" enable_expression="navigation.nav_status&gt;=3"	background_color="#FFAAFF" align="0" text_color="#400040"/>
+	<osd x="0" y="-165" w="125" h="40" font_size="600" type="text" label="km/h" enable_expression="navigation.nav_status&gt;=3" background_color="#FFAAFF" align="0" text_color="#400040" />
+	<osd x="-240" y="-490" w="240" h="60" font_size="850" type="text" label="${navigation.item.destination_length[named]}" enable_expression="navigation.nav_status&gt;=3" background_color="#FFFF00BB" align="3" text_color="#000000" />
+	<osd x="-240" y="-552" w="240" h="60" font_size="940" type="text" label="t~ ${navigation.item.destination_time[remaining]}" enable_expression="navigation.nav_status&gt;=3" background_color="#FFFF00BB" align="4" text_color="#000000" />
+	<osd x="240" y="-70" w="1141" h="70" font_size="900" type="text" label='${navigation.item.street_name_systematic} ${navigation.item.street_name}' enable_expression="navigation.nav_status&gt;=3" background_color="#0022CC" align="4" text_color="#FFFFFF" />
 	<osd x="476" y="820" w="128" h="192" type="navigation_status" icon_src="%s_wh_128_192.png" enable_expression="navigation.nav_status==-1||navigation.nav_status==1||navigation.nav_status==2" />
-	<osd x="0" y="130" w="210" h="210" type="navigation_next_turn" icon_src="%s_wh_210_210.png" command='say("route");tracking=0;pitch=0;follow=80000;zoom_to_route()' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" />
+	<osd x="16" y="250" w="220" h="220" type="navigation_next_turn" icon_src="%s_bk_220_220.png" background_color="#00000000" />
+	<osd x="0" y="240" w="250" h="250" type="navigation_next_turn" icon_src="$NAVIT_USER_DATADIR/Heard/lo.png" command='say("route");tracking=0;pitch=0;follow=80000;zoom_to_route()' enable_expression="navigation.nav_status&gt;=3" background_color="#FFAAFFBB" />
 	<osd x="0" y="-140" w="160" h="140" font_size="650" type="text" label='\n[LAYER]' command='say("l");get_int_var("verkehr")==1
-	?(layout_name="PAX_no_select",gui.menu("#b_b")):(toggle_layer("poly_1"),toggle_layer("poly_2"),toggle_layer("wayside"),toggle_layer("line_1"))' background_color="#FFFFFF00" align="0" text_color="#902080" />
-	<osd x="270" y="-180"	type="button" src="$NAVIT_USER_DATADIR/maske/zp_180_180.png" command='zoom_in()' />
-	<osd x="-440" y="-180"	type="button" src="$NAVIT_USER_DATADIR/maske/zm_180_180.png" command='zoom_out()' />
-	<osd x="-190" y="-190"	type="button" src="gui_menu_128_128.png" command='gui.menu(1)' />
-	<osd x="-210" y="-450" w="210" h="260" font_size="750" type="compass" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" />
-	<osd x="-210" y="-195" w="210" h="50" font_size="750" type="text" label='${vehicle.position_height}NN' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="0" text_color="#FFFFFF" />
-	<osd x="-635" y="-190" w="200" h="120" font_size="800" type="scale" background_color="#C4C4C4DD" />
-	<osd x="0" y="-510" w="270" h="70" font_size="1200" type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" text_color="#E5E5E5" />
-	<osd x="250" y="150" w="800" h="110" font_size="840" type="text" label='${vehicle.position_coord_geo[pos_deg]}\nNord: ${vehicle.position_direction} °' background_color="#00000000" align="4" text_color="#002FFF" osd_configuration="2" />
-	<osd x="-340" y="220" w="340" h="200" font_size="750" type="odometer" label='${max_spd}km/h -Max&#10;${avg_spd}km/h ~Spd&#10;${distance} -Dst&#10;${time} Time' name="odo_reset" background_color="#00000090" idle_color="#FF9900" text_color="#E5E5E5" autostart="0" osd_configuration="2" />
+	?(layout_name="PAX_no_select",gui.menu("#b_b")):(toggle_layer("poly_1"),toggle_layer("poly_2"),toggle_layer("wayside"),toggle_layer("line_1")' background_color="#FFFFFF00" align="0" text_color="#FFAAFF" />
+	<osd x="270" y="-180" type="button" src="$NAVIT_USER_DATADIR/Heard/z_p_180_180.png" command="zoom_in()" />
+	<osd x="-450" y="-180" type="button" src="$NAVIT_USER_DATADIR/Heard/z_m_180_180.png" command="zoom_out()" />
+	<osd x="-180" y="-180" type="button" src="$NAVIT_USER_DATADIR/Heard/menue_180_180.png" command='gui.menu(1)' />
+	<osd x="-265" y="-445" w="265" h="340" font_size="900" type="compass" enable_expression="navigation.nav_status&gt;=3" background_color="#00000000" />
+	<osd x="-240" y="-428" type="button" src="$NAVIT_USER_DATADIR/Heard/ru_240_300.png" command="" enable_expression="navigation.nav_status&gt;=3" />
+	<osd x="-240" y="-130" w="240" h="58" font_size="800" type="text" label="${vehicle.position_height} NN" enable_expression="navigation.nav_status&gt;=3" background_color="#00AAFFBB" align="0" text_color="#620080" />
+	<osd x="-650" y="-190" w="200" h="120" font_size="800" type="scale" background_color="#FBB8DBCC" />
+	<osd x="0" y="-485" w="300" h="70" font_size="1200" type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" text_color="#E5E5E5" />
+	<osd x="260" y="150" w="800" h="120" font_size="840" type="text" label='${vehicle.position_coord_geo[pos_deg]}\nNord: ${vehicle.position_direction} °' background_color="#00000000" align="4" text_color="#002FFF" osd_configuration="2" />
+	<osd x="-340" y="220" w="340" h="200" font_size="750" type="odometer" label='${max_spd}km/h -Max&#10;${avg_spd}km/h ~Spd&#10;${distance} -Dst&#10;${time} Time' name="odo_reset" background_color="#FFAAFFDD" idle_color="#0000FF" text_color="#400040" autostart="0" osd_configuration="2" />
 
 	<tracking cdf_histsize="2" />
-	<vehicleprofile name="car" route_depth="4:16%,6:1%,8:60000,18:12%,18:10000" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="5" static_distance="15">
+	<vehicleprofile name="car" route_depth="4:18%,6:2%,8:60000,18:12%,18:10000" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="5" static_distance="15">
 	<roadprofile item_types="street_parking_lane" speed="10" route_weight="5" />
 	<roadprofile item_types="track_unpaved" speed="15" route_weight="5" />
 	<roadprofile item_types="track_gravelled" speed="20" route_weight="10" />
@@ -195,7 +195,7 @@
 	<roadprofile item_types="street_4_land" speed="80" route_weight="90" />
 	<roadprofile item_types="street_n_lanes" speed="90" route_weight="100" />
 	<roadprofile item_types="highway_land" speed="100" route_weight="120" />
-	<roadprofile item_types="ramp" speed="40" route_weight="80" />
+	<roadprofile item_types="ramp" speed="40" route_weight="60" />
 	<roadprofile item_types="roundabout" speed="30" route_weight="30" />
 	<roadprofile item_types="ferry" speed="10" route_weight="20" />
 	</vehicleprofile>
@@ -801,7 +801,7 @@
 	<itemgra item_types="tec_common" order="15-16">	<icon src="tec_common" w="96" h="96" x="48" y="48" />	<circle text_size="28" color="#FF0000" />	</itemgra>
 	<itemgra item_types="tec_common" order="17-">	<icon src="tec_common" w="128" h="128" x="64" y="64" />	<circle text_size="38" color="#FF0000" />	</itemgra>
 	</layer>
-	<!-- Strassendetail.txt: (poi_tunnel= #icon_src="tunnel_(N,O,S,W)";Unterführung + poi_toll_booth=Maut + custom5=Rastplatz Autobahn
+	<!-- Strassendetail.txt: (poi_tunnel= #icon_src="tunnel_(N,O,S,W)";Unterführung + poi_toll_booth=Maut + custom5=Rastplatz Autobahn +
 							  poi_custom3= #icon_src="pass" #icon_src="sattel" #icon_src="kamm" #icon_src="hochtal(&Schlucht)" #icon_src="gipfel(-Straße)) -->
 	<layer name="POI_Icons_full">
 	<itemgra item_types="poly_archaeological_site" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/archaeologie" w="32" h="32" x="16" y="16" />	</itemgra>
@@ -971,7 +971,7 @@
 	<itemgra item_types="poi_customd" order="5-6">	<circle text_size="36" color="#008CC8" background_color="#40CCFF" />	</itemgra>
 	<itemgra item_types="poi_customd" order="7-8">	<circle text_size="46" color="#008CC8" background_color="#40CCFF" />	</itemgra>
 	</layer>
-	<!-- worldimage.txt: image=worldimage.png + poi_customc=Navit Flaggen + poi_customd=Text Sea -->
+	<!-- worldimage.txt: image= worldimage.png + poi_customc= Navit Flaggen + poi_customd= Text Sea -->
 	<layer name="poly_1">
 	<itemgra item_types="poly_fell" order="11-">		<polygon color="#959995AA" />	</itemgra>
 	<itemgra item_types="poly_glacier" order="11-16">	<polygon color="#EFFFFF" />	<polyline color="#A4A8A4" width="2" />	</itemgra>
@@ -1361,10 +1361,10 @@
 	<itemgra item_types="poly_street_3" order="12-14">	<polygon color="#D9AD00CC" />	</itemgra>
 	<itemgra item_types="poly_street_3" order="15-16">	<polyline color="#999BBB" width="8" />	<polygon color="#D9AD00CC" />	</itemgra>
 	<itemgra item_types="poly_street_3" order="17-">	<polyline color="#999BBB" width="12" />	<polygon color="#D9AD00CC" />	<text text_size="28" background_color="#5154AA" />	</itemgra>
-	<itemgra item_types="street_n_lanes" order="6">		<polyline color="#668866" width="6" />	</itemgra>
-	<itemgra item_types="street_n_lanes" order="7-8">	<polyline color="#668866" width="8" />	</itemgra>
-	<itemgra item_types="street_n_lanes" order="9-10">	<polyline color="#668866" width="12" />	</itemgra>
-	<itemgra item_types="street_n_lanes" order="11-12">	<polyline color="#668866" width="14" />	</itemgra>
+	<itemgra item_types="street_n_lanes" order="6">		<polyline color="#12BB12" width="6" />	</itemgra>
+	<itemgra item_types="street_n_lanes" order="7-8">	<polyline color="#12BB12" width="8" />	</itemgra>
+	<itemgra item_types="street_n_lanes" order="9-10">	<polyline color="#12BB12" width="12" />	</itemgra>
+	<itemgra item_types="street_n_lanes" order="11-12">	<polyline color="#12BB12" width="14" />	</itemgra>
 	<itemgra item_types="street_n_lanes" order="13">	<polyline color="#8888AA" width="16" />		<text text_size="10" color="#FFFFFF" background_color="#00CC44" />	</itemgra>
 	<itemgra item_types="street_n_lanes" order="14">	<polyline color="#8888AA" width="18" />		<text text_size="18" color="#FFFFFF" background_color="#00CC44" />	</itemgra>
 	<itemgra item_types="street_n_lanes" order="15">	<polyline color="#8888AA" width="22" />		<polyline color="#FFFFFF" width="1" dash="28" />	<text text_size="24" color="#FFFFFF" background_color="#00CC44" />	</itemgra>
@@ -1433,11 +1433,11 @@
 	<itemgra item_types="ramp" order="16">	<polyline color="#8080AA" width="20" />	<text text_size="10" color="#E0E0E0" />	</itemgra>
 	<itemgra item_types="ramp" order="17">	<polyline color="#8080AA" width="42" />	<text text_size="18" color="#E0E0E0" />	</itemgra>
 	<itemgra item_types="ramp" order="18-">	<polyline color="#8080AA" width="84" />	<text text_size="32" color="#E0E0E0" />	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="5">	<polyline color="#5555AA" width="2" />	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="6">	<polyline color="#6666AA" width="6" />	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="7-8">	<polyline color="#7777AA" width="8" />	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="9-10">	<polyline color="#7777AA" width="12" />	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="11-12">	<polyline color="#7777AA" width="14" />	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="5">	<polyline color="#8080BB" width="2" />	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="6">	<polyline color="#8080BB" width="6" />	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="7-8">	<polyline color="#8080BB" width="8" />	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="9-10">	<polyline color="#8080BB" width="12" />	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="11-12">	<polyline color="#8080BB" width="14" />	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="13">		<polyline color="#777788" width="16" />	<text text_size="10" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="14">		<polyline color="#777788" width="18" />	<polyline color="#FFFFFF" width="1" dash="20" />	<text text_size="18" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="15">		<polyline color="#777788" width="24" />	<polyline color="#FFFFFF" width="1" dash="30" />	<text text_size="24" color="#FFFFFF" />	</itemgra>
@@ -1509,9 +1509,9 @@
 	<itemgra item_types="street_2_land,street_2_city" order="16">	<polyline color="#BCBCDE" width="28" />		<polyline color="#FFFFFF" width="1" dash="30" />	<text text_size="22" color="#700033" background_color="#590029" />	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="17">	<polyline color="#BCBCDE" width="56" />		<polyline color="#FFFFFF" width="1" dash="40" />	<text text_size="34" color="#700033" background_color="#590029" />	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="18-">	<polyline color="#BCBCDE" width="114" />	<polyline color="#FFFFFF" width="1" dash="50" />	<text text_size="48" color="#700033" background_color="#590029" />	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="9">	<polyline color="#8800DD" width="4" />	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="10">	<polyline color="#8800DD" width="6" />	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="11-12">	<polyline color="#8800DD" width="8" />	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="9">	<polyline color="#992699" width="4" />	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="10">	<polyline color="#992699" width="6" />	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="11-12">	<polyline color="#992699" width="8" />	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="13">	<polyline color="#9191AA" width="12" />		<text text_size="6" color="#5000DD" background_color="#300088" />	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="14">	<polyline color="#9191AA" width="16" />		<text text_size="10" color="#5000DD" background_color="#300088" />	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="15">	<polyline color="#9191AA" width="20" />		<polyline color="#FFFFFF" width="1" dash="30" />	<text text_size="18" color="#5000DD" background_color="#300088" />	</itemgra>
@@ -1655,7 +1655,8 @@
 	</layer>
 	<layer name="up_street">
 	<itemgra item_types="street_route" order="14-15">	<polyline color="#00FF00" width="6" />	</itemgra>
-	<itemgra item_types="street_route" order="16-">		<polyline color="#00FF00" width="14" />	</itemgra>
+	<itemgra item_types="street_route" order="16">		<polyline color="#00FF00" width="8" />	</itemgra>
+	<itemgra item_types="street_route" order="17-">		<polyline color="#00FF00" width="14" />	</itemgra>
 	</layer>
 	<layer name="under_street">
 	<itemgra item_types="street_route" order="14-15">	<polyline color="#00FF00" width="90" />	</itemgra>
@@ -1679,10 +1680,10 @@
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="48" h="48" x="24" y="24" />	<circle text_size="34" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="64" h="64" x="32" y="32" />	<circle text_size="42" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
 	<itemgra item_types="bookmark" order="17-">		<icon src="cursor_still" w="96" h="96" x="48" y="48" />	<circle text_size="48" color="#BD00BD" background_color="#BD00BD" />	</itemgra>
-	<itemgra item_types="waypoint" order="3-5">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="48" h="48" x="24" y="48" />	<circle text_size="32" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="waypoint" order="6-10">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="96" h="96" x="48" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="128" h="128" x="64" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
-	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="192" h="192" x="96" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="3-5">		<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="48" h="48" x="24" y="48" />	<circle text_size="32" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="6-10">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="96" h="96" x="48" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="11-16">	<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="128" h="128" x="64" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
+	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/Heard/nav_destination" w="192" h="192" x="96" y="192" />	<circle text_size="98" color="#0000FF" background_color="#00FFFF" />	</itemgra>
 	<itemgra item_types="route_end" order="3-5">	<icon src="flag_bl_wh" w="48" h="48" x="8" y="48" />	<circle text_size="32" color="#0000FF" background_color="#00FFFF" />	</itemgra>
 	<itemgra item_types="route_end" order="6-12">	<icon src="flag_bl_wh" w="96" h="96" x="8" y="96" />	<circle text_size="52" color="#0000FF" background_color="#00FFFF" />	</itemgra>
 	<itemgra item_types="route_end" order="13-17">	<icon src="flag_bl_wh" w="128" h="128" x="16" y="128" />	<circle text_size="70" color="#0000FF" background_color="#00FFFF" />	</itemgra>
@@ -1806,13 +1807,14 @@
 	</layer>
 	<!-- Ende Universelle Layer -->
 
-	<layout name="MOTORIST" nightlayout="DARKGLOW" color="#EEFFEE">
-	<cursor w="154" h="150" interval="10000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_aa" w="96" h="116" x="32" y="58" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="80" h="98" x="24" y="49" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_aa" w="80" h="98" x="24" y="49" />	</itemgra>
+	<layout name="MOTORIST" nightlayout="DARKGLOW" color="#FFFFFF">
+	<cursor w="190" h="190" interval="30000" sequence_range="-1">
+	<itemgra sequence_range="0" speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s1" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="154" h="141" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s1" w="134" h="123" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_s0" w="134" h="123" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -1848,7 +1850,7 @@
 	<layer name="labels" ref="labels" />
 	</layout>
 
-	<layout name="MOTORIST_1" nightlayout="DARKGLOW" color="#EEFFEE">
+	<layout name="MOTORIST_1" nightlayout="DARKGLOW" color="#FFFFFF">
 	<cursor w="154" h="150">
 	<itemgra speed_range="-2">
 		<polyline color="#0055BB" radius="0" width="12">	<coord x="0" y="0" />	</polyline>
@@ -1899,10 +1901,10 @@
 	</layout>
 
 	<layout name="WALKER_no_select" color="#F0F0CC">
-	<cursor w="154" h="150" interval="30000" sequence_range="-1">
-	<itemgra speed_range="-1">		<icon src="$NAVIT_USER_DATADIR/maske/cursor_w" w="96" h="140" x="48" y="70" />	</itemgra>
-	<itemgra sequence_range="0">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w0" w="96" h="140" x="48" y="70" />	</itemgra>
-	<itemgra sequence_range="1">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w1" w="96" h="140" x="48" y="70" />	</itemgra>
+	<cursor w="190" h="190" interval="30000" sequence_range="-1">
+	<itemgra speed_range="-1">		<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w" w="96" h="140" x="48" y="70" />	</itemgra>
+	<itemgra sequence_range="0">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w0" w="96" h="140" x="48" y="70" />	</itemgra>
+	<itemgra sequence_range="1">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_w1" w="96" h="140" x="48" y="70" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -1939,7 +1941,7 @@
 	<layer name="labels" ref="labels" />
 	</layout>
 
-	<layout name="PAX_no_select" color="#FFEEDD" order_delta="2">
+	<layout name="PAX_no_select" color="#FFDFBF" order_delta="2">
 	<cursor w="154" h="150">
 	<itemgra speed_range="-2">
 	<polyline color="#00BC00" radius="0" width="12">	<coord x="0" y="0" />	</polyline>
@@ -2456,10 +2458,10 @@
 	</layout>
 
 	<layout name="CYCLIST" color="#D0F0D0">
-	<cursor w="154" h="150" interval="10000" sequence_range="-1">
-	<itemgra speed_range="-2">						<icon src="$NAVIT_USER_DATADIR/maske/cursor_b" w="94" h="136" x="47" y="68" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b0" w="94" h="136" x="47" y="68" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b1" w="94" h="136" x="47" y="68" />	</itemgra>
+	<cursor w="190" h="190" interval="10000" sequence_range="-1">
+	<itemgra speed_range="-2">						<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b" w="106" h="150" x="54" y="68" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b0" w="94" h="150" x="46" y="68" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_b1" w="94" h="150" x="46" y="68" />	</itemgra>
 	</cursor>
 	<layer name="poly" ref="poly" />
 	<layer name="poly_1" ref="poly_1" active="1" />
@@ -2495,12 +2497,12 @@
 	</layout>
 
 	<layout name="DARKGLOW" color="#191919" daylayout="MOTORIST">
-	<cursor w="154" h="150" interval="20000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="82" h="150" x="28" y="74" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="71" h="130" x="20" y="54" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="71" h="130" x="20" y="54" />	</itemgra>
+	<cursor w="190" h="190" interval="20000" sequence_range="-1">
+	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l" w="140" h="150" x="28" y="74" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l0" w="140" h="150" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l1" w="140" h="150" />	</itemgra>
+	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l0" w="121" h="130" />	</itemgra>
+	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/Heard/cursor_l1" w="121" h="130" />	</itemgra>
 	</cursor>
 	<layer name="poly_1" active="1">
 	<itemgra item_types="image" order="-11">	<image/>	</itemgra>
