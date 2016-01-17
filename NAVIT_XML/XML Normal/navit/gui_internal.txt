@@ -1,0 +1,2 @@
+navit.layout=navit.layout[@name=="MOTORIST"];
+navit.vehicle[@name="Local GPS"].profilename="car";
