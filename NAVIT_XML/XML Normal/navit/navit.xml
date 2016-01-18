@@ -12,7 +12,6 @@
 
 	<mapset>
 	<map type="binfile" active="yes" data="/mnt/extSdCard/navit/austria.bin"/>
-	<map type="binfile" active="yes" data="/sdcard/navit/*.bin"/>
 	<map type="binfile" active="no" data="/mnt/extSdCard/navit/Deutschland.bin"/>
 	<map type="textfile" active="no" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt"/>
 	<map type="textfile" active="no" data="$NAVIT_USER_DATADIR/txt/Wien Park_ride_ticket.txt"/>
@@ -976,7 +975,6 @@
 	<itemgra item_types="poly_town" order="15-">		<polygon color="#C0CCC0"/></itemgra>
 	<itemgra item_types="poly_water" order="12-">		<polygon color="#77CCEE"/></itemgra>
 	</layer>
-
 	<layer name="poly_1">
 	<itemgra item_types="poly_fell" order="11-">		<polygon color="#959995AA"/></itemgra>
 	<itemgra item_types="poly_glacier" order="11-16">	<polygon color="#EFFFFF"/>	<polyline color="#A4A8A4" width="2"/></itemgra>
@@ -1430,8 +1428,7 @@
 	<itemgra item_types="track_paved" order="18-">	<polyline color="#CCDDEE" width="74"/>	<text text_size="42" color="#008778" background_color="#000000"/></itemgra>
 	</layer>
 	<layer name="highway_1">
-	<itemgra item_types="ramp" order="9-10">	<polyline color="#8080AA" width="4"/></itemgra>
-	<itemgra item_types="ramp" order="11-12">	<polyline color="#8080AA" width="4"/></itemgra>
+	<itemgra item_types="ramp" order="9-12">	<polyline color="#8080AA" width="4"/></itemgra>
 	<itemgra item_types="ramp" order="13">	<polyline color="#8080AA" width="6"/></itemgra>
 	<itemgra item_types="ramp" order="14">	<polyline color="#8080AA" width="8"/></itemgra>
 	<itemgra item_types="ramp" order="15">	<polyline color="#8080AA" width="12"/></itemgra>
