@@ -7,7 +7,7 @@
 -0.12462 51.5007 type=poi_customb label="Big Ben" icon_src="bigben"
 13.3777 52.5163 type=poi_customb label="Brandenburg Gate" icon_src="brandenburger"
 17.1001 48.1422 type=poi_customb label="Bratislava Castle" icon_src="hrad"
-55.2742 25.1975 type=poi_customb label="Burj Khalifa" icon_src="burjkhalifa"
+55.27415 25.19745 type=poi_customb label="Burj Khalifa" icon_src="burjkhalifa"
 14.4114 50.0865 type=poi_customb label="Charles Bridge" icon_src="most_prag"
 -88.5685 20.683 type=poi_customb label="Chichén Itzá" icon_src="chichen"
 115.2332 40.7931 type=poi_customb label="China Wall" icon_src="bigwall"

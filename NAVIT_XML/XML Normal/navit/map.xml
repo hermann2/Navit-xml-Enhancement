@@ -1,0 +1,21 @@
+<mapset enabled="yes">
+	<map type="binfile" active="yes" data="/mnt/extSdCard/navit/austria.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/Asien.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/afrika.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/alaska.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/atlantik.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/Dänemark.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/Kanada.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/Mittelmeer.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/nord.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/süd.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/west.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/west1.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/world2.bin" />
+	<map type="binfile" active="no" data="/mnt/extSdCard/navit/Deutschland.bin" />
+	<map type="textfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/txt/worldimage.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/Wien Park_ride_ticket.txt" />
+	<map type="csv" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/speedcam.txt" item_type="tec_common" attr_types="position_longitude,position_latitude,tec_type,maxspeed,tec_dirtype,tec_direction" />
+</mapset>
+
