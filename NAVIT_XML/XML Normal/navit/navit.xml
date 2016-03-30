@@ -19,7 +19,7 @@ navit.say("Sprache an");
 							back_to_map()'>
 <text>Sprache</text>		</img>	<img cond='navit.speech.active!=0' src='gui_sound' onclick='navit.speech.active=0;back_to_map()'>
 <text>Sprache</text>		</img>	<img src='gui_town' onclick='town()'>
-<text>ZIEL eingeben</text>	</img>	<img src='gui_map' onclick='setting_maps()'>	<text>Maps</text>	</img>	<img src='gui_bookmark' onclick='bookmarks()'><text>Bookmarks</text>	</img>	<a href='#Fahrzeug'><img src='gui_home'>
+<text>ZIEL eingeben</text>	</img>	<img src='gui_map' onclick='setting_maps()'><text>Maps</text>	</img>	<img src='gui_bookmark' onclick='bookmarks()'><text>Bookmarks</text></img>	<a href='#Fahrzeug'><img src='gui_home'>
 <text>[ FAHRZEUGE ]</text>	</img></a>	<img src='gui_actions' onclick='setting_vehicle()'>
 <text>PROFIL ändern</text>	</img>	<a href='#Route'><img src='$NAVIT_USER_DATADIR/maske/tool'>
 <text>[ ROUTE-DATEN ]</text></img></a>	<a href='#Settings'><img src='$NAVIT_USER_DATADIR/maske/setting'>
@@ -36,33 +36,33 @@ navit.say("navigieren beendet");
 <text>Car</text>			</img>
 							<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car&quot;)'
 							src='$NAVIT_USER_DATADIR/maske/cursor_a'
-							onclick='navit.vehicle[@name="Local GPS"].profilename="car";menu("#osd_setting");menu("#POI_0");back_to_map()'>
+							onclick='navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>Car</text>			</img>
 							<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]'
 							src='$NAVIT_USER_DATADIR/maske/cursor_a'
-							onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car";menu("#osd_setting");menu("#POI_0");back_to_map()'>
+							onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>Car</text>			</img>
 							<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car_shortest&quot;)'
 							src='gui_active'	onclick='back_to_map()'>
 <text>Kurzstrecke</text>	</img>
 							<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car_shortest&quot;)'
 							src='$NAVIT_USER_DATADIR/maske/Kurz'
-							onclick='navit.vehicle[@name="Local GPS"].profilename="car_shortest";menu("#osd_setting");menu("#POI_0");back_to_map()'>
+							onclick='navit.vehicle[@name="Local GPS"].profilename="car_shortest";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_shortest;menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>Kurzstrecke</text>	</img>
 							<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]'
 							src='$NAVIT_USER_DATADIR/maske/Kurz'
-							onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car_shortest";menu("#osd_setting");menu("#POI_0");back_to_map()'>
+							onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car_shortest";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_shortest;menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>Kurzstrecke</text>	</img>
 							<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car_avoid_tolls&quot;)'
 							src='gui_active'	onclick='back_to_map()'>
 <text>keine Mautstrecke</text></img>
 							<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car_avoid_tolls&quot;)'
 							src='$NAVIT_USER_DATADIR/maske/Maut'
-							onclick='navit.vehicle[@name="Local GPS"].profilename="car_avoid_tolls";menu("#osd_setting");menu("#POI_0");back_to_map()'>
+							onclick='navit.vehicle[@name="Local GPS"].profilename="car_avoid_tolls";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_avoid_tolls;menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>keine Mautstecke</text></img>
 							<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]'
 							src='$NAVIT_USER_DATADIR/maske/Maut'
-							onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car_avoid_tolls";menu("#osd_setting");menu("#POI_0");back_to_map()'>
+							onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car_avoid_tolls";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_avoid_tolls;menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>keine Mautstrecke</text></img>
 							<img cond='navit.layout==navit.layout[@name=="DARKGLOW"]'
 							src='$NAVIT_USER_DATADIR/maske/active'	onclick='back_to_map()'>
@@ -76,11 +76,11 @@ navit.say("navigieren beendet");
 <text>Car-Day</text>		</img>
 							<img cond='navit.layout==navit.layout[@name=="CAR-DAY"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car&quot;)'
 							src='car_dealer'
-							onclick='navit.vehicle[@name="Local GPS"].profilename="car";menu("#osd_setting");menu("#POI_0");back_to_map()'>
+							onclick='navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>Car-Day</text>		</img>
 							<img cond='navit.layout!=navit.layout[@name=="CAR-DAY"]'
 							src='car_dealer'
-							onclick='navit.layout=navit.layout[@name=="CAR-DAY"];navit.vehicle[@name="Local GPS"].profilename="car";menu("#osd_setting");menu("#POI_0");back_to_map()'>
+							onclick='navit.layout=navit.layout[@name=="CAR-DAY"];navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>Car-Day</text>		</img>
 							<img cond='navit.layout==navit.layout[@name=="CAR-DARK"]'
 							src='$NAVIT_USER_DATADIR/maske/active'	onclick='back_to_map()'>
@@ -89,7 +89,6 @@ navit.say("navigieren beendet");
 							src='gui_vehicle'
 							onclick='navit.layout=navit.layout[@name=="CAR-DARK"];menu("#osd_setting");menu("#POI_0");back_to_map()'>
 <text>Car-Dark</text>		</img>
-
 							<img cond='navit.layout==navit.layout[@name=="MOTORIST_1"]'
 							src='$NAVIT_USER_DATADIR/maske/active'	onclick='back_to_map()'>
 <text>Cursor_360</text>		</img>
@@ -109,18 +108,18 @@ navit.say("navigieren beendet");
 <text>Fahrrad</text>		</img>
 							<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;bike&quot;)'
 							src='bicycle_shop'
-							onclick='navit.vehicle[@name="Local GPS"].profilename="bike";menu("#osd_setting");menu("#POI_1");back_to_map()'>
+							onclick='navit.vehicle[@name="Local GPS"].profilename="bike";navit.vehicle=navit.vehicle[@name=="Local GPS"],bike;menu("#osd_setting");menu("#POI_1");back_to_map()'>
 <text>Fahrrad</text>		</img>
 							<img cond='navit.layout!=navit.layout[@name=="CYCLIST"]'
 							src='bicycle_shop'
-							onclick='navit.layout=navit.layout[@name=="CYCLIST"];navit.vehicle[@name="Local GPS"].profilename="bike";menu("#osd_setting");menu("#POI_1");back_to_map()'>
+							onclick='navit.layout=navit.layout[@name=="CYCLIST"];navit.vehicle[@name="Local GPS"].profilename="bike";navit.vehicle=navit.vehicle[@name=="Local GPS"],bike;menu("#osd_setting");menu("#POI_1");back_to_map()'>
 <text>Fahrrad</text>		</img>
 							<img cond='navit.layout==navit.layout[@name=="WALKER"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;pedestrian&quot;)'
 							src='gui_active'	onclick='back_to_map()'>
 <text>Fußgänger</text>		</img>
 							<img cond='navit.layout!=navit.layout[@name=="WALKER"]'
 							src='gui_vehicle_pedestrian'
-							onclick='navit.layout=navit.layout[@name=="WALKER"];navit.vehicle[@name="Local GPS"].profilename="pedestrian";menu("#osd_setting");menu("#POI_1");back_to_map()'>
+							onclick='navit.layout=navit.layout[@name=="WALKER"];navit.vehicle[@name="Local GPS"].profilename="pedestrian";navit.vehicle=navit.vehicle[@name=="Local GPS"],pedestrian;menu("#osd_setting");menu("#POI_1");back_to_map()'>
 <text>Fußgänger</text>		</img>
 							<img cond='navit.layout==navit.layout[@name=="PAX"]'
 							src='$NAVIT_USER_DATADIR/maske/active'	onclick='back_to_map()'>
@@ -179,7 +178,7 @@ navit.say("aktuelle Landkennung");
 							<img cond='navit.get_int_var("set_osd")==0' src='gui_active' onclick='navit.set_int_var("set_osd",1);refresh()'>
 <text>Autosetting</text>	</img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_rules' onclick='navit.set_int_var("set_osd",0);refresh()'>
 <text>Autosetting</text>	</img>	<img src='dam' onclick='navit.toggle_layer("world_dam");navit.toggle_layer("water_dam")'>
-<text>water_tiled 0/1</text>	</img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_display' onclick='setting_layout()'><text>Layout</text></img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_settings' onclick='setting_rules()'><text>Rules</text></img>	<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch==0&amp;&amp;navit.zoom&lt;128' src='gui_active' onclick='navit.pitch=10;refresh()'>
+<text>water_tiled 0/1</text></img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_display' onclick='setting_layout()'><text>Layout</text></img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_settings' onclick='setting_rules()'><text>Rules</text></img>	<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch==0&amp;&amp;navit.zoom&lt;128' src='gui_active' onclick='navit.pitch=10;refresh()'>
 <text>[  2D  ]3D</text>		</img>	<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch!=0' src='gui_active' onclick='navit.pitch=0;refresh()'>
 <text>2D[  3D  ]</text>		</img>	
 					<!-- Platzhalter für Button im Menü Fenster -->
@@ -260,7 +259,7 @@ navit.say("aktuelle Landkennung");
 <text>Seilbahn</text>		</img>
 							<img src='gui_vehicle_pedestrian' onclick='
 navit.say("Fussgänger");
-							navit.layout=navit.layout[@name=="WALKER"];navit.vehicle[@name="Local GPS"].profilename="pedestrian";menu("#osd_setting");menu("#POI_1");back_to_map()'>
+							navit.layout=navit.layout[@name=="WALKER"];navit.vehicle[@name="Local GPS"].profilename="pedestrian";navit.vehicle=navit.vehicle[@name=="Local GPS"],pedestrian;menu("#osd_setting");menu("#POI_1");back_to_map()'>
 <text>Fußgänger</text>		</img>	<img cond='(navit.get_int_var("s_bahn")==0)&amp;&amp;(navit.get_int_var("bus")==0)&amp;&amp;(navit.get_int_var("bahn")==0)&amp;&amp;(navit.get_int_var("flug")==0)&amp;&amp;(navit.get_int_var("fähre")==0)&amp;&amp;(navit.get_int_var("seil")==0)' src='rail_station' onclick='
 navit.say("Passagier");
 							navit.toggle_layer("tram");navit.set_int_var("s_bahn",1);navit.toggle_layer("passenger");navit.set_int_var("bus",1);navit.toggle_layer("rails");navit.toggle_layer("rails_label");navit.set_int_var("bahn",1);
@@ -275,32 +274,31 @@ navit.say("Passagier");
 		?(get_int_var("zoom_gt")==0 ?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1)):"")
 		:(get_int_var("zoom_gt")==1 ?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0):""))' />
 	<osd x="0" y="-1860" w="1080" h="480"	type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1080_480.png" command="" enable_expression="pitch&gt;0" />
-	<osd x="0" y="0" w="1770" h="60"		font_size="750"		type="text" label='${navit.messages}' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="5" text_color="#00FF00" />
-	<osd x="0" y="60" w="1770" h="70"		font_size="800"		type="text" label='${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="6" text_color="#00FF00" />
+	<osd x="0" y="0" w="1920" h="60"		font_size="700"		type="text" label='${vehicle.position_coord_geo[pos_deg]}' background_color="#00000000" align="10" text_color="#FFFFFF" osd_configuration="2" />
+	<osd x="0" y="0" w="1920" h="60"		font_size="750"		type="text" label='${navit.messages}' enable_expression="navigation.nav_status&gt;=3||osd_configuration&amp;2" background_color="#00000090" align="5" text_color="#00FF00" />
+	<osd x="0" y="60" w="1920" h="70"		font_size="800"		type="text" label='${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="4" text_color="#00FF00" />
 	<osd x="0" y="340" w="210" h="80"		font_size="1300"	type="text" label='${navigation.item[1].length[value]}' enable_expression="navigation.nav_status&gt;=3" background_color="#FFFFFFBB" align="0" text_color="#0000FF" />
 	<osd x="-160" y="0" w="160" h="140"		font_size="650"		type="text" label='[TOWN] \n' command='say("m");toggle_layer("labels_bevore");toggle_layer("world_labels_bevore")' background_color="#FFFFFF00" align="0" text_color="#902080" />
 	<osd x="0" y="0" w="160" h="140"		font_size="650"		type="text" label='[POI]\n' command='gui.menu("#POI_Icons")' background_color="#FFFFFF00" align="0" text_color="#902080" />
 	<osd x="0" y="-450" w="230" h="230"		font_size="750"		type="text" label='CENTER\nCURSOR' command='follow=1;zoom=4;set_center_cursor()' enable_expression="follow&gt;1" background_color="#56FF00BB" align="4" text_color="#000000" />
 	<osd x="0" y="-450" w="230" h="230"		font_size="1300"	type="speed_warner" label='images' speed_exceed_limit_offset="5" speed_exceed_limit_percent="10" announce_on="1" enable_expression="navigation.nav_status&gt;=3" background_color="#FFFFFF90" />
 	<osd x="0" y="-220" w="230" h="100"		font_size="1700"	type="text" label="${vehicle.position_speed[value]}" enable_expression="navigation.nav_status&gt;=3" background_color="#0000FF90" align="0" text_color="#FF9900" />
-	<osd x="0" y="-120" w="230" h="60"		font_size="840"		type="text" label='${navigation.item.destination_length[named]} ' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="8" text_color="#00FF00" />
-	<osd x="0" y="-60" w="230" h="60"		font_size="840"		type="text" label=' t~ ${navigation.item.destination_time[remaining]}' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="0" text_color="#00FF00" />
-	<osd x="225" y="-65" w="1040" h="60"	font_size="900"		type="text" label='${tracking.item.street_name_systematic} ${tracking.item.street_name}' enable_expression="vehicle.position_valid" background_color="#FFFFFFBB" align="4" text_color="#0000FF" />
+	<osd x="0" y="-120" w="230" h="120" 	font_size="820"		type="text" label="➤${navigation.item.destination_length[named]}\n t~ ${navigation.item.destination_time[remaining]}" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="4" text_color="#00FF00" />
+	<osd x="225" y="-65" w="1200" h="60"	font_size="900"		type="text" label='${tracking.item.street_name_systematic} ${tracking.item.street_name}' enable_expression="vehicle.position_valid" background_color="#FFFFFFBB" align="4" text_color="#0000FF" />
 	<osd x="476" y="820" w="128" h="192"	type="navigation_status" icon_src="%s_wh_128_192.png" enable_expression="navigation.nav_status==-1||navigation.nav_status==1||navigation.nav_status==2" />
 	<osd x="0" y="130" w="210" h="210"		type="navigation_next_turn" icon_src="%s_wh_210_210.png" command='(get_int_var("set_osd")==0 ?(tracking=0,pitch=0):"");say("route");follow=80000;zoom_to_route()' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" />
 	<osd x="0" y="-140" w="160" h="140"		font_size="650"		type="text" label='\n[LAYER]' command='say("l");layout==layout[@name=="WALKER"]||layout==layout[@name=="PAX"] ?(layout=layout[@name=="PAX"],gui.menu("#b_b")):(toggle_layer("poly_1"),toggle_layer("poly_2"),toggle_layer("wayside"),toggle_layer("line_1"))' background_color="#FFFFFF00" align="0" text_color="#902080" />
 	<osd x="270" y="-180" w="180" h="180"	type="button" src="$NAVIT_USER_DATADIR/maske/zp_180_180.png" command='zoom_in()' />
 	<osd x="-440" y="-180" w="180" h="180"	type="button" src="$NAVIT_USER_DATADIR/maske/zm_180_180.png" command='zoom_out()' />
 	<osd x="-190" y="-190" w="190" h="190"	type="button" src="gui_menu_128_128.png" command='gui.menu(1)' />
-	<osd x="-210" y="-500" w="210" h="50"	font_size="800"		type="text" label=' ® ${vehicle.position_radius}' enable_expression="vehicle.position_valid" background_color="#00000090" align="4" text_color="#FFFFFF" />
-	<osd x="-210" y="-190" w="210" h="50"	font_size="750"		type="text" label='${vehicle.position_height}NN' enable_expression="vehicle.position_valid" background_color="#00000090" align="0" text_color="#FFFFFF" />
+	<osd x="-210" y="-190" w="210" h="100"	font_size="800"		type="text" label=' ® ${vehicle.position_radius}\n${vehicle.position_height} NN' enable_expression="vehicle.position_valid" background_color="#00000090" align="4" text_color="#FFFFFF" />
 	<osd x="-635" y="-190" w="200" h="120"	font_size="800"		type="scale" background_color="#C4C4C4DD" />
 	<osd x="0" y="-520" w="270" h="80"		font_size="1300"	type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#FF4040FF" align="4" text_color="#800000" />
-	<osd x="230" y="150" w="800" h="110"	font_size="900"		type="text" label='${vehicle.position_coord_geo[pos_deg]}\nNord: ${vehicle.position_direction} °' background_color="#00000000" align="4" text_color="#B38200" enable_expression="osd_configuration&amp;2" />	
-	<osd x="-360" y="210" w="360" h="200"	font_size="750"		type="odometer" label='${max_spd}km/h -Max&#10;${avg_spd}km/h ~Spd&#10;${distance} -Dst&#10;${time} Time' name="odo_reset" background_color="#00000090" idle_color="#FF9900" text_color="#E5E5E5" autostart="0" enable_expression="osd_configuration&amp;2" />
-	<osd x="-210" y="410" w="210" h="100"	font_size="750"		type="stopwatch"  disable_reset="1" background_color="#000000CC" enable_expression="osd_configuration&amp;2" />
-	<!-- <osd x="-210" y="-450" w="210" h="260" font_size="750" type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090" /> -->
-	<osd x="-210" y="-450" w="210" h="260"	font_size="750"		type="compass" enable_expression="vehicle.position_valid" background_color="#00000090" />
+	<osd x="-300" y="130" w="300" h="205"	font_size="750"		type="odometer" label='${max_spd}km/h 〒&#10;${avg_spd}km/h ~&#10;${distance} ˂ ˃&#10;Time ${time}' name="odo_reset" background_color="#00000090" autostart="1" enable_expression="osd_configuration&amp;2" />
+	<osd x="-255" y="345" w="245" h="140"	font_size="750"		type="stopwatch"  disable_reset="1" background_color="#00000090" align="5" enable_expression="osd_configuration&amp;2" />
+	<osd x="-210" y="-510" w="210" h="60"	font_size="750"		type="text" label='N: ${vehicle.position_direction} °' background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2" />
+	<!-- <osd x="-210" y="-450" w="210" h="260" font_size="800" type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090" /> -->
+	<osd x="-210" y="-450" w="210" h="260"	font_size="800"		type="compass" enable_expression="vehicle.position_valid" background_color="#00000090" />
 
 	<tracking cdf_histsize="6" />
 	<vehicleprofile name="car" route_depth="4:24%,6:2%,8:40000,18:10000" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
