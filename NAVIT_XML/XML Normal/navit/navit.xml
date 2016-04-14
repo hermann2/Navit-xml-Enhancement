@@ -13,10 +13,7 @@
 
 	<gui type="internal" menu_on_map_click="0" background_color="#FFCC33" background_color2="#CC9311" text_background="#002050" text_color="#002050" font_size="700" icon_xs="128" icon_s="160" icon_l="160" spacing="1"><![CDATA[
 <html>					<a name='Main Menu'>
-<text>H A U P T M E N Ü</text>
-							<img cond='navit.speech.active==0' src='gui_sound_off' navit.speech.active=1;
-navit.say("Sprache an");
-							back_to_map()'>
+<text>H A U P T M E N Ü</text>		<img cond='navit.speech.active==0' src='gui_sound_off' onclick='navit.speech.active=1;navit.say("Sprache an");back_to_map()'>
 <text>Sprache</text>		</img>	<img cond='navit.speech.active!=0' src='gui_sound' onclick='navit.speech.active=0;back_to_map()'>
 <text>Sprache</text>		</img>	<img src='gui_town' onclick='town()'>
 <text>ZIEL eingeben</text>	</img>	<img src='gui_map' onclick='setting_maps()'><text>Maps</text>	</img>	<img src='gui_bookmark' onclick='bookmarks()'><text>Bookmarks</text></img>	<a href='#Fahrzeug'><img src='gui_home'>
@@ -28,7 +25,7 @@ navit.say("navigieren beendet");
 							abort_navigation();refresh();redraw_map()'><text>Stop Navigation</text>	</img>	<img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img src='gui_quit' onclick='quit()'>	<text>Quit</text>	</img>
 						</a>
 
-				<!-- Bei Umstellung Layout die Zuweisung: von Profil; wenn aktiv "Autosetting"; zum GUI-Menü "POI_Icons" die Einstellung von Layern active(0/1); Layout PAX noch Aufruf Menü "b_b" -->
+					<!-- Bei Umstellung Layout die Zuweisung: von Profil; wenn aktiv "Autosetting"; zum GUI-Menü "POI_Icons" die Einstellung von Layern active(0/1); Layout PAX noch Aufruf Menü "b_b" -->
 						<a name='Fahrzeug'>
 <text>Fahrzeuge</text>
 							<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car&quot;)'
@@ -185,12 +182,12 @@ navit.say("aktuelle Landkennung");
 							<img cond='navit.get_int_var("set_osd")==0' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img cond='navit.get_int_var("set_osd")==0' src='$NAVIT_USER_DATADIR/maske/blank'></img>
 						</a>
 
-				<!-- Vorgabe für aktiv "Autosetting" bei Umstellung Layout im Menü "Fahrzeuge"  -->
+					<!-- Vorgabe für aktiv "Autosetting" bei Umstellung Layout im Menü "Fahrzeuge"  -->
 						<a name='osd_setting'><script>navit.set_int_var("set_osd",0);navit.autozoom_active=0;</script></a>
 						<a name='osd_setting1'><script>navit.set_int_var("set_osd",1);navit.set_int_var("is_orientation",0);navit.orientation=0;navit.set_int_var("is_pitch",pitch);navit.pitch=0;navit.autozoom_active=1;</script></a>
 						<a name='osd_setting2'><script>navit.set_int_var("set_osd",1);navit.set_int_var("is_orientation",-1); navit.orientation=-1; navit.set_int_var("is_pitch",pitch);navit.pitch=0;navit.autozoom_active=0;</script></a>
 
-				<!--  Bei Umstellung im Menü "Fahrzeuge" wird die Einstellung der Layer(active 0/1) im aktivierten Layout dem GUI-Menü "POI_Icons" zugewiesen -->
+					<!--  Bei Umstellung im Menü "Fahrzeuge" wird die Einstellung der Layer(active 0/1) im aktivierten Layout dem GUI-Menü "POI_Icons" zugewiesen -->
 						<a name='POI_1'><script>navit.set_int_var("eigene",0);navit.set_int_var("points",1);navit.set_int_var("icon",0);navit.set_int_var("wanderung",1);navit.set_int_var("winter",0);navit.set_int_var("freizeit",0);navit.set_int_var("geschäft",0);navit.set_int_var("sports",0);navit.set_int_var("gast",0);navit.set_int_var("gebäude",1);</script></a>
 						<a name='POI_0'><script>navit.set_int_var("eigene",0);navit.set_int_var("points",0);navit.set_int_var("icon",0);navit.set_int_var("wanderung",0);navit.set_int_var("winter",0);navit.set_int_var("freizeit",0);navit.set_int_var("geschäft",0);navit.set_int_var("sports",0);navit.set_int_var("gast",0);navit.set_int_var("gebäude",0);</script></a>
 
@@ -242,7 +239,7 @@ navit.say("aktuelle Landkennung");
 							navit.get_int_var("gebäude")==0		?(navit.toggle_layer("Android-POI-Icons-full"),navit.set_int_var("gebäude",1)):"";</script>
 						</a>
 
-						<!-- Layout "PAX" Auswahl Strecken/POI -->
+					<!-- Layout "PAX" Auswahl Strecken/POI -->
 						<a name='b_b'>
 <text>Auswahl Transport</text>		<img cond='navit.get_int_var("s_bahn")==0' src='gui_stop'	onclick='navit.toggle_layer("tram");navit.set_int_var("s_bahn",1);refresh()'>
 <text>Straßenbahn</text>	</img>	<img cond='navit.get_int_var("s_bahn")==1' src='gui_active' onclick='navit.toggle_layer("tram");navit.set_int_var("s_bahn",0);refresh()'>
@@ -293,7 +290,7 @@ navit.say("Passagier");
 	<osd x="-190" y="-190" w="190" h="190"	type="button" src="gui_menu_128_128.png" command='gui.menu(1)' />
 	<osd x="-210" y="-190" w="210" h="100"	font_size="800"		type="text" label=' ® ${vehicle.position_radius}\n${vehicle.position_height} NN' enable_expression="vehicle.position_valid" background_color="#00000090" align="4" text_color="#FFFFFF" />
 	<osd x="-635" y="-190" w="200" h="120"	font_size="800"		type="scale" background_color="#C4C4C4DD" />
-	<osd x="0" y="-520" w="270" h="80"		font_size="1300"	type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#FF4040FF" align="4" text_color="#800000" />
+	<osd x="0" y="-520" w="270" h="80"		font_size="1300"	type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" align="4" text_color="#FF0000" />
 	<osd x="-300" y="130" w="300" h="205"	font_size="750"		type="odometer" label='${max_spd}km/h 〒&#10;${avg_spd}km/h ~&#10;${distance} ˂ ˃&#10;Time ${time}' name="odo_reset" background_color="#00000090" autostart="1" enable_expression="osd_configuration&amp;2" />
 	<osd x="-255" y="345" w="245" h="140"	font_size="750"		type="stopwatch"  disable_reset="1" background_color="#00000090" align="5" enable_expression="osd_configuration&amp;2" />
 	<osd x="-210" y="-510" w="210" h="60"	font_size="750"		type="text" label='N: ${vehicle.position_direction} °' background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2" />
