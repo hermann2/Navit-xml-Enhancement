@@ -16,7 +16,7 @@
 	</itemgra>
 	</cursor>
 	<layer name="world_image">	<itemgra item_types="image" order="-9">	<image/>	</itemgra>	</layer>
-	<layer name="world_dam" active="0">	<itemgra item_types="poly_water_tiled" order="8-">	<polygon color="#8CCFFF" />	</itemgra>	</layer>
+	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="8-">	<polygon color="#8CCFFF" />	</itemgra>	</layer>
 	<layer name="poly_line">
 	<itemgra item_types="poi_customc" order="4">	<icon src="%s" w="32" h="32" />	</itemgra>
 	<itemgra item_types="poi_customc" order="5">	<icon src="%s" w="48" h="48" x="0" y="64" />	<circle text_size="24" color="" background_color="#B00000" />	</itemgra>

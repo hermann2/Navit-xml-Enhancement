@@ -4,19 +4,13 @@
 
 <plugins>	<plugin path="$NAVIT_PREFIX/lib/lib*.so" ondemand="yes" />	</plugins>
 
-	<!-- <debug name="global" dbg_level="debug" level="0"/>
-	<debug name="segv" level="1"/>
-	<debug name="timestamps" level="0"/> -->
-
 <navit center="13.5666 48.1333" zoom="4" zoom_max="524288" autozoom_active="0" pitch="10" tracking="1" orientation="-1" recent_dest="30" waypoints_flag="1" timeout="86400" radius="28" drag_bitmap="1" osd_configuration="1">
 
 	<graphics type="android" />
 	<speech type="android" cps="30" />
-	<vehicle source="android:" name="Local GPS" profilename="car" active="yes" follow="1" follow_cursor="1" lag="15" />
-	<!-- Ohne GPS kann ein Routing mit gewählter gleichbleibender Geschwindigkeit ("speed" km/h) erfolgen. Aktivierung: TIPP HAUPTMENÜ/PROFIL ändern/Demo/Als Aktiv setzen. Erforderlich: Kommentarpfeil von Zeile 18 hier anfügen
-	<vehicle source="demo://" name="Demo" profilename="car" enabled="yes" active="no" follow="1" follow_cursor="1" speed="70" />
-	-->
-	<gui type="internal" menu_on_map_click="0" background_color="#FFCC33" background_color2="#CC9311" text_background="#002050" text_color="#002050" font_size="700" icon_xs="128" icon_s="160" icon_l="160" spacing="1"><![CDATA[
+	<vehicle source="demo://" name="Demo" profilename="car" active="yes" follow="1" follow_cursor="1" speed="1" />
+
+	<gui type="internal" on_map_click='menu("#Map Point")' background_color="#FFCC33" background_color2="#CC9311" text_background="#002050" text_color="#002050" font_size="700" icon_xs="128" icon_s="160" icon_l="160" spacing="1"><![CDATA[
 <html>					<a name='Main Menu'>
 <text>H A U P T M E N Ü</text>		<img cond='navit.speech.active==0' src='gui_sound_off' onclick='navit.speech.active=1;navit.say("Sprache an");back_to_map()'>
 <text>Sprache</text>		</img>	<img cond='navit.speech.active!=0' src='gui_sound' onclick='navit.speech.active=0;back_to_map()'>
@@ -27,7 +21,7 @@
 <text>[ ROUTE-DATEN ]</text></img></a>	<a href='#Settings'><img src='$NAVIT_USER_DATADIR/maske/setting'>
 <text>[ EINSTELLUNGEN ]</text></img></a>	<img cond='navit.route.route_status&amp;1' src='gui_quit' onclick='
 navit.say("navigieren beendet");
-							abort_navigation();refresh();redraw_map()'><text>Stop Navigation</text>	</img>	<img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img src='gui_quit' onclick='navit.graphics.menu()'><text>Quit</text></img>
+							abort_navigation();refresh();redraw_map()'><text>Stop Navigation</text>	</img>	<img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img src='gui_quit' onclick='abort_navigation();navit.graphics.menu()'><text>Quit</text></img>
 						</a>
 
 					<!-- Bei Umstellung Layout die Zuweisung: von Profil; wenn aktiv "Autosetting"; zum GUI-Menü "POI_Icons" die Einstellung von Layern active(0/1); Layout PAX noch Aufruf Menü "b_b" -->
@@ -136,19 +130,12 @@ navit.say("navigieren beendet");
 <text>ROUTE - DATEN</text>	<img src='gui_about' onclick='about()'>	<text>About</text></img>	<img src='gui_formerdests' onclick='
 navit.say("Zielwahl aus vorherigen");
 							formerdests()'>
-<text>Letzte Ziele</text>	</img>	<img src='gui_maps' onclick='enter_coord()'>
-<text>Eingabe Koordinate</text></img>	<img cond='menu_on_map_click==0' src='gui_stop' onclick='
-navit.say("Tipp Kartenpunkt an");
-							menu_on_map_click=1;back_to_map()'>
-<text>TIPP Karte</text>		</img>	<img cond='menu_on_map_click==1' src='gui_active' onclick='
-navit.say("Menüzugang Zahnrad");
-							menu_on_map_click=0;back_to_map()'>
-<text>TIPP Karte</text>		</img>	<img cond='position_coord_geo' src='cursor_still' onclick='position(position_coord_geo,_("Vehicle Position"),8|32|64|128|256)'>
+<text>Letzte Ziele</text>	</img>	<img src='gui_maps' onclick='enter_coord()'><text>Eingabe Koordinate</text></img>	<img cond='position_coord_geo' src='cursor_still' onclick='position(position_coord_geo,_("Vehicle Position"),8|32|64|128|256)'>
 <text>Cursorposition</text>	</img>	<img cond='click_coord_geo' src='gui_maps' onclick='
 navit.say("Aktion am Kartenpunkt");
 							position(click_coord_geo,_("Map Point"),8|16|32|64|256)'>
-<text>Kartenpunkt</text>	</img>	<img cond='!click_coord_geo' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img cond='navit.route.route_status&amp;1' src='gui_log' onclick='route_description()'>
-<text>Wegbeschreibung</text></img>	<img cond='navit.waypoints_flag &amp;&amp;(navit.route.route_status&amp;1)' src='$NAVIT_USER_DATADIR/maske/nav_destination' onclick='
+<text>Kartenpunkt</text>	</img>	<img cond='navit.route.route_status&amp;1' src='gui_log' onclick='route_description()'>
+<text>Wegbeschreibung</text>	</img>	<img cond='navit.waypoints_flag &amp;&amp;(navit.route.route_status&amp;1)' src='$NAVIT_USER_DATADIR/maske/nav_destination' onclick='
 navit.say("Aktion mit Etappenziel");waypoints()'>
 <text>Etappenziele</text>	</img>	<img cond='navit.waypoints_flag &amp;&amp;(navit.route.route_status&amp;1)' src='gui_stop' onclick='
 navit.say("letzten Zielpunkt entfernt");
@@ -271,16 +258,15 @@ navit.say("Passagier");
 							navit.toggle_layer("airport");navit.set_int_var("flug",0);navit.toggle_layer("ferrys");navit.set_int_var("fähre",0);navit.toggle_layer("lift");navit.set_int_var("seil",0);refresh()'>
 <text>ALLE aus</text>		</img>
 						</a>
+							<a name='Map Point'><text>Map Point</text><script>position(click_coord_geo,_("Map Point"),8|16|32|64|256)</script></a>
 							<a name='Satellite Status' class='clist'><text>Satellite Status</text><script>satellite_status_page()</script></a>
 							<a name='NMEA Data' class='clist'><text>NMEA Data</text><script>nmea_data_page()</script></a>
 						</html>]]></gui>
 						
-	<log enabled="no" type="textfile_debug" data="$NAVIT_USER_DATADIR/debug_%Y%m%d-%i.txt" flush_size="1000" flush_time="30" />
-
 	<osd x="-1" y="-1" w="1" h="1"	type="cmd_interface" update_period="1" command='get_int_var("set_osd")==0 ?(follow&gt;1||zoom&gt;64 ?(pitch=0,tracking=0,orientation=0):(pitch=10,tracking=1,orientation=-1)) :(zoom&gt;64
 		?(get_int_var("zoom_gt")==0 ?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1)):"")
 		:(get_int_var("zoom_gt")==1 ?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0):""))' />
-	<osd x="0" y="-1860" w="1080" h="480"	type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1080_480.png" command="" enable_expression="pitch&gt;0" />
+	<!-- <osd x="0" y="-1860" w="1080" h="480"	type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1080_480.png" command="" enable_expression="pitch&gt;0" /> -->
 	<osd x="0" y="0" w="1920" h="60"		font_size="700"		type="text" label='${vehicle.position_coord_geo[pos_deg]}' background_color="#00000000" align="10" text_color="#FFFFFF" osd_configuration="2" />
 	<osd x="0" y="0" w="1920" h="60"		font_size="750"		type="text" label='${navit.messages}' enable_expression="navigation.nav_status&gt;=3||osd_configuration&amp;2" background_color="#00000090" align="5" text_color="#00FF00" />
 	<osd x="0" y="60" w="1920" h="70"		font_size="800"		type="text" label='${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="4" text_color="#00FF00" />
@@ -298,14 +284,23 @@ navit.say("Passagier");
 	<osd x="270" y="-180" w="180" h="180"	type="button" src="$NAVIT_USER_DATADIR/maske/zp_180_180.png" command='zoom_in()' />
 	<osd x="-440" y="-180" w="180" h="180"	type="button" src="$NAVIT_USER_DATADIR/maske/zm_180_180.png" command='zoom_out()' />
 	<osd x="-190" y="-190" w="190" h="190"	type="button" src="gui_menu_128_128.png" command='gui.menu(1)' />
-	<osd x="-210" y="-190" w="210" h="100"	font_size="800"		type="text" label=' ® ${vehicle.position_radius}\n${vehicle.position_height} NN' enable_expression="vehicle.position_valid" background_color="#00000090" align="4" text_color="#FFFFFF" />
 	<osd x="-635" y="-190" w="200" h="120"	font_size="800"		type="scale" background_color="#C4C4C4DD" />
 	<osd x="0" y="-520" w="270" h="80"		font_size="1300"	type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" align="4" text_color="#FF0000" />
-	<osd x="-300" y="130" w="300" h="205"	font_size="750"		type="odometer" label='${max_spd}km/h 〒&#10;${avg_spd}km/h ~&#10;${distance} ˂ ˃&#10;Time ${time}' name="odo_reset" background_color="#00000090" autostart="0" enable_expression="osd_configuration&amp;2" />
 	<osd x="-255" y="345" w="245" h="140"	font_size="750"		type="stopwatch"  disable_reset="1" background_color="#00000090" align="5" enable_expression="osd_configuration&amp;2" />
-	<osd x="-210" y="-510" w="210" h="60"	font_size="750"		type="text" label='N: ${vehicle.position_direction} °' background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2" />
 	<!-- <osd x="-210" y="-450" w="210" h="260" font_size="800" type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090" /> -->
 	<osd x="-210" y="-450" w="210" h="260"	font_size="800"		type="compass" enable_expression="vehicle.position_valid" background_color="#00000090" />
+
+	<osd x="210" y="130" w="140" h="140"	font_size="1000" type="text" label='0' command='vehicle[@name="Demo"].speed=1' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="355" y="130" w="140" h="140"	font_size="1000" type="text" label='5' command='vehicle[@name="Demo"].speed=5' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="500" y="130" w="140" h="140"	font_size="1000" type="text" label='15' command='vehicle[@name="Demo"].speed=15' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="645" y="130" w="140" h="140"	font_size="1000" type="text" label='30' command='vehicle[@name="Demo"].speed=30' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="790" y="130" w="140" h="140"	font_size="1000" type="text" label='50' command='vehicle[@name="Demo"].speed=50' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="935" y="130" w="140" h="140"	font_size="1000" type="text" label='70' command='vehicle[@name="Demo"].speed=70' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="210" y="275" w="140" h="140"	font_size="1000" type="text" label='80' command='vehicle[@name="Demo"].speed=80' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="355" y="275" w="140" h="140"	font_size="1000" type="text" label='90' command='vehicle[@name="Demo"].speed=90' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="500" y="275" w="140" h="140"	font_size="1000" type="text" label='100' command='vehicle[@name="Demo"].speed=100' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="645" y="275" w="140" h="140"	font_size="1000" type="text" label='110' command='vehicle[@name="Demo"].speed=110' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
+	<osd x="790" y="275" w="140" h="140"	font_size="1000" type="text" label='130' command='vehicle[@name="Demo"].speed=130' enable_expression="navigation.nav_status&gt;=3" background_color="#00529290" text_color="#FFFFFF" />
 
 	<tracking cdf_histsize="6" />
 	<vehicleprofile name="car" route_depth="4:24%,6:2%,8:40000,18:10000" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
@@ -473,32 +468,32 @@ navit.say("Passagier");
 	</vehicleprofile>
 	<route destination_distance="40" />
 	<navigation>
-	<announce type="hiking_alpine_difficult" level0="10" level1="80" unit="m" />
-	<announce type="hiking_alpine_demanding" level0="10" level1="80" unit="m" />
-	<announce type="hiking_alpine" level0="10" level1="80" unit="m" />
-	<announce type="hiking_mountain_demanding" level0="10"  level1="80" unit="m" />
-	<announce type="hiking_mountain" level0="10" level1="80" unit="m" />
-	<announce type="hiking" level0="10" level1="80" unit="m" />
-	<announce type="footway" level0="10" level1="80" unit="m" />
-	<announce type="path" level0="10" level1="80" unit="m" />
-	<announce type="street_parking_lane" level0="20" level1="80" unit="m" />
-	<announce type="cycleway" level0="20" level1="80"  level2="200" unit="m" />
-	<announce type="track_grass" level0="20" level1="80" level2="300" unit="m" />
-	<announce type="track_ground" level0="20" level1="80" level2="300" unit="m" />
-	<announce type="street_pedestrian" level0="20" level1="100" level2="300" unit="m" />
-	<announce type="track_gravelled" level0="20" level1="100" level2="400" unit="m" />
-	<announce type="track_unpaved" level0="20" level1="100" level2="400" unit="m" />
-	<announce type="track_paved" level0="20" level1="200" level2="500" unit="m" />
-	<announce type="street_service" level0="20" level1="200" level2="500" unit="m" />
-	<announce type="living_street" level0="20" level1="200" level2="500" unit="m" />
-	<announce type="street_0,street_1_city" level0="30"  level1="300" level2="600" unit="m" />
-	<announce type="street_2_city,street_3_city" level0="30" level1="300" level2="800" unit="m" />
-	<announce type="street_4_city" level0="30"  level1="400" level2="1000" unit="m" />
-	<announce type="ramp" level0="30" level1="400" level2="1000" unit="m" />
-	<announce type="highway_city" level0="80" level1="600" level2="1400" unit="m" />
-	<announce type="street_1_land,street_2_land" level0="30" level1="400" level2="1000" unit="m" />
-	<announce type="street_3_land,street_4_land" level0="40" level1="500" level2="1200" unit="m" />
-	<announce type="street_n_lanes,highway_land" level0="100" level1="800" level2="1800" unit="m" />
+	<announce type="hiking_alpine_difficult" level1="80" unit="m" />
+	<announce type="hiking_alpine_demanding" level1="80" unit="m" />
+	<announce type="hiking_alpine" level1="20" unit="m" />
+	<announce type="hiking_mountain_demanding" level1="80" unit="m" />
+	<announce type="hiking_mountain" level1="80" unit="m" />
+	<announce type="hiking" level1="80" unit="m" />
+	<announce type="footway" level1="80" unit="m" />
+	<announce type="path" level1="80" unit="m" />
+	<announce type="street_parking_lane" level1="80" unit="m" />
+	<announce type="cycleway" level1="80"  level2="200" unit="m" />
+	<announce type="track_grass" level1="80" level2="300" unit="m" />
+	<announce type="track_ground" level1="80" level2="300" unit="m" />
+	<announce type="street_pedestrian" level1="100" level2="300" unit="m" />
+	<announce type="track_gravelled" level1="100" level2="400" unit="m" />
+	<announce type="track_unpaved" level1="100" level2="400" unit="m" />
+	<announce type="track_paved" level1="200" level2="500" unit="m" />
+	<announce type="street_service" level1="200" level2="500" unit="m" />
+	<announce type="living_street" level1="200" level2="500" unit="m" />
+	<announce type="street_0,street_1_city" level1="300" level2="600" unit="m" />
+	<announce type="street_2_city,street_3_city" level0="60" level1="300" level2="800" unit="m" />
+	<announce type="street_4_city" level0="60" level1="400" level2="1000" unit="m" />
+	<announce type="ramp" level1="400" level2="1000" unit="m" />
+	<announce type="highway_city" level1="600" level2="1400" unit="m" />
+	<announce type="street_1_land,street_2_land" level1="400" level2="1000" unit="m" />
+	<announce type="street_3_land,street_4_land"  level0="60" level1="500" level2="1200" unit="m" />
+	<announce type="street_n_lanes,highway_land" level1="800" level2="1800" unit="m" />
 	</navigation>
 
 	<xi:include href="$NAVIT_USER_DATADIR/map.xml" />

@@ -105,7 +105,7 @@
 -23.9 15.0 type=poi_customc label="Cape Verde" icon_src="country_cv"
 105.5 -10.4 type=poi_customc label="Christmas Island" icon_src="country_cx"
 32.6 34.9 type=poi_customc label="Cyprus" icon_src="country_cy"
-13.4 49.5 type=poi_customc label="Czech Republic" icon_src="country_cz"
+13.4 49.5 type=poi_customc label="Czechia" icon_src="country_cz"
 9.5 50.6 type=poi_customc label="Germany" icon_src="country_de"
 42.3 11.7 type=poi_customc label="Djibouti" icon_src="country_dj"
 9.7 55.6 type=poi_customc label="Denmark" icon_src="country_dk"
