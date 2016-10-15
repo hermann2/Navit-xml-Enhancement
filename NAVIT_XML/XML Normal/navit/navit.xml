@@ -1,29 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE config SYSTEM "navit.dtd">
 <config xmlns:xi="http://www.w3.org/2001/XInclude" language="de_AT">
-
-<plugins>	<plugin path="$NAVIT_PREFIX/lib/lib*.so" ondemand="yes" />	</plugins>
-
-	<!-- <debug name="global" dbg_level="debug" level="0"/>
-	<debug name="segv" level="1"/>
-	<debug name="timestamps" level="0"/> -->
-
-<navit center="13.5666 48.1333" zoom="4" zoom_max="524288" autozoom_active="0" pitch="10" tracking="1" orientation="-1" recent_dest="30" waypoints_flag="1" timeout="86400" radius="28" drag_bitmap="1" osd_configuration="1">
-
+	<plugins>	<plugin path="$NAVIT_PREFIX/lib/lib*.so" ondemand="yes" />	</plugins>
+	<navit center="13.5666 48.1333" zoom="4" zoom_max="524288" autozoom_active="0" pitch="10" tracking="1" orientation="-1" recent_dest="30" waypoints_flag="1" timeout="86400" radius="28" drag_bitmap="1" osd_configuration="1">
 	<graphics type="android" />
 	<speech type="android" cps="30" />
 	<vehicle source="android:" name="Local GPS" profilename="car" active="yes" follow="1" follow_cursor="1" lag="15" />
-	<!-- Ohne GPS kann ein Routing mit gewählter gleichbleibender Geschwindigkeit ("speed" km/h) erfolgen. Aktivierung: TIPP HAUPTMENÜ/PROFIL ändern/Demo/Als Aktiv setzen. Erforderlich: Kommentarpfeil von Zeile 18 hier anfügen
-	<vehicle source="demo://" name="Demo" profilename="car" enabled="yes" active="no" follow="1" follow_cursor="1" speed="70" />
-	-->
 	<gui type="internal" menu_on_map_click="0" background_color="#FFCC33" background_color2="#CC9311" text_background="#002050" text_color="#002050" font_size="700" icon_xs="128" icon_s="160" icon_l="160" spacing="1"><![CDATA[
-<html>					<a name='Main Menu'>
+				<html>	<a name='Main Menu'>
 <text>H A U P T M E N Ü</text>		<img cond='navit.speech.active==0' src='gui_sound_off' onclick='navit.speech.active=1;navit.say("Sprache an");back_to_map()'>
 <text>Sprache</text>		</img>	<img cond='navit.speech.active!=0' src='gui_sound' onclick='navit.speech.active=0;back_to_map()'>
 <text>Sprache</text>		</img>	<img src='gui_town' onclick='town()'>
 <text>ZIEL eingeben</text>	</img>	<img src='gui_map' onclick='setting_maps()'><text>Maps</text>	</img>	<img src='gui_bookmark' onclick='bookmarks()'><text>Bookmarks</text></img>	<a href='#Fahrzeug'><img src='gui_home'>
 <text>[ FAHRZEUGE ]</text>	</img></a>	<img src='gui_actions' onclick='setting_vehicle()'>
-<text>PROFIL ändern</text>	</img>	<a href='#Route'><img src='$NAVIT_USER_DATADIR/maske/tool'>
+<text>PROFIL ändern</text>	</img>		<a href='#Route'><img src='$NAVIT_USER_DATADIR/maske/tool'>
 <text>[ ROUTE-DATEN ]</text></img></a>	<a href='#Settings'><img src='$NAVIT_USER_DATADIR/maske/setting'>
 <text>[ EINSTELLUNGEN ]</text></img></a>	<img cond='navit.route.route_status&amp;1' src='gui_quit' onclick='
 navit.say("navigieren beendet");
@@ -270,18 +260,14 @@ navit.say("Passagier");
 							src='rail_station' onclick='navit.toggle_layer("tram");navit.set_int_var("s_bahn",0);navit.toggle_layer("passenger");navit.set_int_var("bus",0);navit.toggle_layer("rails");navit.toggle_layer("rails_label");navit.set_int_var("bahn",0);
 							navit.toggle_layer("airport");navit.set_int_var("flug",0);navit.toggle_layer("ferrys");navit.set_int_var("fähre",0);navit.toggle_layer("lift");navit.set_int_var("seil",0);refresh()'>
 <text>ALLE aus</text>		</img>
-						</a>
-							<a name='Satellite Status' class='clist'><text>Satellite Status</text><script>satellite_status_page()</script></a>
-							<a name='NMEA Data' class='clist'><text>NMEA Data</text><script>nmea_data_page()</script></a>
-						</html>]]></gui>
-						
-	<log enabled="no" type="textfile_debug" data="$NAVIT_USER_DATADIR/debug_%Y%m%d-%i.txt" flush_size="1000" flush_time="30" />
+						</a></html>]]>	</gui>
 
 	<osd x="-1" y="-1" w="1" h="1"	type="cmd_interface" update_period="1" command='get_int_var("set_osd")==0 ?(follow&gt;1||zoom&gt;64 ?(pitch=0,tracking=0,orientation=0):(pitch=10,tracking=1,orientation=-1)) :(zoom&gt;64
 		?(get_int_var("zoom_gt")==0 ?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1)):"")
 		:(get_int_var("zoom_gt")==1 ?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0):""))' />
 	<osd x="0" y="-1860" w="1080" h="480"	type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1080_480.png" command="" enable_expression="pitch&gt;0" />
-	<osd x="0" y="0" w="1920" h="60"		font_size="700"		type="text" label='${vehicle.position_coord_geo[pos_deg]}' background_color="#00000000" align="10" text_color="#FFFFFF" osd_configuration="2" />
+	<!-- <osd x="0" y="0" w="1920" h="60"		font_size="700"		type="text" label='${vehicle.position_coord_geo[pos_deg]}' background_color="#00000000" align="10" text_color="#FFFFFF" osd_configuration="2" />
+	 -->
 	<osd x="0" y="0" w="1920" h="60"		font_size="750"		type="text" label='${navit.messages}' enable_expression="navigation.nav_status&gt;=3||osd_configuration&amp;2" background_color="#00000090" align="5" text_color="#00FF00" />
 	<osd x="0" y="60" w="1920" h="70"		font_size="800"		type="text" label='${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="4" text_color="#00FF00" />
 	<osd x="0" y="340" w="210" h="80"		font_size="1300"	type="text" label='${navigation.item[1].length[value]}' enable_expression="navigation.nav_status&gt;=3" background_color="#FFFFFFBB" align="0" text_color="#0000FF" />
@@ -300,10 +286,11 @@ navit.say("Passagier");
 	<osd x="-190" y="-190" w="190" h="190"	type="button" src="gui_menu_128_128.png" command='gui.menu(1)' />
 	<osd x="-210" y="-190" w="210" h="100"	font_size="800"		type="text" label=' ® ${vehicle.position_radius}\n${vehicle.position_height} NN' enable_expression="vehicle.position_valid" background_color="#00000090" align="4" text_color="#FFFFFF" />
 	<osd x="-635" y="-190" w="200" h="120"	font_size="800"		type="scale" background_color="#C4C4C4DD" />
-	<osd x="0" y="-520" w="270" h="80"		font_size="1300"	type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" align="4" text_color="#FF0000" />
-	<osd x="-300" y="130" w="300" h="205"	font_size="750"		type="odometer" label='${max_spd}km/h 〒&#10;${avg_spd}km/h ~&#10;${distance} ˂ ˃&#10;Time ${time}' name="odo_reset" background_color="#00000090" autostart="0" enable_expression="osd_configuration&amp;2" />
+	<osd x="0" y="-530" w="270" h="80"		font_size="1200"	type="speed_cam" label='${distance}' announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" align="4" text_color="#FF0000" />
+	<osd x="-300" y="130" w="300" h="205"	font_size="750"		type="odometer" label='${max_spd}km/h 〒&#10;${avg_spd}km/h ~&#10;${distance} ˂ ˃&#10;Time ${time}' name="odo_reset" background_color="#00000090" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2" />
 	<osd x="-255" y="345" w="245" h="140"	font_size="750"		type="stopwatch"  disable_reset="1" background_color="#00000090" align="5" enable_expression="osd_configuration&amp;2" />
 	<osd x="-210" y="-510" w="210" h="60"	font_size="750"		type="text" label='N: ${vehicle.position_direction} °' background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2" />
+
 	<!-- <osd x="-210" y="-450" w="210" h="260" font_size="800" type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090" /> -->
 	<osd x="-210" y="-450" w="210" h="260"	font_size="800"		type="compass" enable_expression="vehicle.position_valid" background_color="#00000090" />
 
@@ -313,7 +300,7 @@ navit.say("Passagier");
 	<roadprofile item_types="track_unpaved"			speed="15" route_weight="5" />
 	<roadprofile item_types="track_gravelled"		speed="20" route_weight="10" />
 	<roadprofile item_types="living_street"			speed="7" route_weight="10" />
-	<roadprofile item_types="street_service"		speed="20" route_weight="20" />
+	<roadprofile item_types="street_service"		speed="20" route_weight="15" />
 	<roadprofile item_types="track_paved"			speed="30" route_weight="20" />
 	<roadprofile item_types="street_0"				speed="30" route_weight="25" />
 	<roadprofile item_types="street_1_city"			speed="30" route_weight="30" />
@@ -503,16 +490,6 @@ navit.say("Passagier");
 
 	<xi:include href="$NAVIT_USER_DATADIR/map.xml" />
 	<!-- Beginn Universelle Layer -->
-	<layer name="geocaching">
-	<itemgra item_types="poi_gc_multi" order="12-">		<icon src="gc_multi.png" />	</itemgra>
-	<itemgra item_types="poi_gc_tradi" order="12-">		<icon src="gc_tradi.png" />	</itemgra>
-	<itemgra item_types="poi_gc_event" order="12-">		<icon src="gc_event.png" />	</itemgra>
-	<itemgra item_types="poi_gc_mystery" order="12-">	<icon src="gc_mystery.png" />	</itemgra>
-	<itemgra item_types="poi_gc_question" order="12-">	<icon src="gc_question.png" />	</itemgra>
-	<itemgra item_types="poi_gc_stages" order="12-">	<icon src="gc_stages.png" />	</itemgra>
-	<itemgra item_types="poi_gc_reference" order="12-">	<icon src="gc_reference.png" />	</itemgra>
-	<itemgra item_types="poi_gc_webcam" order="12-">	<icon src="gc_webcam.png" />	</itemgra>
-	</layer>
 	<layer name="my">
 	<itemgra item_types="poi_dam" order="11-14">	<icon src="dam" w="64" h="64" x="32" y="32" />	</itemgra>
 	<itemgra item_types="poi_dam" order="15-16">	<icon src="dam" w="96" h="96" x="48" y="48" />	</itemgra>
@@ -1173,8 +1150,8 @@ navit.say("Passagier");
 	<itemgra item_types="poly_meadow" order="17-">		<polygon color="#DDFF9FAA" />	</itemgra>
 	<itemgra item_types="poly_scrub" order="13-16">	<polygon color="#74997480" />	</itemgra>
 	<itemgra item_types="poly_scrub" order="17-">	<polygon color="#749974AA" />	<text text_size="32" color="#4B005E" />	</itemgra>
-	<itemgra item_types="poly_wood" order="10-16">	<polygon color="#6DA60070" />	</itemgra>
-	<itemgra item_types="poly_wood" order="17-">	<polygon color="#6DA60090" />	<text text_size="32" color="#40006A" />	</itemgra>
+	<itemgra item_types="poly_wood" order="10-16">	<polygon color="#03411170" />	</itemgra>	<!-- 00993370 -->
+	<itemgra item_types="poly_wood" order="17-">	<polygon color="#03411190" />	<text text_size="32" color="#40006A" />	</itemgra>
 	<itemgra item_types="poly_quarry" order="14-16">	<polygon color="#CCCCCC90" />	<polyline color="#EDDAC7" width="4" />	</itemgra>
 	<itemgra item_types="poly_quarry" order="17-">		<polygon color="#CCCCCCBB" />	<polyline color="#EDDAC7" width="10" />	<text text_size="32" color="#340069" />	</itemgra>
 	<itemgra item_types="poly_scree" order="11-16">	<polygon color="#80997790" />	</itemgra>
@@ -1232,6 +1209,11 @@ navit.say("Passagier");
 	<itemgra item_types="poly_beach" order="17-">	<polygon color="#FFF7DDAA" />	<text text_size="32" color="#40006A" />	</itemgra>
 	<itemgra item_types="poly_artwork" order="14-16">	<polygon color="#FFB4FFAA" />	<polyline color="#FFB4FF" width="2" />	</itemgra>
 	<itemgra item_types="poly_artwork" order="17-">		<polygon color="#FFB4FFCC" />	<polyline color="#FFB4FF" width="4" />	<text text_size="32" color="#6B5B00" />	</itemgra>
+	<itemgra item_types="height_line_1" order="12">	<polyline color="#A9A9A9" width="1" />	<text text_size="28" />	</itemgra>
+	<itemgra item_types="height_line_1" order="13-">	<polyline color="#A9A9A9" width="3" />	<text text_size="28" />	</itemgra>
+	<itemgra item_types="height_line_2" order="12">		<polyline color="#A9A9A9" width="2" />	<text text_size="28" />	</itemgra>
+	<itemgra item_types="height_line_2" order="13-">	<polyline color="#A9A9A9" width="2" />	<text text_size="28" />	</itemgra>
+	<itemgra item_types="height_line_3" order="13-">	<polyline color="#A9A9A9" width="1" />	</itemgra> 
 	</layer>
 	<!-- 
 	<itemgra item_types="height_line_1" order="12">	<polyline color="#A9A9A9" width="1" />	<text text_size="28" />	</itemgra>
@@ -1269,9 +1251,9 @@ navit.say("Passagier");
 	<itemgra item_types="water_stream" order="13">		<polyline color="#4ABBEE" width="6" />	</itemgra>
 	<itemgra item_types="water_stream" order="14">		<polyline color="#4ABBEE" width="8" />	</itemgra>
 	<itemgra item_types="water_stream" order="15">		<polyline color="#4ABBEEDD" width="12" />	</itemgra>
-	<itemgra item_types="water_stream" order="16">		<polyline color="#4ABBEEBB" width="18" />	<text text_size="24" color="#FFFFFF" background_color="#000000" />	</itemgra>
-	<itemgra item_types="water_stream" order="17">		<polyline color="#4ABBEEBB" width="32" />	<text text_size="28" color="#FFFFFF" background_color="#000000" />	</itemgra>
-	<itemgra item_types="water_stream" order="18-">		<polyline color="#4ABBEEBB" width="50" />	<text text_size="36" color="#FFFFFF" background_color="#000000" />	</itemgra>
+	<itemgra item_types="water_stream" order="16">		<polyline color="#4ABBEEBB" width="18" />	<text text_size="24" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="water_stream" order="17">		<polyline color="#4ABBEEBB" width="32" />	<text text_size="28" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="water_stream" order="18-">		<polyline color="#4ABBEEBB" width="50" />	<text text_size="36" color="#CCCCFF" background_color="#000055" />	</itemgra>
 	<itemgra item_types="poly_plaza" order="12-13">	<polygon color="#E8E1C190" />	</itemgra>
 	<itemgra item_types="poly_plaza" order="14-16">	<polygon color="#E8E1C180" />	</itemgra>
 	<itemgra item_types="poly_plaza" order="17-">	<polygon color="#E8E1C170" />	<text text_size="28" background_color="#006660" />	</itemgra>
@@ -1283,9 +1265,9 @@ navit.say("Passagier");
 	<itemgra item_types="water_river" order="13">	<polyline color="#77CCEE" width="8" />	</itemgra>
 	<itemgra item_types="water_river" order="14">	<polyline color="#77CCEE" width="12" />	</itemgra>
 	<itemgra item_types="water_river" order="15">	<polyline color="#77CCEE" width="18" />	</itemgra>
-	<itemgra item_types="water_river" order="16">	<polyline color="#77CCEE" width="28" />	<text text_size="24" color="#FFFFFF" background_color="#000000" />	</itemgra>
-	<itemgra item_types="water_river" order="17">	<polyline color="#77CCEE" width="42" />	<text text_size="28" color="#FFFFFF" background_color="#000000" />	</itemgra>
-	<itemgra item_types="water_river" order="18-">	<polyline color="#77CCEE" width="76" />	<text text_size="36" color="#FFFFFF" background_color="#000000" />	</itemgra>
+	<itemgra item_types="water_river" order="16">	<polyline color="#77CCEE" width="28" />	<text text_size="24" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="water_river" order="17">	<polyline color="#77CCEE" width="42" />	<text text_size="28" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="water_river" order="18-">	<polyline color="#77CCEE" width="76" />	<text text_size="36" color="#CCCCFF" background_color="#000055" />	</itemgra>
 	<itemgra item_types="poly_basin" order="12-16">	<polygon color="#7AAFFF90" />	<polyline color="#CC5FFE90" width="2" />	</itemgra>
 	<itemgra item_types="poly_basin" order="17-">	<polygon color="#7AAFFFAA" />	<polyline color="#CC5FFE90" width="4" />	<text text_size="32" color="#40006A" />	</itemgra>
 	<itemgra item_types="water_line" order="6-10">	<polyline color="#396999" width="2" />	</itemgra>
@@ -1411,7 +1393,7 @@ navit.say("Passagier");
 	<itemgra item_types="street_parking_lane" order="15">	<polyline color="#707EFF" width="16" />	</itemgra>
 	<itemgra item_types="street_parking_lane" order="16">	<polyline color="#707EFF" width="24" />	</itemgra>
 	<itemgra item_types="street_parking_lane" order="17">	<polyline color="#707EFF" width="42" />	</itemgra>
-	<itemgra item_types="street_parking_lane" order="18-">	<polyline color="#707EFF" width="86" />	</itemgra>
+	<itemgra item_types="street_parking_lane" order="18-">	<polyline color="#707EFF" width="84" />	</itemgra>
 	<itemgra item_types="ramp" order="14">		<polyline color="#9999BB" width="22" />	</itemgra>
 	<itemgra item_types="ramp" order="15-16">	<polyline color="#9999BB" width="36" />	</itemgra>
 	<itemgra item_types="ramp" order="17">		<polyline color="#9999BB" width="56" />	</itemgra>
@@ -1569,7 +1551,7 @@ navit.say("Passagier");
 	<itemgra item_types="street_0" order="15-16">	<polyline color="#CCDDEE" width="22" />	<text text_size="18" color="#7A7AFF" background_color="#5055BB" />	</itemgra>
 	<itemgra item_types="street_0" order="17">		<polyline color="#CCDDEE" width="44" />	<text text_size="24" color="#7A7AFF" background_color="#5055BB" />	</itemgra>
 	<itemgra item_types="street_0" order="18-">		<polyline color="#CCDDEE" width="84" />	<text text_size="32" color="#7A7AFF" background_color="#5055BB" />	</itemgra>
-	<itemgra item_types="street_1_land,street_1_city" order="12">		<polyline color="#AFBECC" width="6" />	</itemgra>
+	<itemgra item_types="street_1_land,street_1_city" order="12">		<polyline color="#A8A4CC" width="8" />	</itemgra>
 	<itemgra item_types="street_1_land,street_1_city" order="13">		<polyline color="#CCDDEE" width="10" />	</itemgra>
 	<itemgra item_types="street_1_land,street_1_city" order="14">		<polyline color="#CCDDEE" width="14" />	</itemgra>
 	<itemgra item_types="street_1_land,street_1_city" order="15-16">	<polyline color="#CCDDEE" width="26" />	<text text_size="18" color="#5154AA" background_color="#888AAA" />	</itemgra>
@@ -1581,16 +1563,16 @@ navit.say("Passagier");
 	<itemgra item_types="living_street" order="15-16">	<polyline color="#CCDDEE" width="24" />	<text text_size="20" color="#000000" background_color="#FFFF00" />	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="24" h="24" x="12" y="12" />	</itemgra>
 	<itemgra item_types="living_street" order="17">		<polyline color="#CCDDEE" width="46" />	<text text_size="26" color="#000000" background_color="#FFFF00" />	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="48" h="48" x="24" y="24" />	</itemgra>
 	<itemgra item_types="living_street" order="18-">	<polyline color="#CCDDEE" width="94" />	<text text_size="34" color="#000000" background_color="#FFFF00" />	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="64" h="64" x="32" y="32" />	</itemgra>
-	<itemgra item_types="street_2_land,street_2_city" order="10">		<polyline color="#C2AFAF" width="4" />	</itemgra>
-	<itemgra item_types="street_2_land,street_2_city" order="11">		<polyline color="#C2AFAF" width="6" />	</itemgra>
-	<itemgra item_types="street_2_land,street_2_city" order="12">		<polyline color="#C2AFAF" width="12" />	</itemgra>
+	<itemgra item_types="street_2_land,street_2_city" order="10">		<polyline color="#999388" width="4" />	</itemgra>
+	<itemgra item_types="street_2_land,street_2_city" order="11">		<polyline color="#999388" width="6" />	</itemgra>
+	<itemgra item_types="street_2_land,street_2_city" order="12">		<polyline color="#999388" width="12" />	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="13">		<polyline color="#BCBCDE" width="16" />	<text text_size="6" color="#454554" background_color="#590029" />	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="14">		<polyline color="#BCBCDE" width="18" />	<text text_size="10" color="#454554" background_color="#590029" />	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="15-16">	<polyline color="#BCBCDE" width="28" />		<polyline color="#FFFFFF" width="1" dash="18" />	<text text_size="22" color="#454554" background_color="#590029" />	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="17">		<polyline color="#BCBCDE" width="56" />		<polyline color="#FFFFFF" width="1" dash="28" />	<text text_size="28" color="#454554" background_color="#590029" />	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="18-">		<polyline color="#BCBCDE" width="114" />	<polyline color="#FFFFFF" width="1" dash="48" />	<text text_size="38" color="#454554" background_color="#590029" />	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="9">		<polyline color="#AB99CC" width="4" />	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="10-11">	<polyline color="#AB99CC" width="6" />	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="9">		<polyline color="#A688CC" width="4" />	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="10-11">	<polyline color="#A688CC" width="8" />	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="12">		<polyline color="#9191AA" width="12" />	<text text_size="6" color="#5000DD" background_color="#300088" />	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="13">		<polyline color="#9191AA" width="16" />	<text text_size="10" color="#5000DD" background_color="#300088" />	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="14">		<polyline color="#9191AA" width="20" />	<text text_size="18" color="#5000DD" background_color="#AB99CC" />	</itemgra>
@@ -1598,7 +1580,7 @@ navit.say("Passagier");
 	<itemgra item_types="street_3_land,street_3_city" order="17">		<polyline color="#9191AA" width="60" />		<polyline color="#FFFFFF" width="1" dash="28" />	<text text_size="32" color="#5000DD" background_color="#AB99CC" />	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="18-">		<polyline color="#9191AA" width="122" />	<polyline color="#FFFFFF" width="1" dash="48" />	<text text_size="42" color="#5000DD" background_color="#AB99CC" />	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="8-9">		<polyline color="#FF9600" width="4" />	</itemgra>
-	<itemgra item_types="street_4_land,street_4_city" order="10-11">	<polyline color="#FF9600" width="6" />	</itemgra>
+	<itemgra item_types="street_4_land,street_4_city" order="10-11">	<polyline color="#FF9600" width="10" />	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="12">		<polyline color="#9797B3" width="14" />	<text text_size="6" color="#FFCC00" background_color="#FFCC00" />	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="13">		<polyline color="#9797B3" width="18" />	<text text_size="10" color="#FFCC00" background_color="#FFCC00" />	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="14">		<polyline color="#9797B3" width="22" />	<text text_size="18" color="#FFCC00" background_color="#997700" />	</itemgra>
@@ -1807,7 +1789,7 @@ navit.say("Passagier");
 	<itemgra item_types="town_label_5e3" order="8">		<circle text_size="26" color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_5e3" order="8">	<circle text_size="22" color="" background_color="#800000" />	</itemgra>
 	<itemgra item_types="town_label_1e4" order="8">		<circle text_size="28" color="#000000" />	</itemgra>
-	<itemgra item_types="district_label_1e4" order="8">	<circle text_size="24" color="" background_color="#800000" />	</itemgra>
+	<itemgra item_types="district_label_1e4" order="8-9">	<circle text_size="24" color="" background_color="#800000" />	</itemgra>
 	<itemgra item_types="town_label_2e4" order="7-8">		<circle text_size="28" color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_2e4" order="7-8">	<circle text_size="24" color="" background_color="#800000" />	</itemgra>
 	<itemgra item_types="town_label_5e4" order="6-7">		<circle text_size="28" color="#000000" radius="10" width="3" />	</itemgra>
@@ -1836,7 +1818,7 @@ navit.say("Passagier");
 	<itemgra item_types="district_label_1e3,district_label_2e3" order="11">	<circle text_size="26" color="" background_color="#800000" />	</itemgra>
 	<itemgra item_types="town_label_5e3" order="9-11">		<circle text_size="32" color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_5e3" order="9-11">	<circle text_size="28" color="" background_color="#800000" />	</itemgra>
-	<itemgra item_types="town_label_1e4,town_label_2e4" order="10-11">			<circle text_size="34" background_color="#000000" />	</itemgra>
+	<itemgra item_types="town_label_1e4,town_label_2e4" order="9-11">			<circle text_size="34" background_color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_1e4,district_label_2e4" order="10-11">	<circle text_size="32" color="" background_color="#800000" />	</itemgra>
 	<itemgra item_types="town_label_5e4" order="8-11">		<circle text_size="36" background_color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_5e4" order="8-11">	<circle text_size="32" color="" background_color="#800000" />	</itemgra>
@@ -1865,7 +1847,7 @@ navit.say("Passagier");
 	<itemgra item_types="town_label_1e7" order="7-11">		<circle text_size="52" background_color="#000000" />	</itemgra>
 	<itemgra item_types="district_label_1e7" order="7-11">	<circle text_size="48" color="" background_color="#800000" />	</itemgra>
 	</layer>
-	<!-- labels order="12-" color=Individuell in Layouts -->
+	<!-- labels order="12-" color=Individuell in den einzelnen Layouts -->
 	<layer name="labels_bevore">
 	<itemgra item_types="house_number" order="16">		<circle text_size="22" background_color="#AD00AD" />	</itemgra>
 	<itemgra item_types="place_label" order="13-14">	<circle text_size="26" color="#006565" />	</itemgra>
@@ -1911,14 +1893,11 @@ navit.say("Passagier");
 	<itemgra item_types="found_item" order="17-">	<circle text_size="32" color="#660044" background_color="#FF00BB" radius="72" width="4" />	</itemgra>
 	</layer>
 	<!-- Ende Universelle Layer -->
+	<!-- insert there your Favorit Layout  <xi:include href="$NAVIT_USER_DATADIR/your_favorit.xml" />  -->
 
 	<layout name="MOTORIST" nightlayout="DARKGLOW" color="#EEFFEE" order_delta="0">
-	<cursor w="230" h="230" interval="10000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="126" h="126" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="116" h="116" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_aa" w="116" h="116" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="98" h="98" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_aa" w="98" h="98" />	</itemgra>
+	<cursor w="230" h="230">
+	<itemgra>	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="98" h="98" />	</itemgra>
 	</cursor>
 	<layer name="world_image">	<itemgra item_types="image" order="-11">	<image/>	</itemgra>	</layer>
 	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-11">	<polygon color="#8CCFFF" />	</itemgra>	</layer>
@@ -2003,7 +1982,6 @@ navit.say("Passagier");
 	<layer name="station" ref="station" active="1" />
 	<layer name="poly_icon_label" ref="poly_icon_label" active="0" />
 	<layer name="my" ref="my" active="0" />
-	<layer name="geocaching" active="0" />
 	<layer name="Internal" ref="Internal" />
 	<layer name="world_labels_bevore" ref="world_labels_bevore" active="0" />
 	<layer name="labels_bevore" ref="labels_bevore" active="0" />
@@ -2014,7 +1992,7 @@ navit.say("Passagier");
 	<xi:include href="$NAVIT_USER_DATADIR/navit_L3.xml" />
 
 	<layout name="CYCLIST" color="#D0F0D0" order_delta="0">
-	<cursor w="230" h="230" interval="10000" sequence_range="-1">
+	<cursor w="230" h="230" interval="30000" sequence_range="-1">
 	<itemgra speed_range="-2">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b" w="140" h="140" />	</itemgra>
 	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b0" w="140" h="140" />	</itemgra>
 	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b1" w="140" h="140" />	</itemgra>

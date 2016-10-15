@@ -22,10 +22,23 @@
 	</cursor>
 	<layer name="world_image">	<itemgra item_types="image" order="-6">	<image/>	</itemgra>	</layer>
 	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="7-">	<polygon color="#556677" />	</itemgra>	</layer>
-	<layer name="world_poly" ref="world_poly" />
+	<layer name="world_poly">
+	<itemgra item_types="poly_water" order="9-11">	<polygon color="#2E5C77" />	</itemgra>
+	<itemgra item_types="poi_customc" order="2">	<icon src="%s" w="32" h="32" />	</itemgra>
+	<itemgra item_types="poi_customc" order="3">	<icon src="%s" w="48" h="48" x="0" y="64" />	<circle text_size="24" color="" background_color="#B00000" />	</itemgra>
+	<itemgra item_types="poi_customc" order="4">	<icon src="%s" w="64" h="64" x="0" y="96" />	<circle text_size="34" color="" background_color="#B00000" />	</itemgra>
+	<itemgra item_types="poi_customc" order="5">	<icon src="%s" w="96" h="96" x="0" y="128" />	<circle text_size="42" color="" background_color="#B00000" />	</itemgra>
+	<itemgra item_types="poi_customc" order="6">	<icon src="%s" w="128" h="128" x="0" y="192" />	<circle text_size="60" color="" background_color="#B00000" />	</itemgra>
+	<itemgra item_types="poi_customd" order="1">	<circle text_size="18" color="#004466" background_color="#40CCFF" />	</itemgra>
+	<itemgra item_types="poi_customd" order="2-3">	<circle text_size="24" color="#004466" background_color="#40CCFF" />	</itemgra>
+	<itemgra item_types="poi_customd" order="4-5">	<circle text_size="28" color="#006699" background_color="#40CCFF" />	</itemgra>
+	<itemgra item_types="poi_customd" order="6-7">	<circle text_size="36" color="#008CC8" background_color="#40CCFF" />	</itemgra>
+	<itemgra item_types="poi_customd" order="8-9">	<circle text_size="42" color="#008CC8" background_color="#40CCFF" />	</itemgra>
+	</layer>
+	<!-- worldimage.txt: image= worldimage.png + poi_customb= Wahrzeichen + poi_customc= Navit Flaggen + poi_customd= Text Sea -->
 	<layer name="poly">
 	<itemgra item_types="poly_town" order="12-">	<polygon color="#00664450" />	</itemgra>
-	<itemgra item_types="poly_water" order="12-">	<polygon color="#77CCEEBB" />	</itemgra>
+	<itemgra item_types="poly_water" order="12-">	<polygon color="#2E5C77BB" />	</itemgra>
 	</layer>
 	<layer name="poly_1" active="1">
 	<itemgra item_types="poly_fell" order="11-14">	<polygon color="#78767880" />	</itemgra>
@@ -152,7 +165,57 @@
 	<itemgra item_types="poly_artwork" order="17-">		<polygon color="#CF90CFAA" />	<polyline color="#FFB4FF" width="4" />	<text color="#A200FF" text_size="32" />	</itemgra>
 	</layer>
 	<layer name="poly_2" ref="poly_2" active="1" />
-	<layer name="water" ref="water" />
+	<layer name="water">
+	<itemgra item_types="water_drain" order="13-15">	<polyline color="#4A6B6B" width="4" />	</itemgra>
+	<itemgra item_types="water_drain" order="16">		<polyline color="#4A6B6BBB" width="8" />	<text text_size="24" color="#0000FF" background_color="#000000" />	</itemgra>
+	<itemgra item_types="water_drain" order="17">		<polyline color="#4A6B6BAA" width="14" />	<text text_size="28" color="#0000FF" background_color="#000000" />	</itemgra>
+	<itemgra item_types="water_drain" order="18-">		<polyline color="#4A6B6B90" width="22" />	<text text_size="36" color="#0000FF" background_color="#000000" />	</itemgra>
+	<itemgra item_types="water_canal" order="12-13">	<polyline color="#2B4A4A" width="4" />	</itemgra>
+	<itemgra item_types="water_canal" order="14">	<polyline color="#2B4A4ADD" width="6" />	</itemgra>
+	<itemgra item_types="water_canal" order="15">	<polyline color="#2B4A4ABB" width="10" />	</itemgra>
+	<itemgra item_types="water_canal" order="16">	<polyline color="#2B4A4ABB" width="14" />	<text text_size="24" color="#0000FF" background_color="#000000" />	</itemgra>
+	<itemgra item_types="water_canal" order="17">	<polyline color="#2B4A4ABB" width="24" />	<text text_size="28" color="#0000FF" background_color="#000000" />	</itemgra>
+	<itemgra item_types="water_canal" order="18-">	<polyline color="#2B4A4ABB" width="42" />	<text text_size="36" color="#0000FF" background_color="#000000" />	</itemgra>
+	<itemgra item_types="water_stream" order="10-11">	<polyline color="#2A6A88" width="2" />	</itemgra>
+	<itemgra item_types="water_stream" order="12">		<polyline color="#2A6A88" width="4" />	</itemgra>
+	<itemgra item_types="water_stream" order="13">		<polyline color="#2A6A88" width="6" />	</itemgra>
+	<itemgra item_types="water_stream" order="14">		<polyline color="#2A6A88" width="8" />	</itemgra>
+	<itemgra item_types="water_stream" order="15">		<polyline color="#2A6A88DD" width="12" />	</itemgra>
+	<itemgra item_types="water_stream" order="16">		<polyline color="#2A6A88BB" width="18" />	<text text_size="24" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="water_stream" order="17">		<polyline color="#2A6A88BB" width="32" />	<text text_size="28" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="water_stream" order="18-">		<polyline color="#2A6A88BB" width="50" />	<text text_size="36" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="poly_plaza" order="12-13">	<polygon color="#827B5B90" />	</itemgra>
+	<itemgra item_types="poly_plaza" order="14-16">	<polygon color="#827B5B80" />	</itemgra>
+	<itemgra item_types="poly_plaza" order="17-">	<polygon color="#827B5B70" />	<text text_size="28" background_color="#006660" />	</itemgra>
+	<itemgra item_types="poly_pedestrian" order="12-13">	<polygon color="#48486690" />	</itemgra>
+	<itemgra item_types="poly_pedestrian" order="14-16">	<polygon color="#48486680" />	</itemgra>
+	<itemgra item_types="poly_pedestrian" order="17-">		<polygon color="#48486670" />	<text text_size="28" background_color="#999900" />	</itemgra>
+	<itemgra item_types="water_river" order="9-11">	<polyline color="#447484" width="2" />	</itemgra>
+	<itemgra item_types="water_river" order="12">	<polyline color="#447484" width="6" />	</itemgra>
+	<itemgra item_types="water_river" order="13">	<polyline color="#447484" width="8" />	</itemgra>
+	<itemgra item_types="water_river" order="14">	<polyline color="#447484" width="12" />	</itemgra>
+	<itemgra item_types="water_river" order="15">	<polyline color="#447484" width="18" />	</itemgra>
+	<itemgra item_types="water_river" order="16">	<polyline color="#447484" width="28" />	<text text_size="24" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="water_river" order="17">	<polyline color="#447484" width="42" />	<text text_size="28" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="water_river" order="18-">	<polyline color="#447484" width="76" />	<text text_size="36" color="#CCCCFF" background_color="#000055" />	</itemgra>
+	<itemgra item_types="poly_basin" order="12-16">	<polygon color="#49699990" />	<polyline color="#CC5FFE90" width="2" />	</itemgra>
+	<itemgra item_types="poly_basin" order="17-">	<polygon color="#496999AA" />	<polyline color="#CC5FFE90" width="4" />	<text text_size="32" color="#40006A" />	</itemgra>
+	<itemgra item_types="water_line" order="6-10">	<polyline color="#396999" width="2" />	</itemgra>
+	<itemgra item_types="water_line" order="11-13">	<polyline color="#396999" width="2" />		<circle text_size="24" color="#44A2FF" background_color="#0000FF" />	</itemgra>
+	<itemgra item_types="water_line" order="14-16">	<polyline color="#396999BB" width="4" />	<circle text_size="28" color="#44A2FF" background_color="#0000FF" />	</itemgra>
+	<itemgra item_types="water_line" order="17-">	<polyline color="#39699990" width="6" />	<circle text_size="36" color="#44A2FF" background_color="#0000FF" />	<text text_size="38" color="#0000FF" background_color="#0000FF" />	</itemgra>
+	<itemgra item_types="poly_reservoir" order="11-14">	<polygon color="#697299AA" />	</itemgra>
+	<itemgra item_types="poly_reservoir" order="15-">	<polygon color="#697299BB" />	<polyline color="#4470CCAA" width="6" />	<text text_size="32" color="#150051" />	</itemgra>
+	<itemgra item_types="poly_water" order="11-14">	<polyline color="#2E5C7790" width="4" />	</itemgra>
+	<itemgra item_types="poly_water" order="15-16">	<polyline color="#2E5C77AA" width="6" />	<text text_size="22" color="#0000FF" />	</itemgra>
+	<itemgra item_types="poly_water" order="17-">	<polyline color="#2E5C77BB" width="12" />	<text text_size="32" color="#0000FF" />	</itemgra>
+	<itemgra item_types="border_state" order="12-14">	<polyline color="#7A77A790" width="6" />	</itemgra>
+	<itemgra item_types="border_state" order="15-16">	<polyline color="#7A77A760" width="16" />	</itemgra>
+	<itemgra item_types="border_state" order="17-">		<polyline color="#7A77A740" width="28" />	<text text_size="32" color="#FF00FC" />	</itemgra>
+	<itemgra item_types="border_country" order="8-13">	<polyline color="#FF0000" width="4" />		<circle color="#FF0000" radius="14" width="7" />	</itemgra>
+	<itemgra item_types="border_country" order="14-16">	<polyline color="#FF000080" width="10" />	<circle text_size="28" color="#000000" background_color="#FF0000" />	<text text_size="26" color="#000000" background_color="#FF0010" />	</itemgra>
+	<itemgra item_types="border_country" order="17-">	<polyline color="#FF000040" width="20" />	<text text_size="34" color="#000000" background_color="#FF0000" />	</itemgra>
+	</layer>
 	<layer name="poly_icon" ref="poly_icon" active="0" />
 	<layer name="u_street" ref="u_street" />
 	<layer name="under_street" ref="under_street" active="0" />
@@ -339,7 +402,7 @@
 	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-14">	<circle text_size="34" color="" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="15-">	<circle text_size="38" color="" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="13">				<circle text_size="38" color="#FFFFFF" />	</itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-17">				<circle text_size="42" color="#FFFFFF" />	</itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-17">			<circle text_size="42" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-17">	<circle text_size="38" color="" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="town_label_1e3,town_label_2e3" order="11">			<circle text_size="28" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="district_label_1e3,district_label_2e3" order="11">	<circle text_size="26" color="" background_color="#FF99BB" />	</itemgra>
