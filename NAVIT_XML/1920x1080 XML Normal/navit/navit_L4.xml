@@ -1,10 +1,24 @@
-	<layout name="DARKGLOW" color="#191919" daylayout="MOTORIST" order_delta="0">
-	<cursor w="230" h="230" interval="20000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="150" h="150" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="150" h="150" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="150" h="150" />	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="130" h="130" />	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="130" h="130" />	</itemgra>
+	<layout name="DARKGLOW_1" color="#191919" daylayout="MOTORIST_1" order_delta="0">
+	<cursor w="230" h="230">
+	<itemgra speed_range="-2">	<icon src="cursor_still" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-"> 	<circle color="#FFFF0066" radius="110" width="16">	<coord x="115" y="115" />	</circle>	</itemgra>
+	<itemgra speed_range="3-" angle_range="0-10">		<icon src="cursor" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="11-33">		<icon src="cursor225" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="34-56">		<icon src="cursor450" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="57-79">		<icon src="cursor675" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="80-100">		<icon src="$NAVIT_USER_DATADIR/maske/cursor4" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="101-123">	<icon src="$NAVIT_USER_DATADIR/maske/cursor5" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="124-146">	<icon src="$NAVIT_USER_DATADIR/maske/cursor6" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="147-169">	<icon src="$NAVIT_USER_DATADIR/maske/cursor7" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="170-190">	<icon src="$NAVIT_USER_DATADIR/maske/cursor8" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="191-213">	<icon src="$NAVIT_USER_DATADIR/maske/cursor9" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="214-236">	<icon src="$NAVIT_USER_DATADIR/maske/cursor10" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="237-259">	<icon src="$NAVIT_USER_DATADIR/maske/cursor11" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="260-280">	<icon src="$NAVIT_USER_DATADIR/maske/cursor12" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="281-303">	<icon src="$NAVIT_USER_DATADIR/maske/cursor13" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="304-326">	<icon src="$NAVIT_USER_DATADIR/maske/cursor14" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="327-349">	<icon src="$NAVIT_USER_DATADIR/maske/cursor15" w="96" h="96" />	</itemgra>
+	<itemgra speed_range="3-" angle_range="350-360">	<icon src="cursor" w="96" h="96" />	</itemgra>
 	</cursor>
 	<layer name="world_image">	<itemgra item_types="image" order="-6">	<image/>	</itemgra>	</layer>
 	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="7-">	<polygon color="#556677" />	</itemgra>	</layer>
@@ -14,12 +28,12 @@
 	<itemgra item_types="poi_customc" order="3">	<icon src="%s" w="48" h="48" x="0" y="64" />	<circle text_size="24" color="" background_color="#B00000" />	</itemgra>
 	<itemgra item_types="poi_customc" order="4">	<icon src="%s" w="64" h="64" x="0" y="96" />	<circle text_size="34" color="" background_color="#B00000" />	</itemgra>
 	<itemgra item_types="poi_customc" order="5">	<icon src="%s" w="96" h="96" x="0" y="128" />	<circle text_size="42" color="" background_color="#B00000" />	</itemgra>
-	<itemgra item_types="poi_customc" order="6">	<icon src="%s" w="128" h="128" x="0" y="192" />	<circle text_size="60" color="" background_color="#B00000" />	</itemgra>
+	<itemgra item_types="poi_customc" order="6-11">	<icon src="%s" w="128" h="128" x="0" y="192" />	<circle text_size="60" color="" background_color="#B00000" />	</itemgra>
 	<itemgra item_types="poi_customd" order="1">	<circle text_size="18" color="#004466" background_color="#40CCFF" />	</itemgra>
 	<itemgra item_types="poi_customd" order="2-3">	<circle text_size="24" color="#004466" background_color="#40CCFF" />	</itemgra>
 	<itemgra item_types="poi_customd" order="4-5">	<circle text_size="28" color="#006699" background_color="#40CCFF" />	</itemgra>
 	<itemgra item_types="poi_customd" order="6-7">	<circle text_size="36" color="#008CC8" background_color="#40CCFF" />	</itemgra>
-	<itemgra item_types="poi_customd" order="8-9">	<circle text_size="42" color="#008CC8" background_color="#40CCFF" />	</itemgra>
+	<itemgra item_types="poi_customd" order="8-11">	<circle text_size="42" color="#008CC8" background_color="#40CCFF" />	</itemgra>
 	</layer>
 	<!-- worldimage.txt: image= worldimage.png + poi_customb= Wahrzeichen + poi_customc= Navit Flaggen + poi_customd= Text Sea -->
 	<layer name="poly">
@@ -301,6 +315,7 @@
 	<layer name="poly_icon_label" ref="poly_icon_label" active="0" />
 	<layer name="my" ref="my" active="0" />
 	<layer name="Internal" ref="Internal" />
+
 	<layer name="world_labels_bevore" active="0">
 	<itemgra item_types="town_label_5e4" order="6">		<circle text_size="32" color="#000000" radius="10" width="3" />	</itemgra>
 	<itemgra item_types="district_label_5e4" order="6">	<circle text_size="26" color="" background_color="#800000" radius="10" width="3" />	</itemgra>
@@ -387,7 +402,7 @@
 	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-14">	<circle text_size="34" color="" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="15-">	<circle text_size="38" color="" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="13">				<circle text_size="38" color="#FFFFFF" />	</itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-17">				<circle text_size="42" color="#FFFFFF" />	</itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-17">			<circle text_size="42" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-17">	<circle text_size="38" color="" background_color="#FF99BB" />	</itemgra>
 	<itemgra item_types="town_label_1e3,town_label_2e3" order="11">			<circle text_size="28" color="#FFFFFF" />	</itemgra>
 	<itemgra item_types="district_label_1e3,district_label_2e3" order="11">	<circle text_size="26" color="" background_color="#FF99BB" />	</itemgra>

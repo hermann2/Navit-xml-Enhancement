@@ -28,12 +28,12 @@
 	<itemgra item_types="poi_customc" order="3">	<icon src="%s" w="48" h="48" x="0" y="64" />	<circle text_size="24" color="" background_color="#B00000" />	</itemgra>
 	<itemgra item_types="poi_customc" order="4">	<icon src="%s" w="64" h="64" x="0" y="96" />	<circle text_size="34" color="" background_color="#B00000" />	</itemgra>
 	<itemgra item_types="poi_customc" order="5">	<icon src="%s" w="96" h="96" x="0" y="128" />	<circle text_size="42" color="" background_color="#B00000" />	</itemgra>
-	<itemgra item_types="poi_customc" order="6">	<icon src="%s" w="128" h="128" x="0" y="192" />	<circle text_size="60" color="" background_color="#B00000" />	</itemgra>
+	<itemgra item_types="poi_customc" order="6-11">	<icon src="%s" w="128" h="128" x="0" y="192" />	<circle text_size="60" color="" background_color="#B00000" />	</itemgra>
 	<itemgra item_types="poi_customd" order="1">	<circle text_size="18" color="#004466" background_color="#40CCFF" />	</itemgra>
 	<itemgra item_types="poi_customd" order="2-3">	<circle text_size="24" color="#004466" background_color="#40CCFF" />	</itemgra>
 	<itemgra item_types="poi_customd" order="4-5">	<circle text_size="28" color="#006699" background_color="#40CCFF" />	</itemgra>
 	<itemgra item_types="poi_customd" order="6-7">	<circle text_size="36" color="#008CC8" background_color="#40CCFF" />	</itemgra>
-	<itemgra item_types="poi_customd" order="8-9">	<circle text_size="42" color="#008CC8" background_color="#40CCFF" />	</itemgra>
+	<itemgra item_types="poi_customd" order="8-11">	<circle text_size="42" color="#008CC8" background_color="#40CCFF" />	</itemgra>
 	</layer>
 	<!-- worldimage.txt: image= worldimage.png + poi_customb= Wahrzeichen + poi_customc= Navit Flaggen + poi_customd= Text Sea -->
 	<layer name="poly">

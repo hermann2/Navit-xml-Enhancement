@@ -1,0 +1,12 @@
+<mapset enabled="yes">
+	<map type="binfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/austria.bin" />
+	<map type="textfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/txt/worldimage.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/D_strassendetail.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Track_recording.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_Hütte.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_Höhle.txt" />
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/Wien Park_ride_ticket.txt" />
+	<map type="csv" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/speedcam.txt" item_type="tec_common" attr_types="position_longitude,position_latitude,tec_type,maxspeed,tec_dirtype,tec_direction" />
+</mapset>
+
