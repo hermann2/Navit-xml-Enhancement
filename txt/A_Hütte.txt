@@ -1,4 +1,5 @@
-﻿10.00410 46.91095 type=poi_custom8 label="Tübinger Hütte 2191m" icon_src="E_mountainhut"
+﻿
+10.00410 46.91095 type=poi_custom8 label="Tübinger Hütte 2191m" icon_src="E_mountainhut"
 10.00600 47.49140 type=poi_custom8 label="Alpengasthof Hörmoos 1260m" icon_src="E_mountainhut"
 10.00965 46.87303 type=poi_custom8 label="Seetalhütte 2065m" icon_src="E_mountainhut"
 10.01910 47.51040 type=poi_custom8 label="Berggasthof Imberghaus 1225m" icon_src="E_mountainhut"
@@ -1929,3 +1930,4 @@
 9.98361 46.97690 type=poi_custom8 label="Bergrestaurant Nova Stoba 2010m" icon_src="E_mountainhut"
 9.98667 47.29560 type=poi_custom8 label="Wirtshaus Bergkristall 1220m" icon_src="E_mountainhut"
 9.99049 47.16296 type=poi_custom8 label="Freiburger Hütte 1918m" icon_src="E_mountainhut"
+

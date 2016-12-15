@@ -1,4 +1,5 @@
-﻿7.90055 47.62495 type=poi_custom3 label="" icon_src="E_tunnel_A"
+﻿
+7.90055 47.62495 type=poi_custom3 label="" icon_src="E_tunnel_A"
 9.99145 52.37132 type=poi_custom3 label="" icon_src="E_tunnel_A"
 9.98770 53.56102 type=poi_custom3 label="" icon_src="E_tunnel_A"
 9.98559 48.39703 type=poi_custom3 label="" icon_src="E_tunnel_A"
@@ -2653,3 +2654,4 @@
 12.417010 48.993280 type=poi_custom3 label="Wörth an der Donau" icon_src="E_tunnel_A"
 12.422970 48.992520 type=poi_custom3 label="Wörth an der Donau" icon_src="E_tunnel_A"
 12.098340 49.087650 type=poi_custom3 label="Zeitlarn" icon_src="E_tunnel_A"
+

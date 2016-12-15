@@ -1,3 +1,4 @@
+
 31.626 22.3372 type=poi_customb label="Abu Simbel Temples" icon_src="abusimbel"
 22.3734 38.53144 type=poi_customb label="Akropolis" icon_src="akropolis"
 -62.536 5.97 type=poi_customb label="Angel Falls" icon_src="venezuela"
@@ -49,6 +50,7 @@
 78.04215 27.175 type=poi_customb label="Taj Mahal" icon_src="tajmahal"
 116.3913 39.9163 type=poi_customb label="The Forbidden City" icon_src="forbidden"
 -74.0445 40.68925 type=poi_customb label="The Statue Of Liberty" icon_src="liberty"
+25.851 -17.9234 type=poi_customb label="Victoria Falls" icon_src="victoria"
 
 1.5 42.5 type=poi_customc label="Andorra" icon_src="country_ad"
 52.9 23.8 type=poi_customc label="United Arab Emirates" icon_src="country_ae"
@@ -393,3 +395,4 @@ type=image label="$NAVIT_USER_DATADIR/maske/worldimage.png"
 -180.0 85.0511
 180.0 85.0511
 -180.0 -85.0511
+

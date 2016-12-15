@@ -1,4 +1,5 @@
-﻿9.99972 47.17167 type=poi_custom3 label="Formarinjoch (B198) H:1871m SG:2-3" icon_src="E_pass"
+﻿
+9.99972 47.17167 type=poi_custom3 label="Formarinjoch (B198) H:1871m SG:2-3" icon_src="E_pass"
 10.09163 46.99261 type=poi_custom3 label="Pass Forkla-Gibaualpe H:2260m SG:4" icon_src="E_pass"
 10.09861 46.91889 type=poi_custom3 label="Bieler Höhe B188 H:2032m SG:2 14% 26km" icon_src="E_pass"
 10.14194 47.27000 type=poi_custom3 label="Hochtannbergpass B200 H:1676m SG:2 14%" icon_src="E_pass"

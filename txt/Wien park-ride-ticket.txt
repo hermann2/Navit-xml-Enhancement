@@ -1,4 +1,5 @@
-﻿16.389620 48.234068 type=poi_customa label="Trafik" icon_src="parkschein"
+﻿
+16.389620 48.234068 type=poi_customa label="Trafik" icon_src="parkschein"
 16.331930 48.214369 type=poi_customa label="Trafik" icon_src="parkschein"
 16.365768 48.175406 type=poi_customa label="Trafik" icon_src="parkschein"
 16.367392 48.194175 type=poi_customa label="Trafik" icon_src="parkschein"
