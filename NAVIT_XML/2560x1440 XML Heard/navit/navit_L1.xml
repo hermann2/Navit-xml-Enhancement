@@ -1,4 +1,4 @@
-	<layout name="CAR-DAY" color="#fef9ee" nightlayout="CAR-DARK">
+	<layout name="CAR_DAY" color="#fef9ee" nightlayout="CAR_DARK">
 	<cursor w="230" h="230">
 	<itemgra speed_range="-2">
 	<polyline color="#00BC00" radius="0" width="11">	<coord x="0" y="0" />	</polyline>
