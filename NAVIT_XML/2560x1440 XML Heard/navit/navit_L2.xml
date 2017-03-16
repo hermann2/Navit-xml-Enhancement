@@ -1,4 +1,4 @@
-	<layout name="CAR_DARK" daylayout="CAR_DAY" color="#011001" order_delta="0">
+	<layout name="CAR-DARK" daylayout="CAR-DAY" color="#011001" order_delta="0">
 	<cursor w="230" h="230" interval="6000" sequence_range="-2">
 	<itemgra speed_range="-2">
 	<polygon color="#ff0000">	<coord x="0" y="10" />	<coord x="49" y="-39" />	<coord x="39" y="-49" />	<coord x="0" y="-10" />	<coord x="-39" y="-49" />	<coord x="-49" y="-39" />	<coord x="0" y="10" />	</polygon>
