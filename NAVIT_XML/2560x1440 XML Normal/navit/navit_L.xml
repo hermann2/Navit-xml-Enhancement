@@ -10,16 +10,16 @@
 	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="7-">	<polygon color="#556677"/></itemgra>	</layer>
 	<layer name="world_poly">
 	<itemgra item_types="poly_water" order="9-11">	<polygon color="#2E5C77"/></itemgra>
-	<itemgra item_types="poi_customc" order="2">	<icon src="%s" w="32" h="32"/></itemgra>
-	<itemgra item_types="poi_customc" order="3">	<icon src="%s" w="48" h="48" x="0" y="64"/>	<circle text_size="24" color="" background_color="#B00000"/></itemgra>
-	<itemgra item_types="poi_customc" order="4">	<icon src="%s" w="64" h="64" x="0" y="96"/>	<circle text_size="34" color="" background_color="#B00000"/></itemgra>
-	<itemgra item_types="poi_customc" order="5">	<icon src="%s" w="96" h="96" x="0" y="128"/>	<circle text_size="42" color="" background_color="#B00000"/></itemgra>
-	<itemgra item_types="poi_customc" order="6-11">	<icon src="%s" w="128" h="128" x="0" y="192"/>	<circle text_size="60" color="" background_color="#B00000"/></itemgra>
-	<itemgra item_types="poi_customd" order="1">	<circle text_size="18" color="#004466" background_color="#40CCFF"/></itemgra>
-	<itemgra item_types="poi_customd" order="2-3">	<circle text_size="24" color="#004466" background_color="#40CCFF"/></itemgra>
-	<itemgra item_types="poi_customd" order="4-5">	<circle text_size="28" color="#006699" background_color="#40CCFF"/></itemgra>
-	<itemgra item_types="poi_customd" order="6-7">	<circle text_size="36" color="#008CC8" background_color="#40CCFF"/></itemgra>
-	<itemgra item_types="poi_customd" order="8-11">	<circle text_size="42" color="#008CC8" background_color="#40CCFF"/></itemgra>
+	<itemgra item_types="poi_customc" order="2">	<icon src="%s" w="48" h="48"/></itemgra>
+	<itemgra item_types="poi_customc" order="3">	<icon src="%s" w="64" h="64" x="0" y="96"/><circle text_size="28" color="" background_color="#B00000"/></itemgra>
+	<itemgra item_types="poi_customc" order="4">	<icon src="%s" w="96" h="96" x="0" y="128"/><circle text_size="38" color="" background_color="#B00000"/></itemgra>
+	<itemgra item_types="poi_customc" order="5">	<icon src="%s" w="128" h="128" x="0" y="192"/><circle text_size="52" color="" background_color="#B00000"/></itemgra>
+	<itemgra item_types="poi_customc" order="6-11">	<icon src="%s" w="192" h="192" x="0" y="288"/><circle text_size="75" color="" background_color="#B00000"/></itemgra>
+	<itemgra item_types="poi_customd" order="1">	<circle text_size="24" color="#004466" background_color="#40CCFF"/></itemgra>
+	<itemgra item_types="poi_customd" order="2-3">	<circle text_size="28" color="#004466" background_color="#40CCFF"/></itemgra>
+	<itemgra item_types="poi_customd" order="4-5">	<circle text_size="36" color="#006699" background_color="#40CCFF"/></itemgra>
+	<itemgra item_types="poi_customd" order="6-7">	<circle text_size="42" color="#008CC8" background_color="#40CCFF"/></itemgra>
+	<itemgra item_types="poi_customd" order="8-11">	<circle text_size="50" color="#008CC8" background_color="#40CCFF"/></itemgra>
 	</layer>
 	<!-- worldimage.txt: image= worldimage.png + poi_customb= Wahrzeichen + poi_customc= Navit Flaggen + poi_customd= Text Sea -->
 	<layer name="poly">
@@ -78,7 +78,7 @@
 	<itemgra item_types="poly_park" order="17-">	<polygon color="#669147AA"/>	<polyline color="#7BB05690" width="4"/>	<text color="#77FF55" text_size="32"/></itemgra>
 	<itemgra item_types="poly_range" order="13-16">	<polygon color="#E67A7A20"/></itemgra>
 	<itemgra item_types="poly_range" order="17-">	<polygon color="#E67A7A30"/>	<polyline color="#EB96D6" width="4"/>	<text color="#D80000" text_size="32"/></itemgra>
-	<itemgra item_types="poly_sport" order="13-16">	<polygon color="#6AAAA660"/></itemgra>
+	<itemgra item_types="poly_sport" order="12-16">	<polygon color="#6AAAA660"/></itemgra>
 	<itemgra item_types="poly_sport" order="17-">	<polygon color="#6AAAA680"/>	<polyline color="#6AAA6A" width="2"/>	<text color="#006660" text_size="32"/></itemgra>
 	<itemgra item_types="poly_heath" order="14">	<polygon color="#66772250"/></itemgra>
 	<itemgra item_types="poly_heath" order="15-16">	<polygon color="#66772260"/></itemgra>

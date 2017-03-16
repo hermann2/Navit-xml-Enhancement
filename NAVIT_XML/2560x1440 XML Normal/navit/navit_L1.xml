@@ -34,6 +34,7 @@
 	<itemgra item_types="poly_water" order="12-">	<polygon color="#82c8ea"/></itemgra>
 	<itemgra item_types="poly_building" order="14-">	<polygon color="#b6a6a6"/></itemgra>
 	<itemgra item_types="poly_terminal" order="14-">	<polygon color="#e3c6a6"/></itemgra>
+
 	</layer>
 	<layer name="polygons">
 	<itemgra item_types="poly_pedestrian" order="14-">	<polygon color="#dddddd"/></itemgra>
@@ -144,9 +145,9 @@
 	<itemgra item_types="street_n_lanes" order="10-11">	<polyline color="#fcac3b" width="14"/></itemgra>
 	<itemgra item_types="street_n_lanes" order="12">	<polyline color="#595959" width="20"/>	<polyline color="#fcac3b" width="14"/></itemgra>
 	<itemgra item_types="street_n_lanes" order="13-14">	<polyline color="#595959" width="26"/>	<polyline color="#fcac3b" width="20"/>	<text text_size="18"/></itemgra>
-	<itemgra item_types="street_n_lanes" order="15-16">	<polyline color="#595959" width="50"/>	<polyline color="#fcac3b" width="42"/>	<polyline color="#000010"  width="1" dash="20"/>	<text text_size="26"/></itemgra>
-	<itemgra item_types="street_n_lanes" order="17">	<polyline color="#595959" width="92"/>	<polyline color="#fcac3b" width="84"/>	<polyline color="#000010"  width="1" dash="30"/>	<text text_size="36"/></itemgra>
-	<itemgra item_types="street_n_lanes" order="18-">	<polyline color="#595959" width="174"/>	<polyline color="#fcac3b" width="162"/>	<polyline color="#000010"  width="1" dash="50"/>	<text text_size="36"/></itemgra>
+	<itemgra item_types="street_n_lanes" order="15-16">	<polyline color="#595959" width="50"/>	<polyline color="#fcac3b" width="42"/>	<polyline color="#000010" width="1" dash="20"/>	<text text_size="26"/></itemgra>
+	<itemgra item_types="street_n_lanes" order="17">	<polyline color="#595959" width="92"/>	<polyline color="#fcac3b" width="84"/>	<polyline color="#000010" width="1" dash="30"/>	<text text_size="36"/></itemgra>
+	<itemgra item_types="street_n_lanes" order="18-">	<polyline color="#595959" width="174"/>	<polyline color="#fcac3b" width="162"/>	<polyline color="#000010" width="1" dash="50"/>	<text text_size="36"/></itemgra>
 	<itemgra item_types="ramp" order="10-11">	<polyline color="#fcac3b" width="6"/></itemgra>
 	<itemgra item_types="ramp" order="12">		<polyline color="#808080" width="12"/>	<polyline color="#fcac3b" width="8"/></itemgra>
 	<itemgra item_types="ramp" order="13-14">	<polyline color="#c0c0c0" width="16"/>	<polyline color="#fcac3b" width="12"/></itemgra>
@@ -190,8 +191,8 @@
 	<itemgra item_types="street_2_city,street_2_land,street_3_city,street_3_land,ramp" order="15-16">	<text text_size="24"/></itemgra>
 	<itemgra item_types="street_2_city,street_2_land,street_3_city,street_3_land,ramp" order="17-">		<text text_size="32"/></itemgra>
 	<itemgra item_types="street_nopass,track_paved,street_0,street_1_city,street_1_land" order="14">	<text text_size="18"/></itemgra>
-	<itemgra item_types="track_paved,street_0,street_1_city,street_1_land" order="15-16">	<text text_size="22"/></itemgra>
-	<itemgra item_types="track_paved,street_0,street_1_city,street_1_land" order="17-">		<text text_size="28"/></itemgra>
+	<itemgra item_types="street_nopass,track_paved,street_0,street_1_city,street_1_land" order="15-16">	<text text_size="24"/></itemgra>
+	<itemgra item_types="street_nopass,track_paved,street_0,street_1_city,street_1_land" order="17-">	<text text_size="30"/></itemgra>
 	</layer>
 	<layer name="hiking_way" ref="hiking_way" active="0"/>
 	<layer name="up_street" ref="up_street" active="1"/>
