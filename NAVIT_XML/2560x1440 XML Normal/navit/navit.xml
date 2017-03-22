@@ -35,7 +35,7 @@ navit.say("navigieren beendet");
 							<a name='Fahrzeug'>
 <text>Fahrzeuge</text>			<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car&quot;)' src='gui_active' onclick='back_to_map()'><text>car</text></img>
 								<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car&quot;)' src='$NAVIT_USER_DATADIR/maske/cursor_a' onclick='navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;back_to_map()'><text>car</text></img>
-								<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]' src='$NAVIT_USER_DATADIR/maske/cursor_a' onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;menu("#set_navit");	back_to_map()'><text>car</text></img>
+								<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]' src='$NAVIT_USER_DATADIR/maske/cursor_a' onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;menu("#set_navit");menu("#poi_layer");back_to_map()'><text>car</text></img>
 								<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car_shortest&quot;)' src='gui_active' onclick='back_to_map()'><text>car_shortest</text></img>
 								<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car_shortest&quot;)' src='$NAVIT_USER_DATADIR/maske/Kurz' onclick='navit.vehicle[@name="Local GPS"].profilename="car_shortest";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_shortest;back_to_map()'><text>car_shortest</text></img>
 								<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]' src='$NAVIT_USER_DATADIR/maske/Kurz' onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car_shortest";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_shortest;menu("#set_navit");menu("#poi_layer");back_to_map()'><text>car_shortest</text></img>
@@ -259,9 +259,7 @@ navit.say("aktuelle Landkennung");
 	<osd x="-390" y="164" w="390" h="280"	font_size="940"		type="odometer" label="${max_spd}km/h 〒&#10;${avg_spd}km/h ~&#10;${distance} ˂ ˃&#10;Time ${time}" name="odo_reset" background_color="#00000090" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-320" y="450" w="310" h="180"	font_size="940"		type="stopwatch" disable_reset="1" background_color="#00000090" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-264" y="-700" w="264" h="75"	font_size="940"		type="text" label="N: ${vehicle.position_direction} °" background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2"/>
-
-	<!-- <osd x="-264" y="-625" w="264" h="325" font_size="800" type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090"/> -->
-	<osd x="-264" y="-625" w="264" h="325"	font_size="1000"	type="compass" enable_expression="vehicle.position_valid" background_color="#00000090"/>
+	<osd x="-264" y="-625" w="264" h="325"	font_size="1000"	type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090"/>
 
 	<tracking cdf_histsize="0"/>
 	<vehicleprofile name="car" route_depth="4:24%,6:2%,8:40000,18:10000" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">

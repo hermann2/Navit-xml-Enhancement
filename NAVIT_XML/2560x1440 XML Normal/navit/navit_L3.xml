@@ -4,7 +4,7 @@
 	<circle color="#0080FF" radius="20" width="20">	<coord x="0" y="24"/>	</circle>
 	<polygon color="#0080FF">	<coord x="22" y="0"/>		<coord x="66" y="-52"/>	<coord x="56" y="-61"/>	<coord x="24" y="-38"/>	<coord x="24" y="-87"/>
 	<coord x="-24" y="-87"/>	<coord x="-24" y="-38"/>	<coord x="-56" y="-61"/>	<coord x="-66" y="-52"/>	<coord x="-22" y="0"/>		<coord x="22" y="0"/>	</polygon>
-</itemgra>
+	</itemgra>
 	<itemgra speed_range="4-">
 	<polyline color="#00000066" width="14">	<coord x="-22" y="-96"/>	<coord x="22" y="-96"/>	</polyline>
 	<polyline color="#00000066" width="14">	<coord x="-53" y="-68"/>	<coord x="-19" y="-35"/>	</polyline>
@@ -13,7 +13,7 @@
 	<circle color="#0080FF" radius="20" width="20">	<coord x="0" y="24"/>	</circle>
 	<polygon color="#0080FF">	<coord x="22" y="0"/>		<coord x="66" y="-52"/>	<coord x="56" y="-61"/>	<coord x="24" y="-38"/>	<coord x="24" y="-87"/>
 	<coord x="-24" y="-87"/>	<coord x="-24" y="-38"/>	<coord x="-56" y="-61"/>	<coord x="-66" y="-52"/>	<coord x="-22" y="0"/>		<coord x="22" y="0"/>	</polygon>
-</itemgra>
+	</itemgra>
 	</cursor>
 	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/></itemgra>	</layer>
 	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="8-11">	<polygon color="#8CCFFF"/></itemgra>	</layer>
@@ -491,7 +491,6 @@
 	<itemgra item_types="found_item" order="17-18">	<circle text_size="24" color="#660044" background_color="#FF00BB" radius="46" width="4"/></itemgra>
 	<itemgra item_types="found_item" order="19-">	<circle text_size="32" color="#660044" background_color="#FF00BB" radius="72" width="4"/></itemgra>
 	</layer>
-	
 	<layer name="s1" active="0">
 	<itemgra item_types="poi_museum_history" order="9-12">	<circle radius="20" width="10" color="#998000"/></itemgra>
 	<itemgra item_types="poi_museum_history" order="13-14">	<circle text_size="32" color="#998000" radius="20" width="6"/></itemgra>
