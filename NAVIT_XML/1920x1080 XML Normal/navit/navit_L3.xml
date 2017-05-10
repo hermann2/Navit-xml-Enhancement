@@ -510,10 +510,10 @@
 	<itemgra item_types="poly_water_park" order="17-">		<circle text_size="42" color="#0000FF" radius="20" width="6"/></itemgra>
 	</layer>
 	<layer name="s4" active="0">
-	<itemgra item_types="poi_resort" order="9-12">	<circle radius="20" width="10" color="#808000"/></itemgra>
-	<itemgra item_types="poi_resort" order="13-14">	<circle text_size="32" color="#808000" radius="20" width="6"/></itemgra>
-	<itemgra item_types="poi_resort" order="15-16">	<circle text_size="36" color="#808000" radius="20" width="6"/></itemgra>
-	<itemgra item_types="poi_resort" order="17-">	<circle text_size="42" color="#808000" radius="20" width="6"/></itemgra>
+	<itemgra item_types="poi_shop_drugstore" order="9-12">	<circle radius="20" width="10" color="#808000"/></itemgra>
+	<itemgra item_types="poi_shop_drugstore" order="13-14">	<circle text_size="32" color="#808000" radius="20" width="6"/></itemgra>
+	<itemgra item_types="poi_shop_drugstore" order="15-16">	<circle text_size="36" color="#808000" radius="20" width="6"/></itemgra>
+	<itemgra item_types="poi_shop_drugstore" order="17-">	<circle text_size="42" color="#808000" radius="20" width="6"/></itemgra>
 	</layer>
 	<layer name="s5" active="0">
 	<itemgra item_types="poi_zoo" order="9-12">		<circle radius="20" width="10" color="#B33B00"/></itemgra>
