@@ -63,7 +63,7 @@ navit.say("navigieren beendet");
 							</a>
 
 							<a name='Route'>
-<text>ROUTE - DATEN</text>		<img cond='navit.layout==navit.layout[@name=="PAX"]' src='$NAVIT_USER_DATADIR/maske/active'	onclick='menu("#suche")'>
+<text>ROUTE - DATEN</text>		<img cond='navit.layout==navit.layout[@name=="PAX"]' src='gui_active'	onclick='menu("#suche")'>
 <text>Suche auf Karte</text>	</img>	<img cond='navit.layout!=navit.layout[@name=="PAX"]' src='gui_zoom_in' onclick='navit.layout=navit.layout[@name=="PAX"];menu("#suche");menu_on_map_click=1'>
 <text>Suche auf Karte</text>	</img>	<img src='gui_formerdests' onclick='
 navit.say("Zielwahl aus vorherigen");
@@ -277,7 +277,7 @@ navit.say("Statuszeile oben sichtbar");
 	<roadprofile item_types="street_4_land"			speed="75" route_weight="90"/>
 	<roadprofile item_types="street_n_lanes"		speed="80" route_weight="100"/>
 	<roadprofile item_types="highway_land"			speed="100" route_weight="120"/>
-	<roadprofile item_types="ramp"					speed="40" route_weight="60"/>
+	<roadprofile item_types="ramp"					speed="40" route_weight="40"/>
 	<roadprofile item_types="roundabout"			speed="20" route_weight="20"/>
 	<roadprofile item_types="ferry"					speed="10" route_weight="20"/>
 	</vehicleprofile>

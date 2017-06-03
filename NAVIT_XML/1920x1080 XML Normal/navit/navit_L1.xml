@@ -7,11 +7,11 @@
 	<circle color="#008500" radius="48" width="8">	<coord x="0" y="0"/>	</circle>
 	</itemgra>
 	<itemgra speed_range="3-">
-	<polygon color="#00000066">	<coord x="-56" y="-72"/>	<coord x="0" y="32"/>	<coord x="56" y="-72"/>	<coord x="0" y="-32"/>	<coord x="-56" y="-72"/></polygon>
-	<polygon color="#008500">	<coord x="-56" y="-48"/>	<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="-56" y="-48"/></polygon>
-	<polygon color="#00BC00">	<coord x="56" y="-48"/>		<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="56" y="-48"/></polygon>
-	<polyline color="#008500" width="3">	<coord x="-56" y="-48"/>	<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="-56" y="-48"/></polyline>
-	<polyline color="#008500" width="3">	<coord x="56" y="-48"/>		<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="56" y="-48"/></polyline>
+	<polygon color="#00000066">	<coord x="-56" y="-72"/>	<coord x="0" y="32"/>	<coord x="56" y="-72"/>	<coord x="0" y="-32"/>	<coord x="-56" y="-72"/>	</polygon>
+	<polygon color="#008500">	<coord x="-56" y="-48"/>	<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="-56" y="-48"/>	</polygon>
+	<polygon color="#00BC00">	<coord x="56" y="-48"/>	<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="56" y="-48"/>	</polygon>
+	<polyline color="#008500" width="3">	<coord x="-56" y="-48"/>	<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="-56" y="-48"/>	</polyline>
+	<polyline color="#008500" width="3">	<coord x="56" y="-48"/>	<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="56" y="-48"/>	</polyline>
 	</itemgra>
 	</cursor>
 	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/></itemgra>	</layer>
@@ -34,6 +34,7 @@
 	<itemgra item_types="poly_water" order="12-">	<polygon color="#82c8ea"/></itemgra>
 	<itemgra item_types="poly_building" order="14-">	<polygon color="#b6a6a6"/></itemgra>
 	<itemgra item_types="poly_terminal" order="14-">	<polygon color="#e3c6a6"/></itemgra>
+
 	</layer>
 	<layer name="polygons">
 	<itemgra item_types="poly_pedestrian" order="14-">	<polygon color="#dddddd"/></itemgra>
@@ -51,8 +52,9 @@
 	<itemgra item_types="water_drain" order="14-">	<polyline color="#82c8ea" width="4"/>	<text text_size="18"/></itemgra>
 	<itemgra item_types="ferry" order="13-16">	<polyline color="#000000" width="4"/></itemgra>
 	<itemgra item_types="ferry" order="17-">	<polyline color="#000000" width="6"/>	<text text_size="28"/></itemgra>
-	<itemgra item_types="rail" order="13-16">	<polyline color="#696969" width="8"/>	<polyline color="#ffffff" width="4"/></itemgra>
-	<itemgra item_types="rail" order="17-">		<polyline color="#696969" width="16"/>	<polyline color="#ffffff" width="8"/>	<text text_size="28"/></itemgra>
+	<itemgra item_types="rail" order="12-14">	<polyline color="#696969" width="8"/>	<polyline color="#ffffff" width="4"/></itemgra>
+	<itemgra item_types="rail" order="15-16">	<polyline color="#696969" width="12"/>	<polyline color="#ffffff" width="6"/></itemgra>
+	<itemgra item_types="rail" order="17-">		<polyline color="#696969" width="20"/>	<polyline color="#ffffff" width="10"/>	<text text_size="32"/></itemgra>
 	<itemgra item_types="poly_car_parking" order="14-">	<polygon color="#e7cf87"/></itemgra>
 	<itemgra item_types="border_country" order="9-">	<polyline color="#808080" width="4"/>	<circle color="#808080" radius="12" width="6"/></itemgra>
 	</layer>

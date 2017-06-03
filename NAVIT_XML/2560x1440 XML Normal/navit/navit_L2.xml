@@ -61,8 +61,9 @@
 	<itemgra item_types="water_drain" order="14-">	<polyline color="#0a2933" width="4"/>	<text text_size="18" color="008090" background_color="#008090"/></itemgra>
 	<itemgra item_types="ferry" order="14-16">	<polyline color="#338899" width="4"/></itemgra>
 	<itemgra item_types="ferry" order="17">	<polyline color="#338899" width="6"/>	<text color="#008090" text_size="28"/></itemgra>
-	<itemgra item_types="rail" order="13-16">	<polyline color="#333333" width="8"/>	<polyline color="#3d3d3d" width="4"/></itemgra>
-	<itemgra item_types="rail" order="17-">		<polyline color="#333333" width="16"/>	<polyline color="#3d3d3d" width="8"/>	<text color="#880000" text_size="28"/></itemgra>
+	<itemgra item_types="rail" order="12-14">	<polyline color="#333333" width="8"/>	<polyline color="#3d3d3d" width="4"/></itemgra>
+	<itemgra item_types="rail" order="15-16">	<polyline color="#333333" width="12"/>	<polyline color="#3d3d3d" width="6"/></itemgra>
+	<itemgra item_types="rail" order="17-">		<polyline color="#333333" width="20"/>	<polyline color="#3d3d3d" width="10"/>	<text color="#880000" text_size="32"/></itemgra>
 	<itemgra item_types="poly_car_parking" order="14-">	<polygon color="#262216"/></itemgra>
 	<itemgra item_types="border_country" order="9-">	<polyline color="#900000" width="4"/>	<circle color="#900000" radius="12" width="6"/></itemgra>
 	</layer>

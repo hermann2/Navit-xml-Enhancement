@@ -187,9 +187,9 @@
 	<itemgra item_types="poly_basin" order="12-16">	<polygon color="#49699990"/>	<polyline color="#CC5FFE90" width="2"/></itemgra>
 	<itemgra item_types="poly_basin" order="17-">	<polygon color="#496999AA"/>	<polyline color="#CC5FFE90" width="4"/>	<text text_size="32" color="#40006A"/></itemgra>
 	<itemgra item_types="water_line" order="1-11">	<polyline color="#396999" width="1"/></itemgra>
-	<itemgra item_types="water_line" order="12-14">	<polyline color="#396999" width="2"/>	<circle text_size="26" color="#44A2FF" background_color="#0000FF"/></itemgra>
-	<itemgra item_types="water_line" order="15-16">	<polyline color="#396999" width="4"/>	<circle text_size="32" color="#44A2FF" background_color="#0000FF"/></itemgra>
-	<itemgra item_types="water_line" order="17-">	<polyline color="#396999" width="4"/>	<circle text_size="38" color="#44A2FF" background_color="#0000FF"/>	<text text_size="38" color="#0000FF" background_color="#0000FF"/></itemgra>
+	<itemgra item_types="water_line" order="12-14">	<polyline color="#396999" width="2"/>	<circle text_size="26" color="#44A2FF"/></itemgra>
+	<itemgra item_types="water_line" order="15-16">	<polyline color="#396999" width="4"/>	<circle text_size="32" color="#44A2FF"/></itemgra>
+	<itemgra item_types="water_line" order="17-">	<polyline color="#396999" width="4"/>	<circle text_size="44" color="#44A2FF"/>	<text text_size="38" color="#44A2FF"/></itemgra>
 	<itemgra item_types="poly_reservoir" order="11-14">	<polygon color="#697299AA"/></itemgra>
 	<itemgra item_types="poly_reservoir" order="15-">	<polygon color="#697299BB"/>	<polyline color="#4470CCAA" width="6"/>	<text text_size="32" color="#150051"/></itemgra>
 	<itemgra item_types="poly_water" order="11-14">	<polyline color="#2E5C7790" width="4"/></itemgra>

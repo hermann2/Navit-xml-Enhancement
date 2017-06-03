@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE config SYSTEM "navit.dtd">
 <config xmlns:xi="http://www.w3.org/2001/XInclude" language="de_AT">
-	<plugins>	<plugin path="$NAVIT_PREFIX/lib/lib*.so" ondemand="yes"/>	</plugins>
+	<plugins>
+		<plugin path="$NAVIT_LIBDIR/*/${NAVIT_LIBPREFIX}lib*.so" ondemand="yes"/>
+		<plugin path="$NAVIT_LIBDIR/autoload/${NAVIT_LIBPREFIX}lib*.so"/>
+		<plugin path="$NAVIT_LIBDIR/*/${NAVIT_LIBPREFIX}libbinding_dbus.so" active="no"/>
+		<plugin path="$NAVIT_LIBDIR/*/${NAVIT_LIBPREFIX}libgraphics_null.so" active="no"/>
+	</plugins>
+	<!-- <plugins>	<plugin path="$NAVIT_PREFIX/lib/lib*.so" ondemand="yes"/>	</plugins> -->
 	<navit center="13.5666 48.1333" zoom="4" zoom_max="524288" autozoom_active="0" autozoom="16" pitch="10" tracking="1" orientation="-1" recent_dest="30" waypoints_flag="1" timeout="86400" radius="28" drag_bitmap="1" osd_configuration="1">
 	<graphics type="android"/>
 	<speech type="android" cps="30"/>
@@ -19,7 +25,7 @@ navit.say("Sprache an");
 <text>[ ROUTE-DATEN ]</text>	</img></a>	<a href='#Settings'><img src='$NAVIT_USER_DATADIR/maske/setting'>
 <text>[ EINSTELLUNGEN ]</text>	</img></a>	<img src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img cond='navit.route.route_status&amp;1' src='gui_quit' onclick='
 navit.say("navigieren beendet");
-								abort_navigation();refresh();redraw_map()'><text>Stop Navigation</text>	</img>	<img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img src='gui_quit' onclick='navit.graphics.menu()'><text>Quit</text></img>
+								abort_navigation();refresh();redraw_map()'><text>Stop Navigation</text>	</img>	<img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img src='gui_quit' onclick='quit()'><text>Quit</text></img>
 							</a>
 
 							<a name='Fahrzeug'>
@@ -83,8 +89,10 @@ navit.say("letzten Zielpunkt entfernt");
 <text>LÖSCHE Ziel</text>		</img>	<img cond='navit.waypoints_flag &amp;&amp;(navit.route.route_status&amp;1)' src='gui_stop' onclick='
 navit.say("ein Etappenziel entfernt");
 								navit.route_remove_next_waypoint();refresh()'>
-<text>LÖSCHE Etappe</text>		</img>	<img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img><img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img>
+<text>LÖSCHE Etappe</text>		</img>	<img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img>
 								<img src='gui_about' onclick='about()'>	<text>About</text></img>
+								<img src='gui_heightprofile' onclick='route_height_profile()'><text>Height Profile</text></img>
+								<img src='gui_tools' onclick='network_info()'><text>Network info</text></img>
 							</a>
 
 							<a name='Settings'>
@@ -109,7 +117,7 @@ navit.say("aktuelle Landkennung");
 <text>Autosetting</text>		</img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_rules' onclick='navit.set_int_var("set_osd",0);refresh()'>
 <text>Autosetting</text>		</img>	<img src='dam' onclick='navit.toggle_layer("world_dam");navit.toggle_layer("water_dam")'>
 <text>water_tiled 0/1</text>	</img>	<a href='#Settings Layers'><img src='gui_layers'><text>Layers</text></img></a>
-								<img cond='navit.get_int_var("set_osd")==1' src='gui_display' onclick='setting_layout()'><text>Layout</text></img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_settings' onclick='setting_rules()'><text>Rules</text></img>	<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch==0&amp;&amp;navit.zoom&lt;128' src='gui_active' onclick='navit.pitch=6;refresh()'>
+								<img cond='navit.get_int_var("set_osd")==1' src='gui_display' onclick='setting_layout()'><text>Layout</text></img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_settings' onclick='setting_rules()'><text>Rules</text></img>	<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch==0&amp;&amp;navit.zoom&lt;128' src='gui_active' onclick='navit.pitch=10;refresh()'>
 <text>[  2D  ]3D</text>			</img>	<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch!=0' src='gui_active' onclick='navit.pitch=0;refresh()'>
 <text>2D[  3D  ]</text>			</img>
 								<!-- Platzhalter für Button im Menü Fenster -->
@@ -210,7 +218,7 @@ navit.say("aktuelle Landkennung");
 							navit.layout.layer[@name=="lift"].active==0			? navit.toggle_layer("lift"):"";</script>
 						</a>
 
-						<!-- navit_L3.xml Layout "PAX": definierte POI zum besseren auffinden in der Karte -->
+						<!-- navit_L3.xml Layout "PAX": definierte POI zum besseren auffinden in der Karte (hier <text> anpassen zu item_types </text> ) -->
 							<a name='suche'>
 <text>Zeige auf Karte alle :</text>		<img cond='navit.layout.layer[@name=="s1"].active==0' src='gui_stop'	onclick='navit.toggle_layer("s1");refresh()'>
 <text>Museum</text>				</img>	<img cond='navit.layout.layer[@name=="s1"].active==1' src='gui_active'	onclick='navit.toggle_layer("s1");refresh()'>
@@ -287,7 +295,7 @@ navit.say("aktuelle Landkennung");
 	<roadprofile item_types="street_4_land"			speed="75" route_weight="90"/>
 	<roadprofile item_types="street_n_lanes"		speed="80" route_weight="100"/>
 	<roadprofile item_types="highway_land"			speed="100" route_weight="120"/>
-	<roadprofile item_types="ramp"					speed="40" route_weight="40"/>
+	<roadprofile item_types="ramp"					speed="40" route_weight="60"/>
 	<roadprofile item_types="roundabout"			speed="20" route_weight="20"/>
 	<roadprofile item_types="ferry"					speed="10" route_weight="20"/>
 	</vehicleprofile>
@@ -1203,13 +1211,14 @@ navit.say("aktuelle Landkennung");
 	<itemgra item_types="poly_artwork" order="13-16">	<polygon color="#FFB4FFAA"/><polyline color="#FFB4FF" width="2"/></itemgra>
 	<itemgra item_types="poly_artwork" order="17-">		<polygon color="#FFB4FFCC"/><polyline color="#FFB4FF" width="4"/><text text_size="32" color="#6B5B00"/></itemgra>
 	</layer>
-	<!-- <layer name="height_line">
-	<itemgra item_types="height_line_1" order="12">	<polyline color="#A9A9A9" width="1"/><text text_size="28"/></itemgra>
-	<itemgra item_types="height_line_1" order="13-">	<polyline color="#A9A9A9" width="3"/><text text_size="28"/></itemgra>
-	<itemgra item_types="height_line_2" order="12">		<polyline color="#A9A9A9" width="2"/><text text_size="28"/></itemgra>
-	<itemgra item_types="height_line_2" order="13-">	<polyline color="#A9A9A9" width="2"/><text text_size="28"/></itemgra>
-	<itemgra item_types="height_line_3" order="13-">	<polyline color="#A9A9A9" width="1"/></itemgra>
-	</layer> -->
+	<layer name="heightlines">
+	<itemgra item_types="height_line_1" order="12">		<polyline color="#000000" width="1"/></itemgra>
+	<itemgra item_types="height_line_1" order="13-">	<polyline color="#000000" width="3"/>	<text text_size="10"/></itemgra>
+	<itemgra item_types="height_line_2" order="12">		<polyline color="#000000" width="1"/></itemgra>
+	<itemgra item_types="height_line_2" order="13-">	<polyline color="#000000" width="2"/>	<text text_size="10"/></itemgra>
+	<itemgra item_types="height_line_3" order="12">		<polyline color="#000000" width="1"/></itemgra>
+	<itemgra item_types="height_line_3" order="13-">	<polyline color="#000000" width="1"/>	<text text_size="10"/></itemgra>
+	</layer>
 	<layer name="poly_2">
 	<itemgra item_types="poly_fell" order="17-">	<text text_size="32" color="#636363"/></itemgra>
 	<itemgra item_types="poly_meadow" order="14-16">	<polyline color="#DDFF9F60" width="4"/></itemgra>
@@ -1734,8 +1743,8 @@ navit.say("aktuelle Landkennung");
 	<itemgra item_types="track_tracked" order="11-14">	<polyline color="#3F3FFF" width="8"/></itemgra>
 	<itemgra item_types="track_tracked" order="15-16">	<polyline color="#3F3FFF" width="16"/><text text_size="28"/></itemgra>
 	<itemgra item_types="track_tracked" order="17-">	<polyline color="#3F3FFF" width="32"/><text text_size="38"/></itemgra>
-	<itemgra item_types="rg_segment" order="9-">	<polyline color="#FF089C" width="2"/><arrows color="#FF089C" width="4"/><text text_size="26"/></itemgra>
-	<itemgra item_types="rg_point" order="9-">		<circle text_size="26" color="#FF089C" radius="12"/></itemgra>
+	<itemgra item_types="rg_segment" order="12-">	<polyline color="#FF089C" width="1"/>	<arrows color="#FF089C" width="1"/>	<text text_size="26"/></itemgra>
+	<itemgra item_types="rg_point" order="12-">		<circle text_size="26" color="#FF089C" radius="12"/></itemgra>
 	<itemgra item_types="bookmark" order="6-8">		<icon src="cursor_still" w="32" h="32" x="16" y="16"/><circle text_size="28" color="#BD00BD" background_color="#BD00BD"/></itemgra>
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="48" h="48" x="24" y="24"/><circle text_size="34" color="#BD00BD" background_color="#BD00BD"/></itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="64" h="64" x="32" y="32"/><circle text_size="42" color="#BD00BD" background_color="#BD00BD"/></itemgra>
