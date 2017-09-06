@@ -492,10 +492,10 @@
 	<itemgra item_types="found_item" order="19-">	<circle text_size="32" color="#660044" background_color="#FF00BB" radius="72" width="4"/></itemgra>
 	</layer>
 	<layer name="s1" active="0">
-	<itemgra item_types="poi_museum_history" order="9-12">	<circle radius="20" width="10" color="#998000"/></itemgra>
-	<itemgra item_types="poi_museum_history" order="13-14">	<circle text_size="32" color="#998000" radius="20" width="6"/></itemgra>
-	<itemgra item_types="poi_museum_history" order="15-16">	<circle text_size="36" color="#998000" radius="20" width="6"/></itemgra>
-	<itemgra item_types="poi_museum_history" order="17-">	<circle text_size="42" color="#998000" radius="20" width="6"/></itemgra>
+	<itemgra item_types="poi_attraction" order="9-11">	<icon src="attraction" w="32" h="32"/></itemgra>
+	<itemgra item_types="poi_attraction" order="12-14">	<icon src="attraction" w="32" h="32" x="16" y="16"/>	<circle text_size="32" color="#00BB00" background_color="#000000"/></itemgra>
+	<itemgra item_types="poi_attraction" order="15-16">	<icon src="attraction" w="48" h="48" x="48" y="24"/>	<circle text_size="36" color="#00BB00" background_color="#000000"/></itemgra>
+	<itemgra item_types="poi_attraction" order="17-">	<icon src="attraction" w="64" h="64" x="64" y="32"/>	<circle text_size="42" color="#00BB00" background_color="#000000"/></itemgra>
 	</layer>
 	<layer name="s2" active="0">
 	<itemgra item_types="poly_theme_park" order="9-">		<circle radius="20" width="10" color="#FF0000"/></itemgra>

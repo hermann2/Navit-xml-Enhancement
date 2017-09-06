@@ -47,6 +47,7 @@
 23.3329 42.6958 type=poi_customb label="Sveti Aleksandar Nevski" icon_src="nevski"
 25.783 71.171 type=poi_customb label="Nordkapp" icon_src="nordkapp"
 151.2153 -33.8569 type=poi_customb label="Opera House" icon_src="sydneyopera"
+21.0062 52.2318 type=poi_customb label="Palac Kultury i Nauki" icon_src="warschau"
 -79.8098 9.1398 type=poi_customb label="Panama Canal" icon_src="panama"
 35.4444 30.3285 type=poi_customb label="Petra" icon_src="petra"
 101.7121 3.1578 type=poi_customb label="Petronas Towers" icon_src="petronas"
