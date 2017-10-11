@@ -491,6 +491,7 @@
 	<itemgra item_types="found_item" order="17-18">	<circle text_size="24" color="#660044" background_color="#FF00BB" radius="46" width="4"/></itemgra>
 	<itemgra item_types="found_item" order="19-">	<circle text_size="32" color="#660044" background_color="#FF00BB" radius="72" width="4"/></itemgra>
 	</layer>
+	<!-- For SEARCH on MAP: From name="s1" - name="s9" replace or insert your Favorit item_types=" " -->
 	<layer name="s1" active="0">
 	<itemgra item_types="poi_attraction" order="9-11">	<icon src="attraction" w="32" h="32"/></itemgra>
 	<itemgra item_types="poi_attraction" order="12-14">	<icon src="attraction" w="32" h="32" x="16" y="16"/>	<circle text_size="32" color="#00BB00" background_color="#000000"/></itemgra>
