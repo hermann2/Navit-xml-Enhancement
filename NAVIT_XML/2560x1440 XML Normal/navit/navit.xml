@@ -7,18 +7,32 @@
 		<plugin path="$NAVIT_LIBDIR/*/${NAVIT_LIBPREFIX}libbinding_dbus.so" active="no"/>
 		<plugin path="$NAVIT_LIBDIR/*/${NAVIT_LIBPREFIX}libgraphics_null.so" active="no"/>
 	</plugins>
-	<navit center="13.5666 48.1333" zoom="4" zoom_max="262144" autozoom_active="1" autozoom="16" pitch="40" orientation="0" recent_dest="30" waypoints_flag="1" radius="28" timeout="86400" drag_bitmap="0" osd_configuration="1">
+	<navit
+	center="13.5666 48.1333"
+	zoom="8"
+	zoom_max="262144"
+	autozoom_active="1"
+	autozoom="16"
+	pitch="46"
+	orientation="0"
+	recent_dest="30"
+	waypoints_flag="1"
+	radius="28"
+	timeout="86400"
+	drag_bitmap="0"
+	osd_configuration="1"
+	>
 	<graphics type="android"/>
 	<speech type="android" cps="40"/>
 	<vehicle source="android:" name="Local GPS" profilename="car" active="yes" follow="1" follow_cursor="1" lag="15"/>
-		
+
 	<!-- <vehicle source="android:"/>
 	<vehicle enabled="yes" name="Local GPS" profilename="car" active="yes" follow="1" follow_cursor="1" lag="15"/>
     <vehicle enabled="yes" name="Log GPS" profilename="car" active="no" follow="1" follow_cursor="1" lag="15">
 	<log type="gpx" attr_types="position_time_iso8601,position_direction,position_speed,profilename,position_radius" data="$NAVIT_USER_DATADIR/track_%Y%m%d-%%i.gpx" flush_size="1000" flush_time="30"</log>
 	</vehicle>
 	 -->
-		<!-- <vehicle source="demo://" name="Demo" profilename="car" enabled="yes" speed="80"/> -->
+	<!-- <vehicle source="demo://" name="Demo" profilename="car" enabled="yes" speed="80"/> -->
 
 	<gui type="internal" hide_impossible_next_keys="1" menu_on_map_click="0" background_color="#FFCC33" background_color2="#CC9311" text_background="#002050" text_color="#002050" font_size="800" icon_xs="160" icon_s="200" icon_l="200" spacing="16"><![CDATA[ <html>
 						<a name='Main Menu'>
@@ -109,18 +123,21 @@ navit.say("Vollbild");
 <text>Vollbild</text>			</img>	<img cond='fullscreen==1' src='gui_leave_fullscreen' onclick='
 navit.say("Statuszeile oben sichtbar");
 								fullscreen=0'>
-<text>Fensterbild</text>		</img>	<img cond='navit.osd_configuration==1' src='gui_stop' onclick='navit.odometer_reset("odo_reset");navit.osd_configuration=2;refresh()'>
-<text>Statistik</text>			</img>	<img cond='navit.osd_configuration==2' src='gui_log' onclick='navit.osd_configuration=1;refresh()'>
-<text>Statistik</text>			</img>	<img src='gui_bookmark' onclick='
+<text>Fensterbild</text>		</img>
+
+<!--	<img cond='navit.osd_configuration==1' src='gui_stop' onclick='navit.odometer_reset("odo_reset");navit.osd_configuration=2;refresh()'><text>Statistik</text></img>
+		<img cond='navit.osd_configuration==2' src='gui_log' onclick='navit.osd_configuration=1;refresh()'><text>Statistik</text></img>
+-->
+										<img src='gui_bookmark' onclick='
 								locale()'>
 <text>Landkennung</text>		</img>
 						<!-- Wird "Autosetting" deaktiviert dann Button anzeigen zur individuellen Einstellung und 2D/3D Regelung für "worldimage" -->
 								<img cond='navit.get_int_var("set_osd")==0' src='gui_active' onclick='navit.set_int_var("set_osd",1);refresh()'><text>Autosetting</text></img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_rules' onclick='navit.set_int_var("set_osd",0);refresh()'><text>Autosetting</text></img>
 								<img src='dam' onclick='navit.toggle_layer("world_dam");navit.toggle_layer("water_dam")'><text>water_tiled 0/1</text></img>	<a href='#Settings Layers'><img src='gui_layers'><text>Layers</text></img></a>
 								<img cond='navit.get_int_var("set_osd")==1' src='gui_display' onclick='setting_layout()'><text>Layout</text></img>	<img cond='navit.get_int_var("set_osd")==1' src='gui_settings' onclick='setting_rules()'><text>Rules</text></img>
-								<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch==0&amp;&amp;navit.zoom&gt;64'  src='gui_active' onclick='navit.set_int_var("is_pitch",40);refresh()'>				<text>[  2D  ]3D</text></img>
-								<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch==0&amp;&amp;navit.zoom&lt;128' src='gui_active' onclick='navit.pitch=40;navit.set_int_var("is_pitch",40);refresh()'><text>[  2D  ]3D</text></img>
-								<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch!=0'							   src='gui_active' onclick='navit.pitch=0;navit.set_int_var("is_pitch",0);refresh()'>	<text>2D[  3D  ]</text></img>
+								<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch==0&amp;&amp;navit.zoom&gt;64'	src='gui_active' onclick='navit.set_int_var("is_pitch",46);refresh()'>				<text>[  2D  ]3D</text></img>
+								<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch==0&amp;&amp;navit.zoom&lt;128'	src='gui_active' onclick='navit.pitch=46;navit.set_int_var("is_pitch",46);refresh()'><text>[  2D  ]3D</text></img>
+								<img cond='navit.get_int_var("set_osd")==1&amp;&amp;navit.pitch!=0'								src='gui_active' onclick='navit.pitch=0;navit.set_int_var("is_pitch",0);refresh()'>	<text>2D[  3D  ]</text></img>
 								<img cond='navit.get_int_var("set_osd")==0' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img cond='navit.get_int_var("set_osd")==0' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img cond='navit.get_int_var("set_osd")==0' src='$NAVIT_USER_DATADIR/maske/blank'></img>
 						</a>
 
@@ -134,8 +151,8 @@ navit.say("Statuszeile oben sichtbar");
 							else			img("centry",layer.active?"gui_active":"gui_inactive",			 "","navit.layout.layer[@name==%{se}].active=%{d}*",layer.name,!layer.active,"redraw_map();refresh();");</script>
 						</a>
 
-						<a name='POI_Icons'><text>POI-Auswahl</text>
-										<img cond='navit.layout.layer[@name=="my"].active==0'			src='gui_stop'	onclick='navit.toggle_layer("my");setting_maps()'>
+						<a name='POI_Icons'>
+<text>Aktiviere EIGENE</text>			<img cond='navit.layout.layer[@name=="my"].active==0'			src='gui_stop'	onclick='navit.toggle_layer("my");setting_maps()'>
 <text>Eigene TXT</text>			</img>	<img cond='navit.layout.layer[@name=="my"].active==1'			src='gui_active'onclick='navit.toggle_layer("my");refresh()'>
 <text>Eigene TXT</text>			</img>	<img cond='navit.layout.layer[@name=="station"].active==0'		src='gui_stop'	onclick='navit.toggle_layer("station");refresh()'>
 <text>Haltestellen</text>		</img>	<img cond='navit.layout.layer[@name=="station"].active==1'		src='gui_active'onclick='navit.toggle_layer("station");refresh()'>
@@ -247,14 +264,14 @@ navit.say("Statuszeile oben sichtbar");
 	</html>	]]>	</gui>
 
 	<!-- 
-	if you want disabled autosetting ("set_osd")==1 use this cmd_interface and replace next cmd_interface
+	if you disabled autosetting ("set_osd")==1 use this extensive cmd_interface and deactivate the next cmd_interface
 	<osd x="-1" y="-1" w="1" h="1"	type="cmd_interface" update_period="1" command='get_int_var("set_osd")==0
-	?(follow>1||zoom>64	?(pitch=0,tracking=0,orientation=0)	:(pitch=40,tracking=1,orientation=-1))
+	?(follow>1||zoom>64	?(pitch=0,tracking=0,orientation=0)	:(pitch=46,tracking=1,orientation=-1))
 	:(zoom>64	?(get_int_var("zoom_gt")==0	?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1)):"")
 				:(get_int_var("zoom_gt")==1 ?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0)):"")'/>
  -->
-	<osd x="-1" y="-1" w="1" h="1"			type="cmd_interface" update_period="1" command='follow>1||zoom>64?(pitch=0,tracking=0,orientation=0):(pitch=40,tracking=1,orientation=-1)'/>
-	<osd x="0" y="-2560"					type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1440_700.png" command="" enable_expression="pitch&gt;0"/>
+	<osd x="-1" y="-1" w="1" h="1"			type="cmd_interface" update_period="1" command='follow>1||zoom>64?(pitch=0,tracking=0,orientation=0):(pitch=46,tracking=1,orientation=-1)'/>
+	<osd x="0" y="-2560"					type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1440_700.png" command="" enable_expression="pitch&gt;1"/>
 	<!-- <osd x="0" y="0" w="1920" h="60"		font_size="700"		type="text" label='${vehicle.position_coord_geo[pos_deg]}' background_color="#00000000" align="10" text_color="#FFFFFF" osd_configuration="2"/>
 	-->
 	<osd x="0" y="0" w="2370" h="85"		font_size="940"		type="text" label="${navit.messages}" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="5" text_color="#FFFFFF"/>
@@ -266,25 +283,29 @@ navit.say("Statuszeile oben sichtbar");
 	<osd x="0" y="-560" w="290" h="290"		font_size="1600"	type="speed_warner" label="images" speed_exceed_limit_offset="5" speed_exceed_limit_percent="10" announce_on="1" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090"/>
 	<osd x="0" y="-275" w="290" h="125"		font_size="2100"	type="text" label="${vehicle.position_speed[value]}" enable_expression="navigation.nav_status&gt;=3" background_color="#0000FF90" align="0" text_color="#FF9900"/>
 	<osd x="0" y="-150" w="290" h="150" 	font_size="1000"	type="text" label="➤${navigation.item.destination_length[named]}\n t~ ${navigation.item.destination_time[remaining]}" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="4" text_color="#00FF00"/>
-	<osd x="290" y="-80" w="1500" h="80"	font_size="1100"	type="text" label="${tracking.item.street_name_systematic} ${tracking.item.street_name}" enable_expression="vehicle.position_valid" background_color="#FFFFFFBB" align="4" text_color="#0000FF"/>
+	<osd x="290" y="-80" w="1500" h="80"	font_size="1100"	type="text" label="${tracking.item.street_name_systematic} ${tracking.item.street_name}" enable_expression="vehicle.position_valid" background_color="#FFFFFFCC" align="4" text_color="#0000FF"/>
 	<osd x="640" y="820" w="160" h="220"	type="navigation_status" icon_src="%s_wh_160_220.png" enable_expression="navigation.nav_status==-1||navigation.nav_status==1||navigation.nav_status==2"/>
 	<osd x="0" y="170" w="264" h="264"		type="navigation_next_turn" icon_src="%s_wh_264_264.png" command='(get_int_var("set_osd")==0 ?(tracking=0,pitch=0):"");say("route");follow=80000;zoom_to_route()' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090"/>
-	<osd x="0" y="-140" w="160" h="140"		font_size="650"		type="text" label='\n[LAYER]' command='say("a");toggle_layer("poly_1");toggle_layer("poly_2");toggle_layer("wayside");toggle_layer("line_1")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
+	<osd x="0" y="-150" w="290" h="150"		font_size="650"		type="text" label='\n[LAYER]' command='say("a");toggle_layer("poly_1");toggle_layer("poly_2");toggle_layer("wayside");toggle_layer("way");toggle_layer("line_1")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
 	<osd x="340" y="-225"					type="button" src="$NAVIT_USER_DATADIR/maske/zp_225_225.png" command="zoom_in()"/>
 	<osd x="-550" y="-225"					type="button" src="$NAVIT_USER_DATADIR/maske/zm_225_225.png" command="zoom_out()"/>
 	<osd x="-225" y="-225"					type="button" src="gui_menu_225_225.png" command="gui.menu(1)"/>
 	<osd x="-264" y="-300" w="264" h="125"	font_size="940"		type="text" label=" ®  ${vehicle.position_radius}\n${vehicle.position_height} NN" enable_expression="vehicle.position_valid" background_color="#00000090" align="4" text_color="#FFFFFF"/>
 	<osd x="-885" y="-260" w="320" h="190"	font_size="940"		type="scale" background_color="#C4C4C4DD"/>
 	<osd x="0" y="-720" w="370" h="160"		font_size="1500"	type="speed_cam" label="${distance}&#10;" background_color="#000000FF" text_color="#FF0000"/>
-	<!-- <osd x="0" y="-720" w="370" h="160"		font_size="1500"	type="speed_cam" label="${distance}" announce_on="1" speed_exceed_limit_offset="15" speed_exceed_limit_percent="10" background_color="#000000FF" align="4" text_color="#FF0000"/>
-	 -->
-	<osd x="-400" y="164" w="400" h="280"	font_size="940"		type="odometer" label="${max_spd}km/h 〒&#10;${avg_spd}km/h ~&#10;${distance} ˂ ˃&#10;time ${time}" name="odo_reset" background_color="#00000090" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
+<!--
+	<osd x="-400" y="164" w="400" h="70"	font_size="940"		type="odometer" label="〒  ${max_spd}km/h" name="odo_reset" background_color="#00000090" align="4" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
+	<osd x="-400" y="234" w="400" h="70"	font_size="940"		type="odometer" label="~   ${avg_spd}km/h" name="odo_reset" background_color="#00000090" align="4" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
+	<osd x="-400" y="304" w="400" h="70"	font_size="940"		type="odometer" label="˂ ˃ ${distance}" name="odo_reset" background_color="#00000090" align="4" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
+	<osd x="-400" y="374" w="400" h="70"	font_size="940"		type="odometer" label="time ${time}" name="odo_reset" background_color="#00000090" align="4" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
+-->
 	<osd x="-332" y="454" w="326" h="180"	font_size="940"		type="stopwatch" disable_reset="1" background_color="#00000090" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-264" y="-700" w="264" h="75"	font_size="940"		type="text" label="N: ${vehicle.position_direction} °" background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-264" y="-625" w="264" h="325"	font_size="1000"	type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090"/>
 
 	<tracking cdf_histsize="4"/>
-	<vehicleprofile name="car" route_depth="4:24%,6:2%,8:40000,18:10000" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
+
+	<vehicleprofile name="car" route_depth="4:24%,6:2%,8:160000,18:20000" flags="0x04000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
 	<roadprofile item_types="street_parking_lane"	speed="10" route_weight="5"/>
 	<roadprofile item_types="track_unpaved"			speed="15" route_weight="5"/>
 	<roadprofile item_types="track_gravelled"		speed="20" route_weight="10"/>
@@ -307,7 +328,8 @@ navit.say("Statuszeile oben sichtbar");
 	<roadprofile item_types="roundabout"			speed="20" route_weight="20"/>
 	<roadprofile item_types="ferry"					speed="10" route_weight="20"/>
 	</vehicleprofile>
-	<vehicleprofile name="car_shortest" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
+
+	<vehicleprofile name="car_shortest" flags="0x04000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
 	<roadprofile item_types="track_gravelled"		speed="25" route_weight="10"/>
 	<roadprofile item_types="living_street"			speed="7" route_weight="20"/>
 	<roadprofile item_types="street_parking_lane"	speed="10" route_weight="30"/>
@@ -329,7 +351,7 @@ navit.say("Statuszeile oben sichtbar");
 	<roadprofile item_types="roundabout"			speed="20" route_weight="20"/>
 	<roadprofile item_types="ferry"					speed="10" route_weight="20"/>
 	</vehicleprofile>
-	<vehicleprofile name="off_Road_shortest" flags="0x4000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
+	<vehicleprofile name="off_Road_shortest" flags="0x04000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
 	<roadprofile item_types="living_street"			speed="7" route_weight="20"/>
 	<roadprofile item_types="street_parking_lane"	speed="10" route_weight="30"/>
 	<roadprofile item_types="track_grass"			speed="15" route_weight="40"/>
@@ -353,7 +375,7 @@ navit.say("Statuszeile oben sichtbar");
 	<roadprofile item_types="roundabout"			speed="20" route_weight="20"/>
 	<roadprofile item_types="ferry"					speed="10" route_weight="20"/>
 	</vehicleprofile>
-	<vehicleprofile name="car_avoid_tolls" route_depth="4:24%,6:10%,8:14%,8:40000,18:25%,18:40000" flags="0x4000000" flags_forward_mask="0x4000402" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
+	<vehicleprofile name="car_avoid_tolls" route_depth="4:24%,6:10%,8:14%,8:40000,18:25%,18:40000" flags="0x04000000" flags_forward_mask="0x4000402" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
 	<roadprofile item_types="street_parking_lane"	speed="10" route_weight="5"/>
 	<roadprofile item_types="track_unpaved"			speed="15" route_weight="5"/>
 	<roadprofile item_types="street_service"		speed="20" route_weight="10"/>
@@ -589,9 +611,9 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poly_picnic_site"	order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/rastplatz" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poly_picnic_site"	order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/rastplatz" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poly_picnic_site"	order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/rastplatz" w="64" h="64" x="0" y="88"/><circle text_size="32" color="#006666"/></itemgra>
-	<itemgra item_types="poi_picnic" order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/picnic" w="32" h="32" x="16" y="16"/></itemgra>
-	<itemgra item_types="poi_picnic" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/picnic" w="48" h="48" x="24" y="26"/></itemgra>
-	<itemgra item_types="poi_picnic" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/picnic" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#004000"/></itemgra>
+	<itemgra item_types="poi_picnic" order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/picnic" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poi_picnic" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/picnic" w="64" h="64" x="32" y="32"/></itemgra>
+	<itemgra item_types="poi_picnic" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/picnic" w="96" h="96" x="48" y="48"/><circle text_size="32" color="#004000"/></itemgra>
 	<itemgra item_types="poi_bench" order="15">		<icon src="$NAVIT_USER_DATADIR/poi/bench" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poi_bench" order="16">		<icon src="$NAVIT_USER_DATADIR/poi/bench" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_bench" order="17">		<icon src="$NAVIT_USER_DATADIR/poi/bench" w="64" h="64" x="32" y="32"/></itemgra>
@@ -662,6 +684,8 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_attraction" order="17-">	<icon src="attraction" w="64" h="64" x="64" y="32"/><circle text_size="42" color="#00BB00" background_color="#000000"/></itemgra>
 	</layer>
 	<layer name="sport">
+	<itemgra item_types="poly_sport" order="15-16">	<circle text_size="28" color="#006660" background_color="#006660"/></itemgra>
+	<itemgra item_types="poly_sport" order="17-">	<circle text_size="34" color="#006660" background_color="#006660"/></itemgra>
 	<itemgra item_types="poly_sports_track" order="11-12">	<polyline color="#E37E64" width="4"/><icon src="$NAVIT_USER_DATADIR/poi/track" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poly_sports_track" order="13-14">	<polyline color="#E37E64DD" width="8"/><icon src="$NAVIT_USER_DATADIR/poi/track" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poly_sports_track" order="15-16">	<polyline color="#E37E64BB" width="18"/><icon src="$NAVIT_USER_DATADIR/poi/track" w="64" h="64" x="32" y="32"/></itemgra>
@@ -763,19 +787,19 @@ navit.say("Statuszeile oben sichtbar");
 	</layer>
 	<layer name="gastro">
 	<itemgra item_types="poly_camp_site" order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/zelt" w="32" h="32" x="16" y="16"/></itemgra>
-	<itemgra item_types="poly_camp_site" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/zelt" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poly_camp_site" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/zelt" w="48" h="48" x="24" y="24"/><circle text_size="28" color="#005B5B" background_color="#005B5B"/></itemgra>
 	<itemgra item_types="poly_camp_site" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/zelt" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#005B5B" background_color="#005B5B"/></itemgra>
-	<itemgra item_types="poi_camp_rv" order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/camping" w="32" h="32" x="16" y="16"/></itemgra>
-	<itemgra item_types="poi_camp_rv" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/camping" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poi_camp_rv" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/camping" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#005B5B" background_color="#005B5B"/></itemgra>
+	<itemgra item_types="poi_camp_rv" order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/camping" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poi_camp_rv" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/camping" w="64" h="64" x="32" y="32"/><circle text_size="28" color="#005B5B" background_color="#005B5B"/></itemgra>
+	<itemgra item_types="poi_camp_rv" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/camping" w="96" h="96" x="0" y="96"/><circle text_size="32" color="#005B5B" background_color="#005B5B"/></itemgra>
 	<itemgra item_types="poi_guesthouse" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="32" h="32" x="32" y="16"/></itemgra>
-	<itemgra item_types="poi_guesthouse" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="48" h="48" x="48" y="24"/></itemgra>
-	<itemgra item_types="poi_guesthouse" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="64" h="64" x="64" y="32"/><circle text_size="32" color="#000070" background_color="#000070"/></itemgra>
+	<itemgra item_types="poi_guesthouse" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="48" h="48" x="48" y="24"/><circle text_size="28" color="#000070" background_color="#000070"/></itemgra>
+	<itemgra item_types="poi_guesthouse" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="64" h="64" x="64" y="48"/><circle text_size="32" color="#000070" background_color="#000070"/></itemgra>
 	<itemgra item_types="poi_restaurant" order="13-14">	<icon src="restaurant" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poi_restaurant" order="15-16">	<icon src="restaurant" w="64" h="64" x="32" y="96"/></itemgra>
+	<itemgra item_types="poi_restaurant" order="15-16">	<icon src="restaurant" w="64" h="64" x="32" y="96"/><circle text_size="28" color="#000070" background_color="#000070"/></itemgra>
 	<itemgra item_types="poi_restaurant" order="17-">	<icon src="restaurant" w="96" h="96" x="48" y="128"/><circle text_size="32" color="#000070" background_color="#000070"/></itemgra>
 	<itemgra item_types="poi_hotel" order="13-14">	<icon src="hotel" w="48" h="48" x="-24" y="24"/></itemgra>
-	<itemgra item_types="poi_hotel" order="15-16">	<icon src="hotel" w="64" h="64" x="-36" y="64"/></itemgra>
+	<itemgra item_types="poi_hotel" order="15-16">	<icon src="hotel" w="64" h="64" x="-36" y="64"/><circle text_size="28" color="#000070" background_color="#000070"/></itemgra>
 	<itemgra item_types="poi_hotel" order="17-">	<icon src="hotel" w="96" h="96" x="-52" y="96"/><circle text_size="32" color="#000070" background_color="#000070"/></itemgra>
 	<itemgra item_types="poi_motel" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/motel" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poi_motel" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/motel" w="48" h="48" x="24" y="24"/></itemgra>
@@ -856,9 +880,9 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_shopping" order="13-14">	<icon src="shopping" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_shopping" order="15-16">	<icon src="shopping" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poi_shopping" order="17-">		<icon src="shopping" w="96" h="96" x="0" y="128"/><circle text_size="32" color="#000B99" background_color="#000B99"/></itemgra>
-	<itemgra item_types="poi_pharmacy" order="14">		<icon src="pharmacy" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poi_pharmacy" order="15-16">	<icon src="pharmacy" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_pharmacy" order="17-">		<icon src="pharmacy" w="96" h="96" x="64" y="48"/><circle text_size="32" color="#008800" background_color="#008800"/></itemgra>
+	<itemgra item_types="poi_pharmacy" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/pharmacy" w="32" h="32"/></itemgra>
+	<itemgra item_types="poi_pharmacy" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/pharmacy" w="48" h="48"/></itemgra>
+	<itemgra item_types="poi_pharmacy" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/pharmacy" w="64" h="64" x="48" y="64"/><circle text_size="32" color="#008800" background_color="#008800"/></itemgra>
 	<itemgra item_types="poi_shop_bicycle" order="14">		<icon src="bicycle_shop" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_shop_bicycle" order="15-16">	<icon src="bicycle_shop" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poi_shop_bicycle" order="17-">		<icon src="bicycle_shop" w="96" h="96" x="48" y="48"/><circle text_size="32" color="#006A60"/></itemgra>
@@ -881,8 +905,8 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poly_caravan_site" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poly_caravan_site" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="64" h="64" x="32" y="32"/><circle text_size="28" color="#005B5B" background_color="#005B5B"/></itemgra>
 	<itemgra item_types="poly_caravan_site" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="96" h="96" x="64" y="64"/><circle text_size="32" color="#005B5B" background_color="#005B5B"/></itemgra>
-	<itemgra item_types="poly_park" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/park" w="32" h="32" x="16" y="16"/><circle text_size="32" color="#127000"/></itemgra>
-	<itemgra item_types="poly_park" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/park" w="48" h="48" x="24" y="24"/><circle text_size="38" color="#127000" background_color="#127000"/></itemgra>
+	<itemgra item_types="poly_park" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/park" w="32" h="32" x="32" y="24"/><circle text_size="32" color="#127000" background_color="#000000"/></itemgra>
+	<itemgra item_types="poly_park" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/park" w="48" h="48" x="48" y="34"/><circle text_size="38" color="#127000" background_color="#000000"/></itemgra>
 	<itemgra item_types="poi_fuel" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/fuel" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_fuel" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/fuel" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poi_fuel" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/fuel" w="96" h="96" x="48" y="48"/><circle text_size="34" color="#AA3300" background_color="#AA3300"/></itemgra>
@@ -933,9 +957,9 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poly_archaeological_site" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/archaeologie" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poly_archaeological_site" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/archaeologie" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poly_archaeological_site" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/archaeologie" w="64" h="64" x="64" y="32"/><circle text_size="32" color="#6B5B00"/></itemgra>
-	<itemgra item_types="poly_battlefield" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="32" h="32" x="16" y="16"/></itemgra>
-	<itemgra item_types="poly_battlefield" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poly_battlefield" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="64" h="64" x="32" y="32"/><circle text_size="38" color="#6B5B00"/></itemgra>
+	<itemgra item_types="poly_battlefield" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poly_battlefield" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="64" h="64" x="32" y="32"/></itemgra>
+	<itemgra item_types="poly_battlefield" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="96" h="96" x="48" y="48"/><circle text_size="38" color="#6B5B00"/></itemgra>
 	<itemgra item_types="poly_construction" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/bau" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poly_construction" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/bau" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#606060"/></itemgra>
 	<itemgra item_types="point_unkn" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/punkt" w="48" h="48" x="24" y="24"/><circle text_size="32" color="#606060"/></itemgra>
@@ -961,7 +985,7 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_atm" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/atm" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#606060"/></itemgra>
 	<itemgra item_types="poi_post_office" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/post1" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_post_office" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/post1" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_post_office" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/post1" w="96" h="96" x="80" y="48"/><circle text_size="32" color="#854500"/></itemgra>
+	<itemgra item_types="poi_post_office" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/post1" w="96" h="96" x="80" y="48"/><circle text_size="36" color="#854500"/></itemgra>
 	<itemgra item_types="poi_post_box" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/post" w="24" h="24" x="12" y="12"/></itemgra>
 	<itemgra item_types="poi_post_box" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/post" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poi_post_box" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/post" w="48" h="48" x="24" y="24"/></itemgra>
@@ -993,7 +1017,7 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_castle" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="96" h="96" x="48" y="48"/><circle text_size="32" color="#004000"/></itemgra>
 	<itemgra item_types="poi_recycling" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/recycle" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_recycling" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/recycle" w="64" h="64" x="64" y="32"/><circle text_size="32" color="#854500"/></itemgra>
-	<itemgra item_types="poly_attraction" order="11-13">	<icon src="$NAVIT_USER_DATADIR/poi/marker" w="64" h="64" x="32" y="32"/></itemgra>
+	<itemgra item_types="poly_attraction" order="11-13">	<icon src="$NAVIT_USER_DATADIR/poi/marker" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_potable_water" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_potable_water" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poi_potable_water" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="96" h="96" x="48" y="48"/><circle text_size="32" color="#005099" background_color="#005099"/></itemgra>
@@ -1375,11 +1399,6 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="bridleway" order="16">		<polyline color="#919171" width="16"/><text text_size="18" background_color="#C9C900"/><icon src="$NAVIT_USER_DATADIR/poi/horse" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="bridleway" order="17">		<polyline color="#919171" width="32"/><text text_size="24" background_color="#C9C900"/><icon src="$NAVIT_USER_DATADIR/poi/horse" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="bridleway" order="18-">	<polyline color="#919171" width="60"/><text text_size="32" background_color="#C9C900"/><icon src="$NAVIT_USER_DATADIR/poi/horse" w="96" h="96" x="48" y="48"/></itemgra>
-	<itemgra item_types="street_pedestrian" order="13">		<polyline color="#B3AA00" width="12"/></itemgra>
-	<itemgra item_types="street_pedestrian" order="14">		<polyline color="#B3AA00" width="18"/></itemgra>
-	<itemgra item_types="street_pedestrian" order="15-16">	<polyline color="#B3AA00" width="30"/></itemgra>
-	<itemgra item_types="street_pedestrian" order="17">		<polyline color="#B3AA00" width="54"/></itemgra>
-	<itemgra item_types="street_pedestrian" order="18-">	<polyline color="#B3AA00" width="104"/></itemgra>
 	<itemgra item_types="footway_and_piste_nordic,footway,cycleway" order="14">	<polyline color="#999900" width="8"/></itemgra>
 	<itemgra item_types="footway_and_piste_nordic,footway,cycleway" order="15">	<polyline color="#999900" width="12"/></itemgra>
 	<itemgra item_types="footway_and_piste_nordic,footway,cycleway" order="16">	<polyline color="#999900" width="16"/></itemgra>
@@ -1391,6 +1410,21 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="path" order="16">	<polyline color="#999900" width="22"/></itemgra>
 	<itemgra item_types="path" order="17">	<polyline color="#999900" width="36"/></itemgra>
 	<itemgra item_types="path" order="18-">	<polyline color="#999900" width="52"/></itemgra>
+	<itemgra item_types="steps" order="13">		<polyline color="#D10010" width="4"/><polyline color="#E3E6D6" width="2"/></itemgra>
+	<itemgra item_types="steps" order="14">		<polyline color="#D10010" width="6"/><polyline color="#E3E6D6" width="2"/></itemgra>
+	<itemgra item_types="steps" order="15">		<polyline color="#D10010" width="8"/><polyline color="#E3E6D6" width="4"/></itemgra>
+	<itemgra item_types="steps" order="16">		<polyline color="#D10010" width="14"/><polyline color="#E3E6D6" width="8"/><text text_size="18" background_color="#EDE7BB"/></itemgra>
+	<itemgra item_types="steps" order="17">		<polyline color="#D10010" width="22"/><polyline color="#E3E6D6" width="14"/><text text_size="22" background_color="#EDE7BB"/></itemgra>
+	<itemgra item_types="steps" order="18-">	<polyline color="#D10010" width="38"/><polyline color="#E3E6D6" width="28"/><text text_size="28" background_color="#EDE7BB"/></itemgra>
+	</layer>
+	
+	
+	<layer name="wayside1">
+	<itemgra item_types="street_pedestrian" order="13">		<polyline color="#B3AA00" width="12"/></itemgra>
+	<itemgra item_types="street_pedestrian" order="14">		<polyline color="#B3AA00" width="18"/></itemgra>
+	<itemgra item_types="street_pedestrian" order="15-16">	<polyline color="#B3AA00" width="30"/></itemgra>
+	<itemgra item_types="street_pedestrian" order="17">		<polyline color="#B3AA00" width="54"/></itemgra>
+	<itemgra item_types="street_pedestrian" order="18-">	<polyline color="#B3AA00" width="104"/></itemgra>
 	<itemgra item_types="street_service" order="13">	<polyline color="#C77777" width="10"/></itemgra>
 	<itemgra item_types="street_service" order="14">	<polyline color="#C77777" width="14"/></itemgra>
 	<itemgra item_types="street_service" order="15-16">	<polyline color="#C77777" width="26"/></itemgra>
@@ -1411,12 +1445,6 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="street_1_land,street_1_city" order="15-16">	<polyline color="#454554" width="30"/></itemgra>
 	<itemgra item_types="street_1_land,street_1_city" order="17">		<polyline color="#454554" width="54"/></itemgra>
 	<itemgra item_types="street_1_land,street_1_city" order="18-">		<polyline color="#454554" width="104"/></itemgra>
-	<itemgra item_types="steps" order="13">		<polyline color="#D10010" width="4"/><polyline color="#E3E6D6" width="2"/></itemgra>
-	<itemgra item_types="steps" order="14">		<polyline color="#D10010" width="6"/><polyline color="#E3E6D6" width="2"/></itemgra>
-	<itemgra item_types="steps" order="15">		<polyline color="#D10010" width="8"/><polyline color="#E3E6D6" width="4"/></itemgra>
-	<itemgra item_types="steps" order="16">		<polyline color="#D10010" width="14"/><polyline color="#E3E6D6" width="8"/><text text_size="18" background_color="#EDE7BB"/></itemgra>
-	<itemgra item_types="steps" order="17">		<polyline color="#D10010" width="22"/><polyline color="#E3E6D6" width="14"/><text text_size="22" background_color="#EDE7BB"/></itemgra>
-	<itemgra item_types="steps" order="18-">	<polyline color="#D10010" width="38"/><polyline color="#E3E6D6" width="28"/><text text_size="28" background_color="#EDE7BB"/></itemgra>
 	<itemgra item_types="bus_guideway" order="13">	<polyline color="#FF6000" width="5"/></itemgra>
 	<itemgra item_types="bus_guideway" order="14">	<polyline color="#FF6000" width="12"/><polyline color="#9090AA" width="8"/></itemgra>
 	<itemgra item_types="bus_guideway" order="15">	<polyline color="#FF6000" width="18"/><polyline color="#9090AA" width="12"/><icon src="$NAVIT_USER_DATADIR/poi/busspur" w="48" h="48" x="24" y="24"/></itemgra>
@@ -1486,9 +1514,9 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="ramp" order="18-">	<polyline color="#FFFFFF" width="92"/></itemgra>
 	<itemgra item_types="street_n_lanes" order="7">		<polyline color="#40AA40" width="6"/></itemgra>
 	<itemgra item_types="street_n_lanes" order="8-9">	<polyline color="#40AA40" width="8"/></itemgra>
-	<itemgra item_types="street_n_lanes" order="10-11">	<polyline color="#40AA40" width="10"/></itemgra>
+	<itemgra item_types="street_n_lanes" order="10-11">	<polyline color="#40AA40" width="12"/></itemgra>
 	<itemgra item_types="street_n_lanes" order="12">	<polyline color="#40AA40" width="16"/></itemgra>
-	<itemgra item_types="street_n_lanes" order="13">	<polyline color="#7B7B9B" width="18"/><text text_size="10" color="#FFFFFF" background_color="#00CC44"/></itemgra>
+	<itemgra item_types="street_n_lanes" order="13">	<polyline color="#7B7B9B" width="20"/><text text_size="10" color="#FFFFFF" background_color="#00CC44"/></itemgra>
 	<itemgra item_types="street_n_lanes" order="14">	<polyline color="#FFFFFF" width="26"/><polyline color="#7B7B9B" width="24"/><text text_size="14" color="#FFFFFF" background_color="#00CC44"/></itemgra>
 	<itemgra item_types="street_n_lanes" order="15">	<polyline color="#FFFFFF" width="42"/><polyline color="#7B7B9B" width="40"/>	<polyline color="#FFFFFF" width="1" dash="20"/><text text_size="18" color="#FFFFFF" background_color="#00CC44"/></itemgra>
 	<itemgra item_types="street_n_lanes" order="16">	<polyline color="#FFFFFF" width="62"/><polyline color="#7B7B9B" width="60"/>	<polyline color="#FFFFFF" width="1" dash="30"/><text text_size="22" color="#FFFFFF" background_color="#00CC44"/></itemgra>
@@ -1515,8 +1543,6 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="path" order="16">	<polyline color="#CCDDEE" width="12"/><text text_size="18" background_color="#595959"/></itemgra>
 	<itemgra item_types="path" order="17">	<polyline color="#CCDDEE" width="24"/><text text_size="22" background_color="#595959"/></itemgra>
 	<itemgra item_types="path" order="18-">	<polyline color="#CCDDEE" width="40"/><text text_size="28" background_color="#595959"/></itemgra>
-	</layer>
-	<layer name="highway_1">
 	<itemgra item_types="track_grass" order="13">		<polyline color="#AAC277" width="8"/><polyline color="#D2F090" width="4"/></itemgra>
 	<itemgra item_types="track_grass" order="14">		<polyline color="#AAC277" width="10"/><polyline color="#D2F090" width="6"/></itemgra>
 	<itemgra item_types="track_grass" order="15-16">	<polyline color="#AAC277" width="14"/><polyline color="#D2F090" width="10"/><text text_size="18" background_color="#007000"/></itemgra>
@@ -1538,6 +1564,8 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="track_gravelled" order="15-16">	<polyline color="#B3B3B3" width="18"/><text text_size="18" background_color="#39BB39"/></itemgra>
 	<itemgra item_types="track_gravelled" order="17">	<polyline color="#B3B3B3" width="36"/><text text_size="24" background_color="#39BB39"/></itemgra>
 	<itemgra item_types="track_gravelled" order="18-">	<polyline color="#B3B3B3" width="76"/><text text_size="32" background_color="#39BB39"/></itemgra>
+	</layer>
+	<layer name="highway_1">
 	<itemgra item_types="track_paved" order="12">		<polyline color="#919191" width="4"/></itemgra>
 	<itemgra item_types="track_paved" order="13">		<polyline color="#CCDDEE" width="8"/></itemgra>
 	<itemgra item_types="track_paved" order="14">		<polyline color="#CCDDEE" width="10"/></itemgra>
@@ -1638,6 +1666,9 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poly_attraction" order="13-14">	<polyline color="#CA66CAAA" width="6"/></itemgra>
 	<itemgra item_types="poly_attraction" order="15-16">	<polyline color="#CA66CABB" width="10"/><text text_size="28" color="#005555"/><circle text_size="32" color="#790079"/></itemgra>
 	<itemgra item_types="poly_attraction" order="17-">		<polyline color="#CA66CACC" width="18"/><text text_size="32" color="#005555"/><circle text_size="36" color="#790079"/></itemgra>
+	<itemgra item_types="poi_fountain" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/fountain" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poi_fountain" order="17">		<icon src="$NAVIT_USER_DATADIR/poi/fountain" w="64" h="64" x="32" y="32"/></itemgra>
+	<itemgra item_types="poi_fountain" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/fountain" w="96" h="96" x="48" y="48"/></itemgra>
 	<itemgra item_types="fence" order="14-15">	<polyline color="#900FFF" width="2"/></itemgra>
 	<itemgra item_types="fence" order="16">		<polyline color="#900FFF" width="4"/></itemgra>
 	<itemgra item_types="fence" order="17-">	<polyline color="#900FFF90" width="6"/></itemgra>
@@ -1664,9 +1695,7 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_tree" order="17">	<icon src="$NAVIT_USER_DATADIR/poi/tree" w="64" h="64" x="32" y="64"/></itemgra>
 	<itemgra item_types="poi_tree" order="18">	<icon src="$NAVIT_USER_DATADIR/poi/tree" w="96" h="96" x="48" y="48"/></itemgra>
 	<itemgra item_types="poi_tree" order="19-">	<icon src="$NAVIT_USER_DATADIR/poi/tree" w="128" h="128" x="64" y="128"/></itemgra>
-	<itemgra item_types="poi_fountain" order="15-16">	<icon src="fountain" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poi_fountain" order="17">		<icon src="fountain" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_fountain" order="18-">		<icon src="fountain" w="96" h="96" x="48" y="48"/></itemgra>
+
 	</layer>
 	<layer name="line_1">
 	<itemgra item_types="rail_tram" order="13">		<polyline color="#844800" width="2"/></itemgra>
@@ -1772,7 +1801,6 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="street_route" order="6-8">		<polyline color="#00CC00" width="30"/></itemgra>
 	<itemgra item_types="street_route" order="9-11">	<polyline color="#00CC00" width="50"/></itemgra>
 	<itemgra item_types="street_route" order="12-13">	<polyline color="#00CC00" width="70"/></itemgra>
-
 	</layer>
 	<layer name="up_street">
 	<itemgra item_types="street_route" order="14">	<polyline color="#00CC00" width="20"/></itemgra>
@@ -1796,8 +1824,41 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="track_tracked" order="11-14">	<polyline color="#3F3FFF" width="8"/></itemgra>
 	<itemgra item_types="track_tracked" order="15-16">	<polyline color="#3F3FFF" width="16"/><text text_size="28"/></itemgra>
 	<itemgra item_types="track_tracked" order="17-">	<polyline color="#3F3FFF" width="32"/><text text_size="38"/></itemgra>
-	<itemgra item_types="rg_segment" order="9-">	<polyline color="#FF089C" width="2"/><arrows color="#FF089C" width="4"/><text text_size="26"/></itemgra>
+	<itemgra item_types="rg_segment" order="9-">	<polyline color="#FF089C" width="1"/><arrows color="#FF089C" width="1"/><text text_size="26"/></itemgra>
 	<itemgra item_types="rg_point" order="9-">		<circle text_size="26" color="#FF089C" radius="12"/></itemgra>
+	<!--
+	<itemgra item_types="nav_left_1" order="9-">	<icon src="nav_left_1_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_left_2" order="9-">	<icon src="nav_left_2_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_left_3" order="9-">	<icon src="nav_left_3_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_right_1" order="9-">	<icon src="nav_right_1_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_right_2" order="9-">	<icon src="nav_right_2_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_right_3" order="9-">	<icon src="nav_right_3_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_straight" order="9-">	<icon src="nav_straight_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_turnaround_left" order="9-">	<icon src="nav_turnaround_left_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_turnaround_right" order="9-">	<icon src="nav_turnaround_right_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_l1" order="9-">	<icon src="nav_roundabout_l1_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_r1" order="9-">	<icon src="nav_roundabout_r1_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_l2" order="9-">	<icon src="nav_roundabout_l2_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_r2" order="9-">	<icon src="nav_roundabout_r2_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_l3" order="9-">	<icon src="nav_roundabout_l3_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_r3" order="9-">	<icon src="nav_roundabout_r3_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_l4" order="9-">	<icon src="nav_roundabout_l4_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_r4" order="9-">	<icon src="nav_roundabout_r4_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_l5" order="9-">	<icon src="nav_roundabout_l5_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_r5" order="9-">	<icon src="nav_roundabout_r5_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_l6" order="9-">	<icon src="nav_roundabout_l6_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_r6" order="9-">	<icon src="nav_roundabout_r6_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_l7" order="9-">	<icon src="nav_roundabout_l7_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_r7" order="9-">	<icon src="nav_roundabout_r7_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_l8" order="9-">	<icon src="nav_roundabout_l8_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_roundabout_r8" order="9-">	<icon src="nav_roundabout_r8_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_keep_left" order="9-">		<icon src="nav_keep_left_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_merge_left" order="9-">	<icon src="nav_merge_left_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_keep_right" order="9-">	<icon src="nav_keep_right_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_merge_right" order="9-">	<icon src="nav_merge_right_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_exit_left" order="9-">		<icon src="nav_exit_left_bk.svg" w="64" h="64"/></itemgra>
+	<itemgra item_types="nav_exit_right" order="9-">	<icon src="nav_exit_right_bk.svg" w="64" h="64"/></itemgra>
+	-->
 	<itemgra item_types="bookmark" order="6-8">		<icon src="cursor_still" w="32" h="32" x="16" y="16"/><circle text_size="28" color="#BD00BD" background_color="#BD00BD"/></itemgra>
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="48" h="48" x="24" y="24"/><circle text_size="34" color="#BD00BD" background_color="#BD00BD"/></itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="64" h="64" x="32" y="32"/><circle text_size="42" color="#BD00BD" background_color="#BD00BD"/></itemgra>
@@ -1825,6 +1886,7 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_level_crossing" order="14">	<icon src="$NAVIT_USER_DATADIR/poi/train_crossing" w="24" h="24" x="12" y="12"/></itemgra>
 	<itemgra item_types="poi_level_crossing" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/train_crossing" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poi_level_crossing" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/train_crossing" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="nav_none" order="9-">	<icon src="unknown.svg" w="64" h="64"/>	</itemgra>
 	</layer>
 	 <!--  worldimage labels order="-11" -->
 	<layer name="world_labels_bevore">
@@ -1922,30 +1984,30 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="place_label" order="15-">	<circle text_size="32" color="#006565"/></itemgra>
 	<itemgra item_types="town_label,town_label_0e0" order="13-">			<circle text_size="32" color="#000000"/></itemgra>
 	<itemgra item_types="district_label,district_label_0e0" order="13-14">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="district_label,district_label_0e0" order="15-">	<circle text_size="34" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label,district_label_0e0" order="15-">	<circle text_size="42" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e0,town_label_2e0,town_label_5e0" order="13-">					<circle text_size="34" color="#000000"/></itemgra>
 	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="13-14">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="15-">		<circle text_size="36" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="15-">		<circle text_size="42" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="13-">					<circle text_size="36" color="#000000"/></itemgra>
 	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-14">	<circle text_size="34" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="15-">		<circle text_size="38" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="15-">		<circle text_size="46" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="12">					<circle text_size="34" color="#000000"/></itemgra>
 	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="12">		<circle text_size="28" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="13">					<circle text_size="38" color="#000000"/></itemgra>
 	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-17">				<circle text_size="42" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-17">	<circle text_size="38" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-17">	<circle text_size="48" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="12-13">				<circle text_size="42" color="#000000"/></itemgra>
 	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="12-13">	<circle text_size="38" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="14-17">				<circle text_size="46" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="14-17">	<circle text_size="42" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="14-17">				<circle text_size="52" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="14-17">	<circle text_size="52" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e4,town_label_2e4,town_label_5e4" order="12-16">				<circle text_size="48" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12-16">	<circle text_size="46" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12-16">	<circle text_size="56" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="12-15">				<circle text_size="52" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="48" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="56" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6" order="12-14">				<circle text_size="56" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12-14">	<circle text_size="52" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12-14">	<circle text_size="60" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e7" order="12-14">		<circle text_size="60" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="56" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="64" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="found_item" order="11-14">	<circle color="#FF00BB" radius="28" width="4"/></itemgra>
 	<itemgra item_types="found_item" order="15-16">	<circle text_size="28" color="#660044" background_color="#FF00BB" radius="46" width="4"/></itemgra>
 	<itemgra item_types="found_item" order="17-">	<circle text_size="34" color="#660044" background_color="#FF00BB" radius="72" width="4"/></itemgra>
@@ -1971,8 +2033,13 @@ navit.say("Statuszeile oben sichtbar");
 	<layer name="under_street" ref="under_street" active="0"/>
 	<layer name="rail" ref="rail" active="1"/>
 	<layer name="wayside" ref="wayside" active="1"/>
+	
+	<layer name="wayside1" ref="wayside1" active="1"/>
+	
 	<layer name="highway" ref="highway"/>
-	<layer name="way" ref="way"/>
+	
+	<layer name="way" ref="way" active="1"/>
+	
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="line_1" ref="line_1" active="1"/>
 	<layer name="hiking_way" ref="hiking_way" active="0"/>
@@ -2156,11 +2223,10 @@ navit.say("Statuszeile oben sichtbar");
 	<!-- Layout DARKGLOW_1 -->
 	<xi:include href="$NAVIT_USER_DATADIR/navit_L4.xml"/>
 
-	<!-- <layout name="Route">
+	<layout name="Route">
 		<layer name="streets">
 		<itemgra item_types="street_route_occluded" order="2-">	<polyline color="#0000A0" width="20"/></itemgra>
 		</layer>
 		</layout>
-	 -->
 	</navit>
 </config>
