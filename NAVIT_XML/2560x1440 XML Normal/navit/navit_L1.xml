@@ -14,11 +14,11 @@
 	<polyline color="#008500" width="3">	<coord x="56" y="-48"/>	<coord x="0" y="56"/>	<coord x="0" y="-8"/>	<coord x="56" y="-48"/>	</polyline>
 	</itemgra>
 	</cursor>
-	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/></itemgra>	</layer>
-	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-11">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="world_image">	<itemgra item_types="image" order="0-10">	<image/></itemgra>	</layer>
+	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-10">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="world_poly" ref="world_poly"/>
 	<layer name="poly" ref="poly"/>
-	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="12-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="11-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="poly_1" active="1">
 	<itemgra item_types="poly_town" order="11-">	<polygon color="#e2f2e2"/></itemgra>
 	<itemgra item_types="poly_wood" order="13-">	<polygon color="#8ec78d"/>	<text text_size="24"/></itemgra>

@@ -15,7 +15,7 @@
 	<coord x="-24" y="-87"/>	<coord x="-24" y="-38"/>	<coord x="-56" y="-61"/>	<coord x="-66" y="-52"/>	<coord x="-22" y="0"/>		<coord x="22" y="0"/>	</polygon>
 	</itemgra>
 	</cursor>
-	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/></itemgra>	</layer>
+	<layer name="world_image">	<itemgra item_types="image" order="0-10">	<image/></itemgra>	</layer>
 	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="8-11">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="world_poly">
 	<itemgra item_types="poly_water" order="9-11">	<polygon color="#77CCEE"/></itemgra>
@@ -397,6 +397,7 @@
 	<layer name="sport" ref="sport" active="0"/>
 	<layer name="gastro" ref="gastro" active="0"/>
 	<layer name="shop" ref="shop" active="0"/>
+	<layer name="station" ref="station" active="0"/>
 	<layer name="lift" active="0">
 	<itemgra item_types="lift_cable_car" order="11-15">	<polyline color="#705000" width="6"/>	<icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="48" h="48" x="24" y="0"/>	<text text_size="28" color="#944C00"/></itemgra>
 	<itemgra item_types="lift_cable_car" order="16-18">	<polyline color="#705000" width="8"/>	<icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="64" h="64" x="32" y="0"/>	<text text_size="38" color="#944C00" background_color="#944C00"/>	<circle text_size="38" color="#944C00"/></itemgra>
@@ -532,16 +533,16 @@
 	<itemgra item_types="poi_camp_rv" order="9-12">		<circle radius="20" width="10" color="#008000"/></itemgra>
 	<itemgra item_types="poi_camp_rv" order="13-14">	<circle text_size="32" color="#008000" radius="20" width="6"/></itemgra>
 	<itemgra item_types="poi_camp_rv" order="15-16">	<circle text_size="36" color="#008000" radius="20" width="6"/></itemgra>
-	<itemgra item_types="poi_camp_rv" order="17-">		<circle text_size="42" color="#008000" radius="20" width="6"/></itemgra>
+	<itemgra item_types="poi_camp_rv" order="17-">		<circle text_size="42" color="" background_color="#008000" radius="20" width="6"/></itemgra>
 	<itemgra item_types="poly_caravan_site" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="64" h="64"/></itemgra>
-	<itemgra item_types="poly_caravan_site" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="96" h="96" x="48" y="48"/>	<circle text_size="32" color="#005B5B" background_color=""/></itemgra>
-	<itemgra item_types="poly_caravan_site" order="15-">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="128" h="128" x="64" y="64"/>	<circle text_size="36" color="#005B5B" background_color=""/></itemgra>
+	<itemgra item_types="poly_caravan_site" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="96" h="96" x="0" y="128"/>	<circle text_size="32" color="#005B5B" background_color=""/></itemgra>
+	<itemgra item_types="poly_caravan_site" order="15-">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="128" h="128" x="0" y="160"/>	<circle text_size="42" color="" background_color="#005B5B"/></itemgra>
 	</layer>
 	<layer name="s8" active="0">
-	<itemgra item_types="poi_mall" order="9-12">	<circle radius="20" width="10" color="#580080"/></itemgra>
+	<itemgra item_types="poi_mall" order="9-12">	<circle radius="20" width="10" color="#000AFF"/></itemgra>
 	<itemgra item_types="poi_mall" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/mall" w="48" h="48"/></itemgra>
-	<itemgra item_types="poi_mall" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/mall" w="64" h="64" x="0" y="64"/>	<circle text_size="32" color="#580080"/></itemgra>
-	<itemgra item_types="poi_mall" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/mall" w="96" h="96" x="0" y="96"/>	<circle text_size="42" color="#580080"/></itemgra>
+	<itemgra item_types="poi_mall" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/mall" w="64" h="64" x="0" y="96"/>	<circle text_size="34" color="#310091" background_color=""/></itemgra>
+	<itemgra item_types="poi_mall" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/mall" w="96" h="96" x="0" y="128"/>	<circle text_size="42" color="" background_color="#310091"/></itemgra>
 	</layer>
 	<layer name="s9" active="0">
 	<itemgra item_types="poi_guesthouse" order="9-12">	<circle radius="20" width="10" color="#665500"/></itemgra>

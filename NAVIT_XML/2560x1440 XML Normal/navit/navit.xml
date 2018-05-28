@@ -8,23 +8,31 @@
 		<plugin path="$NAVIT_LIBDIR/*/${NAVIT_LIBPREFIX}libgraphics_null.so" active="no"/>
 	</plugins>
 	<navit
-	center="13.5666 48.1333"
-	zoom="8"
-	zoom_max="262144"
-	autozoom_active="1"
-	autozoom="16"
-	pitch="46"
-	orientation="0"
-	recent_dest="30"
-	waypoints_flag="1"
-	radius="28"
-	timeout="86400"
-	drag_bitmap="0"
-	osd_configuration="1"
+		center="13.5666 48.1333"
+		zoom="8"
+		zoom_max="262144"
+		autozoom_active="0"
+		autozoom="16"
+		pitch="46"
+		orientation="0"
+		recent_dest="30"
+		waypoints_flag="1"
+		radius="28"
+		timeout="86400"
+		drag_bitmap="0"
+		osd_configuration="1"
 	>
 	<graphics type="android"/>
 	<speech type="android" cps="40"/>
-	<vehicle source="android:" name="Local GPS" profilename="car" active="yes" follow="1" follow_cursor="1" lag="15"/>
+	<vehicle 
+		source="android:"
+		name="Local GPS"
+		profilename="car"
+		active="yes"
+		follow="1"
+		follow_cursor="1"
+		lag="15"
+	/>
 
 	<!-- <vehicle source="android:"/>
 	<vehicle enabled="yes" name="Local GPS" profilename="car" active="yes" follow="1" follow_cursor="1" lag="15"/>
@@ -34,10 +42,18 @@
 	 -->
 	<!-- <vehicle source="demo://" name="Demo" profilename="car" enabled="yes" speed="80"/> -->
 
-	<gui type="internal" hide_impossible_next_keys="1" menu_on_map_click="0" background_color="#FFCC33" background_color2="#CC9311" text_background="#002050" text_color="#002050" font_size="800" icon_xs="160" icon_s="200" icon_l="200" spacing="16"><![CDATA[ <html>
+	<gui
+	type="internal"
+	hide_impossible_next_keys="1"
+	menu_on_map_click="0"
+	background_color="#FFCC33"
+	background_color2="#CC9311"
+	text_background="#002050"	text_color="#002050"	font_size="800"
+	icon_xs="160" icon_s="200" icon_l="200" spacing="16">
+	<![CDATA[ <html>
 						<a name='Main Menu'>
 <text>H A U P T M E N Ü</text>	<img cond='navit.speech.active==0' src='gui_sound_off' onclick='navit.speech.active=1;
-navit.say("Sprache an");
+navit.say("an");
 								back_to_map()'>
 <text>Sprache</text>			</img>	<img cond='navit.speech.active!=0' src='gui_sound' onclick='navit.speech.active=0;back_to_map()'>
 <text>Sprache</text>			</img>	<img src='gui_town' onclick='town()'>
@@ -49,51 +65,57 @@ navit.say("Sprache an");
 								<img cond='!navit.route.route_status&amp;1' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img src='gui_quit' onclick='quit()'><text>Quit</text></img>
 						</a>
 
-						<a name='Fahrzeug'>
-<text>Fahrzeuge</text>			<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car&quot;)' src='gui_active' onclick='back_to_map()'><text>car</text></img>
-								<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car&quot;)' src='$NAVIT_USER_DATADIR/maske/cursor_a' onclick='navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;back_to_map()'><text>car</text></img>
-								<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]' src='$NAVIT_USER_DATADIR/maske/cursor_a' onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;menu("#set_navit_day");back_to_map()'><text>car</text></img>
-								<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car_shortest&quot;)' src='gui_active' onclick='back_to_map()'><text>car_shortest</text></img>
-								<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car_shortest&quot;)' src='$NAVIT_USER_DATADIR/maske/Kurz' onclick='navit.vehicle[@name="Local GPS"].profilename="car_shortest";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_shortest;back_to_map()'><text>car_shortest</text></img>
-								<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]' src='$NAVIT_USER_DATADIR/maske/Kurz' onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car_shortest";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_shortest;menu("#set_navit_day");back_to_map()'><text>car_shortest</text></img>
-								<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car_avoid_tolls&quot;)' src='gui_active' onclick='back_to_map()'><text>car_avoid_tolls</text></img>
-								<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car_avoid_tolls&quot;)' src='$NAVIT_USER_DATADIR/maske/Maut' onclick='navit.vehicle[@name="Local GPS"].profilename="car_avoid_tolls";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_avoid_tolls;back_to_map()'><text>car_avoid_tolls</text></img>
-								<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]' src='$NAVIT_USER_DATADIR/maske/Maut' onclick='navit.layout=navit.layout[@name=="MOTORIST"];navit.vehicle[@name="Local GPS"].profilename="car_avoid_tolls";navit.vehicle=navit.vehicle[@name=="Local GPS"],car_avoid_tolls;menu("#set_navit_day");back_to_map()'><text>car_avoid_tolls</text></img>
-								<img cond='navit.layout==navit.layout[@name=="DARKGLOW"]' src='gui_active' onclick='back_to_map()'>
-<text>Nachtansicht</text>		<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>	<img cond='navit.layout!=navit.layout[@name=="DARKGLOW"]' src='$NAVIT_USER_DATADIR/maske/cursor_p' onclick='navit.layout=navit.layout[@name=="DARKGLOW"];menu("#set_navit_night");back_to_map()'>
-<text>Nachtansicht</text>		</img>	<img cond='navit.layout==navit.layout[@name=="CAR_DAY"]' src='gui_active' onclick='back_to_map()'>
-<text>Car_Day</text>			<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>	<img cond='navit.layout!=navit.layout[@name=="CAR_DAY"]' src='car_dealer' onclick='navit.layout=navit.layout[@name=="CAR_DAY"];navit.vehicle[@name="Local GPS"].profilename="car";navit.vehicle=navit.vehicle[@name=="Local GPS"],car;menu("#set_navit_day");back_to_map()'>
-<text>Car_Day</text>			</img>	<img cond='navit.layout==navit.layout[@name=="CAR_DARK"]' src='gui_active' onclick='back_to_map()'>
-<text>Car_Dark</text>			<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>	<img cond='navit.layout!=navit.layout[@name=="CAR_DARK"]' src='gui_vehicle' onclick='navit.layout=navit.layout[@name=="CAR_DARK"];menu("#set_navit_night");back_to_map()'>
-<text>Car_Dark</text>			</img>	<img cond='navit.layout==navit.layout[@name=="MOTORIST_1"]' src='gui_active' onclick='back_to_map()'>
-<text>Cursor_360</text>			<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>	<img cond='navit.layout!=navit.layout[@name=="MOTORIST_1"]' src='cursor' onclick='navit.layout=navit.layout[@name=="MOTORIST_1"];navit.layout_name=navit.layout.daylayout;menu("#set_navit1");back_to_map()'>
-<text>Cursor_360</text>			</img>	<img cond='navit.layout==navit.layout[@name=="DARKGLOW_1"]' src='gui_active' onclick='back_to_map()'>
-<text>Cursor_360_Dark</text>	<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>	<img cond='navit.layout!=navit.layout[@name=="DARKGLOW_1"]' src='cursor' onclick='navit.layout=navit.layout[@name=="DARKGLOW_1"];navit.layout_name=navit.layout.nightlayout;menu("#set_navit1");back_to_map()'>
-<text>Cursor_360_Dark</text>	</img>	<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;bike&quot;)' src='gui_active' onclick='back_to_map()'>
-<text>Radfahrer</text>			</img>	<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;bike&quot;)' src='bicycle_shop' onclick='navit.vehicle[@name="Local GPS"].profilename="bike";	navit.vehicle=navit.vehicle[@name=="Local GPS"],bike;back_to_map()'>
-<text>Radfahrer</text>			</img>	<img cond='navit.layout!=navit.layout[@name=="CYCLIST"]' src='bicycle_shop' onclick='navit.layout=navit.layout[@name=="CYCLIST"];navit.vehicle[@name="Local GPS"].profilename="bike";navit.vehicle=navit.vehicle[@name=="Local GPS"],bike;menu("#set_navit_day");back_to_map()'>
-<text>Radfahrer</text>			</img>	<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;bike_a&quot;)' src='gui_active' onclick='back_to_map()'><text>bike</text></img>
-								<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;bike_a&quot;)' src='bicycle_shop' onclick='navit.vehicle[@name="Local GPS"].profilename="bike_a";	navit.vehicle=navit.vehicle[@name=="Local GPS"],bike_a;back_to_map()'><text>bike</text></img>
-								<img cond='navit.layout!=navit.layout[@name=="CYCLIST"]' src='bicycle_shop' onclick='navit.layout=navit.layout[@name=="CYCLIST"];navit.vehicle[@name="Local GPS"].profilename="bike_a";navit.vehicle=navit.vehicle[@name=="Local GPS"],bike_a;menu("#set_navit_day");back_to_map()'><text>bike</text></img>
-								<img cond='navit.layout==navit.layout[@name=="WALKER"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;pedestrian&quot;)' src='gui_active' onclick='back_to_map()'><text>pedestrian</text></img>
-								<img cond='navit.layout==navit.layout[@name=="WALKER"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;pedestrian&quot;)' src='gui_active' onclick='navit.vehicle[@name="Local GPS"].profilename="pedestrian";navit.vehicle=navit.vehicle[@name=="Local GPS"],pedestrian;back_to_map()'><text>pedestrian</text><script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>	
-								<img cond='navit.layout!=navit.layout[@name=="WALKER"]' src='gui_vehicle_pedestrian' onclick='navit.layout=navit.layout[@name=="WALKER"];navit.vehicle[@name="Local GPS"].profilename="pedestrian";navit.vehicle=navit.vehicle[@name=="Local GPS"],pedestrian;menu("#set_navit_day");back_to_map()'><text>pedestrian</text></img>	<img cond='navit.layout==navit.layout[@name=="PAX"]' src='gui_active'	onclick='menu("#b_b")'>
-<text>Passagier</text><script>write(Menü Auswahl)</script>	</img>	<img cond='navit.layout!=navit.layout[@name=="PAX"]' src='airport' onclick='navit.set_attr_var("map_search",navit.layout);navit.layout=navit.layout[@name=="PAX"];menu("#set_navit_day");menu("#b_b")'>
-<text>Passagier</text>			</img>
-						</a>
+<a name='Fahrzeug'><text>Fahrzeuge</text>
+	<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car&quot;)'				src='gui_active' 							onclick='																																																			back_to_map()'><text>car</text></img>
+	<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car&quot;)'				src='$NAVIT_USER_DATADIR/maske/cursor_a'	onclick='													navit.vehicle[@name="Local GPS"].profilename="car";				navit.vehicle=navit.vehicle[@name=="Local GPS"],car;									back_to_map()'><text>car</text></img>
+	<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]'																						src='$NAVIT_USER_DATADIR/maske/cursor_a'	onclick='navit.layout=navit.layout[@name=="MOTORIST"];		navit.vehicle[@name="Local GPS"].profilename="car";				navit.vehicle=navit.vehicle[@name=="Local GPS"],car;				menu("#set_day");	back_to_map()'><text>car</text></img>
+	<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car_shortest&quot;)'		src='gui_active'							onclick='																																																			back_to_map()'><text>car_shortest</text></img>
+	<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car_shortest&quot;)'		src='$NAVIT_USER_DATADIR/maske/Kurz'		onclick='													navit.vehicle[@name="Local GPS"].profilename="car_shortest";	navit.vehicle=navit.vehicle[@name=="Local GPS"],car_shortest;							back_to_map()'><text>car_shortest</text></img>
+	<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]'																						src='$NAVIT_USER_DATADIR/maske/Kurz'		onclick='navit.layout=navit.layout[@name=="MOTORIST"];		navit.vehicle[@name="Local GPS"].profilename="car_shortest";	navit.vehicle=navit.vehicle[@name=="Local GPS"],car_shortest;		menu("#set_day");	back_to_map()'><text>car_shortest</text></img>
+	<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;car_avoid_tolls&quot;)'	src='gui_active'							onclick='																																																			back_to_map()'><text>car_avoid_tolls</text></img>
+	<img cond='navit.layout==navit.layout[@name=="MOTORIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;car_avoid_tolls&quot;)'	src='$NAVIT_USER_DATADIR/maske/Maut'		onclick='													navit.vehicle[@name="Local GPS"].profilename="car_avoid_tolls";	navit.vehicle=navit.vehicle[@name=="Local GPS"],car_avoid_tolls;						back_to_map()'><text>car_avoid_tolls</text></img>
+	<img cond='navit.layout!=navit.layout[@name=="MOTORIST"]'																						src='$NAVIT_USER_DATADIR/maske/Maut'		onclick='navit.layout=navit.layout[@name=="MOTORIST"];		navit.vehicle[@name="Local GPS"].profilename="car_avoid_tolls";	navit.vehicle=navit.vehicle[@name=="Local GPS"],car_avoid_tolls;	menu("#set_day");	back_to_map()'><text>car_avoid_tolls</text></img>
+
+	<img cond='navit.layout==navit.layout[@name=="DARKGLOW"]' 																						src='gui_active' 							onclick='																																																			back_to_map()'><text>Nachtansicht</text>		<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
+	<img cond='navit.layout!=navit.layout[@name=="DARKGLOW"]' 																						src='$NAVIT_USER_DATADIR/maske/cursor_p'	onclick='navit.layout=navit.layout[@name=="DARKGLOW"];																																			menu("#set_night");	back_to_map()'><text>Nachtansicht</text>		</img>
+
+	<img cond='navit.layout==navit.layout[@name=="CAR_DAY"]' 																						src='gui_active'							onclick='																																																			back_to_map()'><text>Car_Day</text>				<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
+	<img cond='navit.layout!=navit.layout[@name=="CAR_DAY"]' 																						src='car_dealer'							onclick='navit.layout=navit.layout[@name=="CAR_DAY"];		navit.vehicle[@name="Local GPS"].profilename="car";				navit.vehicle=navit.vehicle[@name=="Local GPS"],car;				menu("#set_day");	back_to_map()'><text>Car_Day</text>				</img>
+	<img cond='navit.layout==navit.layout[@name=="CAR_DARK"]' 																						src='gui_active'							onclick='																																																			back_to_map()'><text>Car_Dark</text>			<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
+	<img cond='navit.layout!=navit.layout[@name=="CAR_DARK"]' 																						src='gui_vehicle'							onclick='navit.layout=navit.layout[@name=="CAR_DARK"];																																			menu("#set_night");	back_to_map()'><text>Car_Dark</text>			</img>
+
+	<img cond='navit.layout==navit.layout[@name=="MOTORIST_1"]' 																					src='gui_active'							onclick='																																																			back_to_map()'><text>Cursor_360</text>			<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
+	<img cond='navit.layout!=navit.layout[@name=="MOTORIST_1"]' 																					src='cursor'								onclick='navit.layout=navit.layout[@name=="MOTORIST_1"];	navit.layout_name=navit.layout.daylayout;																							menu("#set_1");		back_to_map()'><text>Cursor_360</text>			</img>
+	<img cond='navit.layout==navit.layout[@name=="DARKGLOW_1"]' 																					src='gui_active'							onclick='																																																			back_to_map()'><text>Cursor_360_Dark</text>		<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
+	<img cond='navit.layout!=navit.layout[@name=="DARKGLOW_1"]' 																					src='cursor'								onclick='navit.layout=navit.layout[@name=="DARKGLOW_1"];	navit.layout_name=navit.layout.nightlayout;																							menu("#set_1");		back_to_map()'><text>Cursor_360_Dark</text>		</img>
+
+	<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;bike&quot;)'				src='gui_active'							onclick='																																																			back_to_map()'><text>Radfahrer</text>			</img>
+	<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;bike&quot;)'				src='bicycle_shop'							onclick='													navit.vehicle[@name="Local GPS"].profilename="bike";			navit.vehicle=navit.vehicle[@name=="Local GPS"],bike;									back_to_map()'><text>Radfahrer</text>			</img>
+	<img cond='navit.layout!=navit.layout[@name=="CYCLIST"]' 																						src='bicycle_shop'							onclick='navit.layout=navit.layout[@name=="CYCLIST"];		navit.vehicle[@name="Local GPS"].profilename="bike";			navit.vehicle=navit.vehicle[@name=="Local GPS"],bike;				menu("#set_day");	back_to_map()'><text>Radfahrer</text>			</img>
+	<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;bike_a&quot;)'			src='gui_active'							onclick='																																																			back_to_map()'><text>bike</text>				</img>
+	<img cond='navit.layout==navit.layout[@name=="CYCLIST"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;bike_a&quot;)'			src='bicycle_shop'							onclick='													navit.vehicle[@name="Local GPS"].profilename="bike_a";			navit.vehicle=navit.vehicle[@name=="Local GPS"],bike_a;									back_to_map()'><text>bike</text>				</img>
+	<img cond='navit.layout!=navit.layout[@name=="CYCLIST"]' 																						src='bicycle_shop'							onclick='navit.layout=navit.layout[@name=="CYCLIST"];		navit.vehicle[@name="Local GPS"].profilename="bike_a";			navit.vehicle=navit.vehicle[@name=="Local GPS"],bike_a;				menu("#set_day");	back_to_map()'><text>bike</text>				</img>
+
+	<img cond='navit.layout==navit.layout[@name=="WALKER"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;pedestrian&quot;)'			src='gui_active' 							onclick='																																																			back_to_map()'><text>pedestrian</text>			</img>
+	<img cond='navit.layout==navit.layout[@name=="WALKER"]&amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;pedestrian&quot;)'			src='gui_active' 							onclick='													navit.vehicle[@name="Local GPS"].profilename="pedestrian";		navit.vehicle=navit.vehicle[@name=="Local GPS"],pedestrian;								back_to_map()'><text>pedestrian</text>			<script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
+	<img cond='navit.layout!=navit.layout[@name=="WALKER"]'																							src='gui_vehicle_pedestrian' 				onclick='navit.layout=navit.layout[@name=="WALKER"];		navit.vehicle[@name="Local GPS"].profilename="pedestrian";		navit.vehicle=navit.vehicle[@name=="Local GPS"],pedestrian;			menu("#set_day");	back_to_map()'><text>pedestrian</text>			</img>	
+
+	<img cond='navit.layout==navit.layout[@name=="PAX"]'																							src='gui_active'							onclick='																																														menu("#b_b")'>						<text>Passagier</text>			<script>write(Menü Auswahl)</script>	</img>
+	<img cond='navit.layout!=navit.layout[@name=="PAX"]'																							src='airport'								onclick='navit.set_attr_var("map_search",navit.layout);navit.layout=navit.layout[@name=="PAX"];																									menu("#set_day");menu("#b_b")'>		<text>Passagier</text>			</img>
+</a>
 
 						<a name='Route'>
 <text>ROUTE - DATEN</text>		<img cond='navit.layout==navit.layout[@name=="PAX"]' src='gui_active'	onclick='menu("#suche")'>
-<text>Suche auf Karte</text>	</img>	<img cond='navit.layout!=navit.layout[@name=="PAX"]' src='gui_zoom_in' onclick='navit.set_attr_var("map_search",navit.layout);navit.layout=navit.layout[@name=="PAX"];menu("#suche");menu_on_map_click=1'>
+<text>Suche auf Karte</text>	</img>	<img cond='navit.layout!=navit.layout[@name=="PAX"]' src='gui_zoom_route' onclick='navit.set_attr_var("map_search",navit.layout);navit.layout=navit.layout[@name=="PAX"];menu("#suche");menu_on_map_click=1'>
 <text>Suche auf Karte</text>	</img>	<img src='gui_formerdests' onclick='
 navit.say("Zielwahl aus vorherigen");
 								formerdests()'>
 <text>Letzte Ziele</text>		</img>	<img src='gui_maps' onclick='enter_coord()'>
 <text>Eingabe Koordinate</text>	</img>	<img cond='menu_on_map_click==0' src='gui_stop' onclick='
-navit.say("Tipp Kartenpunkt an");
+navit.say("Tipp Karte");
 								menu_on_map_click=1;back_to_map()'>
 <text>TIPP Karte</text>			</img>	<img cond='menu_on_map_click==1' src='gui_active' onclick='
-navit.say("Menüzugang Zahnrad");
+navit.say("Menü Zahnrad");
 								menu_on_map_click=0;back_to_map()'>
 <text>TIPP Karte</text>			</img>	<img cond='position_coord_geo' src='cursor_still' onclick='position(position_coord_geo,_("Vehicle Position"),8|32|64|128|256)'>
 <text>Cursorposition</text>		</img>	<img cond='click_coord_geo' src='gui_maps' onclick='
@@ -117,7 +139,7 @@ navit.say("ein Etappenziel entfernt");
 
 						<a name='Settings'>
 <text>EINSTELLUNGEN</text>		<img src='gui_actions' onclick='navit.toggle_layer("up_street");navit.toggle_layer("under_street");back_to_map()'>
-<text>Routelinie ---__</text>	</img>	<img cond='navit.autozoom_active==0' src='gui_zoom' onclick='navit.autozoom_active=1;redraw_map();refresh()'><text>Manual zoom</text></img>	<img cond='navit.autozoom_active==1' src='gui_active' onclick='navit.autozoom_active=0;redraw_map();refresh()'><text>Auto zoom</text></img>	<img cond='fullscreen==0' src='gui_fullscreen' onclick='
+<text>Routelinie ---__</text>	</img>	<img cond='navit.autozoom_active==0' src='gui_zoom_manual' onclick='navit.autozoom_active=1;redraw_map();refresh()'><text>Manual zoom</text></img>	<img cond='navit.autozoom_active==1' src='gui_active' onclick='navit.autozoom_active=0;redraw_map();refresh()'><text>Auto zoom</text></img>	<img cond='fullscreen==0' src='gui_fullscreen' onclick='
 navit.say("Vollbild");
 								fullscreen=1'>
 <text>Vollbild</text>			</img>	<img cond='fullscreen==1' src='gui_leave_fullscreen' onclick='
@@ -141,18 +163,20 @@ navit.say("Statuszeile oben sichtbar");
 								<img cond='navit.get_int_var("set_osd")==0' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img cond='navit.get_int_var("set_osd")==0' src='$NAVIT_USER_DATADIR/maske/blank'></img>	<img cond='navit.get_int_var("set_osd")==0' src='$NAVIT_USER_DATADIR/maske/blank'></img>
 						</a>
 
-						<!-- Vorgabe für aktiv "Autosetting" bei Umstellung Layout im Menü "Fahrzeuge" "switch_layout_day_night call with "manual", "auto", "manual_toggle", "manual_day" or "manual_night" -->
-						<a name='set_navit_day'><script>navit.autozoom_active=1;menu_on_map_click=0;		navit.switch_layout_day_night(&quot;manual_day&quot;)</script></a>
-						<a name='set_navit_night'><script>navit.autozoom_active=1;menu_on_map_click=0;		navit.switch_layout_day_night(&quot;manual_night&quot;)</script></a>
-						<a name='set_navit1'><script>navit.set_int_var("is_orientation",0);navit.orientation=0;navit.set_int_var("is_pitch",pitch);navit.pitch=0;navit.autozoom_active=1;menu_on_map_click=0;</script></a>
+				<!-- Vorgabe für aktiv "Autosetting" bei Umstellung Layout im Menü "Fahrzeuge" "switch_layout_day_night call with "manual", "auto", "manual_toggle", "manual_day" or "manual_night" -->
+	<a name='set_day'>		<script>	menu_on_map_click=0;	navit.switch_layout_day_night("manual_day")</script></a>
+	<a name='set_night'>	<script>	menu_on_map_click=0;	navit.switch_layout_day_night("manual_night")</script></a>
+	<a name='set_1'>		<script>	navit.set_int_var("is_orientation",0);navit.orientation=0;navit.set_int_var("is_pitch",pitch);navit.pitch=0;menu_on_map_click=0;</script></a>
 
-						<a name='Settings Layers' class='clist'><text>Layers</text><script>foreach(layer;navit.layout.layer)
-							if (layer.name) img("centry",layer.active?"gui_active":"gui_inactive",layer.name,"","navit.layout.layer[@name==%{se}].active=%{d}*",layer.name,!layer.active,"redraw_map();refresh();");
-							else			img("centry",layer.active?"gui_active":"gui_inactive",			 "","navit.layout.layer[@name==%{se}].active=%{d}*",layer.name,!layer.active,"redraw_map();refresh();");</script>
+						<a name='Settings Layers' class='clist'><text>Layers</text>
+								<script>foreach(layer;navit.layout.layer)
+									if (layer.name) img("centry",layer.active?"gui_active":"gui_inactive",layer.name,"","navit.layout.layer[@name==%{se}].active=%{d}*",layer.name,!layer.active,"redraw_map();refresh();");
+									else			img("centry",layer.active?"gui_active":"gui_inactive",			 "","navit.layout.layer[@name==%{se}].active=%{d}*",layer.name,!layer.active,"redraw_map();refresh();");
+							</script>
 						</a>
 
 						<a name='POI_Icons'>
-<text>Aktiviere EIGENE</text>			<img cond='navit.layout.layer[@name=="my"].active==0'			src='gui_stop'	onclick='navit.toggle_layer("my");setting_maps()'>
+<text>Erweiterte Kartendarstellung :</text>			<img cond='navit.layout.layer[@name=="my"].active==0'			src='gui_stop'	onclick='navit.toggle_layer("my");setting_maps()'>
 <text>Eigene TXT</text>			</img>	<img cond='navit.layout.layer[@name=="my"].active==1'			src='gui_active'onclick='navit.toggle_layer("my");refresh()'>
 <text>Eigene TXT</text>			</img>	<img cond='navit.layout.layer[@name=="station"].active==0'		src='gui_stop'	onclick='navit.toggle_layer("station");refresh()'>
 <text>Haltestellen</text>		</img>	<img cond='navit.layout.layer[@name=="station"].active==1'		src='gui_active'onclick='navit.toggle_layer("station");refresh()'>
@@ -238,7 +262,7 @@ navit.say("Statuszeile oben sichtbar");
 
 						<!-- navit_L3.xml Layout "PAX": definierte POI zum besseren auffinden in der Karte (hier <text> anpassen zu item_types </text> ) -->
 						<a name='suche'>
-<text>Zeige auf Karte alle :</text>		<img cond='navit.layout.layer[@name=="s1"].active==0' src='gui_stop'	onclick='navit.toggle_layer("s1");refresh()'>
+<text>Suche alle :</text>				<img cond='navit.layout.layer[@name=="s1"].active==0' src='gui_stop'	onclick='navit.toggle_layer("s1");refresh()'>
 <text>Attraktion</text>			</img>	<img cond='navit.layout.layer[@name=="s1"].active==1' src='gui_active'	onclick='navit.toggle_layer("s1");refresh()'>
 <text>Attraktion</text>			</img>	<img cond='navit.layout.layer[@name=="s2"].active==0' src='gui_stop'	onclick='navit.toggle_layer("s2");refresh()'>
 <text>Vergnügungspark</text>	</img>	<img cond='navit.layout.layer[@name=="s2"].active==1' src='gui_active'	onclick='navit.toggle_layer("s2");refresh()'>
@@ -263,13 +287,13 @@ navit.say("Statuszeile oben sichtbar");
 						<a name='NMEA Data' class='clist'><text>NMEA Data</text><script>nmea_data_page()</script></a>
 	</html>	]]>	</gui>
 
-	<!-- 
+	<!--
 	if you disabled autosetting ("set_osd")==1 use this extensive cmd_interface and deactivate the next cmd_interface
 	<osd x="-1" y="-1" w="1" h="1"	type="cmd_interface" update_period="1" command='get_int_var("set_osd")==0
 	?(follow>1||zoom>64	?(pitch=0,tracking=0,orientation=0)	:(pitch=46,tracking=1,orientation=-1))
 	:(zoom>64	?(get_int_var("zoom_gt")==0	?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1)):"")
 				:(get_int_var("zoom_gt")==1 ?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0)):"")'/>
- -->
+	-->
 	<osd x="-1" y="-1" w="1" h="1"			type="cmd_interface" update_period="1" command='follow>1||zoom>64?(pitch=0,tracking=0,orientation=0):(pitch=46,tracking=1,orientation=-1)'/>
 	<osd x="0" y="-2560"					type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1440_700.png" command="" enable_expression="pitch&gt;1"/>
 	<!-- <osd x="0" y="0" w="1920" h="60"		font_size="700"		type="text" label='${vehicle.position_coord_geo[pos_deg]}' background_color="#00000000" align="10" text_color="#FFFFFF" osd_configuration="2"/>
@@ -277,8 +301,8 @@ navit.say("Statuszeile oben sichtbar");
 	<osd x="0" y="0" w="2370" h="85"		font_size="940"		type="text" label="${navit.messages}" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="5" text_color="#FFFFFF"/>
 	<osd x="0" y="85" w="2370" h="85"		font_size="1000"	type="text" label="${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="4" text_color="#00FF00"/>
 	<osd x="0" y="434" w="264" h="100"		font_size="1500"	type="text" label="${navigation.item[1].length[value]}" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="0" text_color="#00FF00"/>
-	<osd x="-160" y="0" w="160" h="140"		font_size="650"		type="text" label="[TOWN] \n" command='say("a");toggle_layer("labels_bevore");toggle_layer("world_labels_bevore")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
-	<osd x="0" y="0" w="160" h="140"		font_size="650"		type="text" label="[POI]\n" command='gui.menu("#POI_Icons")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
+	<osd x="-160" y="0" w="160" h="140"		font_size="650"		type="text" label="[ TOWN ] \n" command='toggle_layer("labels_bevore");toggle_layer("world_labels_bevore");say("i")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
+	<osd x="0" y="0" w="160" h="140"		font_size="650"		type="text" label="[  POI ]\n" command='gui.menu("#POI_Icons")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
 	<osd x="0" y="-560" w="290" h="290"		font_size="940"		type="text" label="CENTER\nCURSOR" command="follow=1;zoom=4;set_center_cursor()" enable_expression="follow>1&amp;&amp;vehicle.position_valid" background_color="#56FF00BB" align="4" text_color="#000000"/>
 	<osd x="0" y="-560" w="290" h="290"		font_size="1600"	type="speed_warner" label="images" speed_exceed_limit_offset="5" speed_exceed_limit_percent="10" announce_on="1" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090"/>
 	<osd x="0" y="-275" w="290" h="125"		font_size="2100"	type="text" label="${vehicle.position_speed[value]}" enable_expression="navigation.nav_status&gt;=3" background_color="#0000FF90" align="0" text_color="#FF9900"/>
@@ -286,24 +310,24 @@ navit.say("Statuszeile oben sichtbar");
 	<osd x="290" y="-80" w="1500" h="80"	font_size="1100"	type="text" label="${tracking.item.street_name_systematic} ${tracking.item.street_name}" enable_expression="vehicle.position_valid" background_color="#FFFFFFCC" align="4" text_color="#0000FF"/>
 	<osd x="640" y="820" w="160" h="220"	type="navigation_status" icon_src="%s_wh_160_220.png" enable_expression="navigation.nav_status==-1||navigation.nav_status==1||navigation.nav_status==2"/>
 	<osd x="0" y="170" w="264" h="264"		type="navigation_next_turn" icon_src="%s_wh_264_264.png" command='(get_int_var("set_osd")==0 ?(tracking=0,pitch=0):"");say("route");follow=80000;zoom_to_route()' enable_expression="navigation.nav_status&gt;=3" background_color="#00000090"/>
-	<osd x="0" y="-150" w="290" h="150"		font_size="650"		type="text" label='\n[LAYER]' command='say("a");toggle_layer("poly_1");toggle_layer("poly_2");toggle_layer("wayside");toggle_layer("way");toggle_layer("line_1")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
+	<osd x="0" y="-150" w="290" h="150"		font_size="650"		type="text" label='\n[ LAYER ]' command='toggle_layer("poly_1");toggle_layer("poly_2");toggle_layer("wayside");toggle_layer("way");toggle_layer("line_1");say("i")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
 	<osd x="340" y="-225"					type="button" src="$NAVIT_USER_DATADIR/maske/zp_225_225.png" command="zoom_in()"/>
 	<osd x="-550" y="-225"					type="button" src="$NAVIT_USER_DATADIR/maske/zm_225_225.png" command="zoom_out()"/>
 	<osd x="-225" y="-225"					type="button" src="gui_menu_225_225.png" command="gui.menu(1)"/>
 	<osd x="-264" y="-300" w="264" h="125"	font_size="940"		type="text" label=" ®  ${vehicle.position_radius}\n${vehicle.position_height} NN" enable_expression="vehicle.position_valid" background_color="#00000090" align="4" text_color="#FFFFFF"/>
-	<osd x="-885" y="-260" w="320" h="190"	font_size="940"		type="scale" background_color="#C4C4C4DD"/>
+	<osd x="-865" y="-160" w="300" h="60"	font_size="940"		type="scale" background_color="#00000060"/>
 	<osd x="0" y="-720" w="370" h="160"		font_size="1500"	type="speed_cam" label="${distance}&#10;" background_color="#000000FF" text_color="#FF0000"/>
-<!--
+	<!--
 	<osd x="-400" y="164" w="400" h="70"	font_size="940"		type="odometer" label="〒  ${max_spd}km/h" name="odo_reset" background_color="#00000090" align="4" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-400" y="234" w="400" h="70"	font_size="940"		type="odometer" label="~   ${avg_spd}km/h" name="odo_reset" background_color="#00000090" align="4" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-400" y="304" w="400" h="70"	font_size="940"		type="odometer" label="˂ ˃ ${distance}" name="odo_reset" background_color="#00000090" align="4" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-400" y="374" w="400" h="70"	font_size="940"		type="odometer" label="time ${time}" name="odo_reset" background_color="#00000090" align="4" disable_reset="0" autostart="1" enable_expression="osd_configuration&amp;2"/>
--->
+	-->
 	<osd x="-332" y="454" w="326" h="180"	font_size="940"		type="stopwatch" disable_reset="1" background_color="#00000090" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-264" y="-700" w="264" h="75"	font_size="940"		type="text" label="N: ${vehicle.position_direction} °" background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2"/>
-	<osd x="-264" y="-625" w="264" h="325"	font_size="1000"	type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090"/>
+	<osd x="-264" y="-625" w="264" h="325"	font_size="1000"	type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090" destination_dir_color="#00FF00" north_color="#FFFFFF"/> <!-- destination_dir_color -->
 
-	<tracking cdf_histsize="4"/>
+	<tracking cdf_histsize="0"/>
 
 	<vehicleprofile name="car" route_depth="4:24%,6:2%,8:160000,18:20000" flags="0x04000000" flags_forward_mask="0x4000002" flags_reverse_mask="0x4000001" maxspeed_handling="1" route_mode="0" static_speed="3" static_distance="15">
 	<roadprofile item_types="street_parking_lane"	speed="10" route_weight="5"/>
@@ -618,9 +642,9 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_bench" order="16">		<icon src="$NAVIT_USER_DATADIR/poi/bench" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_bench" order="17">		<icon src="$NAVIT_USER_DATADIR/poi/bench" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poi_bench" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/bench" w="96" h="96" x="48" y="48"/></itemgra>
-	<itemgra item_types="poi_viewpoint" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/viewpoint" w="32" h="32" x="16" y="16"/></itemgra>
-	<itemgra item_types="poi_viewpoint" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/viewpoint" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poi_viewpoint" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/viewpoint" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#004000"/></itemgra>
+	<itemgra item_types="poi_viewpoint" order="13-14">	<icon src="viewpoint" w="32" h="32" x="16" y="16"/></itemgra>
+	<itemgra item_types="poi_viewpoint" order="15-16">	<icon src="viewpoint" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poi_viewpoint" order="17-">	<icon src="viewpoint" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#004000"/></itemgra>
 	<itemgra item_types="poi_information" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/information" w="24" h="24" x="12" y="12"/></itemgra>
 	<itemgra item_types="poi_information" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/information" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poi_information" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/information" w="48" h="48" x="48" y="24"/><circle text_size="32" color="#008000"/></itemgra>
@@ -658,9 +682,9 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poly_theme_park" order="12-14">	<polyline color="#AB6B6B90" width="4"/><icon src="$NAVIT_USER_DATADIR/poi/theme_park" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poly_theme_park" order="15-16">	<polyline color="#AB6B6B70" width="8"/><icon src="$NAVIT_USER_DATADIR/poi/theme_park" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poly_theme_park" order="17-">		<polyline color="#AB6B6B50" width="16"/><icon src="$NAVIT_USER_DATADIR/poi/theme_park" w="64" h="64" x="0" y="88"/><circle text_size="32" color="#006660"/></itemgra>
-	<itemgra item_types="poi_resort" order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/resort" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poi_resort" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/resort" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_resort" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/resort" w="64" h="64" x="0" y="88"/><circle text_size="32" color="#006660"/></itemgra>
+	<itemgra item_types="poi_resort" order="12-14">	<icon src="resort" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poi_resort" order="15-16">	<icon src="resort" w="64" h="64" x="32" y="32"/></itemgra>
+	<itemgra item_types="poi_resort" order="17-">	<icon src="resort" w="64" h="64" x="0" y="88"/><circle text_size="32" color="#006660"/></itemgra>
 	<itemgra item_types="poly_water_park" order="12-14">	<polyline color="#8C8CCC90" width="4"/><icon src="$NAVIT_USER_DATADIR/poi/water_park" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poly_water_park" order="15-16">	<polyline color="#8C8CCC70" width="8"/><icon src="$NAVIT_USER_DATADIR/poi/water_park" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poly_water_park" order="17-">		<polyline color="#8C8CCC50" width="16"/><icon src="$NAVIT_USER_DATADIR/poi/water_park" w="64" h="64" x="0" y="88"/><circle text_size="32" color="#006666"/></itemgra>
@@ -670,12 +694,12 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_cinema" order="13-14">	<icon src="cinema" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poi_cinema" order="15-16">	<icon src="cinema" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_cinema" order="17-">	<icon src="cinema" w="64" h="64" x="64" y="32"/><circle text_size="32" color="#434445"/></itemgra>
-	<itemgra item_types="poi_theater" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/theatre" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poi_theater" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/theatre" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_theater" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/theatre" w="96" h="96" x="90" y="48"/><circle text_size="32" color="#523000"/></itemgra>
-	<itemgra item_types="poi_memorial" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/memorial" w="32" h="32" x="16" y="32"/></itemgra>
-	<itemgra item_types="poi_memorial" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/memorial" w="48" h="48" x="24" y="48"/></itemgra>
-	<itemgra item_types="poi_memorial" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/memorial" w="64" h="64" x="32" y="64"/><circle text_size="32" color="#664400"/></itemgra>
+	<itemgra item_types="poi_theater" order="13-14">	<icon src="theatre" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poi_theater" order="15-16">	<icon src="theatre" w="64" h="64" x="32" y="32"/></itemgra>
+	<itemgra item_types="poi_theater" order="17-">		<icon src="theatre" w="96" h="96" x="90" y="48"/><circle text_size="32" color="#523000"/></itemgra>
+	<itemgra item_types="poi_memorial" order="14">		<icon src="memorial" w="32" h="32" x="16" y="32"/></itemgra>
+	<itemgra item_types="poi_memorial" order="15-16">	<icon src="memorial" w="48" h="48" x="24" y="48"/></itemgra>
+	<itemgra item_types="poi_memorial" order="17-">		<icon src="memorial" w="64" h="64" x="32" y="64"/><circle text_size="32" color="#664400"/></itemgra>
 	<itemgra item_types="poi_monument" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/monument" w="32" h="32" x="16" y="32"/></itemgra>
 	<itemgra item_types="poi_monument" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/monument" w="48" h="48" x="24" y="48"/></itemgra>
 	<itemgra item_types="poi_monument" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/monument" w="64" h="64" x="32" y="64"/><circle text_size="32" color="#664400"/></itemgra>
@@ -933,11 +957,11 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="traffic_sign_city_limit" order="15-">		<icon src="$NAVIT_USER_DATADIR/poi/2ort" w="400" h="60" x="6" y="32"/><circle text_size="28" color="#606060" background_color="#000000"/></itemgra>
 	<itemgra item_types="barrier_bollard" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/bollard" w="32" h="32" x="16" y="32"/></itemgra>
 	<itemgra item_types="barrier_bollard" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/bollard" w="48" h="48" x="24" y="48"/></itemgra>
-	<itemgra item_types="poi_custom3" order="9-10">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poi_custom3" order="9-10">		<icon src="$NAVIT_USER_DATADIR/poi/%s" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_custom3" order="11-12">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poi_custom3" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="96" h="96" x="48" y="48"/></itemgra>
 	<itemgra item_types="poi_custom3" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="128" h="128" x="64" y="64"/></itemgra>
-	<itemgra item_types="poi_custom3" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="128" h="128" x="0" y="140"/><circle text_size="36" color="#0F0FFF" background_color="#FFFFFF"/></itemgra>
+	<itemgra item_types="poi_custom3" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/%s" w="128" h="128" x="0" y="140"/><circle text_size="36" color="#0F0FFF" background_color="#FFFFFF"/></itemgra>
 	<itemgra item_types="poi_toll_booth" order="9-10">	<icon src="$NAVIT_USER_DATADIR/poi/toll" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poi_toll_booth" order="11-14">	<icon src="$NAVIT_USER_DATADIR/poi/toll" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="poi_toll_booth" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/toll" w="64" h="64" x="32" y="32"/></itemgra>
@@ -1417,8 +1441,6 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="steps" order="17">		<polyline color="#D10010" width="22"/><polyline color="#E3E6D6" width="14"/><text text_size="22" background_color="#EDE7BB"/></itemgra>
 	<itemgra item_types="steps" order="18-">	<polyline color="#D10010" width="38"/><polyline color="#E3E6D6" width="28"/><text text_size="28" background_color="#EDE7BB"/></itemgra>
 	</layer>
-	
-	
 	<layer name="wayside1">
 	<itemgra item_types="street_pedestrian" order="13">		<polyline color="#B3AA00" width="12"/></itemgra>
 	<itemgra item_types="street_pedestrian" order="14">		<polyline color="#B3AA00" width="18"/></itemgra>
@@ -1695,7 +1717,6 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_tree" order="17">	<icon src="$NAVIT_USER_DATADIR/poi/tree" w="64" h="64" x="32" y="64"/></itemgra>
 	<itemgra item_types="poi_tree" order="18">	<icon src="$NAVIT_USER_DATADIR/poi/tree" w="96" h="96" x="48" y="48"/></itemgra>
 	<itemgra item_types="poi_tree" order="19-">	<icon src="$NAVIT_USER_DATADIR/poi/tree" w="128" h="128" x="64" y="128"/></itemgra>
-
 	</layer>
 	<layer name="line_1">
 	<itemgra item_types="rail_tram" order="13">		<polyline color="#844800" width="2"/></itemgra>
@@ -1754,31 +1775,31 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="rail_mono" order="15-16">	<polyline color="#474230" width="10"/><polyline color="#FFEAAA" width="6"/><text color="#881818" text_size="28"/><icon src="$NAVIT_USER_DATADIR/poi/monorail" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="rail_mono" order="17">		<polyline color="#474230" width="14"/><polyline color="#FFEAAA" width="8"/><text color="#881818" text_size="38"/><icon src="$NAVIT_USER_DATADIR/poi/monorail" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="rail_mono" order="18-">	<polyline color="#474230" width="18"/><polyline color="#FFEAAA" width="12"/><text color="#881818" text_size="42"/><icon src="$NAVIT_USER_DATADIR/poi/monorail" w="96" h="96" x="48" y="48"/><circle text_size="38" color="#881818"/></itemgra>
-	<itemgra item_types="lift_cable_car" order="11-14">	<polyline color="#003663" width="4"/><icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="48" h="48" x="24" y="0"/><text text_size="28" color="#944C00" background_color="#944C00"/></itemgra>
-	<itemgra item_types="lift_cable_car" order="15-16">	<polyline color="#003663" width="6"/><icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="64" h="64" x="32" y="0"/><text text_size="38" color="#944C00" background_color="#944C00"/><circle text_size="32" color="#944C00"/></itemgra>
-	<itemgra item_types="lift_cable_car" order="17-">	<polyline color="#003663" width="8"/><icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="96" h="96" x="48" y="0"/><text text_size="52" color="#944C00" background_color="#944C00"/><circle text_size="38" color="#944C00"/></itemgra>
+	<itemgra item_types="lift_cable_car" order="11-14">	<polyline color="#003663" width="4"/><icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="48" h="48" x="24" y="0"/><text text_size="28" color="" background_color="#944C00"/></itemgra>
+	<itemgra item_types="lift_cable_car" order="15-16">	<polyline color="#003663" width="6"/><icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="64" h="64" x="32" y="0"/><text text_size="38" color="" background_color="#944C00"/><circle text_size="32" color="#944C00"/></itemgra>
+	<itemgra item_types="lift_cable_car" order="17-">	<polyline color="#003663" width="8"/><icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="96" h="96" x="48" y="0"/><text text_size="52" color="" background_color="#944C00"/><circle text_size="38" color="#944C00"/></itemgra>
 	<itemgra item_types="poi_airport" order="9-12">		<icon src="$NAVIT_USER_DATADIR/poi/airport" w="64" h="64" x="48" y="32"/></itemgra>
 	<itemgra item_types="poi_airport" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/airport" w="64" h="64" x="48" y="32"/><circle text_size="32" color="#AA00DD"/></itemgra>
 	<itemgra item_types="poi_airport" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/airport" w="96" h="96" x="64" y="48"/><circle text_size="38" color="#AA00DD"/></itemgra>
-	<itemgra item_types="poi_airport" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/airport" w="128" h="128" x="96" y="64"/><circle text_size="48" color="#AA00DD" background_color="#AA00DD"/></itemgra>
+	<itemgra item_types="poi_airport" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/airport" w="128" h="128" x="96" y="64"/><circle text_size="48" color="" background_color="#AA00DD"/></itemgra>
 	<itemgra item_types="poi_taxi" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/taxi" w="32" h="32" x="16" y="16"/></itemgra>
 	<itemgra item_types="poi_taxi" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/taxi" w="48" h="48" x="24" y="24"/></itemgra>
-	<itemgra item_types="poi_taxi" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/taxi" w="64" h="64" x="0" y="88"/><circle text_size="32" color="#990000" background_color="#990000"/></itemgra>
+	<itemgra item_types="poi_taxi" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/taxi" w="64" h="64" x="0" y="88"/><circle text_size="32" color="" background_color="#990000"/></itemgra>
 	<itemgra item_types="poi_bus_stop" order="14">		<icon src="bus_halt" w="24" h="24" x="12" y="12"/></itemgra>
 	<itemgra item_types="poi_bus_stop" order="15-16">	<icon src="bus_halt" w="32" h="32" x="16" y="16"/></itemgra>
-	<itemgra item_types="poi_bus_stop" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/5bus_halt" w="458" h="48" x="44" y="24"/><circle text_size="26" color="#129D33" background_color="#FFCC33"/></itemgra>
-	<itemgra item_types="poi_bus_station" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/bus" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_bus_station" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/bus" w="92" h="92" x="48" y="48"/></itemgra>
-	<itemgra item_types="poi_bus_station" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/5bus_station" w="458" h="48" x="44" y="24"/><circle text_size="26" color="#129D33" background_color="#FFCC33"/></itemgra>
+	<itemgra item_types="poi_bus_stop" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/5bus_halt" w="458" h="48" x="44" y="24"/><circle text_size="28" color="#000000" background_color=""/></itemgra>
+	<itemgra item_types="poi_bus_station" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/bus" w="48" h="48" x="24" y="24"/></itemgra>
+	<itemgra item_types="poi_bus_station" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/bus" w="64" h="64" x="32" y="32"/></itemgra>
+	<itemgra item_types="poi_bus_station" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/5bus_station" w="458" h="48" x="44" y="24"/><circle text_size="28" color="#000000" background_color=""/></itemgra>
 	<itemgra item_types="poi_rail_tram_stop" order="13-14">	<circle color="#009000" radius="10" width="10"/><circle color="#FF9000" radius="6" width="6"/></itemgra>
 	<itemgra item_types="poi_rail_tram_stop" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/tram_stop" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_rail_tram_stop" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/3tram_halt" w="458" h="48" x="44" y="24"/><circle text_size="28" color="#853900" background_color="#FFCC33"/></itemgra>
+	<itemgra item_types="poi_rail_tram_stop" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/3tram_halt" w="458" h="48" x="44" y="24"/><circle text_size="28" color="#000000" background_color=""/></itemgra>
 	<itemgra item_types="poi_rail_halt" order="12-14">	<circle color="#FF6600" radius="12" width="6"/><circle color="#FFFFFF" radius="6" width="6"/></itemgra>
 	<itemgra item_types="poi_rail_halt" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/railhalt" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_rail_halt" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/3rail_halt" w="458" h="48" x="44" y="24"/><circle text_size="26" color="#FFFFFF" background_color="#3CA92B"/></itemgra>
+	<itemgra item_types="poi_rail_halt" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/3rail_halt" w="458" h="48" x="44" y="24"/><circle text_size="28" color="#FFFFFF" background_color="000000"/></itemgra>
 	<itemgra item_types="poi_rail_station" order="12-14">	<circle color="#FF6600" radius="16" width="8"/><circle color="#FFFFFF" radius="8" width="8"/></itemgra>
 	<itemgra item_types="poi_rail_station" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/rail_station" w="64" h="64" x="32" y="32"/></itemgra>
-	<itemgra item_types="poi_rail_station" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/3rail_station" w="458" h="48" x="44" y="24"/><circle text_size="26" color="#FFFFFF" background_color="#3CA92B"/></itemgra>
+	<itemgra item_types="poi_rail_station" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/3rail_station" w="458" h="48" x="44" y="24"/><circle text_size="28" color="#FFFFFF" background_color="#000000"/></itemgra>
 	</layer>
 	<layer name="u_street">
 	<itemgra item_types="selected_line" order="3">	<polyline color="#BA00B8" width="4"/></itemgra>
@@ -1826,39 +1847,6 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="track_tracked" order="17-">	<polyline color="#3F3FFF" width="32"/><text text_size="38"/></itemgra>
 	<itemgra item_types="rg_segment" order="9-">	<polyline color="#FF089C" width="1"/><arrows color="#FF089C" width="1"/><text text_size="26"/></itemgra>
 	<itemgra item_types="rg_point" order="9-">		<circle text_size="26" color="#FF089C" radius="12"/></itemgra>
-	<!--
-	<itemgra item_types="nav_left_1" order="9-">	<icon src="nav_left_1_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_left_2" order="9-">	<icon src="nav_left_2_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_left_3" order="9-">	<icon src="nav_left_3_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_right_1" order="9-">	<icon src="nav_right_1_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_right_2" order="9-">	<icon src="nav_right_2_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_right_3" order="9-">	<icon src="nav_right_3_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_straight" order="9-">	<icon src="nav_straight_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_turnaround_left" order="9-">	<icon src="nav_turnaround_left_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_turnaround_right" order="9-">	<icon src="nav_turnaround_right_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_l1" order="9-">	<icon src="nav_roundabout_l1_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_r1" order="9-">	<icon src="nav_roundabout_r1_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_l2" order="9-">	<icon src="nav_roundabout_l2_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_r2" order="9-">	<icon src="nav_roundabout_r2_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_l3" order="9-">	<icon src="nav_roundabout_l3_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_r3" order="9-">	<icon src="nav_roundabout_r3_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_l4" order="9-">	<icon src="nav_roundabout_l4_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_r4" order="9-">	<icon src="nav_roundabout_r4_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_l5" order="9-">	<icon src="nav_roundabout_l5_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_r5" order="9-">	<icon src="nav_roundabout_r5_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_l6" order="9-">	<icon src="nav_roundabout_l6_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_r6" order="9-">	<icon src="nav_roundabout_r6_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_l7" order="9-">	<icon src="nav_roundabout_l7_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_r7" order="9-">	<icon src="nav_roundabout_r7_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_l8" order="9-">	<icon src="nav_roundabout_l8_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_roundabout_r8" order="9-">	<icon src="nav_roundabout_r8_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_keep_left" order="9-">		<icon src="nav_keep_left_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_merge_left" order="9-">	<icon src="nav_merge_left_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_keep_right" order="9-">	<icon src="nav_keep_right_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_merge_right" order="9-">	<icon src="nav_merge_right_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_exit_left" order="9-">		<icon src="nav_exit_left_bk.svg" w="64" h="64"/></itemgra>
-	<itemgra item_types="nav_exit_right" order="9-">	<icon src="nav_exit_right_bk.svg" w="64" h="64"/></itemgra>
-	-->
 	<itemgra item_types="bookmark" order="6-8">		<icon src="cursor_still" w="32" h="32" x="16" y="16"/><circle text_size="28" color="#BD00BD" background_color="#BD00BD"/></itemgra>
 	<itemgra item_types="bookmark" order="9-10">	<icon src="cursor_still" w="48" h="48" x="24" y="24"/><circle text_size="34" color="#BD00BD" background_color="#BD00BD"/></itemgra>
 	<itemgra item_types="bookmark" order="11-16">	<icon src="cursor_still" w="64" h="64" x="32" y="32"/><circle text_size="42" color="#BD00BD" background_color="#BD00BD"/></itemgra>
@@ -1888,21 +1876,13 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_level_crossing" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/train_crossing" w="48" h="48" x="24" y="24"/></itemgra>
 	<itemgra item_types="nav_none" order="9-">	<icon src="unknown.svg" w="64" h="64"/>	</itemgra>
 	</layer>
-	 <!--  worldimage labels order="-11" -->
+	 <!--  worldimage labels order="-10" -->
 	<layer name="world_labels_bevore">
-	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0" order="11">						<circle text_size="28" color="#000000"/></itemgra>
-	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="11">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="11">				<circle text_size="28" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="11">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2" order="11">			<circle text_size="28" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2" order="11">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3" order="10">			<circle text_size="28" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3" order="10">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_2e3" order="9">		<circle text_size="26" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_2e3" order="9">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_5e3" order="8">		<circle text_size="26" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_5e3" order="8">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e4" order="8">		<circle text_size="28" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3" order="9">			<circle text_size="28" color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3" order="9">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_5e3" order="8">			<circle text_size="28" color="#000000"/></itemgra>
+	<itemgra item_types="district_label_5e3" order="8">		<circle text_size="26" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e4" order="8">			<circle text_size="28" color="#000000"/></itemgra>
 	<itemgra item_types="district_label_1e4" order="8-9">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_2e4" order="7-8">		<circle text_size="28" color="#000000"/></itemgra>
 	<itemgra item_types="district_label_2e4" order="7-8">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
@@ -1928,86 +1908,114 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra item_types="poi_customb" order="15">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="192" h="192"/><circle text_size="32" color="#990099"/></itemgra>
 	<itemgra item_types="poi_customb" order="16">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="256" h="256"/><circle text_size="38" color="#990099"/></itemgra>
 	<itemgra item_types="poi_customb" order="17-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/></itemgra>
-	<itemgra item_types="town_label_5e2" order="11">		<circle text_size="28" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_5e2" order="11">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3" order="11">			<circle text_size="28" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3" order="11">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_5e3" order="9-11">		<circle text_size="32" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_5e3" order="9-11">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e4,town_label_2e4" order="9-11">			<circle text_size="34" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4" order="10-11">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_5e4" order="8-11">		<circle text_size="36" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_5e4" order="8-11">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_5e2" order="10">		<circle text_size="28" color="#000000"/></itemgra>
+	<itemgra item_types="district_label_5e2" order="10">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3" order="10">			<circle text_size="28" color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3" order="10">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_5e3" order="9-10">		<circle text_size="32" color="#000000"/></itemgra>
+	<itemgra item_types="district_label_5e3" order="9-10">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e4,town_label_2e4" order="9-10">		<circle text_size="34" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4" order="10">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_5e4" order="8-10">		<circle text_size="36" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_5e4" order="8-10">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e5,town_label_2e5" order="6-7">			<circle text_size="32" color="#000000" radius="10" width="3"/></itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5" order="8-10">			<circle text_size="38" background_color="#000000"/></itemgra>
 	<itemgra item_types="district_label_1e5,district_label_2e5" order="7-8">	<circle text_size="26" color="" background_color="#800000" radius="10" width="3"/></itemgra>
-	<itemgra item_types="town_label_1e5,town_label_2e5" order="8-11">			<circle text_size="38" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5" order="9-11">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_5e5" order="6">		<circle text_size="32" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_5e5" order="6">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_5e5" order="7-11">		<circle text_size="42" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_5e5" order="7-11">	<circle text_size="36" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5" order="9-10">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_5e5" order="6">			<circle text_size="32" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_5e5" order="7-10">		<circle text_size="42" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_5e5" order="6">		<circle text_size="26" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_5e5" order="7-10">	<circle text_size="36" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_1e6,town_label_2e6" order="5-6">			<circle text_size="38" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6" order="7-10">			<circle text_size="46" background_color="#000000"/></itemgra>
 	<itemgra item_types="district_label_1e6,district_label_2e6" order="5-6">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e6,town_label_2e6" order="7-11">			<circle text_size="46" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6" order="7-11">	<circle text_size="38" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6" order="7-10">	<circle text_size="38" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="town_label_5e6" order="4">			<circle text_size="38" color="#000000" radius="10" width="3"/></itemgra>
-	<itemgra item_types="district_label_5e6" order="4">		<circle text_size="32" color="" background_color="#800000" radius="10" width="3"/></itemgra>
 	<itemgra item_types="town_label_5e6" order="5-6">		<circle text_size="42" background_color="#000000" radius="10" width="3"/></itemgra>
+	<itemgra item_types="town_label_5e6" order="7-10">		<circle text_size="48" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_5e6" order="4">		<circle text_size="32" color="" background_color="#800000" radius="10" width="3"/></itemgra>
 	<itemgra item_types="district_label_5e6" order="5-6">	<circle text_size="36" color="" background_color="#800000" radius="10" width="3"/></itemgra>
-	<itemgra item_types="town_label_5e6" order="7-11">		<circle text_size="48" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_5e6" order="7-11">	<circle text_size="42" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e7" order="3">		<circle text_size="28" color="#000000" radius="10" width="3"/></itemgra>
-	<itemgra item_types="town_label_1e7" order="4">		<circle text_size="42" color="#000000" radius="10" width="3"/></itemgra>
-	<itemgra item_types="district_label_1e7" order="4-6">	<circle text_size="36" color="" background_color="#800000" radius="10" width="3"/></itemgra>
+	<itemgra item_types="district_label_5e6" order="7-10">	<circle text_size="44" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e7" order="3">			<circle text_size="28" color="#000000" radius="10" width="3"/></itemgra>
+	<itemgra item_types="town_label_1e7" order="4">			<circle text_size="42" color="#000000" radius="10" width="3"/></itemgra>
 	<itemgra item_types="town_label_1e7" order="5-6">		<circle text_size="48" background_color="#000000" radius="10" width="3"/></itemgra>
-	<itemgra item_types="town_label_1e7" order="7-11">		<circle text_size="52" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e7" order="7-11">	<circle text_size="48" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e7" order="7-10">		<circle text_size="52" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e7" order="4-6">	<circle text_size="36" color="" background_color="#800000" radius="10" width="3"/></itemgra>
+	<itemgra item_types="district_label_1e7" order="7-10">	<circle text_size="48" color="" background_color="#800000"/></itemgra>
 	</layer>
-	<!-- labels order="12-" color=Individuell in den einzelnen Layouts -->
+	<!-- labels order="11-" color=Individuell in den einzelnen Layouts -->
 	<layer name="labels_bevore">
 	<itemgra item_types="street_unkn" order="15">	<text text_size="26"/></itemgra>
 	<itemgra item_types="house_number" order="15-16">	<circle text_size="22" background_color="#AD00AD"/></itemgra>
 	<itemgra item_types="poly_building" order="15-16">	<circle text_size="28" color="#802000" background_color=""/></itemgra>
 	<itemgra item_types="place_label" order="13-14">	<circle text_size="26" color="#006565"/></itemgra>
-	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0" order="12">	<circle text_size="28" color="#000000"/></itemgra>
-	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="12">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0" order="11-12">						<circle text_size="28" color="#000000"/></itemgra>
+	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="11-12">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="11">				<circle text_size="28" color="#000000"/></itemgra>
 	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="12">				<circle text_size="32" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="12">	<circle text_size="26" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="11">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="12">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2" order="11">								<circle text_size="28" color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2" order="11">						<circle text_size="28" color="" background_color="#800000"/></itemgra>
 	</layer>
 	<layer name="labels">
 	<itemgra item_types="street_unkn" order="16">	<text text_size="26"/></itemgra>
 	<itemgra item_types="street_unkn" order="17-">	<text text_size="32"/></itemgra>
 	<itemgra item_types="house_number" order="17">	<circle text_size="26" background_color="#AD00AD"/></itemgra>
-	<itemgra item_types="house_number" order="18-">	<circle text_size="32" background_color="#AD00AD"/></itemgra>
+	<itemgra item_types="house_number" order="18-">	<circle text_size="36" background_color="#AD00AD"/></itemgra>
 	<itemgra item_types="poly_building" order="17">		<circle text_size="28" color="#802000" background_color=""/></itemgra>
 	<itemgra item_types="poly_building" order="18-">	<circle text_size="36" color="#802000" background_color=""/><text text_size="32" color="#802000" background_color=""/></itemgra>
 	<itemgra item_types="place_label" order="15-">	<circle text_size="32" color="#006565"/></itemgra>
-	<itemgra item_types="town_label,town_label_0e0" order="13-">			<circle text_size="32" color="#000000"/></itemgra>
-	<itemgra item_types="district_label,district_label_0e0" order="13-14">	<circle text_size="28" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="district_label,district_label_0e0" order="15-">	<circle text_size="42" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e0,town_label_2e0,town_label_5e0" order="13-">					<circle text_size="34" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="13-14">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="15-">		<circle text_size="42" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="13-">					<circle text_size="36" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-14">	<circle text_size="34" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="15-">		<circle text_size="46" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="12">					<circle text_size="34" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="12">		<circle text_size="28" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="13">					<circle text_size="38" color="#000000"/></itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-17">				<circle text_size="42" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-17">	<circle text_size="48" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="12-13">				<circle text_size="42" color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="12-13">	<circle text_size="38" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="14-17">				<circle text_size="52" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="14-17">	<circle text_size="52" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e4,town_label_2e4,town_label_5e4" order="12-16">				<circle text_size="48" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12-16">	<circle text_size="56" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="12-15">				<circle text_size="52" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="56" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6" order="12-14">				<circle text_size="56" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12-14">	<circle text_size="60" color="" background_color="#800000"/></itemgra>
-	<itemgra item_types="town_label_1e7" order="12-14">		<circle text_size="60" background_color="#000000"/></itemgra>
-	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="64" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label,town_label_0e0" order="13-15">				<circle text_size="32" color="#000000"/></itemgra>
+	<itemgra item_types="town_label,town_label_0e0" order="16-">				<circle text_size="44" color="#000000"/></itemgra>
+	<itemgra item_types="district_label,district_label_0e0" order="13-15">		<circle text_size="32" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label,district_label_0e0" order="16-">		<circle text_size="44" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e0,town_label_2e0,town_label_5e0" order="13">					<circle text_size="32" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e0,town_label_2e0,town_label_5e0" order="14-15">				<circle text_size="38" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e0,town_label_2e0,town_label_5e0" order="16-">					<circle text_size="46" color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="13">		<circle text_size="32" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="14-15">	<circle text_size="38" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="16-">		<circle text_size="46" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="13">					<circle text_size="34" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="14-15">				<circle text_size="40" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="16-">					<circle text_size="48" color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13">		<circle text_size="34" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="14-15">	<circle text_size="40" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="16-">		<circle text_size="48" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="11-12">				<circle text_size="32" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="13">					<circle text_size="36" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-15">				<circle text_size="42" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="16-17">				<circle text_size="52" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="11-12">	<circle text_size="32" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13">		<circle text_size="36" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="14-15">	<circle text_size="42" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="16-17">	<circle text_size="52" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="11-12">				<circle text_size="34" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="13">					<circle text_size="38" color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="14-15">				<circle text_size="44" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="16-17">				<circle text_size="54" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="11-12">	<circle text_size="34" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="13">		<circle text_size="38" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="14-15">	<circle text_size="44" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="16-17">	<circle text_size="54" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e4,town_label_2e4,town_label_5e4" order="11">					<circle text_size="38" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e4,town_label_2e4,town_label_5e4" order="12-13">				<circle text_size="42" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e4,town_label_2e4,town_label_5e4" order="14-16">				<circle text_size="56" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="11">		<circle text_size="38" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12-13">	<circle text_size="42" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="14-16">	<circle text_size="56" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="11-13">				<circle text_size="44" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="14-15">				<circle text_size="60" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="11-13">	<circle text_size="44" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="14-15">	<circle text_size="60" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6" order="11-12">				<circle text_size="48" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6" order="13-14">				<circle text_size="64" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="11-12">	<circle text_size="48" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="13-14">	<circle text_size="64" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="town_label_1e7" order="11-12">		<circle text_size="54" background_color="#000000"/></itemgra>
+	<itemgra item_types="town_label_1e7" order="13-14">		<circle text_size="64" background_color="#000000"/></itemgra>
+	<itemgra item_types="district_label_1e7" order="11-12">	<circle text_size="54" color="" background_color="#800000"/></itemgra>
+	<itemgra item_types="district_label_1e7" order="13-14">	<circle text_size="64" color="" background_color="#800000"/></itemgra>
 	<itemgra item_types="found_item" order="11-14">	<circle color="#FF00BB" radius="28" width="4"/></itemgra>
 	<itemgra item_types="found_item" order="15-16">	<circle text_size="28" color="#660044" background_color="#FF00BB" radius="46" width="4"/></itemgra>
 	<itemgra item_types="found_item" order="17-">	<circle text_size="34" color="#660044" background_color="#FF00BB" radius="72" width="4"/></itemgra>
@@ -2019,11 +2027,11 @@ navit.say("Statuszeile oben sichtbar");
 	<cursor w="230" h="230">
 	<itemgra>	<icon src="$NAVIT_USER_DATADIR/maske/cursor_a" w="120" h="120"/></itemgra>
 	</cursor>
-	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/></itemgra>	</layer>
-	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-11">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="world_image">	<itemgra item_types="image" order="0-10">	<image/></itemgra>	</layer>
+	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-10">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="world_poly" ref="world_poly"/>
 	<layer name="poly" ref="poly"/>
-	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="12-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="11-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="polyA" ref="polyA"/>
 	<layer name="poly_1" ref="poly_1" active="1"/>
 	<layer name="poly_2" ref="poly_2" active="1"/>
@@ -2033,13 +2041,9 @@ navit.say("Statuszeile oben sichtbar");
 	<layer name="under_street" ref="under_street" active="0"/>
 	<layer name="rail" ref="rail" active="1"/>
 	<layer name="wayside" ref="wayside" active="1"/>
-	
 	<layer name="wayside1" ref="wayside1" active="1"/>
-	
 	<layer name="highway" ref="highway"/>
-	
 	<layer name="way" ref="way" active="1"/>
-	
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="line_1" ref="line_1" active="1"/>
 	<layer name="hiking_way" ref="hiking_way" active="0"/>
@@ -2075,11 +2079,11 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra sequence_range="0">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w0" w="180" h="180"/></itemgra>
 	<itemgra sequence_range="1">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w1" w="180" h="180"/></itemgra>
 	</cursor>
-	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/></itemgra>	</layer>
-	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-11">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="world_image">	<itemgra item_types="image" order="0-10">	<image/></itemgra>	</layer>
+	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-10">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="world_poly" ref="world_poly"/>
 	<layer name="poly" ref="poly"/>
-	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="12-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="11-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="polyA" ref="polyA"/>
 	<layer name="poly_1" ref="poly_1" active="1"/>
 	<layer name="poly_2" ref="poly_2" active="1"/>
@@ -2089,6 +2093,7 @@ navit.say("Statuszeile oben sichtbar");
 	<layer name="under_street" ref="under_street" active="1"/>
 	<layer name="rail" ref="rail" active="1"/>
 	<layer name="wayside" ref="wayside" active="1"/>
+	<layer name="wayside1" ref="wayside1" active="1"/>
 	<layer name="highway" ref="highway"/>
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="way" ref="way"/>
@@ -2122,11 +2127,11 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra sequence_range="0" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b0" w="180" h="180"/></itemgra>
 	<itemgra sequence_range="1" speed_range="3-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_b1" w="180" h="180"/></itemgra>
 	</cursor>
-	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/></itemgra>	</layer>
-	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-11">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="world_image">	<itemgra item_types="image" order="0-10">	<image/></itemgra>	</layer>
+	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-10">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="world_poly" ref="world_poly"/>
 	<layer name="poly" ref="poly"/>
-	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="12-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="11-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="polyA" ref="polyA"/>
 	<layer name="poly_1" ref="poly_1" active="1"/>
 	<layer name="poly_2" ref="poly_2" active="1"/>
@@ -2136,6 +2141,7 @@ navit.say("Statuszeile oben sichtbar");
 	<layer name="under_street" ref="under_street" active="0"/>
 	<layer name="rail" ref="rail" active="1"/>
 	<layer name="wayside" ref="wayside" active="1"/>
+	<layer name="wayside1" ref="wayside1" active="1"/>
 	<layer name="highway" ref="highway"/>
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="way" ref="way"/>
@@ -2182,11 +2188,11 @@ navit.say("Statuszeile oben sichtbar");
 	<itemgra speed_range="3-" angle_range="327-349">	<icon src="$NAVIT_USER_DATADIR/maske/cursor15" w="96" h="96"/></itemgra>
 	<itemgra speed_range="3-" angle_range="350-360">	<icon src="cursor" w="96" h="96"/></itemgra>
 	</cursor>
-	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/></itemgra>	</layer>
-	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-11">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="world_image">	<itemgra item_types="image" order="0-10">	<image/></itemgra>	</layer>
+	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-10">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="world_poly" ref="world_poly"/>
 	<layer name="poly" ref="poly"/>
-	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="12-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
+	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="11-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="polyA" ref="polyA"/>
 	<layer name="poly_1" ref="poly_1" active="1"/>
 	<layer name="poly_2" ref="poly_2" active="1"/>
@@ -2196,8 +2202,9 @@ navit.say("Statuszeile oben sichtbar");
 	<layer name="under_street" ref="under_street" active="0"/>
 	<layer name="rail" ref="rail" active="1"/>
 	<layer name="wayside" ref="wayside" active="1"/>
+	<layer name="wayside1" ref="wayside1" active="1"/>
 	<layer name="highway" ref="highway"/>
-	<layer name="way" ref="way"/>
+	<layer name="way" ref="way" active="1"/>
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="line_1" ref="line_1" active="1"/>
 	<layer name="hiking_way" ref="hiking_way" active="0"/>
