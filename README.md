@@ -1,8 +1,9 @@
 # Navit-xml-Enhancement
 Extension to Navit.xml
-created to display 1920x1080 5" (Galaxy S4 ANDROID). Other display see - table - Format.pdf 
+Display 1920x1080 5" (Galaxy S4 ANDROID does not work anymore with own Navit.xml for me). 
 
-XML compled includes choice of two routing masks Heard or Normal
+created to 2560x1440 Galaxy S7
+Other display see - table - Format.pdf 
 
 Icons are in folder - src - enclosed. The empty folder in (routing mask) can be replaced/fill with this or own.
 
