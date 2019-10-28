@@ -392,7 +392,7 @@
 	<layer name="up_street" ref="up_street" active="0"/>
 	<layer name="wintersport" ref="wintersport" active="0"/>
 	<layer name="Android-POI-Icons-full" ref="Android-POI-Icons-full" active="0"/>
-	<layer name="hiking" ref="hiking" active="0"/>
+	<layer name="hikings" ref="hikings" active="0"/>
 	<layer name="leisure" ref="leisure" active="0"/>
 	<layer name="sport" ref="sport" active="0"/>
 	<layer name="gastro" ref="gastro" active="0"/>

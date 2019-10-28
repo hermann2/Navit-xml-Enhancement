@@ -402,6 +402,7 @@
 -93.0 25.0 type=poi_customd label="Gulf of Mexiko"
 100.0 10.0 type=poi_customd label="Gulf of Thailand"
 125.0 -35.0 type=poi_customd label="Great Australian Bight"
+64.0 0.0 type=poi_customd label="E q u a t o r"
 
 type=water_line
 -180.0 0.0
