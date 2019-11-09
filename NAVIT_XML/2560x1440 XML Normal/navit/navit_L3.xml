@@ -1,4 +1,4 @@
-	<layout name="PAX" color="#E6FFE6" order_delta="2">
+	<layout name="PAX" color="#E6FFE6" order_delta="2" underground_alpha="150">
 	<cursor w="230" h="230">
 	<itemgra speed_range="-3">
 	<circle color="#0080FF" radius="20" width="20">	<coord x="0" y="24"/>	</circle>

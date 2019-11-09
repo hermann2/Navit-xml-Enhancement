@@ -1,4 +1,4 @@
-	<layout name="MOTORIST_1" nightlayout="DARKGLOW_1" color="#EEFFEE" order_delta="0">
+	<layout name="MOTORIST_1" nightlayout="DARKGLOW_1" color="#EEFFEE" order_delta="0" underground_alpha="150">
 	<cursor w="230" h="230">
 	<itemgra speed_range="-2">	<icon src="cursor_still" w="96" h="96"/></itemgra>
 	<itemgra speed_range="3-" angle_range="0-10">		<icon src="cursor" w="96" h="96"/></itemgra>
@@ -49,7 +49,7 @@
 	<layer name="sport" ref="sport" active="0"/>
 	<layer name="gastro" ref="gastro" active="0"/>
 	<layer name="shop" ref="shop" active="0"/>
-	<layer name="station" ref="station" active="0"/>
+	<layer name="stations" ref="stations" active="0"/>
 	<layer name="poly_icon_label" ref="poly_icon_label" active="0"/>
 	<layer name="my" ref="my" active="0"/>
 	<layer name="Internal" ref="Internal"/>
@@ -59,7 +59,7 @@
 	<layer name="labels" ref="labels"/>
 	</layout>
 
-	<layout name="DARKGLOW_1" color="#191919" daylayout="MOTORIST_1" order_delta="0">
+	<layout name="DARKGLOW_1" color="#191919" daylayout="MOTORIST_1" order_delta="0" underground_alpha="150">
 	<cursor w="230" h="230">
 	<itemgra speed_range="-2">	<icon src="cursor_still" w="96" h="96"/></itemgra>
 	<itemgra speed_range="3-"> 	<circle color="#FFFF0066" radius="110" width="16">	<coord x="115" y="115"/>	</circle>	</itemgra>
@@ -373,7 +373,7 @@
 	<layer name="sport" ref="sport" active="0"/>
 	<layer name="gastro" ref="gastro" active="0"/>
 	<layer name="shop" ref="shop" active="0"/>
-	<layer name="station" ref="station" active="0"/>
+	<layer name="stations" ref="stations" active="0"/>
 	<layer name="poly_icon_label" ref="poly_icon_label" active="0"/>
 	<layer name="my" ref="my" active="0"/>
 	<layer name="Internal" ref="Internal"/>

@@ -1,4 +1,4 @@
-	<layout name="CAR_DAY" color="#fef9ee" nightlayout="CAR_DARK" order_delta="0">
+	<layout name="CAR_DAY" color="#fef9ee" nightlayout="CAR_DARK" order_delta="0" underground_alpha="150">
 	<cursor w="230" h="230">
 	<itemgra speed_range="-2">
 	<polyline color="#00BC00" radius="0" width="11">	<coord x="0" y="0"/>	</polyline>
@@ -33,7 +33,7 @@
 	<itemgra item_types="poly_airport" order="9-">	<polygon color="#a0a0a0"/></itemgra>
 	<itemgra item_types="poly_apron" order="13-">	<polygon color="#d0d0d0"/></itemgra>
 	<itemgra item_types="poly_water" order="12-">	<polygon color="#82c8ea"/></itemgra>
-	<itemgra item_types="poly_building" order="14-">	<polygon color="#b6a6a6"/></itemgra>
+	<itemgra item_types="poly_building" order="14-">	<polygon color="#b5b5b5"/></itemgra>
 	<itemgra item_types="poly_terminal" order="14-">	<polygon color="#e3c6a6"/></itemgra>
 	</layer>
 	<layer name="polygons">
