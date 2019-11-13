@@ -20,7 +20,7 @@
 	<layer name="poly" ref="poly"/>
 	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="12-">	<polygon color="#8CCFFF"/></itemgra>	</layer>
 	<layer name="p_town">	<itemgra item_types="poly_town" order="10-">	<polygon color="#e2f2e2"/></itemgra>	</layer>
-	<layer name="poly_1" active="1">
+	<layer name="poly_1" active="0">
 	<itemgra item_types="poly_town" order="10-">	<polygon color="#e2f2e2"/></itemgra>
 	<itemgra item_types="poly_wood" order="13-">	<polygon color="#8ec78d"/>	<text text_size="24"/></itemgra>
 	<itemgra item_types="poly_flats,poly_scrub" order="14-">	<polygon color="#a0a0a0"/>	<text text_size="24"/></itemgra>
@@ -60,7 +60,7 @@
 	</layer>
 	<layer name="u_street" ref="u_street"/>
 	<layer name="under_street" ref="under_street" active="0"/>
-	<layer name="line_1" active="1">
+	<layer name="line_1" active="0">
 	<itemgra item_types="aeroway_taxiway" order="11">	<polyline color="#a6a6a6" width="6"/></itemgra>
 	<itemgra item_types="aeroway_taxiway" order="12">	<polyline color="#a6a6a6" width="10"/></itemgra>
 	<itemgra item_types="aeroway_taxiway" order="13">	<polyline color="#a6a6a6" width="20"/></itemgra>
@@ -83,7 +83,7 @@
 	<itemgra item_types="poi_peak" order="14-16">	<icon src="$NAVIT_USER_DATADIR/poi/peak" w="64" h="64" x="32" y="32"/></itemgra>
 	<itemgra item_types="poi_peak" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/peak" w="96" h="96" x="48" y="48"/></itemgra>
 	</layer>
-	<layer name="poly_2" active="1">
+	<layer name="poly_2" active="0">
 	<itemgra item_types="street_unkn" order="15-16">	<polyline color="#AB6B6B" width="2"/></itemgra>
 	<itemgra item_types="street_unkn" order="17-">		<polyline color="#AB6B6B" width="3"/></itemgra>
 	<itemgra item_types="street_construction" order="13-14">	<polyline color="#ff8080" width="6"/>	<icon src="$NAVIT_USER_DATADIR/poi/road_works" w="32" h="32" x="16" y="16"/></itemgra>

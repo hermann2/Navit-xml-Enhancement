@@ -26,7 +26,7 @@
 	<itemgra item_types="poly_town" order="11-">	<polygon color="#00664450"/></itemgra>
 	<itemgra item_types="poly_water" order="12-">	<polygon color="#2E5C77BB"/></itemgra>
 	</layer>
-	<layer name="poly_1" active="1">
+	<layer name="poly_1" active="0">
 	<itemgra item_types="poly_fell" order="11-14">	<polygon color="#78767880"/></itemgra>
 	<itemgra item_types="poly_fell" order="15-16">	<polygon color="#787678AA"/></itemgra>
 	<itemgra item_types="poly_fell" order="17-">	<polygon color="#787678AA"/>	<text color="#DB4DFF" text_size="32"/></itemgra>
@@ -138,7 +138,7 @@
 	<itemgra item_types="poly_sports_stadium" order="13-16">	<polygon color="#C0C0C080"/>	<polyline color="#AB6B6B" width="2"/></itemgra>
 	<itemgra item_types="poly_sports_stadium" order="17-">		<polygon color="#C0C0C0AA"/>	<polyline color="#AB6B6B" width="4"/>	<text color="#00DFFF" text_size="32"/></itemgra>
 	</layer>
-	<layer name="poly_2" ref="poly_2" active="1"/>
+	<layer name="poly_2" ref="poly_2" active="0"/>
 	<layer name="water">
 	<itemgra item_types="water_drain" order="13-15">	<polyline color="#4A6B6B" width="4"/></itemgra>
 	<itemgra item_types="water_drain" order="16">		<polyline color="#4A6B6BBB" width="8"/>	<text text_size="24" color="#0000FF" background_color="#000000"/></itemgra>
@@ -199,7 +199,7 @@
 	<layer name="highway" ref="highway"/>
 	<layer name="ways" ref="ways" active="0"/>
 	<layer name="highway_1" ref="highway_1"/>
-	<layer name="line_1" active="1">
+	<layer name="line_1" active="0">
 	<itemgra item_types="rail_tram" order="13">		<polyline color="#844800" width="2"/></itemgra>
 	<itemgra item_types="rail_tram" order="14-15">	<polyline color="#844800" width="4"/></itemgra>
 	<itemgra item_types="rail_tram" order="16">		<polyline color="#844800" width="8"/>	<polyline color="#94A4C4" width="4"/></itemgra>
@@ -427,7 +427,7 @@
 	<itemgra item_types="poly_town" order="11-">	<polygon color="#00664450"/></itemgra>
 	<itemgra item_types="poly_water" order="12-">	<polygon color="#2E5C77BB"/></itemgra>
 	</layer>
-	<layer name="poly_1" active="1">
+	<layer name="poly_1" active="0">
 	<itemgra item_types="poly_fell" order="11-14">	<polygon color="#78767880"/></itemgra>
 	<itemgra item_types="poly_fell" order="15-16">	<polygon color="#787678AA"/></itemgra>
 	<itemgra item_types="poly_fell" order="17-">	<polygon color="#787678AA"/>	<text color="#DB4DFF" text_size="32"/></itemgra>
@@ -531,7 +531,7 @@
 	<itemgra item_types="poly_sports_stadium" order="13-16">	<polygon color="#C0C0C080"/>	<polyline color="#AB6B6B" width="2"/></itemgra>
 	<itemgra item_types="poly_sports_stadium" order="17-">		<polygon color="#C0C0C0AA"/>	<polyline color="#AB6B6B" width="4"/>	<text color="#00DFFF" text_size="32"/></itemgra>
 	</layer>
-	<layer name="poly_2" ref="poly_2" active="1"/>
+	<layer name="poly_2" ref="poly_2" active="0"/>
 	<layer name="water">
 	<itemgra item_types="water_drain" order="13-15">	<polyline color="#4A6B6B" width="4"/></itemgra>
 	<itemgra item_types="water_drain" order="16">		<polyline color="#4A6B6BBB" width="8"/>	<text text_size="24" color="#0000FF" background_color="#000000"/></itemgra>
@@ -592,7 +592,7 @@
 	<layer name="highway" ref="highway"/>
 	<layer name="ways" ref="ways" active="0"/>
 	<layer name="highway_1" ref="highway_1"/>
-	<layer name="line_1" active="1">
+	<layer name="line_1" active="0">
 	<itemgra item_types="rail_tram" order="13">		<polyline color="#844800" width="2"/></itemgra>
 	<itemgra item_types="rail_tram" order="14-15">	<polyline color="#844800" width="4"/></itemgra>
 	<itemgra item_types="rail_tram" order="16">		<polyline color="#844800" width="8"/>	<polyline color="#94A4C4" width="4"/></itemgra>

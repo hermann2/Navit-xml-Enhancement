@@ -1,7 +1,7 @@
 # Navit-xml-Enhancement
 ## Extension to Navit.xml ##
 
-Created to 2560x1440 Galaxy S7
+Created to 2560x1440 Galaxy S7 with navit-git 0.5.3+589c11d0
 
 Icons are in folder - src - enclosed. The empty folder in (routing mask) can be replaced/fill with this or own.
 
@@ -17,7 +17,7 @@ If the map is in the device memory then change in Navit.xml the Path under
 	map type="textfile" active="yes" data="$NAVIT_USER_DATADIR/Your_Map_Name.bin"
 	..........
 	</mapset>
-#### Display of individual *Point of Interrest:* ####
+### Display of individual *Point of Interrest:* ###
 (see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)
 
 After own idea the POI as "universal layer" create, they can be used in all layouts.
@@ -31,9 +31,9 @@ After own idea the POI as "universal layer" create, they can be used in all layo
 	<itemgra item_types="piste_downhill_freeride" order="16-">	<polyline color="#FFFF0060" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skifreeride" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#000000"/><text text_size="36" color="#000000"/></itemgra>
 	<itemgra item_types="piste_nordic" order="16-">			<polyline color="#CCFFFF" width="18"/><polyline color="#FFFFFF" width="10"/><polyline color="#CCFFFF90" width="5"/>	<text text_size="28" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/langlauf" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
 	<itemgra item_types="piste_nordic" order="16-">			<polyline color="#CCFFFF" width="30"/><polyline color="#FFFFFF" width="16"/><polyline color="#CCFFFF90" width="8"/>	<text text_size="36" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/langlauf" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
-	<itemgra item_types="footway_and_piste_nordic" order="16-">		<polyline color="#CCFFFF" width="30"/><polyline color="#FFFFFF" width="16"/><polyline color="#CCFFFF90" width="8"/>	<text text_size="36" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/walknordic" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
-	<itemgra item_types="poi_skiing" order="16-">				<icon src="skiing" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#1A2A3A"/></itemgra>
-	<itemgra item_types="lift_chair" order="16-">				<polyline color="#003663" width="6"/><icon src="$NAVIT_USER_DATADIR/poi/chair" w="96" h="96" x="48" y="0"/>			<text text_size="38" color="#944C00" background_color="#944C00"/><circle text_size="38" color="#944C00"/></itemgra>
+	<itemgra item_types="footway_and_piste_nordic" order="16-">	<polyline color="#CCFFFF" width="30"/><polyline color="#FFFFFF" width="16"/><polyline color="#CCFFFF90" width="8"/>	<text text_size="36" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/walknordic" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
+	<itemgra item_types="poi_skiing" order="16-">			<icon src="skiing" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#1A2A3A"/></itemgra>
+	<itemgra item_types="lift_chair" order="16-">			<polyline color="#003663" width="6"/><icon src="$NAVIT_USER_DATADIR/poi/chair" w="96" h="96" x="48" y="0"/>		<text text_size="38" color="#944C00" background_color="#944C00"/><circle text_size="38" color="#944C00"/></itemgra>
 	.........
 	</layer>
 
@@ -52,15 +52,15 @@ any **OSD Button "[POI]"**
 
 open the **GUI Menü "POI_Icons"**
 
-![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/src/screencapture/131342_Navit.jpg)
+![Image of GUI Menü "POI_Icons"](github.com/hermann2/Navit-xml-Enhancement/src/screencapture/131342_Navit.jpg)
 
 and allows the POI compilation or all POIs to be activated / deactivated.
 
 	<a name='POI_Icons'><text>POI-Auswahl</text>
-	<img cond='navit.layout.layer[@name=="wintersport"].active==0'		src='gui_stop'		onclick='navit.toggle_layer("wintersport"),refresh()'><text>Wintersport</text></img>
+	<img cond='navit.layout.layer[@name=="wintersport"].active==0'		src='gui_stop'	onclick='navit.toggle_layer("wintersport"),refresh()'><text>Wintersport</text></img>
 	<img cond='navit.layout.layer[@name=="wintersport"].active==1'		src='gui_active' onclick='navit.toggle_layer("wintersport"),refresh()'><text>Wintersport</text></img>
-	<img cond='navit.layout.layer[@name=="Android-POI-Icons-full"].active==0' 	src='gui_stop' onclick='navit.toggle_layer("Android-POI-Icons-full"),refresh()'><text>Gebäude</text></img>
-	<img cond='navit.layout.layer[@name=="Android-POI-Icons-full"].active==1' 	src='gui_active' onclick='navit.toggle_layer("Android-POI-Icons-full"),refresh()'><text>Gebäude</text></img>
+	<img cond='navit.layout.layer[@name=="Android-POI-Icons-full"].active==0' src='gui_stop' onclick='navit.toggle_layer("Android-POI-Icons-full"),refresh()'><text>Gebäude</text></img>
+	<img cond='navit.layout.layer[@name=="Android-POI-Icons-full"].active==1' src='gui_active' onclick='navit.toggle_layer("Android-POI-Icons-full"),refresh()'><text>Gebäude</text></img>
 	<img cond='navit.layout.layer[@name=="hikings"].active==0'			src='gui_stop'	onclick='navit.toggle_layer("hiking_way");navit.toggle_layer("hikings");refresh()'><text>Wanderung</text></img>
 	<img cond='navit.layout.layer[@name=="hikings"].active==1'		src='gui_active' onclick='navit.toggle_layer("hiking_way");navit.toggle_layer("hikings");refresh()'><text>Wanderung</text></img>
 	<img cond='navit.layout.layer[@name=="leisure"].active==0'		src='gui_stop'	onclick='navit.toggle_layer ("leisure"),refresh()'><text>Freizeit</text></img>
@@ -72,15 +72,14 @@ and allows the POI compilation or all POIs to be activated / deactivated.
 
 All "<itemgra item_types =" can be served. Brings overview and speed while scrolling the map.
 
-
-#### At high zoom level, show a world map or /*: ####
+### At high zoom level, show a world map or /*: ###
 
 Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*). 
 The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for free design.
 
-*worldimage.txt* File with coordinates (icon_src= "different image names" label= "any text") possibly information such as:
+*worldimage.txt* (Create as UTF-8 and Line Delimiters to Unix LF) File with coordinates (icon_src="different image names" label="any text") possibly information such as:
 
-	31.626 22.3372 type=poi_customb label="Abu Simbel Temples" icon_src="abusimbel"
+	31.626 22.3372	type=poi_customb label="Abu Simbel Temples" icon_src="abusimbel"
 	1.5 42.5 	type=poi_customc label="Andorra" icon_src="country_ad"
 	24.0 82.0 	type=poi_customd label="A R T I C  O C E A N"
 	<!-- what else should be shown. Various icons according to personal imagination.
@@ -98,15 +97,15 @@ Enter this file under `<mapset>` with the corresponding path.
 
 A world map for 3D requires many map sections and a lot of memory. Below is an automatic switching in the OSD to switch from *zoom&gt;64* to *2D and Orientation North*. The parameters for "*pitch*", "*orientation*" are saved. If "zoom&lt;128" the default setting will be reset (3D and Orientation 360 degrees).
 
-	<osd x="-1" y="-1" w="1" h="1"  type="cmd_interface" update_period="1" command='zoom&gt;64 
+	<osd x="-1" y="-1" w="1" h="1" type="cmd_interface" update_period="1" command='zoom&gt;64
 		?(get_int_var("zoom_gt")==0 
 			?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1))
 			:"")
 		:(get_int_var("zoom_gt")==1 
 			?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0))
-			:""))'/>	
+			:""))'/>
 
-Enter the world map in a <layout name=" (order="any"). 
+Enter the world map in a *<layout name=" (order="*any").
 
 	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/>	</itemgra>	</layer>
 	<!-- In the "worldimage.txt" included (poi_custom*) are also included in the layout, possibly as a separate layer.
@@ -115,4 +114,4 @@ Enter the world map in a <layout name=" (order="any").
 	<itemgra item_types="poi_customb" order="0-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="96" h="96"/><circle text_size="32" color="#990099"/></itemgra>
 	<itemgra item_types="poi_customc" order="0-11">	<icon src="%s" w="192" h="192" x="0" y="288"/><circle text_size="75" color="" background_color="#B00000"/></itemgra>
 	<itemgra item_types="poi_customd" order="0-11">	<circle text_size="50" color="#008CC8" background_color="#40CCFF"/></itemgra>
-	</layer>	
+	</layer>
