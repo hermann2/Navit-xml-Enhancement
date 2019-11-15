@@ -23,11 +23,11 @@ If the map is in the device memory then change in Navit.xml the Path under
 After own idea the POI as "universal layer" create, they can be used in all layouts.
 
 	<layer name="wintersport">
-	<itemgra item_types="piste_downhill_novice" order="16-">	<polyline color="#00A00040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skinovice" w="64" h="64" x="32" y="32"/>		<circle text_size="36" color="#00A000"/><text text_size="36" color="#00A000"/></itemgra>
-	<itemgra item_types="piste_downhill_easy" order="16-">		<polyline color="#0000FF40" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skieasy" w="64" h="64" x="32" y="-32"/>		<circle text_size="36" color="#0000FF"/><text text_size="36" color="#0000FF"/></itemgra>
+	<itemgra item_types="piste_downhill_novice" order="16-">	<polyline color="#00A00040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skinovice" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#00A000"/><text text_size="36" color="#00A000"/></itemgra>
+	<itemgra item_types="piste_downhill_easy" order="16-">		<polyline color="#0000FF40" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skieasy" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#0000FF"/><text text_size="36" color="#0000FF"/></itemgra>
 	<itemgra item_types="piste_downhill_intermediate" order="16-">	<polyline color="#FF000040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skimediate" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#E00000"/><text text_size="36" color="#E00000"/></itemgra>
 	<itemgra item_types="piste_downhill_advanced" order="16-">	<polyline color="#00000040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skiadvanced" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#000000"/><text text_size="36" color="#000000"/></itemgra>
-	<itemgra item_types="piste_downhill_expert" order="16-">	<polyline color="#FFAA0040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skiexpert" w="64" h="64" x="32" y="32"/>		<circle text_size="36" color="#FFAA00"/><text text_size="36" color="#FFAA00"/></itemgra>
+	<itemgra item_types="piste_downhill_expert" order="16-">	<polyline color="#FFAA0040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skiexpert" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#FFAA00"/><text text_size="36" color="#FFAA00"/></itemgra>
 	<itemgra item_types="piste_downhill_freeride" order="16-">	<polyline color="#FFFF0060" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skifreeride" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#000000"/><text text_size="36" color="#000000"/></itemgra>
 	<itemgra item_types="piste_nordic" order="16-">			<polyline color="#CCFFFF" width="18"/><polyline color="#FFFFFF" width="10"/><polyline color="#CCFFFF90" width="5"/>	<text text_size="28" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/langlauf" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
 	<itemgra item_types="piste_nordic" order="16-">			<polyline color="#CCFFFF" width="30"/><polyline color="#FFFFFF" width="16"/><polyline color="#CCFFFF90" width="8"/>	<text text_size="36" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/langlauf" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
@@ -52,7 +52,7 @@ any **OSD Button "[POI]"**
 
 open the **GUI Menü "POI_Icons"**
 
-![Image of GUI Menü "POI_Icons"](github.com/hermann2/Navit-xml-Enhancement/src/screencapture/131342_Navit.jpg)
+![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/131342_Navit.jpg)
 
 and allows the POI compilation or all POIs to be activated / deactivated.
 
@@ -61,7 +61,7 @@ and allows the POI compilation or all POIs to be activated / deactivated.
 	<img cond='navit.layout.layer[@name=="wintersport"].active==1'		src='gui_active' onclick='navit.toggle_layer("wintersport"),refresh()'><text>Wintersport</text></img>
 	<img cond='navit.layout.layer[@name=="Android-POI-Icons-full"].active==0' src='gui_stop' onclick='navit.toggle_layer("Android-POI-Icons-full"),refresh()'><text>Gebäude</text></img>
 	<img cond='navit.layout.layer[@name=="Android-POI-Icons-full"].active==1' src='gui_active' onclick='navit.toggle_layer("Android-POI-Icons-full"),refresh()'><text>Gebäude</text></img>
-	<img cond='navit.layout.layer[@name=="hikings"].active==0'			src='gui_stop'	onclick='navit.toggle_layer("hiking_way");navit.toggle_layer("hikings");refresh()'><text>Wanderung</text></img>
+	<img cond='navit.layout.layer[@name=="hikings"].active==0'		src='gui_stop'	onclick='navit.toggle_layer("hiking_way");navit.toggle_layer("hikings");refresh()'><text>Wanderung</text></img>
 	<img cond='navit.layout.layer[@name=="hikings"].active==1'		src='gui_active' onclick='navit.toggle_layer("hiking_way");navit.toggle_layer("hikings");refresh()'><text>Wanderung</text></img>
 	<img cond='navit.layout.layer[@name=="leisure"].active==0'		src='gui_stop'	onclick='navit.toggle_layer ("leisure"),refresh()'><text>Freizeit</text></img>
 	<img cond='navit.layout.layer[@name=="leisure"].active==1'		src='gui_active' onclick='navit.toggle_layer("leisure"),refresh()'><text>Freizeit</text></img>
@@ -105,9 +105,9 @@ A world map for 3D requires many map sections and a lot of memory. Below is an a
 			?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0))
 			:""))'/>
 
-Enter the world map in a *<layout name=" (order="*any").
+Enter the world map in a *<layout name=" order="*any".
 
-	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/>	</itemgra>	</layer>
+	<layer name="world_image"> <itemgra item_types="image" order="0-11"> <image/> </itemgra> </layer>
 	<!-- In the "worldimage.txt" included (poi_custom*) are also included in the layout, possibly as a separate layer.
 		 %s is placeholder for different Icon names -->
 	<layer name="world_poly">
@@ -115,3 +115,25 @@ Enter the world map in a *<layout name=" (order="*any").
 	<itemgra item_types="poi_customc" order="0-11">	<icon src="%s" w="192" h="192" x="0" y="288"/><circle text_size="75" color="" background_color="#B00000"/></itemgra>
 	<itemgra item_types="poi_customd" order="0-11">	<circle text_size="50" color="#008CC8" background_color="#40CCFF"/></itemgra>
 	</layer>
+
+### Center map to the cursor ###
+    timeout="86400"					| seconds to wait at scroll bevore the map jumps back to the active vehicle
+    type="text" label="TEXT"
+    \n								| new line
+									| or
+    type="button" src="$NAVIT_USER_DATADIR/center_Cursor.png"
+    command=						| click the item, Instruction is executed
+    follow=1						| wait one second before map is refreshed
+    zoom=4							| a given zoom level (2,4,8,16....)
+    set_center_cursor()				| center the map back to the vehicle
+    enable_expression				| If the expression is true show this OSD Item
+    follow&gt;1						| More than one second before the map is refreshed
+    &amp;&amp;						| UND Operator
+    vehicle.position_valid			| GPS works
+    background_color				| any color BB=Tranparency
+    align="4"						| Text align to the left
+    text_color						| any color
+
+Example for entry under OSD
+
+	<osd x="0" y="-560" w="290" h="290" font_size="940" type="text" label="CENTER\nCURSOR" command="follow=1; zoom=4; set_center_cursor()" enable_expression="follow&gt;1&amp;&amp;vehicle.position_valid" background_color="#56FF00BB" align="4" text_color="#000000"/>
