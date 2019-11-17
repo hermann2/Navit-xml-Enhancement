@@ -13,9 +13,7 @@ If the map is in the device memory then change in Navit.xml the Path under
 	..........
 	</mapset>
 
-![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/003437_Navit.jpg)
-![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/090030_Navit.jpg)
-![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/091006_Navit.jpg)
+![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/navit_map.jpg)
 
 ### Display of individual *Point of Interrest:*  
 (see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)  
@@ -72,6 +70,8 @@ and allows the POI compilation or all POIs to be activated / deactivated.
 All "<itemgra item_types =" can be served. Brings overview and speed while scrolling the map.
 
 ### At high zoom level, show a world map or /*: ###
+
+![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/Worldimage.jpg)
 
 Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*).  
 The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for free design.  
