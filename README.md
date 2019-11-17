@@ -13,9 +13,9 @@ If the map is in the device memory then change in Navit.xml the Path under
 	..........
 	</mapset>
 
-<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/003437_Navit.jpg width="113" height="200" align="left"/>
-<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/090030_Navit.jpg width="113" height="200" align="middle"/>
-<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/091006_Navit.jpg width="113" height="200" align="right"/>
+![](<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/003437_Navit.jpg width="113" height="200" align="left"/>)
+![](<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/090030_Navit.jpg width="113" height="200" align="middle"/>)
+![](<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/091006_Navit.jpg width="113" height="200" align="right"/>)
 
 ### Display of individual *Point of Interrest:*  
 (see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)  
@@ -53,7 +53,7 @@ open the **GUI Menü "POI_Icons"**
 
 ![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/131342_Navit.jpg)
 
-<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/131342_Navit.jpg width="113" height="200" />
+![](<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/131342_Navit.jpg width="113" height="200" />)
 
 
 and allows the POI compilation or all POIs to be activated / deactivated.
