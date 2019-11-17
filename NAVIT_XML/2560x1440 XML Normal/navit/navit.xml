@@ -7,7 +7,6 @@
 		<plugin path="$NAVIT_LIBDIR/*/${NAVIT_LIBPREFIX}libbinding_dbus.so" active="no"/>
 		<plugin path="$NAVIT_LIBDIR/*/${NAVIT_LIBPREFIX}libgraphics_null.so" active="no"/>
 	</plugins>
-
 	<!--  zoom="4" orientation="-1"  on start Navit crash -->
 	<navit center="13.5666 48.1333" zoom_max="262144" autozoom_active="1" autozoom="1" autozoom_min="2" autozoom_max="16" pitch="46" tracking="1" recent_dest="30" waypoints_flag="1" timeout="86400" radius="28" drag_bitmap="0" osd_configuration="1">
 	<graphics type="android"/>
@@ -50,7 +49,6 @@ navit.say("navigieren beendet");
 	<img cond='navit.layout==navit.layout[@name=="MOTORIST_1"]' src='gui_active' onclick='back_to_map()'><text>CURSOR_360 Day</text><script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
 	<img cond='navit.layout==navit.layout[@name=="DARKGLOW_1"]' src='gui_active' onclick='back_to_map()'><text>Cursor_360 Dark</text><script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
 	<img cond='navit.layout!=navit.layout[@name=="MOTORIST_1"] &amp;&amp;navit.layout!=navit.layout[@name=="DARKGLOW_1"]' src='cursor' onclick='navit.layout=navit.layout[@name=="MOTORIST_1"]; navit.vehicle[@name="Local GPS"].profilename="car"; navit.vehicle=navit.vehicle[@name=="Local GPS"],car; menu("#way_1_osd_1"); back_to_map()'><text>360 Day/Dark</text></img>
-
 	<img cond='navit.layout==navit.layout[@name=="TRUCK"] &amp;&amp;(navit.vehicle[@name="Local GPS"].profilename==&quot;truck&quot;)' src='gui_active' onclick='back_to_map()'><text>Truck</text><script>write(navit.vehicle[@name="Local GPS"].profilename)</script></img>
 	<img cond='navit.layout==navit.layout[@name=="TRUCK"] &amp;&amp;(navit.vehicle[@name="Local GPS"].profilename!=&quot;truck&quot;)' src='$NAVIT_USER_DATADIR/maske/lkw' onclick='navit.vehicle[@name="Local GPS"].profilename="truck"; navit.vehicle=navit.vehicle[@name=="Local GPS"],truck; menu("#way_0_osd_0"); back_to_map()'><text>Truck</text></img>
 	<img cond='navit.layout!=navit.layout[@name=="TRUCK"]' src='$NAVIT_USER_DATADIR/maske/lkw' onclick='navit.layout=navit.layout[@name=="TRUCK"]; navit.vehicle[@name="Local GPS"].profilename="truck"; navit.vehicle=navit.vehicle[@name=="Local GPS"],truck; menu("#way_0_osd_0"); back_to_map()'><text>Truck</text></img>
@@ -104,6 +102,7 @@ navit.say("ein Etappenziel entfernt");
 								<img src='gui_about' onclick='about()'><text>About</text></img>
 								<img src='gui_heightprofile' onclick='route_height_profile()'><text>Height Profile</text></img>
 								<img src='gui_tools' onclick='network_info()'><text>Network info</text></img>
+								<a href='#help'> <img src='gui_help'> <text>Manual</text> </img> </a>
 							</a>
 							<a name='Settings'>
 <text>EINSTELLUNGEN</text>		<img src='gui_actions' onclick='navit.toggle_layer("up_street"); navit.toggle_layer("under_street"); back_to_map()'>
@@ -245,17 +244,28 @@ navit.say("aktuelle Landkennung");
 							</a>
 							<a name='Satellite Status' class='clist'><text>Satellite Status</text><script>satellite_status_page()</script></a>
 							<a name='NMEA Data' class='clist'><text>NMEA Data</text><script>nmea_data_page()</script></a>
+	<a name='help'> <text>Bedienungsanleitung</text>
+	<img src='communication' onclick='navit.say("tschi Pi eS aktivieren............................
+	einfach LANGER TIPP in Karte auf Zielpunkt und tipp im Fenster auf Ziel setzen............................
+	oder öffne Menü Lesezeichen und sofern vorhanden tippe auf Zieladresse............................
+	oder öffne Menü Letzte Ziele............................
+	oder gehe ins Menü Ziel eingeben mit dem Bedienfeld.............für Ziel in anderem Land tippe auf Flaggensymbol und beginne die Eingabe mit Land........
+	Tippe in die Auswahlliste...und rechts oben bestättige mit grünen Knopf oder weißem ix....weiter mit dem Ort....dann Strasse und eventuell Hausnummer....anschliessend tippe Als Ziel setzen")'> <text>ZIEL EINGEBEN</text> </img>
+	<img src='communication' onclick='navit.say("Eine weitere Zieleingabe wird neuer Zielpunkt und der vorherige wird zu Etappenziel in fortlaufender Nummmer............................
+	Wird im Aktionsmenü als Wegpunkt setzen vor gewählt reiht sich die Eingabe als Etappenziel ein............................
+	Ist eine Etappe nicht mehr wichtig oder wurde verpasst dann mit tipp auf LÖSCHE Etappe entfernen")'> <text>ETAPPENZIELE</text> </img>
+	</a>
 	</html>	]]>	</gui>
 
 	<osd x="-1" y="-1" w="1" h="1"  type="cmd_interface" update_period="1" command='get_int_var("set_osd")==0
 									?(follow&gt;1||zoom&gt;64 
 										?(pitch=0,tracking=0,orientation=0)
 										:(pitch=46,tracking=1,orientation=-1))
-							  		:(zoom&gt;64 
-							  			?(get_int_var("zoom_gt")==0 
-							  				?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1)):"")
-							  			:(get_int_var("zoom_gt")==1 
-							  				?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0)):""))'/>
+									:(zoom&gt;64 
+										?(get_int_var("zoom_gt")==0 
+											?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1)):"")
+										:(get_int_var("zoom_gt")==1 
+											?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0)):""))'/>
 	<osd x="0" y="-2560" w="1440" h="700"	type="button" src="$NAVIT_USER_DATADIR/maske/hw1_1440_700.png" command="" enable_expression="pitch&gt;1"/>
 	<osd x="0" y="0" w="2370" h="85"		font_size="960"		type="text" label="${navit.messages}" enable_expression="osd_configuration&amp;1" background_color="#00000090" align="5" text_color="#00FF00"/>
 	<osd x="0" y="85" w="2370" h="85"		font_size="1000"	type="text" label="${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090" align="4" text_color="#00FF00"/>
@@ -281,8 +291,6 @@ navit.say("aktuelle Landkennung");
 	<osd x="140" y="0" w="1200" h="85"		font_size="960"		type="text" label='Pos deg: ${vehicle.position_coord_geo[pos_deg]}' background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2"/>	
 	<osd x="-264" y="-700" w="264" h="75"	font_size="940"		type="text" label="N: ${vehicle.position_direction} °" background_color="#00000090" align="4" text_color="#FFFFFF" enable_expression="osd_configuration&amp;2"/>
 	<osd x="-264" y="-625" w="264" h="325"	font_size="940"		type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090" destination_dir_color="#00FF00" north_color="#FFFFFF"/>
-
-	<!-- <osd x="200" y="200" w="200" h="200" type="auxmap" /> Kartenausschnitt einblenden -->
 
 	<speech type="android" cps="40"/>
 	<vehicle name="Local GPS" profilename="car" enabled="yes" active="1" follow="1" follow_cursor="1" lag="15" source="android:"/>
@@ -542,15 +550,17 @@ navit.say("aktuelle Landkennung");
 	</layer>
 	<!-- Wien Park_ride_ticket.txt: (poi_custom9= #icon_src="park_ride" + poi_customa= #icon_src="park_schein") -->
 
-	<layer name="hiking_way">
+	<layer name="pedestrian_way">
 	<itemgra item_types="bridleway" order="11-12">		<polyline color="#919171" width="4"/> </itemgra>
 	<itemgra item_types="track_grass" order="11-12">	<polyline color="#AAC277" width="4"/> </itemgra>
 	<itemgra item_types="track_unpaved" order="11-12">	<polyline color="#B3B3B3" width="4"/><polyline color="#D2F090" width="1"/> </itemgra>
 	<itemgra item_types="track_ground" order="11-12">	<polyline color="#B3B3B3" width="4"/><polyline color="#D2F090" width="2"/> </itemgra>
 	<itemgra item_types="track_gravelled" order="11-12"><polyline color="#828777" width="4"/> </itemgra>
-	<itemgra item_types="path" order="11-12">	<polyline color="#B3B3B3" width="4"/> </itemgra>
+	<itemgra item_types="path" order="11-12">			<polyline color="#B3B3B3" width="4"/> </itemgra>
 	<itemgra item_types="footway,footway_and_piste_nordic" order="11-13">	<polyline color="#E3E6D6" width="4"/> </itemgra>
-	<itemgra item_types="cycleway" order="11-13">	<polyline color="#B8E8B8" width="4"/> </itemgra>
+	<itemgra item_types="cycleway" order="11-13">		<polyline color="#B8E8B8" width="4"/> </itemgra>
+	</layer>
+	<layer name="hiking_way">
 	<itemgra item_types="hiking" order="11-12">	<polyline color="#CC9400" width="4"/> </itemgra>
 	<itemgra item_types="hiking" order="13">	<polyline color="#EEE06B" width="6"/> <text text_size="6" color="#938300"/> </itemgra>
 	<itemgra item_types="hiking" order="14">	<polyline color="#EEE06B" width="8"/> <text text_size="10" color="#938300"/> </itemgra>
@@ -918,7 +928,7 @@ navit.say("aktuelle Landkennung");
 	<itemgra item_types="poi_fuel" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/fuel" w="64" h="64" x="32" y="32"/> </itemgra>
 	<itemgra item_types="poi_fuel" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/fuel" w="96" h="96" x="48" y="48"/> <circle text_size="36" color="#AA3300" background_color="#AA3300"/> </itemgra>
 	<itemgra item_types="poi_car_wash" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/car_wash" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_car_wash" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/car_wash" w="96" h="96" x="48" y="48"/> <circle text_size="36" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_car_wash" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/car_wash" w="96" h="96" x="48" y="96"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_repair_service" order="14">	<icon src="$NAVIT_USER_DATADIR/poi/repair_service" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_repair_service" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/repair_service" w="64" h="64" x="32" y="32"/> </itemgra>
 	<itemgra item_types="poi_repair_service" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/repair_service" w="96" h="96" x="48" y="48"/> <circle text_size="36" color="#854500"/> </itemgra>
@@ -970,20 +980,20 @@ navit.say("aktuelle Landkennung");
 	<itemgra item_types="poly_construction" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/bau" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poly_construction" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/bau" w="64" h="64" x="32" y="32"/> <circle text_size="32" color="#606060"/> </itemgra>
 	<itemgra item_types="point_unkn" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/punkt" w="48" h="48" x="24" y="24"/> <circle text_size="32" color="#606060"/> </itemgra>
-	<itemgra item_types="poi_public_office" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/public_office" w="48" h="48" x="24" y="24"/> </itemgra>
-	<itemgra item_types="poi_public_office" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/public_office" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_public_office" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/public_office" w="96" h="96" x="0" y="120"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_public_office" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/public_office" w="64" h="64" x="32" y="32"/> </itemgra>
+	<itemgra item_types="poi_public_office" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/public_office" w="96" h="96" x="0" y="120"/> </itemgra>
+	<itemgra item_types="poi_public_office" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/public_office" w="128" h="128" x="0" y="150"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_tower" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/tower" w="48" h="48" x="24" y="48"/> </itemgra>
 	<itemgra item_types="poi_tower" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/tower" w="64" h="64" x="32" y="64"/> </itemgra>
 	<itemgra item_types="poi_tower" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/tower" w="96" h="96" x="48" y="96"/> <circle text_size="32" color="#004000"/> </itemgra>
 	<itemgra item_types="poi_justice" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/justice" w="48" h="48" x="24" y="24"/> </itemgra>
-	<itemgra item_types="poi_justice" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/justice" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_justice" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/justice" w="96" h="96" x="0" y="120"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_justice" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/justice" w="96" h="96" x="0" y="120"/> </itemgra>
+	<itemgra item_types="poi_justice" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/justice" w="128" h="128" x="0" y="150"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_townhall" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/townhall" w="64" h="64" x="32" y="32"/> </itemgra>
 	<itemgra item_types="poi_townhall" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/townhall" w="96" h="96" x="48" y="48"/> </itemgra>
-	<itemgra item_types="poi_townhall" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/townhall" w="128" h="128" x="64" y="64"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_townhall" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/townhall" w="128" h="128" x="64" y="64"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_prison" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/prison" w="48" h="48" x="24" y="24"/> </itemgra>
-	<itemgra item_types="poi_prison" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/prison" w="64" h="64" x="64" y="32"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_prison" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/prison" w="96" h="96" x="48" y="48"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_bank" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/bank" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_bank" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/bank" w="64" h="64" x="32" y="32"/> </itemgra>
 	<itemgra item_types="poi_bank" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/bank" w="96" h="96" x="80" y="48"/> <circle text_size="32" color="#606060"/> </itemgra>
@@ -991,48 +1001,48 @@ navit.say("aktuelle Landkennung");
 	<itemgra item_types="poi_atm" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/atm" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_atm" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/atm" w="64" h="64" x="32" y="32"/> <circle text_size="32" color="#606060"/> </itemgra>
 	<itemgra item_types="poi_post_office" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/post1" w="48" h="48" x="24" y="24"/> </itemgra>
-	<itemgra item_types="poi_post_office" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/post1" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_post_office" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/post1" w="96" h="96" x="80" y="48"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_post_office" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/post1" w="96" h="96" x="80" y="48"/> </itemgra>
+	<itemgra item_types="poi_post_office" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/post1" w="128" h="128" x="80" y="150"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_post_box" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/post" w="24" h="24" x="12" y="12"/> </itemgra>
 	<itemgra item_types="poi_post_box" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/post" w="32" h="32" x="16" y="16"/> </itemgra>
 	<itemgra item_types="poi_post_box" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/post" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_military" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/military" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_military" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/military" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_military" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/military" w="96" h="96" x="48" y="48"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_military" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/military" w="96" h="96" x="48" y="48"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_school" order="14">	<icon src="$NAVIT_USER_DATADIR/poi/g_school" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_school" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/g_school" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_school" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/g_school" w="96" h="96" x="0" y="120"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_school" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/g_school" w="96" h="96" x="0" y="120"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_school_university" order="14">		<icon src="school" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_school_university" order="15-16">	<icon src="school" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_school_university" order="17-">	<icon src="school" w="96" h="96" x="0" y="120"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_school_university" order="17-">	<icon src="school" w="96" h="96" x="0" y="120"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_school_college" order="14">	<icon src="$NAVIT_USER_DATADIR/poi/college" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_school_college" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/college" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_school_college" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/college" w="96" h="96" x="0" y="88"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_school_college" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/college" w="96" h="96" x="0" y="88"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_library" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/library" w="48" h="48" x="24" y="24"/> </itemgra>
-	<itemgra item_types="poi_library" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/library" w="64" h="64" x="64" y="32"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_library" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/library" w="64" h="64" x="64" y="32"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_kindergarten" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/k_garten" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_kindergarten" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/k_garten" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_kindergarten" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/k_garten" w="96" h="96" x="0" y="120"/> <circle text_size="32" color="#854500"/> </itemgra>
+	<itemgra item_types="poi_kindergarten" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/k_garten" w="96" h="96" x="0" y="120"/> <circle text_size="36" color="#854500"/> </itemgra>
 	<itemgra item_types="poi_cemetery" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/cemetery" w="32" h="32" x="16" y="16"/> </itemgra>
 	<itemgra item_types="poi_cemetery" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/cemetery" w="48" h="48" x="24" y="24"/> </itemgra>
-	<itemgra item_types="poi_cemetery" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/cemetery" w="64" h="64" x="64" y="32"/> <circle text_size="32" color="#755818"/> </itemgra>
+	<itemgra item_types="poi_cemetery" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/cemetery" w="64" h="64" x="64" y="32"/> <circle text_size="36" color="#755818"/> </itemgra>
 	<itemgra item_types="poi_worship" order="14">		<icon src="worship" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_worship" order="15-16">	<icon src="worship" w="64" h="64" x="32" y="32"/> </itemgra>
 	<itemgra item_types="poi_worship" order="17-">		<icon src="worship" w="96" h="96" x="48" y="48"/> <circle text_size="32" color="#755818"/> </itemgra>
 	<itemgra item_types="poi_castle" order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_castle" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_castle" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="96" h="96" x="48" y="48"/> <circle text_size="32" color="#004000"/> </itemgra>
+	<itemgra item_types="poi_castle" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="96" h="96" x="48" y="48"/> <circle text_size="36" color="#004000"/> </itemgra>
 	<itemgra item_types="poi_recycling" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/recycle" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_recycling" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/recycle" w="64" h="64" x="64" y="32"/> <circle text_size="32" color="#854500"/> </itemgra>
 	<itemgra item_types="poly_attraction" order="11-13">	<icon src="$NAVIT_USER_DATADIR/poi/marker" w="64" h="64" x="32" y="32"/> </itemgra>
 	<itemgra item_types="poi_potable_water" order="14">		<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="48" h="48" x="24" y="24"/> </itemgra>
 	<itemgra item_types="poi_potable_water" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="64" h="64" x="32" y="32"/> </itemgra>
-	<itemgra item_types="poi_potable_water" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="96" h="96" x="48" y="48"/> <circle text_size="32" color="#005099" background_color="#005099"/> </itemgra>
+	<itemgra item_types="poi_potable_water" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="96" h="96" x="48" y="48"/> <circle text_size="34" color="#005099" background_color="#005099"/> </itemgra>
 	<itemgra item_types="poi_church" order="16-">	<circle text_size="32" color="#460020"/> </itemgra>
 	<itemgra item_types="poi_peak" order="12-15">	<circle text_size="28" color="#009944"/> </itemgra>
 	<itemgra item_types="poi_peak" order="16-">		<circle text_size="38" color="#009944"/> </itemgra>
-	<itemgra item_types="poi_fountain" order="17-">	<circle text_size="32" color="#004000"/> </itemgra>
-	<itemgra item_types="poi_tree" order="17-">		<circle text_size="32" color="#004000"/> </itemgra>
+	<itemgra item_types="poi_fountain" order="17-">	<circle text_size="36" color="#004000"/> </itemgra>
+	<itemgra item_types="poi_tree" order="17-">		<circle text_size="36" color="#004000"/> </itemgra>
 	</layer>
 	<layer name="poly_icon">
 	<itemgra item_types="poly_range" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/p_range" w="64" h="64" x="32" y="32"/> </itemgra>
@@ -1293,7 +1303,6 @@ navit.say("aktuelle Landkennung");
 	<itemgra item_types="water_stream" order="16">		<polyline color="#4ABBEEDD" width="18"/> <text text_size="26" color="#0000AA" background_color="#000044"/> </itemgra>
 	<itemgra item_types="water_stream" order="17">		<polyline color="#4ABBEEDD" width="32"/> <text text_size="28" color="#0000AA" background_color="#000044"/> </itemgra>
 	<itemgra item_types="water_stream" order="18-">		<polyline color="#4ABBEEDD" width="50"/> <text text_size="36" color="#0000AA" background_color="#000044"/> </itemgra>
-
 	<itemgra item_types="water_river" order="9-11">	<polyline color="#4AA5EE" width="2"/> </itemgra>
 	<itemgra item_types="water_river" order="12">	<polyline color="#77CCEE" width="6"/> </itemgra>
 	<itemgra item_types="water_river" order="13">	<polyline color="#77CCEE" width="8"/> </itemgra>
@@ -1399,7 +1408,7 @@ navit.say("aktuelle Landkennung");
 	<itemgra item_types="bus_guideway" order="16">	<polyline color="#FF6000" width="28"/><polyline color="#9090AA" width="20"/><icon src="$NAVIT_USER_DATADIR/poi/busspur" w="64" h="64" x="32" y="32"/> <text text_size="18" background_color="#990000"/> </itemgra>
 	<itemgra item_types="bus_guideway" order="17">	<polyline color="#FF6000" width="46"/><polyline color="#9090AA" width="36"/><icon src="$NAVIT_USER_DATADIR/poi/busspur" w="96" h="96" x="48" y="48"/> <text text_size="24" background_color="#990000"/> </itemgra>
 	<itemgra item_types="bus_guideway" order="18-">	<polyline color="#FF6000" width="92"/><polyline color="#9090AA" width="80"/><icon src="$NAVIT_USER_DATADIR/poi/busspur" w="128" h="128" x="64" y="64"/> <text text_size="32" background_color="#990000"/> </itemgra>
-	</layer>	
+	</layer>
 	<layer name="wayside_1">
 	<itemgra item_types="track_paved" order="13">		<polyline color="#588000" width="10"/> </itemgra>
 	<itemgra item_types="track_paved" order="14">		<polyline color="#588000" width="14"/> </itemgra>
@@ -2035,6 +2044,7 @@ navit.say("aktuelle Landkennung");
 	<layer name="ways" ref="ways" active="0"/>
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="line_1" ref="line_1" active="0"/>
+	<layer name="pedestrian_way" ref="pedestrian_way" active="0"/>
 	<layer name="hiking_way" ref="hiking_way" active="0"/>
 	<layer name="up_street" ref="up_street" active="1"/>
 	<layer name="line" ref="line" active="0"/>
@@ -2086,6 +2096,7 @@ navit.say("aktuelle Landkennung");
 	<layer name="ways" ref="ways" active="0"/>
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="line_1" ref="line_1" active="0"/>
+	<layer name="pedestrian_way" ref="pedestrian_way" active="0"/>
 	<layer name="hiking_way" ref="hiking_way" active="0"/>
 	<layer name="up_street" ref="up_street" active="1"/>
 	<layer name="line" ref="line" active="0"/>
@@ -2113,11 +2124,11 @@ navit.say("aktuelle Landkennung");
 	<itemgra sequence_range="0">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w0" w="180" h="180"/> </itemgra>
 	<itemgra sequence_range="1">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_w1" w="180" h="180"/> </itemgra>
 	</cursor>
-	<layer name="world_image">	<itemgra item_types="image" order="0-11">	<image/>	</itemgra>	</layer>
-	<layer name="world_dam" active="1">	<itemgra item_types="poly_water_tiled" order="6-11">	<polygon color="#8CCFFF"/> </itemgra> </layer>
+	<layer name="world_image"> <itemgra item_types="image" order="0-11"> <image/> </itemgra> </layer>
+	<layer name="world_dam" active="1"> <itemgra item_types="poly_water_tiled" order="6-11"> <polygon color="#8CCFFF"/> </itemgra> </layer>
 	<layer name="world_poly" ref="world_poly"/>
 	<layer name="poly" ref="poly"/>
-	<layer name="water_dam" active="1">	<itemgra item_types="poly_water_tiled" order="12-">	<polygon color="#8CCFFF"/> </itemgra> </layer>
+	<layer name="water_dam" active="1"> <itemgra item_types="poly_water_tiled" order="12-"> <polygon color="#8CCFFF"/> </itemgra> </layer>
 	<layer name="polyA" ref="polyA"/>
 	<layer name="poly_1" ref="poly_1" active="1"/>
 	<layer name="poly_2" ref="poly_2" active="1"/>
@@ -2132,6 +2143,7 @@ navit.say("aktuelle Landkennung");
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="ways" ref="ways" active="1"/>
 	<layer name="line_1" ref="line_1" active="1"/>
+	<layer name="pedestrian_way" ref="pedestrian_way" active="1"/>
 	<layer name="hiking_way" ref="hiking_way" active="1"/>
 	<layer name="up_street" ref="up_street" active="0"/>
 	<layer name="line" ref="line" active="1"/>
@@ -2180,6 +2192,7 @@ navit.say("aktuelle Landkennung");
 	<layer name="highway_1" ref="highway_1"/>
 	<layer name="ways" ref="ways" active="1"/>
 	<layer name="line_1" ref="line_1" active="0"/>
+	<layer name="pedestrian_way" ref="pedestrian_way" active="1"/>
 	<layer name="hiking_way" ref="hiking_way" active="1"/>
 	<layer name="up_street" ref="up_street" active="1"/>
 	<layer name="line" ref="line" active="1"/>

@@ -1,25 +1,24 @@
 # Navit-xml-Enhancement
 ## Extension to Navit.xml ##
 
-Created to 2560x1440 Galaxy S7 with navit-git 0.5.3+589c11d0
-
-Icons are in folder - src - enclosed. The empty folder in (routing mask) can be replaced/fill with this or own.
-
-### Installation: ###
-
-Path in Device Memory --> Folder navit; Add Sub Folder: maske; poi; txt; (Heard)
-
-Path in SDcard to Map --> Folder navit
-
+Created to 2560x1440 Galaxy S7 with navit-git 0.5.3+589c11d0  
+Icons are in folder - src - enclosed. The empty folder in (routing mask) can be replaced/fill with this or own.  
+### Installation:  
+Path in Device Memory --> Folder navit; Add Sub Folder: maske; poi; txt; (Heard)  
+Path in SDcard to Map --> Folder navit  
 If the map is in the device memory then change in Navit.xml the Path under
 
 	<mapset>
 	map type="textfile" active="yes" data="$NAVIT_USER_DATADIR/Your_Map_Name.bin"
 	..........
 	</mapset>
-### Display of individual *Point of Interrest:* ###
-(see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)
 
+<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/003437_Navit.jpg width="113" height="200" align="left"/>
+<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/090030_Navit.jpg width="113" height="200" align="middle"/>
+<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/091006_Navit.jpg width="113" height="200" align="right"/>
+
+### Display of individual *Point of Interrest:*  
+(see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)  
 After own idea the POI as "universal layer" create, they can be used in all layouts.
 
 	<layer name="wintersport">
@@ -35,7 +34,7 @@ After own idea the POI as "universal layer" create, they can be used in all layo
 	<itemgra item_types="poi_skiing" order="16-">			<icon src="skiing" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#1A2A3A"/></itemgra>
 	<itemgra item_types="lift_chair" order="16-">			<polyline color="#003663" width="6"/><icon src="$NAVIT_USER_DATADIR/poi/chair" w="96" h="96" x="48" y="0"/>		<text text_size="38" color="#944C00" background_color="#944C00"/><circle text_size="38" color="#944C00"/></itemgra>
 	.........
-	</layer>
+	</layer>  
 
 In the respective **Layout**, the link to the "universal Layer" will be entered:
 
@@ -53,6 +52,9 @@ any **OSD Button "[POI]"**
 open the **GUI Menü "POI_Icons"**
 
 ![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/131342_Navit.jpg)
+
+<img src="https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/131342_Navit.jpg width="113" height="200" />
+
 
 and allows the POI compilation or all POIs to be activated / deactivated.
 
@@ -74,9 +76,8 @@ All "<itemgra item_types =" can be served. Brings overview and speed while scrol
 
 ### At high zoom level, show a world map or /*: ###
 
-Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*). 
-The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for free design.
-
+Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*).  
+The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for free design.  
 *worldimage.txt* (Create as UTF-8 and Line Delimiters to Unix LF) File with coordinates (icon_src="different image names" label="any text") possibly information such as:
 
 	31.626 22.3372	type=poi_customb label="Abu Simbel Temples" icon_src="abusimbel"
@@ -88,6 +89,7 @@ The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for fr
 	-180.0 85.0511
 	180.0 85.0511
 	-180.0 -85.0511
+
 Enter this file under `<mapset>` with the corresponding path.
 
     <mapset>
@@ -98,14 +100,14 @@ Enter this file under `<mapset>` with the corresponding path.
 A world map for 3D requires many map sections and a lot of memory. Below is an automatic switching in the OSD to switch from *zoom&gt;64* to *2D and Orientation North*. The parameters for "*pitch*", "*orientation*" are saved. If "zoom&lt;128" the default setting will be reset (3D and Orientation 360 degrees).
 
 	<osd x="-1" y="-1" w="1" h="1" type="cmd_interface" update_period="1" command='zoom&gt;64
-		?(get_int_var("zoom_gt")==0 
-			?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1))
-			:"")
-		:(get_int_var("zoom_gt")==1 
-			?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0))
-			:""))'/>
+	?(get_int_var("zoom_gt")==0 
+	  ?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1))
+	  :"")
+	:(get_int_var("zoom_gt")==1 
+	  ?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0))
+	  :""))'/>
 
-Enter the world map in a *<layout name=" order="*any".
+Enter the world map in a <layout name=" order="any".
 
 	<layer name="world_image"> <itemgra item_types="image" order="0-11"> <image/> </itemgra> </layer>
 	<!-- In the "worldimage.txt" included (poi_custom*) are also included in the layout, possibly as a separate layer.
@@ -117,23 +119,23 @@ Enter the world map in a *<layout name=" order="*any".
 	</layer>
 
 ### Center map to the cursor ###
-    timeout="86400"					| seconds to wait at scroll bevore the map jumps back to the active vehicle
+    timeout="86400"				| seconds to wait at scroll bevore the map jumps back to the active vehicle
     type="text" label="TEXT"
-    \n								| new line
-									| or
+    \n					| new line
+						| or
     type="button" src="$NAVIT_USER_DATADIR/center_Cursor.png"
-    command=						| click the item, Instruction is executed
-    follow=1						| wait one second before map is refreshed
-    zoom=4							| a given zoom level (2,4,8,16....)
-    set_center_cursor()				| center the map back to the vehicle
-    enable_expression				| If the expression is true show this OSD Item
-    follow&gt;1						| More than one second before the map is refreshed
-    &amp;&amp;						| UND Operator
+    command=				| click the item, Instruction is executed
+    follow=1				| wait one second before map is refreshed
+    zoom=4					| a given zoom level (2,4,8,16....)
+    set_center_cursor()			| center the map back to the vehicle
+    enable_expression			| If the expression is true show this OSD Item
+    follow&gt;1				| More than one second before the map is refreshed
+    &amp;&amp;				| UND Operator
     vehicle.position_valid			| GPS works
-    background_color				| any color BB=Tranparency
-    align="4"						| Text align to the left
-    text_color						| any color
+    background_color			| any color BB=Tranparency
+    align="4"				| Text align to the left
+    text_color				| any color
 
-Example for entry under OSD
+Example for entry under **OSD**
 
 	<osd x="0" y="-560" w="290" h="290" font_size="940" type="text" label="CENTER\nCURSOR" command="follow=1; zoom=4; set_center_cursor()" enable_expression="follow&gt;1&amp;&amp;vehicle.position_valid" background_color="#56FF00BB" align="4" text_color="#000000"/>
