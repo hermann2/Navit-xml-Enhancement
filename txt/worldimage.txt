@@ -87,7 +87,7 @@
 47.4 40.3 type=poi_customc label="Azerbaijan" icon_src="country_az"
 45.3 39.2 type=poi_customc label="AZ" icon_src="country_az"
 16.9 44.4 type=poi_customc label="Bosnia and" icon_src="country_ba"
-16.9 44.0 type=poi_customc label="Herzegovina"
+16.9 44.1 type=poi_customc label="Herzegovina"
 -59.4 12.9 type=poi_customc label="Barbados" icon_src="country_bb"
 89.3 24.0 type=poi_customc label="Bangladesh" icon_src="country_bd"
 3.8 50.5 type=poi_customc label="Belgium" icon_src="country_be"

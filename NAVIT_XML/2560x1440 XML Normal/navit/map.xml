@@ -1,8 +1,8 @@
 
 <mapset>
+	<map type="garmin"  enabled="yes" active="yes" data="/storage/3239-6132/Navit/gmapsupp.img" debug="4"/>
 	<map type="binfile" enabled="yes" active="yes" data="storage/3239-6132/Navit/austria.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/austriavoll.bin"/>
-	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/germanyvoll.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Deutschland.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Ungarn.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Tschechische Republik.bin"/>
@@ -16,13 +16,15 @@
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Italyegypt.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/südamerika.bin"/>
 	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/D_strassendetail.txt"/>
-	<map type="textfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt"/>
-	<map type="textfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/txt/A_Höhle.txt"/>
-	<map type="textfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/txt/A_Hütte.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_Höhle.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_Hütte.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/EIGENE.txt"/>
 	<map type="textfile" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/txt/worldimage.txt"/>
 	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Track_recording.txt"/>
-	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/EIGENE.txt"/>
 	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/Wien Park_ride_ticket.txt"/>
-	<map type="csv" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/speedcam.txt" item_type="tec_common" attr_types="position_longitude,position_latitude,tec_type,maxspeed,tec_dirtype,tec_direction"/>
+	<map type="csv" enabled="yes" active="no"  data="$NAVIT_USER_DATADIR/txt/speedcam.txt" item_type="tec_common" attr_types="position_longitude,position_latitude,tec_type,maxspeed,tec_dirtype,tec_direction"/>
+	<map type="csv" name="pylon" active="no" data="$NAVIT_USER_DATADIR/txt/pylon.csv" item_type="poi_custom7" attr_types="position_longitude,position_latitude"/>
+	<map type="csv" name="skicentre" active="no" data="$NAVIT_USER_DATADIR/txt/ski_at.csv" item_type="poi_custom1" attr_types="position_longitude,position_latitude,label"/>
 </mapset>
 

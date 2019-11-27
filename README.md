@@ -1,8 +1,11 @@
 # Navit-xml-Enhancement
-## Extension to Navit.xml ##
-
+## Extension to Navit.xml  
 Created to 2560x1440 Galaxy S7 with navit-git 0.5.3+589c11d0  
 Icons are in folder - src - enclosed. The empty folder in (routing mask) can be replaced/fill with this or own.  
+* A - Display of individual *Point of Interrest*  
+* B - POI map dependent on demand  
+* C - At high zoom level, show a world map or /*  
+* D - Center map to the cursor
 ### Installation:  
 Path in Device Memory --> Folder navit; Add Sub Folder: maske; poi; txt; (Heard)  
 Path in SDcard to Map --> Folder navit  
@@ -15,7 +18,7 @@ If the map is in the device memory then change in Navit.xml the Path under
 
 ![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/navit_map.jpg)
 
-### Display of individual *Point of Interrest:*  
+### A - Display of individual *Point of Interrest:*  
 (see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)  
 After own idea the POI as "universal layer" create, they can be used in all layouts.
 
@@ -49,7 +52,7 @@ any **OSD Button "[POI]"**
 
 open the **GUI Menü "POI_Icons"**
 
-![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/131342_Navit.jpg)
+![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/poi_auswahl.jpg)
 
 and allows the POI compilation or all POIs to be activated / deactivated.
 
@@ -69,7 +72,44 @@ and allows the POI compilation or all POIs to be activated / deactivated.
 
 All "<itemgra item_types =" can be served. Brings overview and speed while scrolling the map.
 
-### At high zoom level, show a world map or /*: ###
+### B - POI map dependent on demand
+
+If a POI icon is activated in the GUI menu or in the OSD, a supplementary map can be automatically activated.  
+Is required: The entry in the Navit.xml under
+
+	<plugins>
+	...
+	<plugin path="$NAVIT_PREFIX/lib/libmap_csv.so" ondemand="no"/>
+	...
+	</plugins>
+
+An example: (see also Display of individual *Point of Interrest)
+
+	<layer name="wintersport">
+	<itemgra item_types="poi_custom7" order="14-"> <icon src="$NAVIT_USER_DATADIR/poi/pylon" w="96" h="96" x="48" y="0"/> </itemgra>
+	...
+	</layer>
+
+and in the layout
+
+	<layer name="wintersport" ref="wintersport" active="0"/>
+
+under (map.xml or Navit.xml)
+
+	<mapset>
+	...
+	<map type="csv" name="pylon" active="no" data="$NAVIT_USER_DATADIR/txt/pylon.csv" item_type="poi_custom7" attr_types="position_longitude,position_latitude"/>
+	...
+	</mapset>
+
+The file with the coordinates (*data="$NAVIT_USER_DATADIR/txt/pylon.csv"*) is stored for Austria in the folder *txt*   
+Any icon in a folder (*$NAVIT_USER_DATADIR/poi/pylon*) - to find under *src/poi*   
+A circuit in the *OSD* or as below in the *GUI*
+
+	<img cond='navit.layout.layer[@name=="wintersport"].active==0' src='gui_stop' onclick='navit.mapset.map[@name=="pylon"].active=1;	navit.toggle_layer("wintersport"); refresh()'> <text>Wintersport</text> </img>
+	<img cond='navit.layout.layer[@name=="wintersport"].active==1' src='gui_active'	onclick='navit.mapset.map[@name=="pylon"].active=0;	navit.toggle_layer("wintersport"); refresh()'> <text>Wintersport</text> </img>
+
+### C - At high zoom level, show a world map or /*:
 
 ![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/Worldimage.jpg)
 
@@ -115,7 +155,7 @@ Enter the world map in a <layout name=" order="any".
 	<itemgra item_types="poi_customd" order="0-11">	<circle text_size="50" color="#008CC8" background_color="#40CCFF"/></itemgra>
 	</layer>
 
-### Center map to the cursor ###
+### D - Center map to the cursor
     timeout="86400"				| seconds to wait at scroll bevore the map jumps back to the active vehicle
     type="text" label="TEXT"
     \n					| new line
