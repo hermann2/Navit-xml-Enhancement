@@ -2,7 +2,7 @@
 ## Extension to Navit.xml  
 Created to 2560x1440 Galaxy S7 with navit-git 0.5.3+589c11d0  
 Icons are in folder - src - enclosed. The empty folder in (routing mask) can be replaced/fill with this or own.  
-* *A - Display of individual *Point of Interrest*  
+* *A - Display of individual Point of Interrest*  
 * *B - POI map dependent on demand*  
 * *C - At high zoom level, show a world map or /**  
 * *D - Center map to the cursor*  

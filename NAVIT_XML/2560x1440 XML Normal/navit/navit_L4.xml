@@ -19,7 +19,6 @@
 	<itemgra speed_range="3-" angle_range="327-349">	<icon src="$NAVIT_USER_DATADIR/maske/cursor15" w="96" h="96"/></itemgra>
 	<itemgra speed_range="3-" angle_range="350-360">	<icon src="cursor" w="96" h="96"/></itemgra>
 	</cursor>
-	<layer name="world_poly" ref="world_poly"/>
 	<layer name="poly" ref="poly"/>
 	<layer name="polyA" ref="polyA"/>
 	<layer name="poly_1" ref="poly_1" active="0"/>
@@ -28,7 +27,7 @@
 	<layer name="poly_icon" ref="poly_icon" active="0"/>
 	<layer name="u_street" ref="u_street"/>
 	<layer name="under_street" ref="under_street" active="0"/>
-	<layer name="rail" ref="rail" active="1"/>
+	<layer name="rails" ref="rails" active="1"/>
 	<layer name="wayside" ref="wayside" active="1"/>
 	<layer name="wayside_1" ref="wayside_1" active="1"/>
 	<layer name="highway" ref="highway"/>
@@ -79,8 +78,12 @@
 	<itemgra speed_range="3-" angle_range="327-349">	<icon src="$NAVIT_USER_DATADIR/maske/cursor15" w="96" h="96"/></itemgra>
 	<itemgra speed_range="3-" angle_range="350-360">	<icon src="cursor" w="96" h="96"/></itemgra>
 	</cursor>
-	<layer name="world_poly">
+	
+	<layer name="poly">
+	<itemgra item_types="image" order="0-11">	<image/>	</itemgra>
+	<itemgra item_types="poly_town" order="11-">	<polygon color="#00664450"/></itemgra>
 	<itemgra item_types="poly_water" order="9-11">	<polygon color="#2E5C77"/></itemgra>
+	<itemgra item_types="poly_water" order="12-">	<polygon color="#2E5C77BB"/></itemgra>
 	<itemgra item_types="poi_customc" order="2">	<icon src="%s" w="48" h="48"/></itemgra>
 	<itemgra item_types="poi_customc" order="3">	<icon src="%s" w="64" h="64" x="0" y="96"/><circle text_size="28" color="" background_color="#B00000"/></itemgra>
 	<itemgra item_types="poi_customc" order="4">	<icon src="%s" w="96" h="96" x="0" y="128"/><circle text_size="38" color="" background_color="#B00000"/></itemgra>
@@ -91,12 +94,7 @@
 	<itemgra item_types="poi_customd" order="4-5">	<circle text_size="36" color="#006699" background_color="#40CCFF"/></itemgra>
 	<itemgra item_types="poi_customd" order="6-7">	<circle text_size="42" color="#008CC8" background_color="#40CCFF"/></itemgra>
 	<itemgra item_types="poi_customd" order="8-11">	<circle text_size="50" color="#008CC8" background_color="#40CCFF"/></itemgra>
-	</layer>
-	<!-- worldimage.txt: image= worldimage.png + poi_customb= Wahrzeichen + poi_customc= Navit Flaggen + poi_customd= Text Sea -->
-	<layer name="poly">
-	<itemgra item_types="poly_town" order="11-">	<polygon color="#00664450"/></itemgra>
-	<itemgra item_types="poly_water" order="12-">	<polygon color="#2E5C77BB"/></itemgra>
-	</layer>
+	</layer> <!-- worldimage.txt: image= worldimage.png + poi_customb= Wahrzeichen + poi_customc= Navit Flaggen + poi_customd= Text Sea -->
 	<layer name="poly_1" active="1">
 	<itemgra item_types="poly_fell" order="11-14">	<polygon color="#78767880"/></itemgra>
 	<itemgra item_types="poly_fell" order="15-16">	<polygon color="#787678AA"/></itemgra>
@@ -276,7 +274,7 @@
 	<layer name="poly_icon" ref="poly_icon" active="0"/>
 	<layer name="u_street" ref="u_street"/>
 	<layer name="under_street" ref="under_street" active="0"/>
-	<layer name="rail" ref="rail" active="1"/>
+	<layer name="rails" ref="rails" active="1"/>
 	<layer name="wayside" ref="wayside" active="1"/>
 	<layer name="wayside_1" ref="wayside_1" active="1"/>	
 	<layer name="highway" ref="highway"/>
