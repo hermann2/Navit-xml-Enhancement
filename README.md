@@ -2,13 +2,15 @@
 ## Extension to Navit.xml  
 Created to 2560x1440 Galaxy S7 with navit-git 0.5.3+589c11d0  
 Icons are in folder - src - enclosed. The empty folder in (routing mask) can be replaced/fill with this or own.  
-* A - Display of individual *Point of Interrest*  
-* B - POI map dependent on demand  
-* C - At high zoom level, show a world map or /*  
-* D - Center map to the cursor
-* E - Layout street_day and street_night
-### Installation:  
-Path in Device Memory --> Folder navit; Add Sub Folder: maske; poi; txt; (Heard)  
+* *A - Display of individual *Point of Interrest*  
+* *B - POI map dependent on demand*  
+* *C - At high zoom level, show a world map or /**  
+* *D - Center map to the cursor*  
+* *E - Layout street`_`day and street`_`night*
+### Installation:
+Path in Device Memory --> Folder navit; Add Sub Folder: maske, poi and txt;  
+Copy the files in the github to the respective folders in the device.  
+Folder navit(all *.xml), Folder navit/maske-maske.png, Folder navit/poi-poi.png, Folder navit/txt-`*`.txt  
 Path in SDcard to Map --> Folder navit  
 If the map is in the device memory then change in Navit.xml the Path under
 
@@ -16,6 +18,12 @@ If the map is in the device memory then change in Navit.xml the Path under
 	map type="textfile" active="yes" data="$NAVIT_USER_DATADIR/Your_Map_Name.bin"
 	..........
 	</mapset>
+and you can in the device click bottom right on compass and download a Map.  
+
+To open the **GUI-Menu** click bottom right on the gear.  
+A small user Manual can be found in the Folder **ROUTE-DATA/Manual** (sorry, only spoken in German).  
+For other languages replace in the navit.xml the german text ("translate into your speech"). Search the lines under GUI as listed below.  
+***<img src='communication' onclick='navit.say("translate into your speech")'<text>Enter destination</text</img>***
 
 ![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/navit_map.jpg)
 
@@ -51,7 +59,7 @@ any **OSD Button "[POI]"**
 
 	<osd x="0" y="0" w="160" h="140" font_size="650" type="text" label="[POI]\n" command='gui.menu("#POI_Icons")' background_color="#FFFFFF00" align="0" text_color="#902080"/>
 
-open the **GUI Menü "POI_Icons"**
+open the **GUI Menu "POI_Icons"**
 
 ![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/poi_auswahl.jpg)
 
@@ -178,7 +186,7 @@ Example for entry under **OSD**
 
 	<osd x="0" y="-560" w="290" h="290" font_size="940" type="text" label="CENTER\nCURSOR" command="follow=1; zoom=4; set_center_cursor()" enable_expression="follow&gt;1&amp;&amp;vehicle.position_valid" background_color="#56FF00BB" align="4" text_color="#000000"/>
 
-### E - Layout street_day and street_night
+### E - Layout street`_`day and street`_`night
 These two layouts are minimally created for routing by car.  
 To expand with additional functions, representations and adaptation to the personal imagination, these layouts form a manageable basis.  
 Gradually changes or additions can be created and tracked. Especially suitable for quick adaptation to a new device.
