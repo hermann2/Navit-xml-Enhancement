@@ -1,4 +1,4 @@
-	<layout name="DARKGLOW" color="#191919" daylayout="MOTORIST" order_delta="0" underground_alpha="0x77">
+	<layout name="DARKGLOW" color="#191919" daylayout="MOTORIST" font="Arial" order_delta="0" underground_alpha="0x77">
 	<cursor w="230" h="230" interval="20000" sequence_range="-1">
 	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="180" h="180"/>	</itemgra>
 	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="180" h="180"/>	</itemgra>
