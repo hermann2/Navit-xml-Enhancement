@@ -1,17 +1,31 @@
 
-	<layout name="DARKGLOW" color="#191919" daylayout="MOTORIST" font="Gothic Bold" order_delta="0" underground_alpha="0x77">
-	<cursor w="230" h="230" interval="20000" sequence_range="-1">
-	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="180" h="180"/>	</itemgra>
-	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="180" h="180"/>	</itemgra>
-	<itemgra sequence_range="1" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="180" h="180"/>	</itemgra>
-	<itemgra sequence_range="0" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="156" h="156"/>	</itemgra>
-	<itemgra sequence_range="1" speed_range="60-">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="156" h="156"/>	</itemgra>
+	<layout name="DARKGLOW_1" color="#191919" daylayout="MOTORIST_1" order_delta="0" underground_alpha="150">
+	<cursor w="230" h="230">
+	<itemgra speed_range="-2">	<icon src="cursor_still" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-">	<circle color="#FFFF0066" radius="110" width="16">	<coord x="115" y="115"/>	</circle>	</itemgra>
+	<itemgra speed_range="3-" angle_range="0-10">		<icon src="cursor" w="96" h="96"/>		</itemgra>
+	<itemgra speed_range="3-" angle_range="11-33">		<icon src="cursor225" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="34-56">		<icon src="cursor450" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="57-79">		<icon src="cursor675" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="80-100">		<icon src="$NAVIT_USER_DATADIR/maske/cursor4" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="101-123">	<icon src="$NAVIT_USER_DATADIR/maske/cursor5" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="124-146">	<icon src="$NAVIT_USER_DATADIR/maske/cursor6" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="147-169">	<icon src="$NAVIT_USER_DATADIR/maske/cursor7" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="170-190">	<icon src="$NAVIT_USER_DATADIR/maske/cursor8" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="191-213">	<icon src="$NAVIT_USER_DATADIR/maske/cursor9" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="214-236">	<icon src="$NAVIT_USER_DATADIR/maske/cursor10" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="237-259">	<icon src="$NAVIT_USER_DATADIR/maske/cursor11" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="260-280">	<icon src="$NAVIT_USER_DATADIR/maske/cursor12" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="281-303">	<icon src="$NAVIT_USER_DATADIR/maske/cursor13" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="304-326">	<icon src="$NAVIT_USER_DATADIR/maske/cursor14" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="327-349">	<icon src="$NAVIT_USER_DATADIR/maske/cursor15" w="96" h="96"/>	</itemgra>
+	<itemgra speed_range="3-" angle_range="350-360">	<icon src="cursor" w="96" h="96"/>	</itemgra>
 	</cursor>
+	
 	<layer name="poly">
-	<itemgra item_types="image" order="-6">	<image/>	</itemgra>
-	<itemgra item_types="poly_water_tiled" order="7-">	<polygon color="#556677"/>	</itemgra>
+	<itemgra item_types="image" order="0-11">	<image/>	</itemgra>
 	<itemgra item_types="poly_town" order="11-">	<polygon color="#00664450"/>	</itemgra>
-	<itemgra item_types="poly_water" order="8-11">	<polygon color="#2E5C77"/>	</itemgra>
+	<itemgra item_types="poly_water" order="9-11">	<polygon color="#2E5C77"/>		</itemgra>
 	<itemgra item_types="poly_water" order="12-">	<polygon color="#2E5C77BB"/>	</itemgra>
 	<itemgra item_types="poi_customb" order="3">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="64" h="64"/> </itemgra>
 	<itemgra item_types="poi_customb" order="4">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="96" h="96"/> </itemgra>
@@ -34,8 +48,8 @@
 	<itemgra item_types="poi_custome" order="0">	<circle text_size="36"	color="" background_color="#004411" /> </itemgra>
 	<itemgra item_types="poi_custome" order="1">	<circle text_size="50"	color="" background_color="#004411" /> </itemgra>
 	<itemgra item_types="poi_custome" order="2-3">	<circle text_size="98"	color="" background_color="#004411" /> </itemgra>
-	</layer>
-	<layer name="poly_1" active="0">
+	</layer> <!-- worldimage.txt: image= worldimage.png + poi_customb= Wahrzeichen + poi_customc= Navit Flaggen + poi_customd= Text Sea -->
+	<layer name="poly_1" active="1">
 	<itemgra item_types="poly_fell" order="11-14">	<polygon color="#78767880"/>	</itemgra>
 	<itemgra item_types="poly_fell" order="15-16">	<polygon color="#787678AA"/>	</itemgra>
 	<itemgra item_types="poly_fell" order="17-">	<polygon color="#787678AA"/>	<text color="#DB4DFF" text_size="32"/>	</itemgra>
@@ -68,6 +82,8 @@
 	<itemgra item_types="poly_naval_base" order="15-">		<polygon color="#E8BCFF80"/>	<polyline color="#66666690" width="4"/>	<text color="#BB38FF" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_marine" order="13-14">	<polygon color="#D9409650"/>	</itemgra>
 	<itemgra item_types="poly_marine" order="15-">		<polygon color="#D9409670"/>	<text color="#D80000" text_size="32"/>	</itemgra>
+	<itemgra item_types="poly_landfill" order="14-16">	<polygon color="#9D9C6C50"/>	</itemgra>
+	<itemgra item_types="poly_landfill" order="17-">	<polygon color="#9D9C6C70"/>	<polyline color="#A00000" width="4"/>	<text color="#7757FF" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_village_green" order="13-16">	<polygon color="#8B9E7150"/>	</itemgra>
 	<itemgra item_types="poly_village_green" order="17-">	<polygon color="#8B9E7180"/>	<polyline color="#34703490" width="4"/>	<text color="#214721" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_recreation_ground" order="14-16">	<polygon color="#6BA68560"/>	</itemgra>
@@ -85,7 +101,7 @@
 	<itemgra item_types="poly_park" order="17-">	<polygon color="#669147AA"/>	<polyline color="#7BB05690" width="4"/>	<text color="#77FF55" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_range" order="13-16">	<polygon color="#E67A7A20"/>	</itemgra>
 	<itemgra item_types="poly_range" order="17-">	<polygon color="#E67A7A30"/>	<polyline color="#EB96D6" width="4"/>	<text color="#D80000" text_size="32"/>	</itemgra>
-	<itemgra item_types="poly_sport" order="12-16">	<polygon color="#6AAAA660"/>	</itemgra>
+	<itemgra item_types="poly_sport" order="13-16">	<polygon color="#6AAAA660"/>	</itemgra>
 	<itemgra item_types="poly_sport" order="17-">	<polygon color="#6AAAA680"/>	<polyline color="#6AAA6A" width="2"/>	<text color="#006660" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_heath" order="14">	<polygon color="#66772250"/>	</itemgra>
 	<itemgra item_types="poly_heath" order="15-16">	<polygon color="#66772260"/>	</itemgra>
@@ -124,6 +140,8 @@
 	<itemgra item_types="poly_picnic_site" order="17-">		<polygon color="#74A98280"/>	<text color="#340069" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_sports_centre" order="12-16">	<polygon color="#77AAA740"/>	</itemgra>
 	<itemgra item_types="poly_sports_centre" order="17-">	<polygon color="#77AAA760"/>	<polyline color="#FBE2FF" width="8"/>	<text color="#006660" text_size="32"/>	</itemgra>
+	<itemgra item_types="poly_fishing" order="13-16">	<polygon color="#7BBCCC50"/>	</itemgra>
+	<itemgra item_types="poly_fishing" order="17-">		<polygon color="#7BBCCC70"/>	<text color="#00DED1" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_beach" order="12-16">	<polygon color="#FFF7DD90"/>	</itemgra>
 	<itemgra item_types="poly_beach" order="17-">	<polygon color="#FFF7DDAA"/>	<text color="#8000D4" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_museum" order="14-16">	<polygon color="#FFFFFF60"/>	</itemgra>
@@ -138,6 +156,10 @@
 	<itemgra item_types="poly_garden" order="17-">		<polygon color="#52855280"/>	<polyline color="#FFD8AAAA" width="3"/>	<text color="#FFEE33" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_allotments" order="14-16">	<polygon color="#DAE88B50"/>	</itemgra>
 	<itemgra item_types="poly_allotments" order="17-">		<polygon color="#DAE88B80"/>	<polyline color="#47AA47AA" width="4"/>	<text color="#E2FFD6" text_size="32"/>	</itemgra>
+	<itemgra item_types="poly_archaeological_site" order="14-16">	<polyline color="#FFDD99" width="4"/>	</itemgra>
+	<itemgra item_types="poly_archaeological_site" order="17-">		<polyline color="#FFDD9990" width="14"/>	<text color="#D0B000" text_size="32"/>	</itemgra>
+	<itemgra item_types="poly_battlefield" order="14-16">	<polyline color="#BA77BA" width="4"/>	</itemgra>
+	<itemgra item_types="poly_battlefield" order="17-">		<polyline color="#BA77BA90" width="8"/>	<text color="#D0B000" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_ruins" order="14-16">	<polygon color="#BB85B550"/>	</itemgra>
 	<itemgra item_types="poly_ruins" order="17-">	<polygon color="#BB85B5AA"/>	<text color="#D0B000" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_zoo" order="13-16">	<polygon color="#55FF5520"/>	<polyline color="#FF70F7" width="3"/>	</itemgra>
@@ -146,15 +168,19 @@
 	<itemgra item_types="poly_sports_pitch" order="17-">	<polygon color="#7F943ECC"/>	<polyline color="#D6D6B6" width="3"/>	<text color="#00DFFF" text_size="32"/>	</itemgra>
 	<itemgra item_types="poly_sports_stadium" order="13-16">	<polygon color="#C0C0C080"/>	<polyline color="#AB6B6B" width="2"/>	</itemgra>
 	<itemgra item_types="poly_sports_stadium" order="17-">		<polygon color="#C0C0C0AA"/>	<polyline color="#AB6B6B" width="4"/>	<text color="#00DFFF" text_size="32"/>	</itemgra>
+	<itemgra item_types="poly_playground" order="13-16">	<polygon color="#D2E0C4AA"/>	<polyline color="#FFFDDD" width="4"/>	</itemgra>
+	<itemgra item_types="poly_playground" order="17-">		<polygon color="#D2E0C4AA"/>	<polyline color="#FFFDDD" width="8"/>	<text color="#000000" text_size="32"/>	</itemgra>
+	<itemgra item_types="poly_artwork" order="14-16">	<polygon color="#CF90CF80"/>	<polyline color="#FFB4FF" width="2"/>	</itemgra>
+	<itemgra item_types="poly_artwork" order="17-">		<polygon color="#CF90CFAA"/>	<polyline color="#FFB4FF" width="4"/>	<text color="#A200FF" text_size="32"/>	</itemgra>
 	</layer>
-	<layer name="poly_2" ref="poly_2" active="0"/>
+	<layer name="poly_2" ref="poly_2" active="1"/>
 	<layer name="water">
 	<itemgra item_types="water_drain" order="13-15">	<polyline color="#4A6B6B" width="4"/>	</itemgra>
 	<itemgra item_types="water_drain" order="16">		<polyline color="#4A6B6BBB" width="8"/>	<text text_size="24" color="#0000FF" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="water_drain" order="17">		<polyline color="#4A6B6BAA" width="14"/>	<text text_size="28" color="#0000FF" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="water_drain" order="18-">		<polyline color="#4A6B6B90" width="22"/>	<text text_size="36" color="#0000FF" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="water_canal" order="12-13">	<polyline color="#2B4A4A" width="4"/>	</itemgra>
-	<itemgra item_types="water_canal" order="14">	<polyline color="#2B4A4ADD" width="6"/>	</itemgra>
+	<itemgra item_types="water_canal" order="14">	<polyline color="#2B4A4ADD" width="6"/>		</itemgra>
 	<itemgra item_types="water_canal" order="15">	<polyline color="#2B4A4ABB" width="10"/>	</itemgra>
 	<itemgra item_types="water_canal" order="16">	<polyline color="#2B4A4ABB" width="14"/>	<text text_size="24" color="#0000FF" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="water_canal" order="17">	<polyline color="#2B4A4ABB" width="24"/>	<text text_size="28" color="#0000FF" background_color="#000000"/>	</itemgra>
@@ -184,15 +210,15 @@
 	<itemgra item_types="poly_basin" order="12-16">	<polygon color="#49699990"/>	<polyline color="#CC5FFE90" width="2"/>	</itemgra>
 	<itemgra item_types="poly_basin" order="17-">	<polygon color="#496999AA"/>	<polyline color="#CC5FFE90" width="4"/>	<text text_size="32" color="#40006A"/>	</itemgra>
 	<itemgra item_types="water_line" order="1-11">	<polyline color="#396999" width="1"/>	</itemgra>
-	<itemgra item_types="water_line" order="12-14">	<polyline color="#396999" width="2"/>	<circle text_size="26" color="#44A2FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_line" order="12-14">	<polyline color="#396999" width="2"/>	<circle text_size="28" color="#44A2FF" background_color="#0000FF"/>	</itemgra>
 	<itemgra item_types="water_line" order="15-16">	<polyline color="#396999" width="4"/>	<circle text_size="32" color="#44A2FF" background_color="#0000FF"/>	</itemgra>
 	<itemgra item_types="water_line" order="17-">	<polyline color="#396999" width="4"/>	<circle text_size="38" color="#44A2FF" background_color="#0000FF"/>	<text text_size="38" color="#0000FF" background_color="#0000FF"/>	</itemgra>
 	<itemgra item_types="poly_reservoir" order="11-14">	<polygon color="#697299AA"/>	</itemgra>
 	<itemgra item_types="poly_reservoir" order="15-">	<polygon color="#697299BB"/>	<polyline color="#4470CCAA" width="6"/>	<text text_size="32" color="#150051"/>	</itemgra>
-	<itemgra item_types="poly_water" order="11-14">	<polyline color="#2E5C7790" width="4"/>	</itemgra>
-	<itemgra item_types="poly_water" order="15-16">	<polyline color="#2E5C77AA" width="6"/>	<text text_size="22" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="poly_water" order="11-14">	<polyline color="#2E5C7790" width="4"/>		</itemgra>
+	<itemgra item_types="poly_water" order="15-16">	<polyline color="#2E5C77AA" width="6"/>		<text text_size="22" color="#0000FF"/>	</itemgra>
 	<itemgra item_types="poly_water" order="17-">	<polyline color="#2E5C77BB" width="12"/>	<text text_size="32" color="#0000FF"/>	</itemgra>
-	<itemgra item_types="border_state" order="12-14">	<polyline color="#7A77A790" width="6"/>	</itemgra>
+	<itemgra item_types="border_state" order="12-14">	<polyline color="#7A77A790" width="6"/>		</itemgra>
 	<itemgra item_types="border_state" order="15-16">	<polyline color="#7A77A760" width="16"/>	</itemgra>
 	<itemgra item_types="border_state" order="17-">		<polyline color="#7A77A740" width="28"/>	<text text_size="32" color="#FF00FC"/>	</itemgra>
 	<itemgra item_types="border_country" order="8-13">	<polyline color="#FF0000" width="4"/>		<circle color="#FF0000" radius="14" width="7"/>	</itemgra>
@@ -202,13 +228,13 @@
 	<layer name="poly_icon" ref="poly_icon" active="0"/>
 	<layer name="u_street" ref="u_street"/>
 	<layer name="under_street" ref="under_street" active="0"/>
-	<layer name="rails" ref="rails" active="0"/>
-	<layer name="wayside" ref="wayside" active="0"/>
-	<layer name="wayside_1" ref="wayside_1" active="0"/>
+	<layer name="rails" ref="rails" active="1"/>
+	<layer name="wayside" ref="wayside" active="1"/>
+	<layer name="wayside_1" ref="wayside_1" active="1"/>	
 	<layer name="highway" ref="highway"/>
-	<layer name="ways" ref="ways" active="0"/>
+	<layer name="ways" ref="ways" active="1"/>
 	<layer name="highway_1" ref="highway_1"/>
-	<layer name="line_1" active="0">
+	<layer name="line_1" active="1">
 	<itemgra item_types="rail_tram" order="13">		<polyline color="#844800" width="2"/>	</itemgra>
 	<itemgra item_types="rail_tram" order="14-15">	<polyline color="#844800" width="4"/>	</itemgra>
 	<itemgra item_types="rail_tram" order="16">		<polyline color="#844800" width="8"/>	<polyline color="#94A4C4" width="4"/>	</itemgra>
@@ -256,6 +282,9 @@
 	<layer name="hiking_way" ref="hiking_way" active="0"/>
 	<layer name="up_street" ref="up_street" active="1"/>
 	<layer name="line" active="0">
+	<itemgra item_types="poly_attraction" order="13-14">	<polyline color="#CA66CAAA" width="6"/>	</itemgra>
+	<itemgra item_types="poly_attraction" order="15-16">	<polyline color="#CA66CABB" width="10"/>	<text text_size="28" color="#C000C0"/>	<circle text_size="32" color="#C000C0"/>	</itemgra>
+	<itemgra item_types="poly_attraction" order="17-">		<polyline color="#CA66CACC" width="18"/>	<text text_size="32" color="#C000C0"/>	<circle text_size="36" color="#C000C0"/>	</itemgra>
 	<itemgra item_types="fence" order="14-15">	<polyline color="#660088" width="2"/>	</itemgra>
 	<itemgra item_types="fence" order="16">		<polyline color="#660088" width="4"/>	</itemgra>
 	<itemgra item_types="fence" order="17-">	<polyline color="#66008890" width="8"/>	</itemgra>
@@ -277,6 +306,13 @@
 	<itemgra item_types="city_wall" order="15">		<polyline color="#756868" width="8"/>	</itemgra>
 	<itemgra item_types="city_wall" order="16">		<polyline color="#756868" width="14"/>	</itemgra>
 	<itemgra item_types="city_wall" order="17-">	<polyline color="#756868" width="22"/>	</itemgra>
+	<itemgra item_types="poi_tree" order="15">	<icon src="$NAVIT_USER_DATADIR/poi/tree_d" w="32" h="32" x="16" y="32"/>	</itemgra>
+	<itemgra item_types="poi_tree" order="16">	<icon src="$NAVIT_USER_DATADIR/poi/tree_d" w="48" h="48" x="24" y="48"/>	</itemgra>
+	<itemgra item_types="poi_tree" order="17">	<icon src="$NAVIT_USER_DATADIR/poi/tree_d" w="64" h="64" x="32" y="64"/>	</itemgra>
+	<itemgra item_types="poi_tree" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/tree_d" w="128" h="128" x="64" y="128"/>	</itemgra>
+	<itemgra item_types="poi_fountain" order="15-16">	<icon src="fountain" w="32" h="32" x="16" y="16"/>	</itemgra>
+	<itemgra item_types="poi_fountain" order="17">		<icon src="fountain" w="48" h="48" x="24" y="24"/>	</itemgra>
+	<itemgra item_types="poi_fountain" order="18-">		<icon src="fountain" w="64" h="64" x="32" y="32"/>	</itemgra>
 	</layer>
 	<layer name="POI Symbols" ref="POI Symbols"/>
 	<layer name="wintersport" ref="wintersport" active="0"/>
@@ -290,6 +326,7 @@
 	<layer name="poly_icon_label" ref="poly_icon_label" active="0"/>
 	<layer name="my" ref="my" active="0"/>
 	<layer name="Internal" ref="Internal"/>
+
 	<layer name="world_labels_bevore" active="0">
 	<itemgra item_types="town_label_5e4" order="6">		<circle text_size="32" color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_5e4" order="6">	<circle text_size="26" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
@@ -299,6 +336,10 @@
 	<itemgra item_types="district_label_1e6,district_label_2e6" order="4">	<circle text_size="26" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="town_label_1e7" order="1-2">		<circle text_size="22" color="#000000" radius="12" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_1e7" order="1-2">	<circle text_size="18" color="" background_color="#800000" radius="12" width="3"/>	</itemgra>
+	<itemgra item_types="poi_tunnel" order="14-16">		<circle text_size="32" color="#781178"/>	</itemgra>
+	<itemgra item_types="poi_custom3" order="10-12">	<circle text_size="26" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_custom3" order="13-16">	<circle text_size="32" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_custom5" order="12-14">	<circle text_size="32" color="#0000FF"/>	</itemgra>
 	</layer>
 	<layer name="world_labels">
 	<itemgra item_types="town_label_1e5,town_label_2e5" order="6">			<circle text_size="32" color="#000000" radius="10" width="3"/>	</itemgra>
@@ -311,40 +352,40 @@
 	<itemgra item_types="district_label_5e6" order="4">		<circle text_size="32" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="town_label_5e6" order="5-6">		<circle text_size="42" background_color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_5e6" order="5-6">	<circle text_size="36" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="town_label_1e7" order="3">		<circle text_size="28" color="#000000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="town_label_1e7" order="4">		<circle text_size="42" color="#000000" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="town_label_1e7" order="3">			<circle text_size="28" color="#000000" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="town_label_1e7" order="4">			<circle text_size="42" color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_1e7" order="4-6">	<circle text_size="36" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="town_label_1e7" order="5-6">		<circle text_size="48" background_color="#000000" radius="10" width="3"/>	</itemgra>
 	</layer>
 	<layer name="labels_bevore" active="0">
 	<itemgra item_types="house_number" order="16">		<circle text_size="22" background_color="#FF00FF"/>	</itemgra>
 	<itemgra item_types="place_label" order="13-14">	<circle text_size="26" color="#00B3B3"/>	</itemgra>
-	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0" order="11">						<circle text_size="24" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="11">	<circle text_size="22" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0" order="12">			<circle text_size="28" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="12">	<circle text_size="24" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="11">				<circle text_size="26" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="11">	<circle text_size="24" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="12">				<circle text_size="32" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="12">	<circle text_size="26" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2" order="11">			<circle text_size="28" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2" order="11">	<circle text_size="24" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_5e2" order="11">		<circle text_size="28" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_5e2" order="11">	<circle text_size="26" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="12">				<circle text_size="34" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="12">	<circle text_size="28" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3" order="10">			<circle text_size="28" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3" order="10">	<circle text_size="24" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_2e3" order="9">		<circle text_size="26" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_2e3" order="9">	<circle text_size="22" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_5e3" order="8">		<circle text_size="26" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_5e3" order="8">	<circle text_size="22" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e4" order="8">		<circle text_size="28" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e4" order="8">	<circle text_size="24" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_2e4" order="7-8">		<circle text_size="28" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_2e4" order="7-8">	<circle text_size="24" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_5e4" order="7">		<circle text_size="32" color="#FFFFFF" background_color="#000000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="district_label_5e4" order="7">	<circle text_size="26" color="#FFFFFF" background_color="#800000" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0" order="11">						<circle text_size="24" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="11">	<circle text_size="22" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0" order="12">			<circle text_size="28" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0" order="12">	<circle text_size="24" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="11">				<circle text_size="26" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="11">	<circle text_size="24" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="12">				<circle text_size="32" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="12">	<circle text_size="26" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2" order="11">			<circle text_size="28" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2" order="11">	<circle text_size="24" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_5e2" order="11">		<circle text_size="28" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_5e2" order="11">	<circle text_size="26" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="12">				<circle text_size="34" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="12">	<circle text_size="28" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3" order="10">			<circle text_size="28" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3" order="10">	<circle text_size="24" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_2e3" order="9">		<circle text_size="26" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_2e3" order="9">	<circle text_size="22" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_5e3" order="8">		<circle text_size="26" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_5e3" order="8">	<circle text_size="22" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e4" order="8">		<circle text_size="28" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e4" order="8">	<circle text_size="24" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_2e4" order="7-8">		<circle text_size="28" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_2e4" order="7-8">	<circle text_size="24" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_5e4" order="7">			<circle text_size="32" color="#FFFFFF" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="district_label_5e4" order="7">		<circle text_size="26" color="" background_color="#FF99BB" radius="10" width="3"/>	</itemgra>
 	</layer>
 	<layer name="labels">
 	<itemgra item_types="street_unkn" order="16">	<text text_size="26" color="#A90000"/>	</itemgra>
@@ -352,50 +393,50 @@
 	<itemgra item_types="house_number" order="17">	<circle text_size="26" color="#FF00FF"/>	</itemgra>
 	<itemgra item_types="house_number" order="18-">	<circle text_size="32" color="#FF00FF"/>	</itemgra>
 	<itemgra item_types="place_label" order="15-">	<circle text_size="32" color="#00B3B3"/>	</itemgra>
-	<itemgra item_types="town_label,town_label_0e0" order="13-">			<circle text_size="32" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label,district_label_0e0" order="13-14">	<circle text_size="28" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="district_label,district_label_0e0" order="15-">	<circle text_size="34" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e0,town_label_2e0,town_label_5e0" order="13-">					<circle text_size="34" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="13-14">	<circle text_size="32" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="15-">		<circle text_size="36" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="13-">				<circle text_size="36" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-14">	<circle text_size="34" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="15-">	<circle text_size="38" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="13">				<circle text_size="38" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-17">				<circle text_size="42" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-17">	<circle text_size="38" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3" order="11">			<circle text_size="28" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3" order="11">	<circle text_size="26" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_5e3" order="9-11">		<circle text_size="32" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_5e3" order="9-11">	<circle text_size="28" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="12-13">				<circle text_size="42" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="12-13">	<circle text_size="38" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="14-17">				<circle text_size="46" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="14-17">	<circle text_size="42" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e4,town_label_2e4" order="10-11">			<circle text_size="34" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4" order="10-11">	<circle text_size="32" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_5e4" order="8-11">		<circle text_size="36" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_5e4" order="8-11">	<circle text_size="32" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e4,town_label_2e4,town_label_5e4" order="12-16">				<circle text_size="48" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12-16">	<circle text_size="46" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e5,town_label_2e5" order="7">			<circle text_size="32" color="#FFFFFF" background_color="#000000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5" order="7">	<circle text_size="26" color="#FFFFFF" background_color="#800000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="town_label_1e5,town_label_2e5" order="8-11">			<circle text_size="38" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5" order="8-11">	<circle text_size="32" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_5e5" order="7-11">		<circle text_size="42" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_5e5" order="7-11">	<circle text_size="36" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="12-15">				<circle text_size="52" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="48" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e6,town_label_2e6" order="7-11">			<circle text_size="46" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6" order="7-11">	<circle text_size="38" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_5e6" order="7-11">		<circle text_size="48" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_5e6" order="7-11">	<circle text_size="42" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6" order="12-14">				<circle text_size="56" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12-14">	<circle text_size="52" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e7" order="7-11">		<circle text_size="52" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e7" order="7-11">	<circle text_size="48" color="#FFFFFF" background_color="#800000"/>	</itemgra>
-	<itemgra item_types="town_label_1e7" order="12-14">		<circle text_size="60" color="#FFFFFF" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="56" color="#FFFFFF" background_color="#800000"/>	</itemgra>
+	<itemgra item_types="town_label,town_label_0e0" order="13-">			<circle text_size="32" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label,district_label_0e0" order="13-14">	<circle text_size="28" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="district_label,district_label_0e0" order="15-">	<circle text_size="34" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e0,town_label_2e0,town_label_5e0" order="13-">					<circle text_size="34" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="13-14">	<circle text_size="32" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="district_label_1e0,district_label_2e0,district_label_5e0" order="15-">		<circle text_size="36" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e1,town_label_2e1,town_label_5e1" order="13-">					<circle text_size="36" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="13-14">	<circle text_size="34" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="district_label_1e1,district_label_2e1,district_label_5e1" order="15-">		<circle text_size="38" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="13">					<circle text_size="38" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="town_label_1e2,town_label_2e2,town_label_5e2" order="14-17">				<circle text_size="42" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e2,district_label_2e2,district_label_5e2" order="13-17">	<circle text_size="38" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3" order="11">			<circle text_size="28" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3" order="11">	<circle text_size="26" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_5e3" order="9-11">		<circle text_size="32" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_5e3" order="9-11">	<circle text_size="28" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="12-13">				<circle text_size="42" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="12-13">	<circle text_size="38" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e3,town_label_2e3,town_label_5e3" order="14-17">				<circle text_size="46" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="14-17">	<circle text_size="42" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e4,town_label_2e4" order="10-11">			<circle text_size="34" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4" order="10-11">	<circle text_size="32" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_5e4" order="8-11">		<circle text_size="36" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_5e4" order="8-11">	<circle text_size="32" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e4,town_label_2e4,town_label_5e4" order="12-16">				<circle text_size="48" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="12-16">	<circle text_size="46" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5" order="7">				<circle text_size="32" color="#FFFFFF" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5" order="7">		<circle text_size="26" color="" background_color="#FF99BB" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5" order="8-11">			<circle text_size="38" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5" order="8-11">	<circle text_size="32" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_5e5" order="7-11">		<circle text_size="42" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_5e5" order="7-11">	<circle text_size="36" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="12-15">				<circle text_size="52" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="13-15">	<circle text_size="48" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6" order="7-11">			<circle text_size="46" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6" order="7-11">	<circle text_size="38" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_5e6" order="7-11">		<circle text_size="48" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_5e6" order="7-11">	<circle text_size="42" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6" order="12-14">				<circle text_size="56" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6" order="12-14">	<circle text_size="52" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e7" order="7-11">		<circle text_size="52" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e7" order="7-11">	<circle text_size="48" color="" background_color="#FF99BB"/>	</itemgra>
+	<itemgra item_types="town_label_1e7" order="12-14">		<circle text_size="60" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="district_label_1e7" order="12-14">	<circle text_size="56" color="" background_color="#FF99BB"/>	</itemgra>
 	<itemgra item_types="found_item" order="11-14">	<circle color="#FF00BB" radius="28" width="4"/>	</itemgra>
 	<itemgra item_types="found_item" order="15-16">	<circle text_size="24" color="#660044" background_color="#FF00BB" radius="46" width="4"/>	</itemgra>
 	<itemgra item_types="found_item" order="17-">	<circle text_size="32" color="#660044" background_color="#FF00BB" radius="72" width="4"/>	</itemgra>
