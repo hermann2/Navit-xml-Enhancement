@@ -1,21 +1,23 @@
 
 <mapset>
-	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_shrine.txt"/>
-
-	<map name="wandern" type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/a_hiking.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_cross_shrine.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_marktplatz.txt"/>
+	<map name="wandern" type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_hiking.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_toll.txt"/>
 	<map type="textfile" name="street_add" enabled="yes" active="no" route_active="1" search_active="1" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt"/>
 	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/D_strassendetail.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_e_tankstelle.txt"/>
 	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/EIGENE.txt"/>
 	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Track_recording.txt"/>
 	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/Wien Park_ride_ticket.txt"/>
 	<map type="garmin"  enabled="yes" active="yes" data="/storage/3239-6132/Navit/gmapsupp.img" debug="4"/>
 	<map type="binfile" enabled="yes" active="yes" data="storage/3239-6132/Navit/austria.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Deutschland.bin"/>
+	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Frankreich.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Ungarn.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Tschechische Republik.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Polen.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/sweden_norge.bin"/>
-	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/Frankreich.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/usa_w_alaska.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/usa_ost.bin"/>
 	<map type="binfile" enabled="yes" active="no" data="storage/3239-6132/Navit/asien.bin"/>
