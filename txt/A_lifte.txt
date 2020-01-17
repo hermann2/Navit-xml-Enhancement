@@ -873,7 +873,7 @@ type=forest_way_1 label="Waldbahn" count="13"
 10.5928457 47.0519016
 10.5921193 47.0518056
 
-type=forest_way_1 label="Kabinska Ãƒâ€¦Ã‚Â¾iÃƒâ€žÃ¯Â¿Â½nica Krvavec" count="18"
+type=forest_way_1 label="Kabinska nica Krvavec" count="18"
 14.4979216 46.2847901
 14.4980295 46.2848357
 14.4999001 46.2857053
@@ -2730,7 +2730,7 @@ type=forest_way_1 label="Gondelbahn Kulm" count="9"
 9.6640522 46.7823253
 9.6641224 46.7830699
 
-type=forest_way_1 label="KÃ¤nzeli-Brambüesch" count="2"
+type=forest_way_1 label="Känzeli-Brambüesch" count="2"
 9.5257114 46.8388917
 9.5162272 46.8289671
 
@@ -5982,7 +5982,6 @@ type=forest_way_1 label="way 659527387" count="2"
 14.0353227 46.3677053
 14.0202455 46.3546976
 
-
 type=lift_drag label="Olperer 1" count="7"
 11.670104 47.0606288
 11.6698515 47.0605565
@@ -6366,9 +6365,6 @@ type=lift_drag label="Ranggerköpfl-Lift"
 11.181157 47.2429541
 
 type=lift_drag label="Egghoflift"
-
-
-
 11.2304531 47.2397004
 11.2186645 47.2388252
 
@@ -6965,7 +6961,7 @@ type=lift_drag label="Seetäli"
 9.8151932 46.8537342
 9.8146406 46.8537525
 
-type=lift_drag label="Wartensteinerlift / Grosser Riegel" 
+type=lift_drag label="Wartensteinerlift / Grosser Riegel"
 15.7928169 47.6188475
 15.7905697 47.6174505
 
@@ -7032,9 +7028,6 @@ type=lift_drag label="Sorgschrofenlift I"
 10.4563125 47.5603486
 
 type=lift_drag label="Stockerboden"
-
-
-
 13.6595163 47.1218599
 13.6589112 47.1217768
 13.6571396 47.1215333
@@ -7910,7 +7903,7 @@ type=lift_drag label="KÃ– 3"
 14.7923795 47.7846375
 14.792648 47.7835593
 14.793015 47.7820854
-14.7932853 47781
+14.7932853 47.781
 14.7935163 47.7800721
 14.7935337 47.7799852
 14.7936351 47.7795956
@@ -8585,7 +8578,6 @@ type=lift_drag label="Planggerlift"
 10.7086572 47.040379
 10.7088049 47.0403524
 
-
 type=lift_drag label="Kaserwald I"
 11.3033227 47.1934375
 11.307067 47.1928508
@@ -9239,7 +9231,7 @@ type=lift_drag label="Skilift Eben"
 14.2883161 48.4240609
 14.2876713 48.424331
 
-type=lift_drag label="Schlepplift Slalom Kärnten" 
+type=lift_drag label="Schlepplift Slalom Kärnten"
 13.7476779 46.970598
 13.7473667 46.9698796
 13.7470614 46.9691068
@@ -9894,7 +9886,7 @@ type=lift_drag label="Hackl-Lift 1"
 14.215732 47.7058833
 14.2157085 47.7058509
 
-type=lift_drag label="Hackl- Lift 2"
+type=lift_drag label="Hackl-Lift 2"
 14.2157801 47.7054297
 14.215801 47.7052918
 14.2158843 47.7047436
@@ -10382,7 +10374,7 @@ type=lift_drag
 11.6352294 47.1698847
 11.6361771 47.1700852
 
-type=lift_drag label="Sciovia Sauris di Sotto" 
+type=lift_drag label="Sciovia Sauris di Sotto"
 12.7092709 46.4664314
 12.7095749 46.4670412
 12.7099279 46.4677494
@@ -10597,7 +10589,6 @@ type=lift_drag
 14.6323259 46.8726598
 
 type=lift_drag
-
 14.6179161 46.8700825
 14.618636 46.8706495
 14.6196246 46.8714282
@@ -10672,7 +10663,6 @@ type=lift_drag label="Berglandlift"
 13.8065827 48.7472879
 
 type=lift_drag
-
 13.6467002 48.8041836
 13.6474753 48.804042
 13.6486087 48.8038983
@@ -11285,7 +11275,6 @@ type=lift_drag label="Kolbenlift 1"
 11.0443921 47.5927791
 
 type=lift_drag
-
 14.2335875 46.4779523
 14.2324691 46.476138
 14.234422 46.4727384
@@ -11335,5 +11324,3 @@ type=lift_drag label="Schönleiten 2"
 type=lift_drag label="Hausberg-Privatlift"
 11.0923589 47.4811464
 11.0931404 47.4790765
-
-

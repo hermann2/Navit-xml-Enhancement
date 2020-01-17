@@ -41,7 +41,7 @@
 10.3136672 47.7160092 type=poi_custom1 icon_src="ev_car"
 11.2501252 48.1750126 type=poi_custom1 icon_src="ev_car"
 15.4591532 47.0690216 type=poi_custom1 icon_src="ev_car"
-10.6064740 47.7743006 type=poi_custom1 label="Iglauer straße 1" icon_src="ev_car"
+10.6064740 47.7743006 type=poi_custom1 label="Iglauer Straße 1" icon_src="ev_car"
 10.6145297 47.7735497 type=poi_custom1 label="Bahnhofstraße 38" icon_src="ev_car"
 16.4663745 48.4181007 type=poi_custom1 label="Elektrotankstelle" icon_src="ev_car"
 11.9718238 48.0742889 type=poi_custom1 icon_src="ev_car"
@@ -186,8 +186,8 @@
 12.1231544 49.0605505 type=poi_custom1 icon_src="ev_car"
 10.2992604 48.4249395 type=poi_custom1 icon_src="ev_bicycle"
 14.6807731 48.2832465 type=poi_custom1 label="Stromtankstelle" icon_src="ev_car"
-12.380034 47.482136 type=poi_custom1 label="Pass-Thurn-straße 22" icon_src="ev_car"
-12.3804063 47.4822387 type=poi_custom1 label="Pass-Thurn-straße 22 -0 24" icon_src="ev_car"
+12.380034 47.482136 type=poi_custom1 label="Pass-Thurn-Straße 22" icon_src="ev_car"
+12.3804063 47.4822387 type=poi_custom1 label="Pass-Thurn-Straße 22 -0 24" icon_src="ev_car"
 12.9264001 47.9845513 type=poi_custom1 icon_src="ev_car"
 12.925276 47.9822484 type=poi_custom1 icon_src="ev_car"
 15.9078399 46.9905685 type=poi_custom1 icon_src="ev_car"
@@ -3600,5 +3600,3 @@
 16.3748828 48.246862 type=poi_custom1 label="Leystraße" icon_src="ev_car"
 12.5363083 47.8907407 type=poi_custom1 icon_src="ev_car"
 16.1390341 46.682614 type=poi_custom1 icon_src="ev_car"
-
-

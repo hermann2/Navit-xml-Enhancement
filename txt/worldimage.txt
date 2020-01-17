@@ -431,19 +431,15 @@
 type=water_line
 -180.0 0.0
 180.0 0.0
-
 type=water_line
 -180.0 23.26
 180.0 23.26
-
 type=water_line
 -180.0 -23.26
 180.0 -23.26
-
 type=water_line
 -180.0 66.34
 180.0 66.34
-
 type=water_line
 -180.0 -66.33
 180.0 -66.33

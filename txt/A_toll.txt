@@ -1,0 +1,1 @@
+9.880496 46.857741 type=poi_custom1 label="Autoverlad Vereina-Selfranga west" icon_src="toll"

@@ -71,7 +71,7 @@ type=plantation label="Daleyelama Videoproduktion"
 16.331579 48.1722579
 type=plantation label="Gegenbauer Essig"
 16.3649966 48.1992517
-type=plantation label="PÃƒÂ¶hl"
+type=plantation label="Phl"
 16.3649094 48.199207 
 type=plantation label="Dorf Platz"
 13.1864017 47.8976175
