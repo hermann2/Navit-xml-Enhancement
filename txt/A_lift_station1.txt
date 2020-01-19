@@ -221,8 +221,8 @@ type=tundra
 
 type=tundra
 12.940399 46.3592937
-12.9404501 46.3592691
-12.9404751 46.359294
+12.940450 46.3592691
+12.940475 46.359294
 12.940505 46.3592796
 12.9405424 46.359317
 12.9404614 46.359356
@@ -5769,7 +5769,7 @@ type=tundra label="Salvenbahn I"
 12.1854317 47.4565015
 12.1855062 47.4565319
 
-type=tundra label="6er Sesselbahn Kreuzkogel Gegenst."
+type=tundra label="6er Sesselbahn Kreuzkogel Gegenstelle"
 13.1535251 47.2251291
 13.1534173 47.2250159
 13.1534145 47.2249984
@@ -5782,7 +5782,7 @@ type=tundra label="6er Sesselbahn Kreuzkogel Gegenst."
 13.1536123 47.2250897
 13.1535251 47.2251291
 
-type=tundra label="Wengerhochalmbahn" 
+type=tundra label="Wengerhochalmbahn"
 13.1350488 47.2335949
 13.1351265 47.2334949
 13.1350712 47.2334741
@@ -8391,7 +8391,7 @@ type=tundra
 13.8217458 47.8982552
 13.8216085 47.8984043
 
-type=tundra label="Bergstation" 
+type=tundra label="Bergstation"
 14.0529093 47.0755274
 14.052792 47.0754528
 14.0527819 47.0754612
@@ -8412,7 +8412,7 @@ type=tundra label="Bergstation"
 14.0529983 47.0754696
 14.0529093 47.0755274
 
-type=tundra label="DolnÃ¢Ë†Å¡Ãƒâ€°Ã‚Â¬Ã¢â€°Â  stanice lanovky"
+type=tundra label="Doln stanice lanovky"
 14.299259 48.8778348
 14.2991913 48.8777844
 14.2991678 48.877798
@@ -8537,7 +8537,7 @@ type=tundra
 9.4734862 47.0979621
 9.4734282 47.0980104
 
-type=tundra label="Wasenmooslift" 
+type=tundra label="Wasenmooslift"
 13.2537375 47.8668596
 13.2537301 47.8668601
 13.2537324 47.8668751
@@ -8582,7 +8582,7 @@ type=tundra
 10.1214032 47.1766712
 10.1214079 47.1767141
 
-type=tundra label="Intermedia" 
+type=tundra label="Intermedia"
 10.5802506 46.2279316
 10.5802547 46.2278612
 10.580271 46.2277881
@@ -8983,7 +8983,7 @@ type=tundra label="Albonabahn II Talstation"
 10.1807074 47.1384471
 10.1802774 47.1384778
 
-type=tundra label="Flexenbahn" 
+type=tundra label="Flexenbahn"
 10.1802175 47.1388798
 10.179815 47.1388694
 10.1798385 47.1385105
@@ -9801,7 +9801,7 @@ type=tundra
 13.2268098 46.5643454
 13.2269999 46.5645118
 
-type=tundra label="Isentalkopfbahn" 
+type=tundra label="Isentalkopfbahn"
 10.967842 47.3829121
 10.9678227 47.3829492
 10.9679268 47.3829742
@@ -9814,7 +9814,7 @@ type=tundra label="Isentalkopfbahn"
 10.9679064 47.3827892
 10.967842 47.3829121
 
-type=tundra label="Issentalkopf" 
+type=tundra label="Issentalkopf"
 10.9841193 47.3869961
 10.9841496 47.3869386
 10.9841854 47.3868707
@@ -10049,7 +10049,7 @@ type=tundra
 11.5176746 47.6611586
 11.5176044 47.6612078
 
-type=tundra label="Zwerenalpbahn" 
+type=tundra label="Zwerenalpbahn"
 10.2019748 47.337099
 10.202011 47.3370714
 10.2020414 47.3370483
@@ -10163,28 +10163,28 @@ type=tundra
 13.5010804 47.9050963
 13.5010398 47.9051329
 
-type=tundra label="Hochleckenlifte" 
+type=tundra label="Hochleckenlifte"
 13.6230624 47.8416239
 13.6230656 47.8415995
 13.6231713 47.8416058
 13.6231681 47.8416301
 13.6230624 47.8416239
 
-type=tundra label="Hochleckenlifte" 
+type=tundra label="Hochleckenlifte"
 13.6158549 47.8411009
 13.6158963 47.8411035
 13.6159011 47.841069
 13.6158597 47.8410665
 13.6158549 47.8411009
 
-type=tundra label="Hochleckenlifte" 
+type=tundra label="Hochleckenlifte"
 13.6230494 47.8416742
 13.6230529 47.8416488
 13.6231594 47.8416554
 13.6231559 47.8416808
 13.6230494 47.8416742
 
-type=tundra label="Hochleckenlifte" 
+type=tundra label="Hochleckenlifte"
 13.6159099 47.8411737
 13.6159611 47.841175
 13.6159627 47.8411452
@@ -10378,7 +10378,7 @@ type=tundra
 9.4533942 47.2605615
 9.4534471 47.260522
 
-type=tundra label="Milchhäusl-6er-Express" 
+type=tundra label="Milchhäusl-6er-Express"
 11.5563306 47.6622688
 11.5563226 47.6621583
 11.5555963 47.6621832

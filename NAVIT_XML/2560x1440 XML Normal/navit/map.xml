@@ -34,6 +34,7 @@
 	<map type="textfile" name="winter1" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_lift_station.txt"/>
 	<map type="textfile" name="winter2" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_lift_station1.txt"/>
 	<map type="textfile" name="hut" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_Hütte.txt"/>
-	<map type="csv" name="pylon" enabled="yes" active="no"  data="$NAVIT_USER_DATADIR/txt/A_pylon.csv" item_type="poi_wifi" attr_types="position_longitude,position_latitude"/>
+	<map type="csv" name="pylon" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/txt/A_pylon.csv" item_type="poi_wifi" attr_types="position_longitude,position_latitude"/>
+	<map type="csv" name="passing" enabled="yes" active="yes" data="$NAVIT_USER_DATADIR/txt/A_passing.txt" item_type="poi_custom2" attr_types="position_longitude,position_latitude"/>
 </mapset>
 

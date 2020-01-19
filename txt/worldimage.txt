@@ -1,4 +1,4 @@
-
+﻿
 4.0 50.5 type=poi_custome label="E U R O P E"
 5.0 5.2 type=poi_custome label="A F R I K A"
 90.0 55.0 type=poi_custome label="A   S   I   A"

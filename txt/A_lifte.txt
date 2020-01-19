@@ -1,5 +1,5 @@
 ﻿
-type=forest_way_1 label="Eisgratbahn" count="7"
+type=forest_way_1 label="Eisgratbahn"
 11.1621766 47.0132693
 11.1584319 47.0103925
 11.1560994 47.0086006
@@ -8,7 +8,7 @@ type=forest_way_1 label="Eisgratbahn" count="7"
 11.1409708 46.9969764
 11.1149974 46.9871135
 
-type=forest_way_1 label="Schaufeljochbahn" count="7"
+type=forest_way_1 label="Schaufeljochbahn"
 11.1145429 46.9870463
 11.1144112 46.986697
 11.1139532 46.9854821
@@ -17,16 +17,16 @@ type=forest_way_1 label="Schaufeljochbahn" count="7"
 11.1118852 46.9800385
 11.1109121 46.9772051
 
-type=forest_way_1 label="Gamsgartenbahn" count="3"
+type=forest_way_1 label="Gamsgartenbahn"
 11.1549091 47.0107579
 11.1404676 46.9971742
 11.1200542 46.9966501
 
-type=forest_way_1 label="Elferbahn Berg" count="2"
+type=forest_way_1 label="Elferbahn Berg"
 11.3123844 47.1109476
 11.3234386 47.0986227
 
-type=forest_way_1 label="Kreuzjochbahn Bergfahrt" count="14"
+type=forest_way_1 label="Kreuzjochbahn Bergfahrt"
 11.3435359 47.1552966
 11.3432305 47.1553291
 11.3424352 47.1554137
@@ -42,12 +42,12 @@ type=forest_way_1 label="Kreuzjochbahn Bergfahrt" count="14"
 11.3310249 47.1557175
 11.3071179 47.1453872
 
-type=forest_way_1 label="Serlesbahn Bergfahrt" count="3"
+type=forest_way_1 label="Serlesbahn Bergfahrt"
 11.3800561 47.1635762
 11.3805455 47.1631305
 11.3950092 47.1499574
 
-type=forest_way_1 label="413 Mühlbachl-Meransen" count="7"
+type=forest_way_1 label="413 Mühlbachl-Meransen"
 11.6639754 46.814783
 11.6645925 46.8122417
 11.6653757 46.8090163
@@ -56,7 +56,7 @@ type=forest_way_1 label="413 Mühlbachl-Meransen" count="7"
 11.6661829 46.8056922
 11.6681514 46.7975843
 
-type=forest_way_1 label="161 Oberbozen-Bozen" count="9"
+type=forest_way_1 label="161 Oberbozen-Bozen"
 11.4050114 46.5277845
 11.4035755 46.526805
 11.3959246 46.5215858
@@ -67,12 +67,12 @@ type=forest_way_1 label="161 Oberbozen-Bozen" count="9"
 11.3710359 46.5046038
 11.3642502 46.4999729
 
-type=forest_way_1 label="118 Bozen-Kolhern" count="3"
+type=forest_way_1 label="118 Bozen-Kolhern"
 11.3685415 46.4909409
 11.368785 46.4852748
 11.3690816 46.4783721
 
-type=forest_way_1 label="155 Bozen-Jenesien" count="9"
+type=forest_way_1 label="155 Bozen-Jenesien"
 11.3525062 46.5143002
 11.3469975 46.5200294
 11.3466124 46.5204797
@@ -83,17 +83,17 @@ type=forest_way_1 label="155 Bozen-Jenesien" count="9"
 11.3375922 46.5302564
 11.3357708 46.532235
 
-type=forest_way_1 label="203 Vilpian-Mölten" count="3"
+type=forest_way_1 label="203 Vilpian-Mölten"
 11.2247617 46.563349
 11.2348386 46.5686991
 11.2369383 46.5699009
 
-type=forest_way_1 label="226 Burgstall-Vöran" count="3"
+type=forest_way_1 label="226 Burgstall-Vöran"
 11.1992539 46.6005718
 11.2104038 46.6019955
 11.2231404 46.6036217
 
-type=forest_way_1 label="Zettersfeldbahn" count="22"
+type=forest_way_1 label="Zettersfeldbahn"
 12.7759727 46.8418016
 12.7760566 46.8419225
 12.7765843 46.8426827
@@ -117,7 +117,7 @@ type=forest_way_1 label="Zettersfeldbahn" count="22"
 12.7905866 46.8628505
 12.7907486 46.8630838
 
-type=forest_way_1 label="Jennerbahn" count="10"
+type=forest_way_1 label="Jennerbahn"
 12.9944723 47.5911273
 12.9959221 47.5908501
 13.0002435 47.5899736
@@ -129,7 +129,7 @@ type=forest_way_1 label="Jennerbahn" count="10"
 13.0163722 47.5867056
 13.0172195 47.5865401
 
-type=forest_way_1 label="Schöcklseilbahn" count="10"
+type=forest_way_1 label="Schöcklseilbahn"
 15.4859149 47.185745
 15.482791 47.1879769
 15.4802339 47.1897897
@@ -141,7 +141,7 @@ type=forest_way_1 label="Schöcklseilbahn" count="10"
 15.4682204 47.1983421
 15.4677685 47.1986637
 
-type=forest_way_1 label="Hössbahn" count="6"
+type=forest_way_1 label="Hössbahn"
 14.1566868 47.6992821
 14.1570468 47.6985755
 14.1587337 47.6952639
@@ -149,11 +149,11 @@ type=forest_way_1 label="Hössbahn" count="6"
 14.1612799 47.6903307
 14.1670902 47.6789937
 
-type=forest_way_1 label="8er Sommerberg" count="2"
+type=forest_way_1 label="8er Sommerberg"
 11.6748163 47.106912
 11.6636257 47.0974893
 
-type=forest_way_1 label="Fernerhaus" count="23"
+type=forest_way_1 label="Fernerhaus"
 11.6636463 47.0969988
 11.6637536 47.0967086
 11.6642308 47.0954175
@@ -178,7 +178,7 @@ type=forest_way_1 label="Fernerhaus" count="23"
 11.6707627 47.0777444
 11.6708913 47.0773964
 
-type=forest_way_1 label="Gletscherbus 3" count="12"
+type=forest_way_1 label="Gletscherbus 3"
 11.6725266 47.077178
 11.6729848 47.0763521
 11.6739943 47.0745322
@@ -192,7 +192,7 @@ type=forest_way_1 label="Gletscherbus 3" count="12"
 11.6803943 47.0629928
 11.6805632 47.0626883
 
-type=forest_way_1 label="Gefrorene Wand" count="7"
+type=forest_way_1 label="Gefrorene Wand"
 11.6712762 47.0771736
 11.6714505 47.0762305
 11.6715739 47.0755212
@@ -205,24 +205,24 @@ type=forest_way_1 label="Gefrorene Wand" count="7"
 11.6730956 47.0667664
 11.67318 47.0663396
 
-type=forest_way_1 label="Alpenrosenbahn I" count="2"
+type=forest_way_1 label="Alpenrosenbahn I"
 12.2140594 47.4274775
 12.2310443 47.422284
 
-type=forest_way_1 label="Rossbach" count="3"
+type=forest_way_1 label="Rossbach"
 12.8409185 47.0404785
 12.8413734 47.0408027
 12.8511383 47.0477893
 
-type=forest_way_1 label="Pozza-Buffaure" count="3"
+type=forest_way_1 label="Pozza-Buffaure"
 11.6983512 46.4278218
 11.722725 46.4307164
 
-type=forest_way_1 label="Canazei-Pecol" count="2"
+type=forest_way_1 label="Canazei-Pecol"
 11.7747887 46.4743643
 11.7881708 46.4811695
 
-type=forest_way_1 label="areitXpress" count="18"
+type=forest_way_1 label="areitXpress"
 12.7884047 47.3000022
 12.7881445 47.3000909
 12.7880589 47.3001201
@@ -242,7 +242,7 @@ type=forest_way_1 label="areitXpress" count="18"
 12.7685000 47.3067873
 12.7680460 47.306942
 
-type=forest_way_1 label="Areitbahn II" count="19"
+type=forest_way_1 label="Areitbahn II"
 12.7670844 47.3072681
 12.7667283 47.3074394
 12.7666769 47.3074641
@@ -263,7 +263,7 @@ type=forest_way_1 label="Areitbahn II" count="19"
 12.7508830 47.3150601
 12.7502709 47.3153545
 
-type=forest_way_1 label="Areitbahn III" count="14"
+type=forest_way_1 label="Areitbahn III"
 12.7502709 47.3153545
 12.7496917 47.3157131
 12.7486030 47.3163871
@@ -279,7 +279,7 @@ type=forest_way_1 label="Areitbahn III" count="14"
 12.7368273 47.3236768
 12.7362767 47.3240176
 
-type=forest_way_1 label="Hornbahn" count="10"
+type=forest_way_1 label="Hornbahn"
 13.4625382 47.5886947
 13.4628701 47.5882945
 13.4632539 47.5878224
@@ -291,7 +291,7 @@ type=forest_way_1 label="Hornbahn" count="10"
 13.4784701 47.5691002
 13.4788023 47.5686913
 
-type=forest_way_1 label="Kampenwandbahn" count="8"
+type=forest_way_1 label="Kampenwandbahn"
 12.3254842 47.7650446
 12.3267530 47.7644368
 12.3373951 47.7595821
@@ -301,7 +301,7 @@ type=forest_way_1 label="Kampenwandbahn" count="8"
 12.3504220 47.7536082
 12.3520840 47.7528432
 
-type=forest_way_1 label="Goldbergbahn I" count="7"
+type=forest_way_1 label="Goldbergbahn I"
 13.0587247 47.0621487
 13.0591862 47.0620328
 13.0617423 47.0614015
@@ -310,7 +310,7 @@ type=forest_way_1 label="Goldbergbahn I" count="7"
 13.0674290 47.059995
 13.0681460 47.0598067
 
-type=forest_way_1 label="Kanin (A-C)" count="17"
+type=forest_way_1 label="Kanin (A-C)"
 13.5382805 46.332795
 13.5108971 46.3431631
 13.5101126 46.3434601
@@ -329,12 +329,12 @@ type=forest_way_1 label="Kanin (A-C)" count="17"
 13.4950404 46.3491659
 13.4886943 46.3515682
 
-type=forest_way_1 label="Brauneck" count="3"
+type=forest_way_1 label="Brauneck"
 11.5545598 47.6749837
 11.5315647 47.6653755
 11.5268035 47.6631925
 
-type=forest_way_1 label="Panoramabahn" count="13"
+type=forest_way_1 label="Panoramabahn"
 12.7270207 47.2293884
 12.7257011 47.2289688
 12.7254896 47.2289015
@@ -349,7 +349,7 @@ type=forest_way_1 label="Panoramabahn" count="13"
 12.6997765 47.2207225
 12.6992299 47.2205508
 
-type=forest_way_1 label="Gletscherjet II" count="11"
+type=forest_way_1 label="Gletscherjet II"
 12.6993779 47.2198485
 12.6981003 47.2184545
 12.6969442 47.2171912
@@ -362,7 +362,7 @@ type=forest_way_1 label="Gletscherjet II" count="11"
 12.6899577 47.2095811
 12.6895814 47.2091658
 
-type=forest_way_1 label="Gletscherjet I" count="14"
+type=forest_way_1 label="Gletscherjet I"
 12.7259781 47.2289765
 12.7257465 47.2288988
 12.7255431 47.2288306
@@ -378,7 +378,7 @@ type=forest_way_1 label="Gletscherjet I" count="14"
 12.7051053 47.222003
 12.6997360 47.2201715
 
-type=forest_way_1 label="Imbergbahn" count="9"
+type=forest_way_1 label="Imbergbahn"
 10.0226984 47.5209322
 10.0226739 47.5207339
 10.0225434 47.5202588
@@ -389,7 +389,7 @@ type=forest_way_1 label="Imbergbahn" count="9"
 10.0200545 47.510521
 10.0199853 47.5101594
 
-type=forest_way_1 label="Hochsöll" count="17"
+type=forest_way_1 label="Hochsöll"
 12.1983007 47.4968608
 12.1982540 47.4948082
 12.1982277 47.4936556
@@ -408,7 +408,7 @@ type=forest_way_1 label="Hochsöll" count="17"
 12.1979486 47.481395
 12.1979233 47.4802813
 
-type=forest_way_1 label="Schlossbergbahn" count="12"
+type=forest_way_1 label="Schlossbergbahn"
 12.7534064 46.8308576
 12.7531433 46.8307694
 12.7530754 46.8307467
@@ -422,15 +422,15 @@ type=forest_way_1 label="Schlossbergbahn" count="12"
 12.7420648 46.8270556
 12.7416395 46.826913
 
-type=forest_way_1 label="Schiferbahn" count="2"
+type=forest_way_1 label="Schiferbahn"
 9.8134467 46.8800952
 9.8091996 46.8651719
 
-type=forest_way_1 label="Schiferbahn" count="2"
+type=forest_way_1 label="Schiferbahn"
 9.8091996 46.8651719
 9.8054550 46.833531
 
-type=forest_way_1 label="Hohe Salve" count="14"
+type=forest_way_1 label="Hohe Salve"
 12.1970664 47.4800315
 12.1974295 47.4792778
 12.1982505 47.4775733
@@ -446,27 +446,27 @@ type=forest_way_1 label="Hohe Salve" count="14"
 12.2039495 47.4656249
 12.2040980 47.4653253
 
-type=forest_way_1 label="Piz Sorega" count="2"
+type=forest_way_1 label="Piz Sorega"
 11.9377485 46.56755
 11.9227899 46.5563319
 
-type=forest_way_1 label="BoÃƒÆ’Ã‚Â¨" count="2"
+type=forest_way_1 label="Bo"
 11.8714786 46.5487565
 11.8626920 46.5266498
 
-type=forest_way_1 label="Col Alto" count="2"
+type=forest_way_1 label="Col Alto"
 11.8764248 46.5475481
 11.8862472 46.5527965
 
-type=forest_way_1 label="Col Pradat" count="2"
+type=forest_way_1 label="Col Pradat"
 11.8548030 46.5578616
 11.8586232 46.5619157
 
-type=forest_way_1 label="Piz la Ila" count="2"
+type=forest_way_1 label="Piz la Ila"
 11.9010558 46.5809462
 11.9059626 46.5654693
 
-type=forest_way_1 label="Pezidbahn" count="9"
+type=forest_way_1 label="Pezidbahn"
 10.5242358 47.0289614
 10.5239651 47.0287405
 10.5227628 47.0277594
@@ -477,7 +477,7 @@ type=forest_way_1 label="Pezidbahn" count="9"
 10.5137043 47.020367
 10.5132967 47.0200344
 
-type=forest_way_1 label="Sunliner" count="10"
+type=forest_way_1 label="Sunliner"
 10.5953119 47.0408301
 10.5951728 47.0412848
 10.5948434 47.0423621
@@ -489,7 +489,7 @@ type=forest_way_1 label="Sunliner" count="10"
 10.5921314 47.0512285
 10.5919898 47.0516914
 
-type=forest_way_1 label="Sonnenbahn Ladis-Fiss" count="25"
+type=forest_way_1 label="Sonnenbahn Ladis-Fiss"
 10.6451476 47.0703841
 10.6448904 47.070289
 10.6448489 47.0702737
@@ -516,13 +516,13 @@ type=forest_way_1 label="Sonnenbahn Ladis-Fiss" count="25"
 10.6140045 47.0568589
 10.6138363 47.0567388
 
-type=forest_way_1 label="Bergeralmbahn" count="4"
+type=forest_way_1 label="Bergeralmbahn"
 11.4597387 47.0868358
 11.4550265 47.076957
 11.4549804 47.0768602
 11.4546381 47.0761426
 
-type=forest_way_1 label="Ratschings-Jaufen" count="14"
+type=forest_way_1 label="Ratschings-Jaufen"
 11.3089874 46.8640839
 11.3088223 46.8634111
 11.3084308 46.8618156
@@ -538,7 +538,7 @@ type=forest_way_1 label="Ratschings-Jaufen" count="14"
 11.3050821 46.848167
 11.3049965 46.847818
 
-type=forest_way_1 label="Gondelbahn Steinplatte" count="16"
+type=forest_way_1 label="Gondelbahn Steinplatte"
 12.5650033 47.5873825
 12.5650833 47.5877269
 12.5656086 47.5899888
@@ -556,7 +556,7 @@ type=forest_way_1 label="Gondelbahn Steinplatte" count="16"
 12.5704178 47.6106907
 12.5705080 47.6110789
 
-type=forest_way_1 label="Alpendorf Gondelbahn" count="26"
+type=forest_way_1 label="Alpendorf Gondelbahn"
 13.194957 47.321385
 13.1953105 47.3212584
 13.1953691 47.3212374
@@ -584,7 +584,7 @@ type=forest_way_1 label="Alpendorf Gondelbahn" count="26"
 13.22305 47.3113239
 13.2238986 47.31102
 
-type=forest_way_1 label="Grafenbergbahn" count="21"
+type=forest_way_1 label="Grafenbergbahn"
 13.299692 47.3281211
 13.2989891 47.3275965
 13.296868 47.3260134
@@ -607,7 +607,7 @@ type=forest_way_1 label="Grafenbergbahn" count="21"
 13.2744064 47.3092457
 13.2738331 47.3088176
 
-type=forest_way_1 label="Breitenbergbahn" count="10"
+type=forest_way_1 label="Breitenbergbahn"
 10.5752918 47.5649357
 10.5751677 47.5645467
 10.5748305 47.5634895
@@ -619,7 +619,7 @@ type=forest_way_1 label="Breitenbergbahn" count="10"
 10.5728661 47.5573296
 10.5701333 47.5486903
 
-type=forest_way_1 label="Fimbabahn" count="18"
+type=forest_way_1 label="Fimbabahn"
 10.2936546 47.0116363
 10.2973159 47.0046126
 10.3002736 46.9989378
@@ -639,7 +639,7 @@ type=forest_way_1 label="Fimbabahn" count="18"
 10.3162161 46.9834219
 10.3171128 46.9825922
 
-type=forest_way_1 label="Gipfelbahn-Fulseck I" count="14"
+type=forest_way_1 label="Gipfelbahn-Fulseck I"
 13.1104757 47.244694
 13.1108282 47.2446232
 13.1126945 47.2442482
@@ -655,7 +655,7 @@ type=forest_way_1 label="Gipfelbahn-Fulseck I" count="14"
 13.1253017 47.2417153
 13.1259122 47.2415926
 
-type=forest_way_1 label="Panoramabahn GroÃƒÅ¸arltal II" count="15"
+type=forest_way_1 label="Panoramabahn Großarltal II"
 13.1842998 47.2411281
 13.1839783 47.2408701
 13.1839151 47.2408194
@@ -672,7 +672,7 @@ type=forest_way_1 label="Panoramabahn GroÃƒÅ¸arltal II" count="15"
 13.1691018 47.2289291
 13.1687616 47.228656
 
-type=forest_way_1 label="Rosskopfbahn" count="16"
+type=forest_way_1 label="Rosskopfbahn"
 13.4557839 47.2941911
 13.4549232 47.2942981
 13.4523971 47.2946174
@@ -690,7 +690,7 @@ type=forest_way_1 label="Rosskopfbahn" count="16"
 13.4291564 47.2939254
 13.4286769 47.2938285
 
-type=forest_way_1 label="Schwarzwandbahn" count="16"
+type=forest_way_1 label="Schwarzwandbahn"
 13.4576477 47.2907929
 13.4565905 47.2893073
 13.4560474 47.288544
@@ -708,7 +708,7 @@ type=forest_way_1 label="Schwarzwandbahn" count="16"
 13.4462384 47.2747575
 13.4459601 47.2743657
 
-type=forest_way_1 label="Zehnerkarbahn" count="19"
+type=forest_way_1 label="Zehnerkarbahn"
 13.5455146 47.2508753
 13.5453725 47.2505778
 13.5449034 47.2495957
@@ -729,7 +729,7 @@ type=forest_way_1 label="Zehnerkarbahn" count="19"
 13.5342398 47.2405225
 13.5335425 47.2403606
 
-type=forest_way_1 label="Schindlergratbahn" count="23"
+type=forest_way_1 label="Schindlergratbahn"
 10.215155 47.1386436
 10.215259 47.1388182
 10.2152705 47.1388376
@@ -754,7 +754,7 @@ type=forest_way_1 label="Schindlergratbahn" count="23"
 10.2219381 47.1499244
 10.2245753 47.1532557
 
-type=forest_way_1 label="Alpkogelbahn" count="11"
+type=forest_way_1 label="Alpkogelbahn"
 10.1621496 46.9662512
 10.1617793 46.9662667
 10.160709 46.9663114
@@ -767,7 +767,7 @@ type=forest_way_1 label="Alpkogelbahn" count="11"
 10.1445623 46.9669867
 10.143917 46.9670137
 
-type=forest_way_1 label="(37) Spinale express" count="14"
+type=forest_way_1 label="(37) Spinale express"
 10.8294225 46.228409
 10.8298347 46.2282839
 10.8302701 46.2281615
@@ -783,7 +783,7 @@ type=forest_way_1 label="(37) Spinale express" count="14"
 10.847319 46.223367
 10.8477798 46.2232375
 
-type=forest_way_1 label="Flying Mozart I" count="20"
+type=forest_way_1 label="Flying Mozart I"
 13.3084928 47.3340547
 13.3092527 47.3338007
 13.310642 47.3333364
@@ -805,7 +805,7 @@ type=forest_way_1 label="Flying Mozart I" count="20"
 13.3203216 47.3301012
 13.3209523 47.3298904
 
-type=forest_way_1 label="Rote 8er I" count="11"
+type=forest_way_1 label="Rote 8er I"
 13.3440204 47.3561027
 13.3438134 47.3558761
 13.343781 47.3558406
@@ -818,15 +818,15 @@ type=forest_way_1 label="Rote 8er I" count="11"
 13.3368128 47.3482125
 13.3364107 47.3477723
 
-type=forest_way_1 label="achterjet" count="2"
+type=forest_way_1 label="achterjet"
 13.3856177 47.3534277
 13.3580801 47.334821
 
-type=forest_way_1 label="Hochbrixen" count="2"
+type=forest_way_1 label="Hochbrixen"
 12.2433088 47.4494751
 12.229273 47.4615926
 
-type=forest_way_1 label="Möseralmbahn" count="14"
+type=forest_way_1 label="Möseralmbahn"
 10.613643 47.0567321
 10.6132299 47.0567876
 10.6131763 47.0567949
@@ -842,7 +842,7 @@ type=forest_way_1 label="Möseralmbahn" count="14"
 10.5928603 47.0595275
 10.5924172 47.0595871
 
-type=forest_way_1 label="Schönjochbahn I" count="14"
+type=forest_way_1 label="Schönjochbahn I"
 10.6129868 47.0571722
 10.6127808 47.0572774
 10.6127272 47.0573047
@@ -858,7 +858,7 @@ type=forest_way_1 label="Schönjochbahn I" count="14"
 10.5974309 47.0651136
 10.5967137 47.0654797
 
-type=forest_way_1 label="Waldbahn" count="13"
+type=forest_way_1 label="Waldbahn"
 10.6087074 47.0539979
 10.6083457 47.0539501
 10.6082722 47.0539404
@@ -873,7 +873,7 @@ type=forest_way_1 label="Waldbahn" count="13"
 10.5928457 47.0519016
 10.5921193 47.0518056
 
-type=forest_way_1 label="Kabinska nica Krvavec" count="18"
+type=forest_way_1 label="Kabinska nica Krvavec"
 14.4979216 46.2847901
 14.4980295 46.2848357
 14.4999001 46.2857053
@@ -893,7 +893,7 @@ type=forest_way_1 label="Kabinska nica Krvavec" count="18"
 14.5210578 46.2955449
 14.521569 46.2957797
 
-type=forest_way_1 label="Kanzelwandbahn" count="11"
+type=forest_way_1 label="Kanzelwandbahn"
 10.184858 47.3558401
 10.1860039 47.3545687
 10.1903118 47.3497889
@@ -906,20 +906,20 @@ type=forest_way_1 label="Kanzelwandbahn" count="11"
 10.2009804 47.3379498
 10.2012282 47.3376748
 
-type=forest_way_1 label="Fellhornbahn" count="5"
+type=forest_way_1 label="Fellhornbahn"
 10.2629307 47.3523118
 10.2496155 47.3512007
 10.239208 47.3503519
 10.2300667 47.3496046
 10.2270705 47.3492251
 
-type=forest_way_1 label="Papagenobahn" count="4"
+type=forest_way_1 label="Papagenobahn"
 13.5211698 47.4320293
 13.5209434 47.4298719
 13.5197039 47.4199549
 13.5194594 47.4181083
 
-type=forest_way_1 label="Kabinenbahn Hochbrand" count="10"
+type=forest_way_1 label="Kabinenbahn Hochbrand"
 13.1951547 47.2452444
 13.1947663 47.2451163
 13.1942514 47.2449464
@@ -931,7 +931,7 @@ type=forest_way_1 label="Kabinenbahn Hochbrand" count="10"
 13.1824777 47.2410626
 13.1818921 47.2408694
 
-type=forest_way_1 label="Topexpress Gurgl" count="11"
+type=forest_way_1 label="Topexpress Gurgl"
 11.0398153 46.8685548
 11.0400881 46.8689386
 11.0429227 46.8729265
@@ -944,7 +944,7 @@ type=forest_way_1 label="Topexpress Gurgl" count="11"
 11.0603385 46.8974215
 11.0605708 46.8977481
 
-type=forest_way_1 label="Top Schermerbahn 3000" count="14"
+type=forest_way_1 label="Top Schermerbahn 3000"
 11.0611954 46.8986442
 11.0615583 46.898513
 11.0619251 46.8983805
@@ -960,7 +960,7 @@ type=forest_way_1 label="Top Schermerbahn 3000" count="14"
 11.08242 46.8909733
 11.0828686 46.8908112
 
-type=forest_way_1 label="Festkoglbahn" count="18"
+type=forest_way_1 label="Festkoglbahn"
 11.0330781 46.8757183
 11.0332481 46.8754621
 11.0334534 46.8751527
@@ -980,11 +980,11 @@ type=forest_way_1 label="Festkoglbahn" count="18"
 11.044026 46.8592159
 11.0441602 46.8590136
 
-type=forest_way_1 label="Hohe Mut Bahn I" count="2"
+type=forest_way_1 label="Hohe Mut Bahn I"
 11.0269732 46.8692214
 11.0228513 46.8603041
 
-type=forest_way_1 label="Hochkössen" count="21"
+type=forest_way_1 label="Hochkössen"
 12.4211771 47.6533884
 12.4214114 47.6528575
 12.4220658 47.6513746
@@ -1007,7 +1007,7 @@ type=forest_way_1 label="Hochkössen" count="21"
 12.430399 47.632487
 12.430514 47.6322263
 
-type=forest_way_1 label="Brandstadl I" count="17"
+type=forest_way_1 label="Brandstadl I"
 12.2489512 47.5200198
 12.2491343 47.5177904
 12.2492046 47.5169341
@@ -1026,11 +1026,11 @@ type=forest_way_1 label="Brandstadl I" count="17"
 12.2504932 47.5013162
 12.2505633 47.5003833
 
-type=forest_way_1 label="Tognola" count="2"
+type=forest_way_1 label="Tognola"
 11.7988176 46.2549718
 11.77744 46.2416303
 
-type=forest_way_1 label="Mittelbergbahn" count="12"
+type=forest_way_1 label="Mittelbergbahn"
 10.8897886 46.9223934
 10.8894897 46.922136
 10.8889703 46.9216888
@@ -1044,7 +1044,7 @@ type=forest_way_1 label="Mittelbergbahn" count="12"
 10.8807436 46.9145943
 10.8806591 46.9145322
 
-type=forest_way_1 label="Wildspitzbahn" count="6"
+type=forest_way_1 label="Wildspitzbahn"
 10.8790206 46.9258283
 10.8771909 46.9243735
 10.8736522 46.9215582
@@ -1052,7 +1052,7 @@ type=forest_way_1 label="Wildspitzbahn" count="6"
 10.8663691 46.9157634
 10.862469 46.9127897
 
-type=forest_way_1 label="Rothorn 1" count="8"
+type=forest_way_1 label="Rothorn 1"
 9.5565794 46.7402083
 9.557472 46.7403502
 9.5596371 46.7406943
@@ -1062,15 +1062,15 @@ type=forest_way_1 label="Rothorn 1" count="8"
 9.5722951 46.7427061
 9.5730901 46.7428325
 
-type=forest_way_1 label="Piz Seteur 1" count="2"
+type=forest_way_1 label="Piz Seteur 1"
 11.7711498 46.5324554
 11.7602769 46.5275514
 
-type=forest_way_1 label="Pian Frataces-Gherdecia" count="2"
+type=forest_way_1 label="Pian Frataces-Gherdecia"
 11.7829415 46.490651
 11.8049547 46.4822306
 
-type=forest_way_1 label="Plans" count="9"
+type=forest_way_1 label="Plans"
 11.8431494 46.5479852
 11.8418184 46.5480004
 11.8402 46.5480188
@@ -1081,7 +1081,7 @@ type=forest_way_1 label="Plans" count="9"
 11.8299657 46.5481353
 11.8275033 46.5481633
 
-type=forest_way_1 label="Taubensteinbahn" count="22"
+type=forest_way_1 label="Taubensteinbahn"
 11.8895774 47.6661306
 11.8903771 47.6659519
 11.8924494 47.665539
@@ -1105,7 +1105,7 @@ type=forest_way_1 label="Taubensteinbahn" count="22"
 11.9196866 47.6598832
 11.9199889 47.6598182
 
-type=forest_way_1 label="Alpkopfbahn" count="14"
+type=forest_way_1 label="Alpkopfbahn"
 10.5964347 47.0403817
 10.5961046 47.040322
 10.593686 47.0398848
@@ -1121,7 +1121,7 @@ type=forest_way_1 label="Alpkopfbahn" count="14"
 10.5715226 47.0358786
 10.5704316 47.0356813
 
-type=forest_way_1 label="Fössener Jöchle" count="6"
+type=forest_way_1 label="Fössener Jöchle"
 10.5642537 47.504996
 10.5886652 47.511437
 10.5916533 47.5122254
@@ -1129,7 +1129,7 @@ type=forest_way_1 label="Fössener Jöchle" count="6"
 10.5954911 47.5132379
 10.5960245 47.5133786
 
-type=forest_way_1 label="Hörnerbahn I" count="11"
+type=forest_way_1 label="Hörnerbahn I"
 10.2275131 47.4629264
 10.227196 47.4629037
 10.2265264 47.4628432
@@ -1142,7 +1142,7 @@ type=forest_way_1 label="Hörnerbahn I" count="11"
 10.2135056 47.4616267
 10.2129771 47.46157
 
-type=forest_way_1 label="Seiseralmbahn" count="12"
+type=forest_way_1 label="Seiseralmbahn"
 11.5637762 46.5402157
 11.5654158 46.5402818
 11.5682108 46.5403946
@@ -1156,7 +1156,7 @@ type=forest_way_1 label="Seiseralmbahn" count="12"
 11.6151652 46.5422884
 11.6170037 46.5423625
 
-type=forest_way_1 label="Hausbergbahn" count="9"
+type=forest_way_1 label="Hausbergbahn"
 11.094757 47.4818158
 11.0947715 47.4758271
 11.094804 47.4743563
@@ -1167,11 +1167,11 @@ type=forest_way_1 label="Hausbergbahn" count="9"
 11.0949364 47.4661841
 11.0950186 47.4641653
 
-type=forest_way_1 label="Vellau-Leiteralm-Velloi-Malga Leiter" count="2"
+type=forest_way_1 label="Vellau-Leiteralm-Velloi-Malga Leiter"
 11.1093502 46.6955978
 11.1083724 46.7047148
 
-type=forest_way_1 label="Umlaufbahn Falzeben-Cabinovia Falzeben" count="15"
+type=forest_way_1 label="Umlaufbahn Falzeben-Cabinovia Falzeben"
 11.2414921 46.6660745
 11.2421073 46.6665795
 11.2430198 46.6673286
@@ -1188,7 +1188,7 @@ type=forest_way_1 label="Umlaufbahn Falzeben-Cabinovia Falzeben" count="15"
 11.2543643 46.6766405
 11.255164 46.6772969
 
-type=forest_way_1 label="Ehrwalder Almbahn" count="19"
+type=forest_way_1 label="Ehrwalder Almbahn"
 10.9383365 47.3873441
 10.9384547 47.3873366
 10.9390807 47.3872904
@@ -1209,11 +1209,11 @@ type=forest_way_1 label="Ehrwalder Almbahn" count="19"
 10.9675048 47.3852933
 10.9677541 47.3852758
 
-type=forest_way_1 label="Sonnwendkopfbahn" count="2"
+type=forest_way_1 label="Sonnwendkopfbahn"
 12.1149635 47.2417045
 12.1082527 47.255636
 
-type=forest_way_1 label="Katrinseilbahn" count="25"
+type=forest_way_1 label="Katrinseilbahn"
 13.6070072 47.6985598
 13.6068829 47.6984966
 13.6064968 47.6983006
@@ -1240,7 +1240,7 @@ type=forest_way_1 label="Katrinseilbahn" count="25"
 13.583206 47.6864705
 13.5830041 47.6863679
 
-type=forest_way_1 label="Schareck" count="18"
+type=forest_way_1 label="Schareck"
 12.8513709 47.0478051
 12.8514925 47.0481308
 12.8517558 47.0488712
@@ -1260,20 +1260,20 @@ type=forest_way_1 label="Schareck" count="18"
 12.856962 47.0633525
 12.8576357 47.0652412
 
-type=forest_way_1 label="5 Laghi express" count="2"
+type=forest_way_1 label="5 Laghi express"
 10.8258606 46.2303127
 10.8012265 46.2262133
 
-type=forest_way_1 label="Eckbauerbahn" count="2"
+type=forest_way_1 label="Eckbauerbahn"
 11.1188975 47.4815832
 11.1362799 47.4669287
 
-type=forest_way_1 label="Stalimen-GardonÃƒÆ’Ã‚Â¨" count="3"
+type=forest_way_1 label="Stalimen-Gardon"
 11.6020491 46.3277214
 11.5864878 46.3361594
 11.5781643 46.3406722
 
-type=forest_way_1 label="Lorenzi" count="13"
+type=forest_way_1 label="Lorenzi"
 12.0097179 46.7449889
 12.0085691 46.7448922
 12.0069702 46.7447575
@@ -1288,7 +1288,7 @@ type=forest_way_1 label="Lorenzi" count="13"
 11.9908318 46.7433987
 11.9901255 46.7433392
 
-type=forest_way_1 label="Olang I-Valdaora I" count="20"
+type=forest_way_1 label="Olang I-Valdaora I"
 12.0105322 46.7466875
 12.0094029 46.7465942
 12.0076454 46.7464489
@@ -1310,7 +1310,7 @@ type=forest_way_1 label="Olang I-Valdaora I" count="20"
 11.9732705 46.7436083
 11.9726018 46.743553
 
-type=forest_way_1 label="Olang II" count="9"
+type=forest_way_1 label="Olang II"
 11.9726018 46.743553
 11.9710917 46.7430642
 11.9694502 46.7425293
@@ -1321,11 +1321,11 @@ type=forest_way_1 label="Olang II" count="9"
 11.9601993 46.7395111
 11.9596764 46.7393443
 
-type=forest_way_1 label="Rotwand-Croda Rossa" count="2"
+type=forest_way_1 label="Rotwand-Croda Rossa"
 12.36489 46.6813525
 12.3730616 46.6650857
 
-type=forest_way_1 label="Celerina-Marguns" count="17"
+type=forest_way_1 label="Celerina-Marguns"
 9.8528792 46.5128524
 9.8522986 46.5129332
 9.8479457 46.5135393
@@ -1344,7 +1344,7 @@ type=forest_way_1 label="Celerina-Marguns" count="17"
 9.8261014 46.5165807
 9.8250408 46.5167284
 
-type=forest_way_1 label="Gondelbahn Neunerköpfle" count="15"
+type=forest_way_1 label="Gondelbahn Neunerköpfle"
 10.5241401 47.4982964
 10.5243885 47.4980959
 10.5248319 47.497738
@@ -1361,7 +1361,7 @@ type=forest_way_1 label="Gondelbahn Neunerköpfle" count="15"
 10.5417861 47.4840522
 10.5422746 47.4836578
 
-type=forest_way_1 label="Hochzillertal I" count="17"
+type=forest_way_1 label="Hochzillertal I"
 11.8728632 47.2892347
 11.8726385 47.2890622
 11.8716923 47.2883359
@@ -1380,7 +1380,7 @@ type=forest_way_1 label="Hochzillertal I" count="17"
 11.8631665 47.281791
 11.8626828 47.2814196
 
-type=forest_way_1 label="Zillertal Shuttle" count="19"
+type=forest_way_1 label="Zillertal Shuttle"
 11.7774521 47.2637268
 11.7777806 47.2636534
 11.7778838 47.2636303
@@ -1401,7 +1401,7 @@ type=forest_way_1 label="Zillertal Shuttle" count="19"
 11.8065799 47.2572174
 11.807253 47.257067
 
-type=forest_way_1 label="Ortisei-Furnes" count="15"
+type=forest_way_1 label="Ortisei-Furnes"
 11.6750609 46.5764299
 11.6757748 46.5767785
 11.6781221 46.5779498
@@ -1418,7 +1418,7 @@ type=forest_way_1 label="Ortisei-Furnes" count="15"
 11.7000812 46.5886045
 11.7022238 46.589644
 
-type=forest_way_1 label="Hochgratbahn" count="16"
+type=forest_way_1 label="Hochgratbahn"
 10.0580323 47.5096411
 10.0592882 47.5080762
 10.061202 47.5057561
@@ -1436,11 +1436,11 @@ type=forest_way_1 label="Hochgratbahn" count="16"
 10.0723504 47.4926155
 10.0724886 47.4924685
 
-type=forest_way_1 label="Schönleitenbahn I" count="2"
+type=forest_way_1 label="Schönleitenbahn I"
 12.6759618 47.3787332
 12.6830356 47.3916718
 
-type=forest_way_1 label="Asitzbahn I" count="7"
+type=forest_way_1 label="Asitzbahn I"
 12.7188325 47.4392487
 12.7176262 47.4363509
 12.7163301 47.4332372
@@ -1449,7 +1449,7 @@ type=forest_way_1 label="Asitzbahn I" count="7"
 12.7141708 47.4280497
 12.7139344 47.4274817
 
-type=forest_way_1 label="Thurntaler 1" count="16"
+type=forest_way_1 label="Thurntaler 1"
 12.4332221 46.7506191
 12.4328126 46.7508651
 12.4324038 46.7511108
@@ -1467,15 +1467,15 @@ type=forest_way_1 label="Thurntaler 1" count="16"
 12.4127514 46.762918
 12.4120731 46.7633255
 
-type=forest_way_1 label="Peter Anich I" count="2"
+type=forest_way_1 label="Peter Anich I"
 11.2374879 47.2457141
 11.221444 47.2382582
 
-type=forest_way_1 label="Peter Anich II" count="2"
+type=forest_way_1 label="Peter Anich II"
 11.2212151 47.2382241
 11.1997855 47.2402294
 
-type=forest_way_1 label="Kaiserburgbahn I" count="10"
+type=forest_way_1 label="Kaiserburgbahn I"
 13.7989069 46.8123336
 13.7992203 46.8119309
 13.7999375 46.8110093
@@ -1487,7 +1487,7 @@ type=forest_way_1 label="Kaiserburgbahn I" count="10"
 13.8075369 46.801243
 13.8083941 46.8001412
 
-type=forest_way_1 label="Nationalparkbahn Brunnach" count="15"
+type=forest_way_1 label="Nationalparkbahn Brunnach"
 13.7658995 46.8443435
 13.7656105 46.8445665
 13.7651573 46.8449163
@@ -1504,7 +1504,7 @@ type=forest_way_1 label="Nationalparkbahn Brunnach" count="15"
 13.7504027 46.8563011
 13.7499626 46.8566406
 
-type=forest_way_1 label="Peio Fonti-Tarlenta" count="12"
+type=forest_way_1 label="Peio Fonti-Tarlenta"
 10.6624695 46.3560387
 10.6618925 46.35957
 10.6615724 46.361467
@@ -1518,7 +1518,7 @@ type=forest_way_1 label="Peio Fonti-Tarlenta" count="12"
 10.6602435 46.3696606
 10.660173 46.370036
 
-type=forest_way_1 label="Muttereralmbahn" count="7"
+type=forest_way_1 label="Muttereralmbahn"
 11.3662713 47.2224359
 11.3623708 47.221148
 11.3584647 47.2198367
@@ -1527,7 +1527,7 @@ type=forest_way_1 label="Muttereralmbahn" count="7"
 11.3514382 47.217495
 11.3337052 47.2115726
 
-type=forest_way_1 label="Nockspitzbahn" count="19"
+type=forest_way_1 label="Nockspitzbahn"
 11.3146048 47.2318716
 11.3147317 47.2316495
 11.3150275 47.2311321
@@ -1548,12 +1548,12 @@ type=forest_way_1 label="Nockspitzbahn" count="19"
 11.3283504 47.2078179
 11.3285184 47.2075238
 
-type=forest_way_1 label="Cortina -Col DrusciÃƒÆ’Ã‚Â©" count="3"
+type=forest_way_1 label="Cortina-Col Drusci"
 12.1310666 46.5458619
 12.1301901 46.5457874
 12.1039815 46.543575
 
-type=forest_way_1 label="Isskogelbahn" count="18"
+type=forest_way_1 label="Isskogelbahn"
 12.0490301 47.2296185
 12.0483635 47.2303502
 12.0472442 47.2315789
@@ -1573,7 +1573,7 @@ type=forest_way_1 label="Isskogelbahn" count="18"
 12.0356104 47.2443478
 12.0352893 47.2447002
 
-type=forest_way_1 label="Millennium-Express Sektion I" count="15"
+type=forest_way_1 label="Millennium-Express Sektion I"
 13.2793561 46.6114673
 13.2792488 46.6112196
 13.2788835 46.6103768
@@ -1590,7 +1590,7 @@ type=forest_way_1 label="Millennium-Express Sektion I" count="15"
 13.2735172 46.5979924
 13.2733132 46.5975216
 
-type=forest_way_1 label="Zamang Bahn" count="16"
+type=forest_way_1 label="Zamang Bahn"
 9.9301198 47.0687743
 9.9328253 47.0692355
 9.934721 47.0695586
@@ -1608,7 +1608,7 @@ type=forest_way_1 label="Zamang Bahn" count="16"
 9.961881 47.074188
 9.9624752 47.0742892
 
-type=forest_way_1 label="Lazaun" count="11"
+type=forest_way_1 label="Lazaun"
 10.7810692 46.7555108
 10.778433 46.7550165
 10.7765473 46.7546629
@@ -1621,7 +1621,7 @@ type=forest_way_1 label="Lazaun" count="11"
 10.766486 46.7527762
 10.7658175 46.7526508
 
-type=forest_way_1 label="Söllereckbahn" count="16"
+type=forest_way_1 label="Söllereckbahn"
 10.2454646 47.3990931
 10.245399 47.3988876
 10.2453865 47.3988485
@@ -1639,13 +1639,13 @@ type=forest_way_1 label="Söllereckbahn" count="16"
 10.2399777 47.381913
 10.2398579 47.3815378
 
-type=forest_way_1 label="Mellaubahn" count="4"
+type=forest_way_1 label="Mellaubahn"
 9.8869573 47.3286048
 9.8883575 47.3440735
 9.8884771 47.345363
 9.8885352 47.3461017
 
-type=forest_way_1 label="Brunnalmbahn" count="15"
+type=forest_way_1 label="Brunnalmbahn"
 12.3512003 46.9112915
 12.3513512 46.9109636
 12.3516394 46.9103373
@@ -1662,11 +1662,11 @@ type=forest_way_1 label="Brunnalmbahn" count="15"
 12.3562924 46.9002254
 12.356461 46.8998589
 
-type=forest_way_1 label="(31) Pradalago express" count="2"
+type=forest_way_1 label="(31) Pradalago express"
 10.8254827 46.2340258
 10.8129909 46.2472386
 
-type=forest_way_1 label="(45) GrostÃƒÆ’Ã‚Â¨ 1 express" count="22"
+type=forest_way_1 label="(45) Grost 1 express"
 10.8361424 46.2367332
 10.837434 46.2363948
 10.8385821 46.2360939
@@ -1690,7 +1690,7 @@ type=forest_way_1 label="(45) GrostÃƒÆ’Ã‚Â¨ 1 express" count="22"
 10.8754095 46.2264429
 10.8761385 46.2262519
 
-type=forest_way_1 label="Rudolfshütte II" count="26"
+type=forest_way_1 label="Rudolfshütte II"
 12.6256458 47.1349594
 12.6255888 47.1356222
 12.6255086 47.1365532
@@ -1718,25 +1718,25 @@ type=forest_way_1 label="Rudolfshütte II" count="26"
 12.6238434 47.1558967
 12.6237716 47.1567305
 
-type=forest_way_1 label="Hörnli-Express" count="2"
+type=forest_way_1 label="Hörnli-Express"
 9.6595259 46.772715
 9.6209446 46.7670616
 
-type=forest_way_1 label="Bergbahn" count="3"
+type=forest_way_1 label="Bergbahn"
 11.6652872 46.8215649
 11.669736 46.8353272
 11.6698439 46.8354568
 
-type=forest_way_1 label="Ski Express" count="3"
+type=forest_way_1 label="Ski Express"
 11.6857956 46.8514558
 11.6852902 46.8450649
 11.6841424 46.8357521
 
-type=forest_way_1 label="Klausberg" count="2"
+type=forest_way_1 label="Klausberg"
 11.9783162 46.9936414
 11.9853129 46.9847906
 
-type=forest_way_1 label="Plosebahn" count="24"
+type=forest_way_1 label="Plosebahn"
 11.6826936 46.6981351
 11.6840808 46.6975033
 11.6854205 46.6968931
@@ -1762,7 +1762,7 @@ type=forest_way_1 label="Plosebahn" count="24"
 11.7097483 46.6858117
 11.7101915 46.6856098
 
-type=forest_way_1 label="Zwölferhorn Seilbahn" count="7"
+type=forest_way_1 label="Zwölferhorn Seilbahn"
 13.3643215 47.765452
 13.3608646 47.7585481
 13.3582491 47.7532583
@@ -1771,12 +1771,12 @@ type=forest_way_1 label="Zwölferhorn Seilbahn" count="7"
 13.3532537 47.7432675
 13.3531507 47.743061
 
-type=forest_way_1 label="Acherkogelbahn" count="3"
+type=forest_way_1 label="Acherkogelbahn"
 10.9030702 47.1998692
 10.9084669 47.2021556
 10.9318421 47.2120577
 
-type=forest_way_1 label="Fellhornbahn 2" count="18"
+type=forest_way_1 label="Fellhornbahn 2"
 10.2628234 47.3524899
 10.2619609 47.3524263
 10.2588555 47.3521624
@@ -1796,7 +1796,7 @@ type=forest_way_1 label="Fellhornbahn 2" count="18"
 10.2277905 47.349588
 10.2274232 47.3495575
 
-type=forest_way_1 label="Zau[:ber:]g Kabinenbahn" count="12"
+type=forest_way_1 label="Zau[:ber:]g Kabinenbahn"
 15.8304299 47.6315205
 15.8305886 47.6311264
 15.8307116 47.630821
@@ -1810,7 +1810,7 @@ type=forest_way_1 label="Zau[:ber:]g Kabinenbahn" count="12"
 15.8337726 47.6232199
 15.8339663 47.622739
 
-type=forest_way_1 label="Reinswald" count="14"
+type=forest_way_1 label="Reinswald"
 11.420581 46.6881946
 11.4218846 46.6886615
 11.4227154 46.6889591
@@ -1826,21 +1826,21 @@ type=forest_way_1 label="Reinswald" count="14"
 11.4402538 46.6952406
 11.4407587 46.6954214
 
-type=forest_way_1 label="Pradel-Rodella" count="2"
+type=forest_way_1 label="Pradel-Rodella"
 11.7810397 46.4923672
 11.7523988 46.5022845
 
-type=forest_way_1 label="ToÃƒÆ’Ã‚Â¨" count="22"
+type=forest_way_1 label="To"
 11.789586 46.4803636
 11.7957666 46.4791092
 11.7981144 46.4786328
 11.8045741 46.4773217
 
-type=forest_way_1 label="Fodom (Vauz-Pordoi)" count="2"
+type=forest_way_1 label="Fodom (Vauz-Pordoi)"
 11.8443723 46.4880259
 11.8149186 46.4880427
 
-type=forest_way_1 label="DMC Europa I" count="8"
+type=forest_way_1 label="DMC Europa I"
 11.8748212 46.4955374
 11.8749733 46.4950849
 11.8751721 46.4944428
@@ -1850,7 +1850,7 @@ type=forest_way_1 label="DMC Europa I" count="8"
 11.8790424 46.4823636
 11.8792015 46.4818717
 
-type=forest_way_1 label="Tiefenbachbahn" count="11"
+type=forest_way_1 label="Tiefenbachbahn"
 10.9447766 46.9229509
 10.9434787 46.9228334
 10.9429058 46.9227814
@@ -1863,7 +1863,7 @@ type=forest_way_1 label="Tiefenbachbahn" count="11"
 10.9191629 46.9206302
 10.9185411 46.9205739
 
-type=forest_way_1 label="Schwarze Schneid I" count="7"
+type=forest_way_1 label="Schwarze Schneid I"
 10.931534 46.9410105
 10.9305427 46.9400793
 10.9301851 46.9397433
@@ -1872,11 +1872,11 @@ type=forest_way_1 label="Schwarze Schneid I" count="7"
 10.925058 46.9349267
 10.9245759 46.9344488
 
-type=forest_way_1 label="Hirschkogelbahn" count="2"
+type=forest_way_1 label="Hirschkogelbahn"
 14.1565296 47.6818395
 14.1607628 47.6673405
 
-type=forest_way_1 label="Kanzelbahn" count="11"
+type=forest_way_1 label="Kanzelbahn"
 13.9015971 46.6595112
 13.9015123 46.6601807
 13.9013558 46.66187
@@ -1889,7 +1889,7 @@ type=forest_way_1 label="Kanzelbahn" count="11"
 13.8996072 46.6810945
 13.899593 46.6812935
 
-type=forest_way_1 label="Salvenbahn II" count="11"
+type=forest_way_1 label="Salvenbahn II"
 12.1859371 47.456235
 12.1872975 47.4569085
 12.1899088 47.4582263
@@ -1902,16 +1902,16 @@ type=forest_way_1 label="Salvenbahn II" count="11"
 12.202707 47.4646844
 12.2032513 47.4649591
 
-type=forest_way_1 label="Rifflseebahn" count="2"
+type=forest_way_1 label="Rifflseebahn"
 10.8701411 46.9686
 10.853839 46.9673124
 
-type=forest_way_1 label="Almkopfbahn" count="3"
+type=forest_way_1 label="Almkopfbahn"
 10.7768799 47.4270842
 10.7684504 47.4229035
 10.7602614 47.4188417
 
-type=forest_way_1 label="Rosenalmbahn 1" count="17"
+type=forest_way_1 label="Rosenalmbahn 1"
 11.8996119 47.2372011
 11.8998132 47.2372154
 11.8998785 47.2372201
@@ -1930,11 +1930,11 @@ type=forest_way_1 label="Rosenalmbahn 1" count="17"
 11.9221062 47.2388064
 11.9228626 47.2388604
 
-type=forest_way_1 label="Rastkogelbahn" count="2"
+type=forest_way_1 label="Rastkogelbahn"
 11.7431126 47.1636727
 11.7455485 47.1830116
 
-type=forest_way_1 label="Finkenberger Almbahn I" count="16"
+type=forest_way_1 label="Finkenberger Almbahn I"
 11.8223286 47.1523098
 11.821036 47.153165
 11.8193464 47.1542829
@@ -1952,7 +1952,7 @@ type=forest_way_1 label="Finkenberger Almbahn I" count="16"
 11.8077513 47.1619543
 11.8074262 47.1621694
 
-type=forest_way_1 label="Kronplatz I-Plan de" count="22"
+type=forest_way_1 label="Kronplatz I-Plan de"
 11.9420389 46.7722045
 11.9421328 46.771994
 11.9423604 46.7714839
@@ -1976,7 +1976,7 @@ type=forest_way_1 label="Kronplatz I-Plan de" count="22"
 11.9495476 46.7553743
 11.9524721 46.7488177
 
-type=forest_way_1 label="Korer" count="8"
+type=forest_way_1 label="Korer"
 11.9398903 46.7726959
 11.940298 46.7716823
 11.9409528 46.7698614
@@ -1986,21 +1986,21 @@ type=forest_way_1 label="Korer" count="8"
 11.9430437 46.7641279
 11.9431692 46.7637607
 
-type=forest_way_1 label="Panorama" count="2"
+type=forest_way_1 label="Panorama"
 11.9826788 46.9826637
 11.9758506 46.9757452
 
-type=forest_way_1 label="Klaussee 2" count="2"
+type=forest_way_1 label="Klaussee 2"
 11.9895835 46.9717907
 12.0063607 46.9637391
 
-type=forest_way_1 label="Speikboden" count="4"
+type=forest_way_1 label="Speikboden"
 11.937471 46.9326486
 11.9249687 46.9305307
 11.9208498 46.929692
 11.9037249 46.9257182
 
-type=forest_way_1 label="Kronplatz 2000" count="22"
+type=forest_way_1 label="Kronplatz 2000"
 11.9410267 46.771945
 11.9412663 46.7714511
 11.9425143 46.7688793
@@ -2024,7 +2024,7 @@ type=forest_way_1 label="Kronplatz 2000" count="22"
 11.9570308 46.7398103
 11.9572226 46.7394451
 
-type=forest_way_1 label="Panorama Jet Zwieselalm" count="15"
+type=forest_way_1 label="Panorama Jet Zwieselalm"
 13.5035787 47.5450892
 13.5026667 47.5448663
 13.5007159 47.5443697
@@ -2041,7 +2041,7 @@ type=forest_way_1 label="Panorama Jet Zwieselalm" count="15"
 13.4780166 47.5385911
 13.4773604 47.538424
 
-type=forest_way_1 label="Eisseebahn" count="18"
+type=forest_way_1 label="Eisseebahn"
 13.0158967 47.0163773
 13.0157656 47.0167765
 13.0154283 47.017803
@@ -2061,17 +2061,17 @@ type=forest_way_1 label="Eisseebahn" count="18"
 13.011372 47.0301482
 13.01105 47.0311282
 
-type=forest_way_1 label="Giggijochbahn" count="2"
+type=forest_way_1 label="Giggijochbahn"
 11.0086824 46.9725038
 10.9759819 46.9752626
 
-type=forest_way_1 label="Kaiserburgbahn II" count="4"
+type=forest_way_1 label="Kaiserburgbahn II"
 13.8083941 46.8001412
 13.808601 46.7999893
 13.8088596 46.7999589
 13.8266944 46.7834943
 
-type=forest_way_1 label="Millennium-Express Sektion III" count="12"
+type=forest_way_1 label="Millennium-Express Sektion III"
 13.2613892 46.5742575
 13.2611014 46.5737963
 13.2605475 46.5729085
@@ -2085,7 +2085,7 @@ type=forest_way_1 label="Millennium-Express Sektion III" count="12"
 13.2534444 46.5615224
 13.2531844 46.5611057
 
-type=forest_way_1 label="Millennium-Express Sektion II" count="18"
+type=forest_way_1 label="Millennium-Express Sektion II"
 13.2733132 46.5975216
 13.2731721 46.5972464
 13.272021 46.5950009
@@ -2105,7 +2105,7 @@ type=forest_way_1 label="Millennium-Express Sektion II" count="18"
 13.2616329 46.5747331
 13.2613892 46.5742575
 
-type=forest_way_1 label="Zweikofelbahn" count="13"
+type=forest_way_1 label="Zweikofelbahn"
 13.2426485 46.5786077
 13.2422104 46.5787152
 13.2418268 46.5788094
@@ -2120,7 +2120,7 @@ type=forest_way_1 label="Zweikofelbahn" count="13"
 13.2277917 46.5822543
 13.2271477 46.5824124
 
-type=forest_way_1 label="Trogkofelbahn" count="16"
+type=forest_way_1 label="Trogkofelbahn"
 13.2426303 46.5777294
 13.2423629 46.5775041
 13.2416961 46.5769424
@@ -2138,7 +2138,7 @@ type=forest_way_1 label="Trogkofelbahn" count="16"
 13.2271936 46.5647239
 13.2267479 46.5643505
 
-type=forest_way_1 label="Almbahn I" count="17"
+type=forest_way_1 label="Almbahn I"
 12.6913066 47.5878801
 12.691102 47.5883116
 12.6907801 47.5889903
@@ -2157,7 +2157,7 @@ type=forest_way_1 label="Almbahn I" count="17"
 12.6836598 47.6040036
 12.6835555 47.6042235
 
-type=forest_way_1 label="Almbahn II" count="15"
+type=forest_way_1 label="Almbahn II"
 12.6824807 47.6044334
 12.6813313 47.6045817
 12.6794629 47.6048228
@@ -2174,11 +2174,11 @@ type=forest_way_1 label="Almbahn II" count="15"
 12.6548219 47.6080019
 12.6542729 47.6080727
 
-type=forest_way_1 label="Ochsenweide" count="2"
+type=forest_way_1 label="Ochsenweide"
 11.5249405 46.3829052
 11.5324198 46.3725194
 
-type=forest_way_1 label="Ruis" count="12"
+type=forest_way_1 label="Ruis"
 11.9640979 46.7247924
 11.9634635 46.7259514
 11.9627206 46.7273487
@@ -2192,14 +2192,14 @@ type=forest_way_1 label="Ruis" count="12"
 11.9574473 46.7372127
 11.9572527 46.7375862
 
-type=forest_way_1 label="Kaserebenbahn" count="5"
+type=forest_way_1 label="Kaserebenbahn"
 13.0814441 47.1317214
 13.0811872 47.1318764
 13.0811459 47.1319033
 13.0809727 47.1320239
 13.0624214 47.1433644
 
-type=forest_way_1 label="Nassereinbahn" count="15"
+type=forest_way_1 label="Nassereinbahn"
 10.272997 47.1347375
 10.2728697 47.1347546
 10.2727569 47.1347698
@@ -2216,7 +2216,7 @@ type=forest_way_1 label="Nassereinbahn" count="15"
 10.2496964 47.1378679
 10.2491551 47.1379406
 
-type=forest_way_1 label="Galzigbahn" count="13"
+type=forest_way_1 label="Galzigbahn"
 10.2629731 47.128138
 10.2595491 47.1284251
 10.2556867 47.1287489
@@ -2231,7 +2231,7 @@ type=forest_way_1 label="Galzigbahn" count="13"
 10.2312457 47.1307981
 10.2307545 47.1308393
 
-type=forest_way_1 label="Rendlbahn" count="14"
+type=forest_way_1 label="Rendlbahn"
 10.263181 47.1266611
 10.2632247 47.1264541
 10.2632574 47.1262992
@@ -2247,7 +2247,7 @@ type=forest_way_1 label="Rendlbahn" count="14"
 10.2677206 47.1051507
 10.2677513 47.1050051
 
-type=forest_way_1 label="Diedamskopfbahn I" count="15"
+type=forest_way_1 label="Diedamskopfbahn I"
 10.0085031 47.3173254
 10.0102237 47.3190696
 10.0117018 47.3205678
@@ -2264,7 +2264,7 @@ type=forest_way_1 label="Diedamskopfbahn I" count="15"
 10.0237073 47.3327351
 10.024705 47.3337462
 
-type=forest_way_1 label="Diedamskopfbahn II" count="9"
+type=forest_way_1 label="Diedamskopfbahn II"
 10.024705 47.3337462
 10.0251015 47.3352917
 10.0255264 47.3369479
@@ -2275,7 +2275,7 @@ type=forest_way_1 label="Diedamskopfbahn II" count="9"
 10.0275886 47.3449854
 10.0276792 47.3453385
 
-type=forest_way_1 label="Kasbergbahn" count="9"
+type=forest_way_1 label="Kasbergbahn"
 14.0048727 47.8456846
 14.0048043 47.8454069
 14.0047153 47.8450733
@@ -2286,15 +2286,15 @@ type=forest_way_1 label="Kasbergbahn" count="9"
 14.003641 47.8407306
 14.0011498 47.830619
 
-type=forest_way_1 label="Gruppenumlaufbahn" count="2"
+type=forest_way_1 label="Gruppenumlaufbahn"
 13.9969944 47.826825
 13.9865777 47.8101633
 
-type=forest_way_1 label="Hochalmbahn" count="2"
+type=forest_way_1 label="Hochalmbahn"
 12.561554 47.3754241
 12.5537693 47.3837274
 
-type=forest_way_1 label="Bernkogelbahn" count="19"
+type=forest_way_1 label="Bernkogelbahn"
 12.6359634 47.3930649
 12.6357267 47.3931917
 12.6346213 47.3937838
@@ -2315,11 +2315,11 @@ type=forest_way_1 label="Bernkogelbahn" count="19"
 12.6162731 47.4036111
 12.6159129 47.403804
 
-type=forest_way_1 label="Ski Weltbahn" count="2"
+type=forest_way_1 label="Ski Weltbahn"
 12.2439273 47.4489567
 12.2444382 47.4198701
 
-type=forest_way_1 label="Choralmbahn" count="22"
+type=forest_way_1 label="Choralmbahn"
 12.2166909 47.4131528
 12.2169694 47.4132181
 12.2170423 47.4132347
@@ -2343,25 +2343,25 @@ type=forest_way_1 label="Choralmbahn" count="22"
 12.2441275 47.4190796
 12.244405 47.4191409
 
-type=forest_way_1 label="Saslong" count="2"
+type=forest_way_1 label="Saslong"
 11.7294065 46.557031
 11.7409886 46.5434306
 
-type=forest_way_1 label="Schattberg Sprinter" count="2"
+type=forest_way_1 label="Schattberg Sprinter"
 12.6302596 47.3675354
 12.623265 47.3645781
 
-type=forest_way_1 label="Westgipfelbahn I" count="2"
+type=forest_way_1 label="Westgipfelbahn I"
 12.5932595 47.3728578
 12.6050354 47.3656347
 
-type=forest_way_1 label="Zwölfer Nordbahn" count="4"
+type=forest_way_1 label="Zwölfer Nordbahn"
 12.5656393 47.375855
 12.5673724 47.3685784
 12.5691188 47.3610448
 12.5692186 47.360602
 
-type=forest_way_1 label="Zwölferkogelbahn I" count="14"
+type=forest_way_1 label="Zwölferkogelbahn I"
 12.5893661 47.3754209
 12.5884984 47.3740948
 12.5875871 47.372706
@@ -2377,19 +2377,19 @@ type=forest_way_1 label="Zwölferkogelbahn I" count="14"
 12.5818357 47.3639406
 12.5812935 47.3631142
 
-type=forest_way_1 label="Reiterkogelbahn" count="2"
+type=forest_way_1 label="Reiterkogelbahn"
 12.5967788 47.3795243
 12.5891025 47.3886294
 
-type=forest_way_1 label="Colfosco" count="2"
+type=forest_way_1 label="Colfosco"
 11.8532525 46.5502146
 11.8508874 46.56243
 
-type=forest_way_1 label="Hochzillertal III" count="2"
+type=forest_way_1 label="Hochzillertal III"
 11.8473432 47.2704774
 11.8727505 47.2893129
 
-type=forest_way_1 label="Hochzillertal II" count="16"
+type=forest_way_1 label="Hochzillertal II"
 11.8626828 47.2814196
 11.8614516 47.2805783
 11.8598295 47.2793968
@@ -2407,7 +2407,7 @@ type=forest_way_1 label="Hochzillertal II" count="16"
 11.8473219 47.2702858
 11.8469071 47.2699837
 
-type=forest_way_1 label="Golmerbahn 1" count="11"
+type=forest_way_1 label="Golmerbahn 1"
 9.8687904 47.089471
 9.8689742 47.0887364
 9.8692741 47.0874293
@@ -2420,7 +2420,7 @@ type=forest_way_1 label="Golmerbahn 1" count="11"
 9.8718084 47.0762652
 9.8719373 47.0757157
 
-type=forest_way_1 label="Gletscherexpress" count="10"
+type=forest_way_1 label="Gletscherexpress"
 10.9403748 46.9552149
 10.9402657 46.9550204
 10.9400258 46.9545927
@@ -2432,17 +2432,17 @@ type=forest_way_1 label="Gletscherexpress" count="10"
 10.9329523 46.9419797
 10.9327322 46.9415873
 
-type=forest_way_1 label="Rotkogl" count="3"
+type=forest_way_1 label="Rotkogl"
 10.9896202 46.9751224
 10.9822977 46.9764164
 10.9752531 46.9776612
 
-type=forest_way_1 label="Madrisabahn" count="3"
+type=forest_way_1 label="Madrisabahn"
 9.8756039 46.8844455
 9.8752898 46.8849317
 9.8641127 46.9022307
 
-type=forest_way_1 label="ContrÃƒÆ’Ã‚Â¨-Malga Copai" count="17"
+type=forest_way_1 label="Contr-Malga Copai"
 10.8125334 46.3141054
 10.8124468 46.313707
 10.8123222 46.313134
@@ -2461,11 +2461,11 @@ type=forest_way_1 label="ContrÃƒÆ’Ã‚Â¨-Malga Copai" count="17"
 10.8098237 46.301644
 10.8097687 46.3013911
 
-type=forest_way_1 label="Copai-Panciana" count="2"
+type=forest_way_1 label="Copai-Panciana"
 10.8121352 46.3019878
 10.820865 46.286022
 
-type=forest_way_1 label="Dorfbahn" count="12"
+type=forest_way_1 label="Dorfbahn"
 9.7436876 47.1110147
 9.7435749 47.1110597
 9.7435427 47.1110734
@@ -2479,7 +2479,7 @@ type=forest_way_1 label="Dorfbahn" count="12"
 9.7320651 47.1160134
 9.7318452 47.116108
 
-type=forest_way_1 label="trassXpress" count="22"
+type=forest_way_1 label="trassXpress"
 12.7723836 47.3262435
 12.771959 47.3262194
 12.7703011 47.3261252
@@ -2503,12 +2503,12 @@ type=forest_way_1 label="trassXpress" count="22"
 12.7376534 47.3242703
 12.7368876 47.3242268
 
-type=forest_way_1 label="Palüdbahn" count="3"
+type=forest_way_1 label="Palüdbahn"
 9.7347416 47.0951378
 9.7344251 47.0953213
 9.7181343 47.1046633
 
-type=forest_way_1 label="Pizolbahn Bad Ragaz" count="16"
+type=forest_way_1 label="Pizolbahn Bad Ragaz"
 9.47343 47.017183
 9.4725853 47.0144642
 9.4717778 47.0118648
@@ -2526,7 +2526,7 @@ type=forest_way_1 label="Pizolbahn Bad Ragaz" count="16"
 9.4649226 46.9897939
 9.4647783 46.9893292
 
-type=forest_way_1 label="Pizolbahn Wangs" count="23"
+type=forest_way_1 label="Pizolbahn Wangs"
 9.432086 47.028818
 9.4317441 47.0280381
 9.4312287 47.026862
@@ -2551,11 +2551,11 @@ type=forest_way_1 label="Pizolbahn Wangs" count="23"
 9.4205517 47.0025192
 9.4204457 47.0022778
 
-type=forest_way_1 label="Sonnenbahn" count="2"
+type=forest_way_1 label="Sonnenbahn"
 13.6479303 47.1008557
 13.6487873 47.1197705
 
-type=forest_way_1 label="Hochgurglbahn I" count="8"
+type=forest_way_1 label="Hochgurglbahn I"
 11.0407442 46.8978013
 11.0410108 46.8978352
 11.0424838 46.8980224
@@ -2565,7 +2565,7 @@ type=forest_way_1 label="Hochgurglbahn I" count="8"
 11.0512799 46.8991402
 11.0519482 46.8992251
 
-type=forest_way_1 label="Hochgurglbahn II" count="13"
+type=forest_way_1 label="Hochgurglbahn II"
 11.0519482 46.8992251
 11.052591 46.8988564
 11.0548504 46.8975605
@@ -2580,7 +2580,7 @@ type=forest_way_1 label="Hochgurglbahn II" count="13"
 11.0730363 46.8871283
 11.0737868 46.8866978
 
-type=forest_way_1 label="Hohe Mut Bahn II" count="15"
+type=forest_way_1 label="Hohe Mut Bahn II"
 11.0228513 46.8603041
 11.0230404 46.8599457
 11.0232823 46.859487
@@ -2597,7 +2597,7 @@ type=forest_way_1 label="Hohe Mut Bahn II" count="15"
 11.0285833 46.849436
 11.0288798 46.8488738
 
-type=forest_way_1 label="Gaislachkoglbahn I" count="16"
+type=forest_way_1 label="Gaislachkoglbahn I"
 11.0094183 46.9599985
 11.0089618 46.9598059
 11.007385 46.9591408
@@ -2615,11 +2615,11 @@ type=forest_way_1 label="Gaislachkoglbahn I" count="16"
 10.9885176 46.9511817
 10.9879864 46.9509576
 
-type=forest_way_1 label="Ochsengarten" count="2"
+type=forest_way_1 label="Ochsengarten"
 10.9328146 47.2272379
 10.9319017 47.2127702
 
-type=forest_way_1 label="Abergbahn" count="21"
+type=forest_way_1 label="Abergbahn"
 12.9089489 47.3897407
 12.9092059 47.389003
 12.9095081 47.3881348
@@ -2642,12 +2642,12 @@ type=forest_way_1 label="Abergbahn" count="21"
 12.9151084 47.3720444
 12.9152039 47.3717699
 
-type=forest_way_1 label="Hornbahn I" count="3"
+type=forest_way_1 label="Hornbahn I"
 12.3948502 47.4501785
 12.4076686 47.4635739
 12.4078122 47.4635978
 
-type=forest_way_1 label="Raintal" count="8"
+type=forest_way_1 label="Raintal"
 12.4452319 47.4704381
 12.4440146 47.470874
 12.4422096 47.4714838
@@ -2657,7 +2657,7 @@ type=forest_way_1 label="Raintal" count="8"
 12.4356158 47.4736873
 12.4307698 47.4753119
 
-type=forest_way_1 label="Pengelstein I" count="17"
+type=forest_way_1 label="Pengelstein I"
 12.3152324 47.4172677
 12.3156393 47.4167188
 12.3170233 47.4148519
@@ -2676,28 +2676,28 @@ type=forest_way_1 label="Pengelstein I" count="17"
 12.3310992 47.3958603
 12.3316675 47.3950934
 
-type=forest_way_1 label="3S Bahn" count="5"
+type=forest_way_1 label="3S Bahn"
 12.3469532 47.3892365
 12.3474562 47.3888828
 12.3568757 47.3822587
 12.3800231 47.3659771
 12.380563 47.3655973
 
-type=forest_way_1 label="Fleckalmbahn" count="2"
+type=forest_way_1 label="Fleckalmbahn"
 12.3353688 47.4504456
 12.3579267 47.4178987
 
-type=forest_way_1 label="WagstÃ¤ttbahn" count="3"
+type=forest_way_1 label="Wagstättbahn"
 12.4181836 47.3775856
 12.4036149 47.3748131
 12.388195 47.3702896
 
-type=forest_way_1 label="Panoramabahn Kitzbüheler Alpen I" count="3"
+type=forest_way_1 label="Panoramabahn Kitzbüheler Alpen I"
 12.4054256 47.2806792
 12.4080791 47.2996989
 12.408061 47.2997255
 
-type=forest_way_1 label="Gipfelbahn" count="13"
+type=forest_way_1 label="Gipfelbahn"
 11.9587753 46.7542589
 11.9587526 46.7538736
 11.9587141 46.7532213
@@ -2712,14 +2712,14 @@ type=forest_way_1 label="Gipfelbahn" count="13"
 11.9580195 46.7396433
 11.9580116 46.7393873
 
-type=forest_way_1 label="Penkenbahn" count="5"
+type=forest_way_1 label="Penkenbahn"
 11.8605804 47.1634094
 11.8476545 47.1691739
 11.833125 47.1740281
 11.8305032 47.174835
 11.8291095 47.1753113
 
-type=forest_way_1 label="Gondelbahn Kulm" count="9"
+type=forest_way_1 label="Gondelbahn Kulm"
 9.6635833 46.7773511
 9.6636574 46.7781374
 9.663722 46.7788227
@@ -2730,11 +2730,11 @@ type=forest_way_1 label="Gondelbahn Kulm" count="9"
 9.6640522 46.7823253
 9.6641224 46.7830699
 
-type=forest_way_1 label="Känzeli-Brambüesch" count="2"
+type=forest_way_1 label="Känzeli-Brambüesch"
 9.5257114 46.8388917
 9.5162272 46.8289671
 
-type=forest_way_1 label="Goldried I" count="26"
+type=forest_way_1 label="Goldried I"
 12.5433128 46.9906252
 12.5436917 46.9906002
 12.5440135 46.9905789
@@ -2762,7 +2762,7 @@ type=forest_way_1 label="Goldried I" count="26"
 12.5802658 46.9881848
 12.5804597 46.988172
 
-type=forest_way_1 label="Kals I" count="9"
+type=forest_way_1 label="Kals I"
 12.640477 47.0059138
 12.6393719 47.0055962
 12.6360711 47.0046477
@@ -2773,7 +2773,7 @@ type=forest_way_1 label="Kals I" count="9"
 12.611958 46.997718
 12.6107258 46.9973638
 
-type=forest_way_1 label="Ossi-Reichert-Bahn Sektion 2" count="8"
+type=forest_way_1 label="Ossi-Reichert-Bahn Sektion 2"
 10.2193572 47.5063713
 10.2191877 47.5060738
 10.2187444 47.5053053
@@ -2783,7 +2783,7 @@ type=forest_way_1 label="Ossi-Reichert-Bahn Sektion 2" count="8"
 10.2140341 47.4992307
 10.213665 47.4987546
 
-type=forest_way_1 label="8er Jet" count="18"
+type=forest_way_1 label="8er Jet"
 11.7766355 47.2646911
 11.7763968 47.2644897
 11.7755484 47.2637735
@@ -2803,7 +2803,7 @@ type=forest_way_1 label="8er Jet" count="18"
 11.7586397 47.2495001
 11.7584877 47.2493718
 
-type=forest_way_1 label="Harschbichl I" count="21"
+type=forest_way_1 label="Harschbichl I"
 12.4269324 47.5168109
 12.42692 47.5165523
 12.4268681 47.5157962
@@ -2826,11 +2826,11 @@ type=forest_way_1 label="Harschbichl I" count="21"
 12.4258209 47.4958916
 12.4258031 47.4953786
 
-type=forest_way_1 label="Bauernpenzing" count="2"
+type=forest_way_1 label="Bauernpenzing"
 12.395942 47.496627
 12.4184014 47.4912328
 
-type=forest_way_1 label="Eichenhof 1" count="10"
+type=forest_way_1 label="Eichenhof 1"
 12.4492214 47.5143687
 12.449134 47.5141231
 12.4491155 47.5140712
@@ -2842,7 +2842,7 @@ type=forest_way_1 label="Eichenhof 1" count="10"
 12.4464066 47.5064617
 12.446333 47.5062549
 
-type=forest_way_1 label="Pre da Peres" count="8"
+type=forest_way_1 label="Pre da Peres"
 11.9651954 46.722833
 11.9658078 46.7220901
 11.9668646 46.7208126
@@ -2852,7 +2852,7 @@ type=forest_way_1 label="Pre da Peres" count="8"
 11.9704896 46.7165521
 11.9708035 46.7161724
 
-type=forest_way_1 label="Skitrans Bronta" count="6"
+type=forest_way_1 label="Skitrans Bronta"
 11.9297491 46.7045086
 11.9295544 46.7042531
 11.9292133 46.7038124
@@ -2860,7 +2860,7 @@ type=forest_way_1 label="Skitrans Bronta" count="6"
 11.9277265 46.7018902
 11.9272513 46.7012475
 
-type=forest_way_1 label="PedagÃƒÆ’Ã‚Â " count="8"
+type=forest_way_1 label="Pedag"
 11.9280337 46.7005488
 11.9276998 46.7003474
 11.9271892 46.7000485
@@ -2870,7 +2870,7 @@ type=forest_way_1 label="PedagÃƒÆ’Ã‚Â " count="8"
 11.9220713 46.6969497
 11.9214881 46.6965861
 
-type=forest_way_1 label="Piz de Plaies" count="9"
+type=forest_way_1 label="Piz de Plaies"
 11.9214881 46.6965861
 11.9210565 46.6966387
 11.9200198 46.6967652
@@ -2881,7 +2881,7 @@ type=forest_way_1 label="Piz de Plaies" count="9"
 11.9128207 46.6976334
 11.9120535 46.6977276
 
-type=forest_way_1 label="Piculin" count="15"
+type=forest_way_1 label="Piculin"
 11.8928248 46.6923554
 11.8946317 46.6929032
 11.8963827 46.693434
@@ -2898,7 +2898,7 @@ type=forest_way_1 label="Piculin" count="15"
 11.9108137 46.6978089
 11.9113653 46.6979761
 
-type=forest_way_1 label="Miara" count="13"
+type=forest_way_1 label="Miara"
 11.9305724 46.7044699
 11.9322145 46.7050118
 11.9339928 46.7055857
@@ -2913,7 +2913,7 @@ type=forest_way_1 label="Miara" count="13"
 11.9505581 46.7108321
 11.9511505 46.7109921
 
-type=forest_way_1 label="Col Toron" count="12"
+type=forest_way_1 label="Col Toron"
 11.9505889 46.7111024
 11.9509102 46.711305
 11.9519384 46.7119535
@@ -2927,17 +2927,17 @@ type=forest_way_1 label="Col Toron" count="12"
 11.9629246 46.7188821
 11.9638322 46.7194042
 
-type=forest_way_1 label="Marchner" count="4"
+type=forest_way_1 label="Marchner"
 11.9945958 46.7336508
 11.9881738 46.7345214
 11.986154 46.7347952
 11.9732863 46.7365395
 
-type=forest_way_1 label="412 Hubertus" count="2"
+type=forest_way_1 label="412 Hubertus"
 11.5924505 46.4075583
 11.6071038 46.4031684
 
-type=forest_way_1 label="Rosenalmbahn 2" count="9"
+type=forest_way_1 label="Rosenalmbahn 2"
 11.9228626 47.2388604
 11.9238632 47.2393331
 11.9286817 47.2416092
@@ -2948,7 +2948,7 @@ type=forest_way_1 label="Rosenalmbahn 2" count="9"
 11.9410021 47.2474287
 11.9414446 47.2476377
 
-type=forest_way_1 label="Doischberg" count="14"
+type=forest_way_1 label="Doischberg"
 12.5515089 47.4667865
 12.5516827 47.4666464
 12.5521705 47.4662531
@@ -2964,19 +2964,19 @@ type=forest_way_1 label="Doischberg" count="14"
 12.5640723 47.4566567
 12.5644825 47.4563259
 
-type=forest_way_1 label="Reckmoos Nord II" count="2"
+type=forest_way_1 label="Reckmoos Nord II"
 12.5574109 47.439501
 12.5588629 47.4429302
 
-type=forest_way_1 label="Reckmoos Nord I" count="2"
+type=forest_way_1 label="Reckmoos Nord I"
 12.5574109 47.439501
 12.551598 47.4279901
 
-type=forest_way_1 label="Reckmoos Süd" count="2"
+type=forest_way_1 label="Reckmoos Süd"
 12.5682741 47.4175473
 12.5523479 47.4278123
 
-type=forest_way_1 label="8er-Kabinenbahn Kings Cab" count="16"
+type=forest_way_1 label="8er-Kabinenbahn Kings Cab"
 13.0732225 47.385435
 13.0729006 47.3853598
 13.072825 47.3853422
@@ -2994,7 +2994,7 @@ type=forest_way_1 label="8er-Kabinenbahn Kings Cab" count="16"
 13.0482001 47.3795923
 13.047801 47.3794991
 
-type=forest_way_1 label="Kabinenbahn Karbachalm" count="12"
+type=forest_way_1 label="Kabinenbahn Karbachalm"
 13.1091758 47.3796584
 13.1081498 47.3794868
 13.1069232 47.3792817
@@ -3008,7 +3008,7 @@ type=forest_way_1 label="Kabinenbahn Karbachalm" count="12"
 13.0887252 47.3762413
 13.086249 47.3758244
 
-type=forest_way_1 label="Heidbüel" count="10"
+type=forest_way_1 label="Heidbüel"
 9.5416139 46.7771543
 9.5366164 46.7708746
 9.5359946 46.7700933
@@ -3020,7 +3020,7 @@ type=forest_way_1 label="Heidbüel" count="10"
 9.5318564 46.7648926
 9.5316314 46.7646099
 
-type=forest_way_1 label="Telecabina Canin" count="11"
+type=forest_way_1 label="Telecabina Canin"
 13.4704435 46.3881236
 13.4702956 46.3878663
 13.4678028 46.383527
@@ -3033,7 +3033,7 @@ type=forest_way_1 label="Telecabina Canin" count="11"
 13.4615598 46.3726585
 13.461442 46.3724533
 
-type=forest_way_1 label="Rittnerhornbahn-Funivia del Corno" count="19"
+type=forest_way_1 label="Rittnerhornbahn-Funivia del Corno"
 11.4458771 46.576621
 11.4461074 46.5772475
 11.4465477 46.5785335
@@ -3054,7 +3054,7 @@ type=forest_way_1 label="Rittnerhornbahn-Funivia del Corno" count="19"
 11.4523879 46.5954026
 11.4525162 46.5957762
 
-type=forest_way_1 label="Bormio-Bormio 2000" count="16"
+type=forest_way_1 label="Bormio-Bormio 2000"
 10.3725159 46.462099
 10.3728608 46.4617068
 10.3738969 46.4605288
@@ -3072,7 +3072,7 @@ type=forest_way_1 label="Bormio-Bormio 2000" count="16"
 10.3878012 46.444717
 10.3882156 46.4442457
 
-type=forest_way_1 label="Hauser Kaiblingbahn" count="17"
+type=forest_way_1 label="Hauser Kaiblingbahn"
 13.779562 47.4115157
 13.7795057 47.4113031
 13.7792012 47.4101538
@@ -3091,7 +3091,7 @@ type=forest_way_1 label="Hauser Kaiblingbahn" count="17"
 13.7739199 47.3902116
 13.7737934 47.3897338
 
-type=forest_way_1 label="Planaibahn II" count="19"
+type=forest_way_1 label="Planaibahn II"
 13.7077394 47.3821429
 13.7084463 47.3817545
 13.7096124 47.3811138
@@ -3112,7 +3112,7 @@ type=forest_way_1 label="Planaibahn II" count="19"
 13.7239439 47.3732392
 13.7243878 47.3729953
 
-type=forest_way_1 label="Planaibahn I" count="18"
+type=forest_way_1 label="Planaibahn I"
 13.693217 47.392887
 13.6944526 47.3920205
 13.6964191 47.3905298
@@ -3132,7 +3132,7 @@ type=forest_way_1 label="Planaibahn I" count="18"
 13.7072467 47.3825108
 13.7077394 47.3821429
 
-type=forest_way_1 label="Planai West I" count="8"
+type=forest_way_1 label="Planai West I"
 13.6775159 47.3903781
 13.6777952 47.3901514
 13.6780027 47.3899829
@@ -3142,7 +3142,7 @@ type=forest_way_1 label="Planai West I" count="8"
 13.6857036 47.3837306
 13.6861548 47.3833642
 
-type=forest_way_1 label="Gaislachkoglbahn II" count="6"
+type=forest_way_1 label="Gaislachkoglbahn II"
 10.9878893 46.9512301
 10.987473 46.9510537
 10.9846526 46.9498585
@@ -3150,35 +3150,35 @@ type=forest_way_1 label="Gaislachkoglbahn II" count="6"
 10.9684221 46.9429803
 10.9671991 46.942462
 
-type=forest_way_1 label="Senderbahn I" count="4"
+type=forest_way_1 label="Senderbahn I"
 13.0819646 47.1320232
 13.0819616 47.1318368
 13.0819609 47.1317966
 13.0818491 47.1250941
 
-type=forest_way_1 label="Grubigsteinbahn" count="5"
+type=forest_way_1 label="Grubigsteinbahn"
 10.8789238 47.4014384
 10.8735117 47.3960755
 10.8723467 47.3949211
 10.8697999 47.3923971
 10.8694996 47.3920996
 
-type=forest_way_1 label="Family Jet" count="2"
+type=forest_way_1 label="Family Jet"
 10.8835195 47.3995546
 10.8820815 47.3965344
 
-type=forest_way_1 label="Bergbahn Schöneben" count="3"
+type=forest_way_1 label="Bergbahn Schöneben"
 10.5088441 46.8217017
 10.5038841 46.8168568
 10.4917198 46.804973
 
-type=forest_way_1 label="St. Ulrich-Seiser Alm-Ortisei-Alpe" count="4"
+type=forest_way_1 label="St. Ulrich-Seiser Alm-Ortisei-Alpe"
 11.6712606 46.5728179
 11.6709417 46.5720992
 11.6678836 46.5652063
 11.6647087 46.5580492
 
-type=forest_way_1 label="Wiedersbergerhornbahn (Sektion I)" count="13"
+type=forest_way_1 label="Wiedersbergerhornbahn (Sektion I)"
 11.9243458 47.3962003
 11.9243737 47.3960138
 11.9243794 47.3959756
@@ -3193,7 +3193,7 @@ type=forest_way_1 label="Wiedersbergerhornbahn (Sektion I)" count="13"
 11.9262032 47.3837893
 11.9262657 47.3833714
 
-type=forest_way_1 label="Reitherkogelbahn" count="10"
+type=forest_way_1 label="Reitherkogelbahn"
 11.8801026 47.4145424
 11.8798827 47.4138344
 11.8791634 47.411519
@@ -3205,13 +3205,13 @@ type=forest_way_1 label="Reitherkogelbahn" count="10"
 11.8749512 47.3979571
 11.8748611 47.397667
 
-type=forest_way_1 label="Rinerhornbahn" count="4"
+type=forest_way_1 label="Rinerhornbahn"
 9.7804222 46.7454278
 9.7838592 46.7452381
 9.7920036 46.7447727
 9.802768 46.7441596
 
-type=forest_way_1 label="Bischling Ikarus" count="14"
+type=forest_way_1 label="Bischling Ikarus"
 13.2759658 47.4586153
 13.2761929 47.4586606
 13.277358 47.4588932
@@ -3227,11 +3227,11 @@ type=forest_way_1 label="Bischling Ikarus" count="14"
 13.2975783 47.4629289
 13.2983876 47.4630904
 
-type=forest_way_1 label="KaiserBahn" count="2"
+type=forest_way_1 label="Kaiser Bahn"
 11.0107028 47.2117185
 11.0106746 47.2259653
 
-type=forest_way_1 label="Silver Jet" count="16"
+type=forest_way_1 label="Silver Jet"
 13.5976619 47.388469
 13.597577 47.3882407
 13.597559 47.3881923
@@ -3249,7 +3249,7 @@ type=forest_way_1 label="Silver Jet" count="16"
 13.5918866 47.3729412
 13.5917288 47.3725169
 
-type=forest_way_1 label="Livigno-Tagliede" count="7"
+type=forest_way_1 label="Livigno-Tagliede"
 10.1367466 46.5432501
 10.1359225 46.5436422
 10.1346289 46.5440006
@@ -3258,7 +3258,7 @@ type=forest_way_1 label="Livigno-Tagliede" count="7"
 10.1293504 46.5456212
 10.1287858 46.5457945
 
-type=forest_way_1 label="Schatzbergbahn" count="13"
+type=forest_way_1 label="Schatzbergbahn"
 12.0118238 47.4053691
 12.0132053 47.4055407
 12.0143261 47.405666
@@ -3273,7 +3273,7 @@ type=forest_way_1 label="Schatzbergbahn" count="13"
 12.032775 47.4077289
 12.0373376 47.4082391
 
-type=forest_way_1 label="Schatzbergbahn" count="15"
+type=forest_way_1 label="Schatzbergbahn"
 11.9883668 47.3975783
 11.9886855 47.3976873
 11.9890507 47.397807
@@ -3290,15 +3290,15 @@ type=forest_way_1 label="Schatzbergbahn" count="15"
 12.0090203 47.404438
 12.0118238 47.4053691
 
-type=forest_way_1 label="Wildkogelbahn 2" count="2"
+type=forest_way_1 label="Wildkogelbahn 2"
 12.2809315 47.2704792
 12.2815878 47.2803451
 
-type=forest_way_1 label="Wilkogelbahn 1" count="2"
+type=forest_way_1 label="Wilkogelbahn 1"
 12.2807748 47.254389
 12.2808208 47.2705012
 
-type=forest_way_1 label="Cabinovia Colverde" count="16"
+type=forest_way_1 label="Cabinovia Colverde"
 11.8052124 46.2641261
 11.8054733 46.2642529
 11.8055669 46.2642984
@@ -3316,15 +3316,15 @@ type=forest_way_1 label="Cabinovia Colverde" count="16"
 11.8209962 46.2717955
 11.8212851 46.2719358
 
-type=forest_way_1 label="Gipfelbahn Hochwurzen" count="2"
+type=forest_way_1 label="Gipfelbahn Hochwurzen"
 13.6539761 47.3760632
 13.6393606 47.3603716
 
-type=forest_way_1 label="Folgarida" count="2"
+type=forest_way_1 label="Folgarida"
 10.858995 46.3034013
 10.8512062 46.2906484
 
-type=forest_way_1 label="A-Schafbergbahn" count="15"
+type=forest_way_1 label="A-Schafbergbahn"
 9.9192896 46.9675832
 9.9190482 46.9674871
 9.9170835 46.9667053
@@ -3341,7 +3341,7 @@ type=forest_way_1 label="A-Schafbergbahn" count="15"
 9.8969757 46.9587037
 9.8958782 46.9582669
 
-type=forest_way_1 label="Hochzeigerbahn" count="18"
+type=forest_way_1 label="Hochzeigerbahn"
 10.7587418 47.1522836
 10.7590895 47.152307
 10.7595775 47.1523398
@@ -3361,7 +3361,7 @@ type=forest_way_1 label="Hochzeigerbahn" count="18"
 10.78012 47.153719
 10.7805852 47.1537502
 
-type=forest_way_1 label="Versettla I" count="14"
+type=forest_way_1 label="Versettla I"
 10.0244338 46.9840665
 10.0235665 46.9841165
 10.0222859 46.984182
@@ -3377,7 +3377,7 @@ type=forest_way_1 label="Versettla I" count="14"
 10.0078386 46.9849208
 10.0071741 46.9849548
 
-type=forest_way_1 label="Hochalmbahn" count="23"
+type=forest_way_1 label="Hochalmbahn"
 12.9911691 47.2238638
 12.9908031 47.2238276
 12.9900143 47.2237496
@@ -3401,24 +3401,24 @@ type=forest_way_1 label="Hochalmbahn" count="23"
 12.9600772 47.2207927
 12.9583748 47.2206203
 12.9577511 47.2205577
-type=forest_way_1 label="Panoramabahn Kitzbüheler Alpen II" count="2"
+type=forest_way_1 label="Panoramabahn Kitzbüheler Alpen II"
 12.408061 47.2997255
 12.3827552 47.3069239
 
-type=forest_way_1 label="Königslehenbahn II" count="3"
+type=forest_way_1 label="Königslehenbahn II"
 13.4547522 47.3628722
 13.4546495 47.3556906
 13.4546106 47.3526555
 
-type=forest_way_1 label="Königslehenbahn I" count="2"
+type=forest_way_1 label="Königslehenbahn I"
 13.4667407 47.3724275
 13.4547522 47.3628722
 
-type=forest_way_1 label="Jochtal" count="2"
+type=forest_way_1 label="Jochtal"
 11.6009134 46.8439548
 11.6210469 46.850557
 
-type=forest_way_1 label="Ciampinoi" count="15"
+type=forest_way_1 label="Ciampinoi"
 11.7617381 46.5533122
 11.7615873 46.5530259
 11.7610441 46.5520706
@@ -3435,23 +3435,23 @@ type=forest_way_1 label="Ciampinoi" count="15"
 11.7536162 46.5390127
 11.7533895 46.538615
 
-type=forest_way_1 label="Col Raiser" count="2"
+type=forest_way_1 label="Col Raiser"
 11.7366866 46.5651243
 11.7453183 46.5847839
 
-type=forest_way_1 label="Karspitzbahn 2" count="2"
+type=forest_way_1 label="Karspitzbahn 2"
 11.9226451 47.2396655
 11.9531252 47.2385885
 
-type=forest_way_1 label="Piani di Pezzo" count="2"
+type=forest_way_1 label="Piani di Pezzo"
 12.0232345 46.4052397
 12.0408026 46.4129847
 
-type=forest_way_1 label="Col dei Baldi" count="2"
+type=forest_way_1 label="Col dei Baldi"
 12.0437643 46.4114358
 12.0685287 46.4152295
 
-type=forest_way_1 label="Vzpenjaa" count="18"
+type=forest_way_1 label="Vzpenjaa"
 15.5992111 46.5329018
 15.5989929 46.5327153
 15.5982305 46.5320636
@@ -3471,7 +3471,7 @@ type=forest_way_1 label="Vzpenjaa" count="18"
 15.5797217 46.5162358
 15.5795846 46.5161482
 
-type=forest_way_1 label="Gipfelbahn" count="7"
+type=forest_way_1 label="Gipfelbahn"
 9.8833658 47.3272265
 9.8835073 47.3270455
 9.8838429 47.3266161
@@ -3480,15 +3480,15 @@ type=forest_way_1 label="Gipfelbahn" count="7"
 9.8882478 47.3209797
 9.8944767 47.3130085
 
-type=forest_way_1 label="Falschbach" count="2"
+type=forest_way_1 label="Falschbach"
 12.0764458 47.2550945
 12.0892587 47.2613713
 
-type=forest_way_1 label="Gipfelbahn" count="2"
+type=forest_way_1 label="Gipfelbahn"
 12.1062967 47.2624563
 12.0901636 47.2610635
 
-type=forest_way_1 label="Belvedere" count="9"
+type=forest_way_1 label="Belvedere"
 11.9729532 46.736579
 11.9715196 46.7367554
 11.9697412 46.7369824
@@ -3499,7 +3499,7 @@ type=forest_way_1 label="Belvedere" count="9"
 11.9597956 46.7383308
 11.9592804 46.7383882
 
-type=forest_way_1 label="Eggalmbahn" count="18"
+type=forest_way_1 label="Eggalmbahn"
 11.7287152 47.1570386
 11.7280628 47.1572724
 11.7264752 47.1578175
@@ -3519,7 +3519,7 @@ type=forest_way_1 label="Eggalmbahn" count="18"
 11.7129921 47.1625157
 11.7125552 47.1626714
 
-type=forest_way_1 label="Golzentippbahn" count="13"
+type=forest_way_1 label="Golzentippbahn"
 12.618245 46.7104757
 12.6183334 46.7106589
 12.61836 46.7107276
@@ -3534,7 +3534,7 @@ type=forest_way_1 label="Golzentippbahn" count="13"
 12.6231327 46.7230382
 12.6234464 46.7238475
 
-type=forest_way_1 label="Hans im Glück" count="10"
+type=forest_way_1 label="Hans im Glück"
 12.192348 47.480231
 12.1923957 47.4803228
 12.1924144 47.4803587
@@ -3546,16 +3546,16 @@ type=forest_way_1 label="Hans im Glück" count="10"
 12.1941494 47.4836947
 12.1941885 47.4837698
 
-type=forest_way_1 label="Cianross" count="2"
+type=forest_way_1 label="Cianross"
 11.9283788 46.6976937
 11.9247264 46.6964812
 
-type=forest_way_1 label="Dorfbahn Königsleiten" count="3"
+type=forest_way_1 label="Dorfbahn Königsleiten"
 12.1221937 47.2508304
 12.1125911 47.2557277
 12.0926301 47.2629725
 
-type=forest_way_1 label="Golmerbahn 2" count="12"
+type=forest_way_1 label="Golmerbahn 2"
 9.8719373 47.0757157
 9.8712065 47.0753426
 9.8700761 47.0748134
@@ -3569,7 +3569,7 @@ type=forest_way_1 label="Golmerbahn 2" count="12"
 9.8597294 47.0698215
 9.8591201 47.0695204
 
-type=forest_way_1 label="Golmerbahn 3" count="9"
+type=forest_way_1 label="Golmerbahn 3"
 9.8591201 47.0695204
 9.857993 47.0691366
 9.8553377 47.0682096
@@ -3580,7 +3580,7 @@ type=forest_way_1 label="Golmerbahn 3" count="9"
 9.8458511 47.0648891
 9.8450949 47.0646344
 
-type=forest_way_1 label="Brandstadl" count="22"
+type=forest_way_1 label="Brandstadl"
 12.2468842 47.5196505
 12.2468095 47.5172744
 12.2467928 47.5167413
@@ -3604,14 +3604,14 @@ type=forest_way_1 label="Brandstadl" count="22"
 12.2460312 47.4925027
 12.2460155 47.4920039
 
-type=forest_way_1 label="DMC Europa II" count="5"
+type=forest_way_1 label="DMC Europa II"
 11.8792015 46.4818717
 11.8787908 46.4814804
 11.875019 46.4778874
 11.8703987 46.4734856
 11.8701162 46.4732165
 
-type=forest_way_1 label="Pfannspitz-Monte Fana" count="14"
+type=forest_way_1 label="Pfannspitz-Monte Fana"
 11.738039 46.6777076
 11.7415564 46.6831786
 11.7419377 46.6838262
@@ -3627,7 +3627,7 @@ type=forest_way_1 label="Pfannspitz-Monte Fana" count="14"
 11.7460789 46.6908599
 11.7462083 46.6910797
 
-type=forest_way_1 label="Kanin (C-D)" count="7"
+type=forest_way_1 label="Kanin (C-D)"
 13.4886943 46.3515682
 13.4883439 46.3517748
 13.4876825 46.3521649
@@ -3636,7 +3636,7 @@ type=forest_way_1 label="Kanin (C-D)" count="7"
 13.4785023 46.3575782
 13.4767195 46.3586496
 
-type=forest_way_1 label="Grafenberg-Express I" count="6"
+type=forest_way_1 label="Grafenberg-Express I"
 13.2995156 47.3283229
 13.2974991 47.3272305
 13.2934406 47.3250317
@@ -3644,11 +3644,11 @@ type=forest_way_1 label="Grafenberg-Express I" count="6"
 13.2907759 47.3235879
 13.2905276 47.3234534
 
-type=forest_way_1 label="Pian del Crep" count="2"
+type=forest_way_1 label="Pian del Crep"
 12.0999755 46.3909429
 12.0943889 46.3814965
 
-type=forest_way_1 label="Puflatsch-Bullaccia" count="10"
+type=forest_way_1 label="Puflatsch-Bullaccia"
 11.6240374 46.5448386
 11.6237112 46.5451727
 11.6227823 46.5461215
@@ -3660,11 +3660,11 @@ type=forest_way_1 label="Puflatsch-Bullaccia" count="10"
 11.6174351 46.5515826
 11.6171812 46.5518419
 
-type=forest_way_1 label="AlbaÂ¬Ciampac" count="2"
+type=forest_way_1 label="Alba¬Ciampac"
 11.7886914 46.4579431
 11.772194 46.4465999
 
-type=forest_way_1 label="Kohlmaisgipfelbahn" count="11"
+type=forest_way_1 label="Kohlmaisgipfelbahn"
 12.6402073 47.3920446
 12.6407593 47.3927905
 12.641673 47.3940316
@@ -3677,7 +3677,7 @@ type=forest_way_1 label="Kohlmaisgipfelbahn" count="11"
 12.6469653 47.4012196
 12.6533775 47.409948
 
-type=forest_way_1 label="Tagliede-Costaccia" count="10"
+type=forest_way_1 label="Tagliede-Costaccia"
 10.1287858 46.5457945
 10.1274334 46.5454636
 10.126643 46.5452702
@@ -3689,7 +3689,7 @@ type=forest_way_1 label="Tagliede-Costaccia" count="10"
 10.1180966 46.5431788
 10.1175666 46.5430491
 
-type=forest_way_1 label="Sonnenkopfbahn" count="23"
+type=forest_way_1 label="Sonnenkopfbahn"
 10.0561993 47.1285447
 10.0561835 47.1281127
 10.0561063 47.1265353
@@ -3714,7 +3714,7 @@ type=forest_way_1 label="Sonnenkopfbahn" count="23"
 10.0556115 47.1117325
 10.0555977 47.1113199
 
-type=forest_way_1 label="Motta Naluns" count="16"
+type=forest_way_1 label="Motta Naluns"
 10.289089 46.795308
 10.288541 46.7958184
 10.2875539 46.7967517
@@ -3732,7 +3732,7 @@ type=forest_way_1 label="Motta Naluns" count="16"
 10.2728312 46.8105958
 10.2724946 46.8109123
 
-type=forest_way_1 label="8er Kabinenbahn Gsoll" count="11"
+type=forest_way_1 label="8er Kabinenbahn Gsoll"
 13.7413925 47.8066109
 13.7403451 47.8068176
 13.7356088 47.8077655
@@ -3745,7 +3745,7 @@ type=forest_way_1 label="8er Kabinenbahn Gsoll" count="11"
 13.7217361 47.8105321
 13.7211612 47.8106495
 
-type=forest_way_1 label="Salvistabahn" count="17"
+type=forest_way_1 label="Salvistabahn"
 12.1628725 47.4859161
 12.1636795 47.4854076
 12.1648476 47.4846714
@@ -3764,7 +3764,7 @@ type=forest_way_1 label="Salvistabahn" count="17"
 12.1810445 47.4744635
 12.1833931 47.4729578
 
-type=forest_way_1 label="Brandstadl II" count="9"
+type=forest_way_1 label="Brandstadl II"
 12.2505633 47.5003833
 12.2503471 47.4997656
 12.2497442 47.4980708
@@ -3775,7 +3775,7 @@ type=forest_way_1 label="Brandstadl II" count="9"
 12.2474911 47.491755
 12.2473676 47.4914284
 
-type=forest_way_1 label="Pöglbahn" count="23"
+type=forest_way_1 label="Pöglbahn"
 11.9576631 47.3773641
 11.9573784 47.3772757
 11.9573196 47.3772575
@@ -3800,7 +3800,7 @@ type=forest_way_1 label="Pöglbahn" count="23"
 11.9314184 47.3692204
 11.9307711 47.3690195
 
-type=forest_way_1 label="Wiedersbergerhornbahn (Sektion II)" count="16"
+type=forest_way_1 label="Wiedersbergerhornbahn (Sektion II)"
 11.9262657 47.3833714
 11.9263228 47.3831104
 11.9263328 47.3830649
@@ -3818,7 +3818,7 @@ type=forest_way_1 label="Wiedersbergerhornbahn (Sektion II)" count="16"
 11.9287549 47.3719964
 11.9288591 47.3715201
 
-type=forest_way_1 label="Alm-Express" count="8"
+type=forest_way_1 label="Alm-Express"
 11.9075175 46.9282884
 11.9074536 46.9281771
 11.9070629 46.9274955
@@ -3828,11 +3828,11 @@ type=forest_way_1 label="Alm-Express" count="8"
 11.9045387 46.9230922
 11.9043533 46.9227686
 
-type=forest_way_1 label="Belvedere" count="2"
+type=forest_way_1 label="Belvedere"
 10.8670939 46.2989287
 10.8516932 46.2906726
 
-type=forest_way_1 label="Hochwurzen 1" count="18"
+type=forest_way_1 label="Hochwurzen 1"
 13.6128901 47.3858552
 13.6131498 47.3857174
 13.6132023 47.3856896
@@ -3852,11 +3852,11 @@ type=forest_way_1 label="Hochwurzen 1" count="18"
 13.6321209 47.3756518
 13.6326582 47.3753667
 
-type=forest_way_1 label="Karspitzbahn 1" count="2"
+type=forest_way_1 label="Karspitzbahn 1"
 11.9002932 47.2404897
 11.9226451 47.2396655
 
-type=forest_way_1 label="Finkenberger Almbahn II" count="11"
+type=forest_way_1 label="Finkenberger Almbahn II"
 11.8073462 47.1617795
 11.8071231 47.1619961
 11.8070691 47.1620486
@@ -3869,7 +3869,7 @@ type=forest_way_1 label="Finkenberger Almbahn II" count="11"
 11.8008426 47.1680937
 11.8005391 47.1683883
 
-type=forest_way_1 label="Medrigjochbahn" count="14"
+type=forest_way_1 label="Medrigjochbahn"
 10.4638338 47.0823985
 10.4641581 47.0821709
 10.4643023 47.0820697
@@ -3885,7 +3885,7 @@ type=forest_way_1 label="Medrigjochbahn" count="14"
 10.4763639 47.0736054
 10.4767095 47.0733628
 
-type=forest_way_1 label="Colonia Vigili-Tonale" count="17"
+type=forest_way_1 label="Colonia Vigili-Tonale"
 10.5734637 46.2594519
 10.572964 46.259306
 10.5708497 46.2587702
@@ -3904,11 +3904,11 @@ type=forest_way_1 label="Colonia Vigili-Tonale" count="17"
 10.5456357 46.2523803
 10.5444137 46.2520706
 
-type=forest_way_1 label="Westgipfelbahn II" count="2"
+type=forest_way_1 label="Westgipfelbahn II"
 12.6050354 47.3656347
 12.6224574 47.364809
 
-type=forest_way_1 label="Zwölferkogelbahn II" count="10"
+type=forest_way_1 label="Zwölferkogelbahn II"
 12.5812935 47.3631142
 12.5802849 47.3628747
 12.5774366 47.3621508
@@ -3920,7 +3920,7 @@ type=forest_way_1 label="Zwölferkogelbahn II" count="10"
 12.5699122 47.3602381
 12.5692895 47.3600799
 
-type=forest_way_1 label="Ponte di Legno-Colonia" count="21"
+type=forest_way_1 label="Ponte di Legno-Colonia"
 10.5444137 46.2520706
 10.5437357 46.2521211
 10.54187 46.25226
@@ -3943,18 +3943,18 @@ type=forest_way_1 label="Ponte di Legno-Colonia" count="21"
 10.5112035 46.2545437
 10.5111151 46.2545503
 
-type=forest_way_1 label="Presena" count="2"
+type=forest_way_1 label="Presena"
 10.580643 46.2385123
 10.5802863 46.2279328
 
-type=forest_way_1 label="Paradiso" count="5"
+type=forest_way_1 label="Paradiso"
 10.5717326 46.256842
 10.5730139 46.2542216
 10.5769518 46.2461612
 10.578009 46.2439972
 10.5803892 46.2391331
 
-type=forest_way_1 label="Panoramabahn" count="9"
+type=forest_way_1 label="Panoramabahn"
 12.843522 47.0688603
 12.8438252 47.0687878
 12.8464331 47.0681642
@@ -3965,7 +3965,7 @@ type=forest_way_1 label="Panoramabahn" count="9"
 12.8568699 47.0656681
 12.8574882 47.0655203
 
-type=forest_way_1 label="Schönjochbahn II" count="15"
+type=forest_way_1 label="Schönjochbahn II"
 10.5967137 47.0654797
 10.5965264 47.0657259
 10.5964893 47.0657746
@@ -3982,7 +3982,7 @@ type=forest_way_1 label="Schönjochbahn II" count="15"
 10.58964 47.0747778
 10.5893317 47.075183
 
-type=forest_way_1 label="Grünbodenexpress" count="10"
+type=forest_way_1 label="Grünbodenexpress"
 11.0918862 46.7969942
 11.0934204 46.795947
 11.0942478 46.7953822
@@ -3994,21 +3994,21 @@ type=forest_way_1 label="Grünbodenexpress" count="10"
 11.0999236 46.7915079
 11.1002732 46.7912692
 
-type=forest_way_1 label="Versciaco-Monte Elmo" count="4"
+type=forest_way_1 label="Versciaco-Monte Elmo"
 12.3297751 46.7316366
 12.3390407 46.7275411
 12.3415078 46.7263512
 12.361933 46.7172795
 
-type=forest_way_1 label="Signaue" count="2"
+type=forest_way_1 label="Signaue"
 12.3813862 46.6800373
 12.3743367 46.6699873
 
-type=forest_way_1 label="Colbricon Express" count="2"
+type=forest_way_1 label="Colbricon Express"
 11.7889657 46.2640362
 11.7679713 46.2737306
 
-type=forest_way_1 label="Fendels-Ried-Bahn" count="16"
+type=forest_way_1 label="Fendels-Ried-Bahn"
 10.6608266 47.0573693
 10.6610308 47.0572981
 10.6610959 47.0572754
@@ -4026,7 +4026,7 @@ type=forest_way_1 label="Fendels-Ried-Bahn" count="16"
 10.6786252 47.0511618
 10.6792529 47.0509428
 
-type=forest_way_1 label="Bergkastelseilbahn" count="18"
+type=forest_way_1 label="Bergkastelseilbahn"
 10.50892 46.875456
 10.5096589 46.8751669
 10.5112347 46.8745435
@@ -4046,13 +4046,13 @@ type=forest_way_1 label="Bergkastelseilbahn" count="18"
 10.5374989 46.8642214
 10.5398237 46.8633157
 
-type=forest_way_1 label="Karlesjochbahn" count="4"
+type=forest_way_1 label="Karlesjochbahn"
 10.7130712 46.8631355
 10.7127478 46.8630279
 10.7119123 46.8627501
 10.6941221 46.8568342
 
-type=forest_way_1 label="Karkogelbahn" count="11"
+type=forest_way_1 label="Karkogelbahn"
 13.3503411 47.5557807
 13.3504891 47.5556086
 13.3505326 47.5555579
@@ -4065,11 +4065,11 @@ type=forest_way_1 label="Karkogelbahn" count="11"
 13.3588523 47.5458792
 13.359153 47.5455293
 
-type=forest_way_1 label="Rudolfshütte I" count="2"
+type=forest_way_1 label="Rudolfshütte I"
 12.623376 47.1568585
 12.624409 47.1695898
 
-type=forest_way_1 label="Grösch-Cavadura-SchwÃ¤nzelegg" count="22"
+type=forest_way_1 label="Grösch-Cavadura-Schwänzelegg"
 9.6399 46.9725963
 9.6395694 46.9720364
 9.6389724 46.971025
@@ -4093,7 +4093,7 @@ type=forest_way_1 label="Grösch-Cavadura-SchwÃ¤nzelegg" count="22"
 9.6416412 46.9533874
 9.6494795 46.9461696
 
-type=forest_way_1 label="Goldbergbahn II" count="22"
+type=forest_way_1 label="Goldbergbahn II"
 13.068146 47.0598067
 13.0686651 47.0597205
 13.0698533 47.0595341
@@ -4117,16 +4117,16 @@ type=forest_way_1 label="Goldbergbahn II" count="22"
 13.0976705 47.0550871
 13.0981235 47.0550227
 
-type=forest_way_1 label="Spieljochbahn I" count="3"
+type=forest_way_1 label="Spieljochbahn I"
 11.8430935 47.3389391
 11.8423122 47.3387518
 11.815961 47.3342186
 
-type=forest_way_1 label="Spieljochbahn II" count="2"
+type=forest_way_1 label="Spieljochbahn II"
 11.815961 47.3342186
 11.7952273 47.332038
 
-type=forest_way_1 label="Preunegg Jet" count="17"
+type=forest_way_1 label="Preunegg Jet"
 13.6135455 47.374683
 13.6133566 47.3745226
 13.6124963 47.3737919
@@ -4145,15 +4145,15 @@ type=forest_way_1 label="Preunegg Jet" count="17"
 13.596373 47.3600965
 13.5959549 47.3597413
 
-type=forest_way_1 label="Smaragdbahn 1" count="2"
+type=forest_way_1 label="Smaragdbahn 1"
 12.3405529 47.2725412
 12.3035145 47.2724201
 
-type=forest_way_1 label="Smaragdbahn 2" count="2"
+type=forest_way_1 label="Smaragdbahn 2"
 12.3035145 47.2724201
 12.2928294 47.2830714
 
-type=forest_way_1 label="Schattberg X-Press I" count="6"
+type=forest_way_1 label="Schattberg X-Press I"
 12.6352467 47.3903133
 12.6342796 47.3861904
 12.6339323 47.3847096
@@ -4161,15 +4161,15 @@ type=forest_way_1 label="Schattberg X-Press I" count="6"
 12.6330283 47.3808552
 12.6329214 47.3803993
 
-type=forest_way_1 label="Gipfelbahn" count="2"
+type=forest_way_1 label="Gipfelbahn"
 13.6606193 47.060957
 13.6397519 47.0562735
 
-type=forest_way_1 label="Daolasa-Val Mastellina 1" count="2"
+type=forest_way_1 label="Daolasa-Val Mastellina 1"
 10.8363735 46.3191903
 10.8367113 46.3032108
 
-type=forest_way_1 label="Albar" count="7"
+type=forest_way_1 label="Albar"
 10.8116853 46.3045295
 10.811708 46.3043832
 10.8117227 46.3042884
@@ -4178,12 +4178,12 @@ type=forest_way_1 label="Albar" count="7"
 10.81201 46.3024346
 10.8120489 46.3021833
 
-type=forest_way_1 label="Daolasa-Val Mastellina 2" count="3"
+type=forest_way_1 label="Daolasa-Val Mastellina 2"
 10.8367528 46.3030373
 10.8368023 46.3027987
 10.8367998 46.3027498
 
-type=forest_way_1 label="Reischlbergbahn" count="9"
+type=forest_way_1 label="Reischlbergbahn"
 13.8989179 48.7381312
 13.8985339 48.7388937
 13.8980323 48.7398967
@@ -4194,12 +4194,12 @@ type=forest_way_1 label="Reischlbergbahn" count="9"
 13.904164 48.7484262
 13.9050079 48.7491335
 
-type=forest_way_1 label="Highliner I" count="3"
+type=forest_way_1 label="Highliner I"
 13.3989478 47.2945128
 13.4047054 47.2959642
 13.416869 47.2989074
 
-type=forest_way_1 label="Kombibahn Penken" count="12"
+type=forest_way_1 label="Kombibahn Penken"
 11.8275372 47.1756554
 11.8260456 47.1756954
 11.8244378 47.1757384
@@ -4213,13 +4213,13 @@ type=forest_way_1 label="Kombibahn Penken" count="12"
 11.8167125 47.1759453
 11.81604 47.1759633
 
-type=forest_way_1 label="Mitterstein" count="4"
+type=forest_way_1 label="Mitterstein"
 13.9760456 47.5801647
 13.9651752 47.589932
 13.9623964 47.5923632
 13.9635224 47.5981086
 
-type=forest_way_1 label="Gipfelbahn" count="16"
+type=forest_way_1 label="Gipfelbahn"
 12.9642682 47.2212327
 12.9640068 47.221168
 12.9625905 47.2208176
@@ -4237,7 +4237,7 @@ type=forest_way_1 label="Gipfelbahn" count="16"
 12.9369344 47.2144689
 12.9362891 47.2143092
 
-type=forest_way_1 label="Kronplatz II" count="12"
+type=forest_way_1 label="Kronplatz II"
 11.9524721 46.7488177
 11.9529435 46.7479229
 11.95304 46.7477397
@@ -4251,7 +4251,7 @@ type=forest_way_1 label="Kronplatz II" count="12"
 11.9572789 46.7396925
 11.9574545 46.739359
 
-type=forest_way_1 label="cityXpress" count="14"
+type=forest_way_1 label="cityXpress"
 12.771424 47.3160265
 12.7719915 47.3162149
 12.774252 47.3169654
@@ -4267,7 +4267,7 @@ type=forest_way_1 label="cityXpress" count="14"
 12.7938662 47.3234767
 12.7940983 47.3235538
 
-type=forest_way_1 label="Hörnerbahn II" count="8"
+type=forest_way_1 label="Hörnerbahn II"
 10.2129771 47.46157
 10.212614 47.4615354
 10.2120605 47.4614736
@@ -4277,11 +4277,11 @@ type=forest_way_1 label="Hörnerbahn II" count="8"
 10.2062957 47.4607253
 10.205781 47.4606632
 
-type=forest_way_1 label="Falcade-Le Buse" count="2"
+type=forest_way_1 label="Falcade-Le Buse"
 11.8592786 46.3493661
 11.8369595 46.353959
 
-type=forest_way_1 label="Hahnenkammbahn Höfen" count="17"
+type=forest_way_1 label="Hahnenkammbahn Höfen"
 10.6464949 47.4748877
 10.6470372 47.47492
 10.6484623 47.4750099
@@ -4300,7 +4300,7 @@ type=forest_way_1 label="Hahnenkammbahn Höfen" count="17"
 10.678433 47.4769033
 10.6787087 47.4769151
 
-type=forest_way_1 label="Alpenrosenbahn II" count="15"
+type=forest_way_1 label="Alpenrosenbahn II"
 12.2311596 47.4220816
 12.2315586 47.4218667
 12.2316776 47.4218027
@@ -4317,12 +4317,12 @@ type=forest_way_1 label="Alpenrosenbahn II" count="15"
 12.2469399 47.4135452
 12.2473628 47.4133164
 
-type=forest_way_1 label="Ã„lplibahn Malans" count="3"
+type=forest_way_1 label="Älplibahn Malans"
 9.5694943 46.9861825
 9.5702331 46.9872096
 9.5884582 47.0125412
 
-type=forest_way_1 label="Muttersbergbahn" count="11"
+type=forest_way_1 label="Muttersbergbahn"
 9.8212206 47.1673114
 9.8213907 47.1679515
 9.8220895 47.1704036
@@ -4335,7 +4335,7 @@ type=forest_way_1 label="Muttersbergbahn" count="11"
 9.8249605 47.1807417
 9.8250153 47.1809321
 
-type=forest_way_1 label="Hochalpila Bahn" count="9"
+type=forest_way_1 label="Hochalpila Bahn"
 9.9922595 47.050449
 9.9909395 47.0517771
 9.9899046 47.0528182
@@ -4346,7 +4346,7 @@ type=forest_way_1 label="Hochalpila Bahn" count="9"
 9.9839579 47.0588007
 9.982693 47.0600731
 
-type=forest_way_1 label="Versettla II" count="16"
+type=forest_way_1 label="Versettla II"
 10.0069229 46.9848949
 10.0067912 46.9848352
 10.0067254 46.9848055
@@ -4364,7 +4364,7 @@ type=forest_way_1 label="Versettla II" count="16"
 9.9942023 46.9791346
 9.9937447 46.9789274
 
-type=forest_way_1 label="Dias-Kabinenbahn" count="14"
+type=forest_way_1 label="Dias-Kabinenbahn"
 10.3742018 47.0603563
 10.3734576 47.0606944
 10.3724703 47.0611429
@@ -4380,13 +4380,13 @@ type=forest_way_1 label="Dias-Kabinenbahn" count="14"
 10.3597038 47.0669418
 10.3593288 47.0671121
 
-type=forest_way_1 label="Schwarze Schneid II" count="4"
+type=forest_way_1 label="Schwarze Schneid II"
 10.9245759 46.9344488
 10.9256041 46.9326041
 10.9292564 46.926293
 10.9295067 46.9258642
 
-type=forest_way_1 label="Thurntaler 2" count="13"
+type=forest_way_1 label="Thurntaler 2"
 12.4120731 46.7633255
 12.4117103 46.7635432
 12.4116338 46.763589
@@ -4401,18 +4401,18 @@ type=forest_way_1 label="Thurntaler 2" count="13"
 12.3999854 46.7705765
 12.3995705 46.7708254
 
-type=forest_way_1 label="Schilling" count="5"
+type=forest_way_1 label="Schilling"
 11.6224375 46.8505752
 11.6252627 46.8495948
 11.627565 46.8487959
 11.6354989 46.8460427
 11.6460194 46.8424121
 
-type=forest_way_1 label="Gaisjoch" count="2"
+type=forest_way_1 label="Gaisjoch"
 11.6464324 46.8423002
 11.6692308 46.8349272
 
-type=forest_way_1 label="Pardatschgratbahn" count="8"
+type=forest_way_1 label="Pardatschgratbahn"
 10.2945027 47.0126825
 10.2958329 47.0117079
 10.2977129 47.0103633
@@ -4422,7 +4422,7 @@ type=forest_way_1 label="Pardatschgratbahn" count="8"
 10.3226555 46.9925219
 10.3241219 46.9915465
 
-type=forest_way_1 label="Kabinenbahn Petzen" count="19"
+type=forest_way_1 label="Kabinenbahn Petzen"
 14.7716287 46.5180834
 14.7716631 46.5184129
 14.7718529 46.5202327
@@ -4443,7 +4443,7 @@ type=forest_way_1 label="Kabinenbahn Petzen" count="19"
 14.7738861 46.5397206
 14.7739617 46.5404451
 
-type=forest_way_1 label="Schattberg X-Press II" count="10"
+type=forest_way_1 label="Schattberg X-Press II"
 12.6329214 47.3803993
 12.6332837 47.3795058
 12.6335035 47.3789634
@@ -4455,7 +4455,7 @@ type=forest_way_1 label="Schattberg X-Press II" count="10"
 12.6377925 47.3683831
 12.6379921 47.3678774
 
-type=forest_way_1 label="Buchaubahn" count="19"
+type=forest_way_1 label="Buchaubahn"
 13.2405824 47.3261254
 13.2405555 47.3258995
 13.2404321 47.3248652
@@ -4476,26 +4476,26 @@ type=forest_way_1 label="Buchaubahn" count="19"
 13.2384291 47.3080658
 13.2383836 47.307684
 
-type=forest_way_1 label="Ried" count="3"
+type=forest_way_1 label="Ried"
 11.9781099 46.7902441
 11.9770165 46.7882053
 11.9587753 46.7542589
 
-type=forest_way_1 label="Silverjet II" count="3"
+type=forest_way_1 label="Silverjet II"
 13.6729141 47.0701114
 13.6700997 47.06937
 13.6455868 47.0628093
 
-type=forest_way_1 label="Le Fassane-La Morea" count="2"
+type=forest_way_1 label="Le Fassane-La Morea"
 11.6982838 46.3242362
 11.7080222 46.3311638
 
-type=forest_way_1 label="Ki West" count="3"
+type=forest_way_1 label="Ki West"
 12.3060146 47.4043698
 12.2712157 47.4011308
 12.2677769 47.4008302
 
-type=forest_way_1 label="Karwendel-Bergbahn" count="8"
+type=forest_way_1 label="Karwendel-Bergbahn"
 11.6968016 47.4371039
 11.6967176 47.436151
 11.6965186 47.433858
@@ -4505,7 +4505,7 @@ type=forest_way_1 label="Karwendel-Bergbahn" count="8"
 11.6959893 47.42776
 11.6959619 47.4274434
 
-type=forest_way_1 label="Einseilumlaufbahn Glungezer I" count="12"
+type=forest_way_1 label="Einseilumlaufbahn Glungezer I"
 11.5352725 47.2563761
 11.5353773 47.2561957
 11.5361192 47.2549188
@@ -4519,7 +4519,7 @@ type=forest_way_1 label="Einseilumlaufbahn Glungezer I" count="12"
 11.5435067 47.2422139
 11.543697 47.2418879
 
-type=forest_way_1 label="Maierlbahn" count="9"
+type=forest_way_1 label="Maierlbahn"
 12.3252112 47.4389813
 12.3255296 47.4386855
 12.3303979 47.4341619
@@ -4530,7 +4530,7 @@ type=forest_way_1 label="Maierlbahn" count="9"
 12.3379559 47.4271382
 12.3459041 47.419751
 
-type=forest_way_1 label="Telecabina Misconca" count="13"
+type=forest_way_1 label="Telecabina Misconca"
 13.5124702 46.487651
 13.5127451 46.4874346
 13.513895 46.4865584
@@ -4545,11 +4545,11 @@ type=forest_way_1 label="Telecabina Misconca" count="13"
 13.5200239 46.4819394
 13.5200761 46.4819003
 
-type=forest_way_1 label="Kirchenkarbahn I" count="2"
+type=forest_way_1 label="Kirchenkarbahn I"
 11.0532899 46.909281
 11.0712437 46.9039698
 
-type=forest_way_1 label="Talbahn Goldeck" count="16"
+type=forest_way_1 label="Talbahn Goldeck"
 13.4702228 46.7922256
 13.4697619 46.791544
 13.4687806 46.7901263
@@ -4567,7 +4567,7 @@ type=forest_way_1 label="Talbahn Goldeck" count="16"
 13.4549074 46.7700719
 13.4547568 46.7698454
 
-type=forest_way_1 label="Almbahn" count="20"
+type=forest_way_1 label="Almbahn"
 10.5761255 47.0902592
 10.576134 47.0900328
 10.5761364 47.089971
@@ -4589,7 +4589,7 @@ type=forest_way_1 label="Almbahn" count="20"
 10.5767766 47.0729752
 10.5767859 47.0727269
 
-type=forest_way_1 label="Komperdellbahn" count="21"
+type=forest_way_1 label="Komperdellbahn"
 10.596112 47.0406831
 10.595814 47.0406747
 10.595756 47.0406731
@@ -4612,7 +4612,7 @@ type=forest_way_1 label="Komperdellbahn" count="21"
 10.563365 47.0397584
 10.5626358 47.0397378
 
-type=forest_way_1 label="Lazidbahn" count="12"
+type=forest_way_1 label="Lazidbahn"
 10.5623899 47.0397245
 10.5616667 47.0395108
 10.5590249 47.0387299
@@ -4626,7 +4626,7 @@ type=forest_way_1 label="Lazidbahn" count="12"
 10.5464817 47.035022
 10.545909 47.0348527
 
-type=forest_way_1 label="Horbergbahn" count="19"
+type=forest_way_1 label="Horbergbahn"
 11.857775 47.1905607
 11.855253 47.1901267
 11.8539166 47.1899034
@@ -4647,11 +4647,11 @@ type=forest_way_1 label="Horbergbahn" count="19"
 11.8124989 47.1829875
 11.8104845 47.1826316
 
-type=forest_way_1 label="Hahnenkammbahn" count="2"
+type=forest_way_1 label="Hahnenkammbahn"
 12.3893632 47.4432306
 12.3725198 47.4268104
 
-type=forest_way_1 label="Markbachjochbahn" count="15"
+type=forest_way_1 label="Markbachjochbahn"
 12.0924167 47.4475061
 12.09263 47.4467348
 12.0931364 47.4448628
@@ -4668,7 +4668,7 @@ type=forest_way_1 label="Markbachjochbahn" count="15"
 12.0966003 47.432054
 12.0966959 47.4317006
 
-type=forest_way_1 label="Gondelbahn Seegatterl" count="21"
+type=forest_way_1 label="Gondelbahn Seegatterl"
 12.5808805 47.6549973
 12.5796691 47.6550707
 12.5773576 47.6551856
@@ -4691,7 +4691,7 @@ type=forest_way_1 label="Gondelbahn Seegatterl" count="21"
 12.5424857 47.6573702
 12.5411373 47.6574547
 
-type=forest_way_1 label="Rosskopf" count="27"
+type=forest_way_1 label="Rosskopf"
 11.42965 46.904197
 11.4293202 46.9042861
 11.4281197 46.9046105
@@ -4720,7 +4720,7 @@ type=forest_way_1 label="Rosskopf" count="27"
 11.3985472 46.9126003
 11.3980218 46.9127423
 
-type=forest_way_1 label="Unterschwarzachbahn" count="8"
+type=forest_way_1 label="Unterschwarzachbahn"
 12.5944415 47.3768913
 12.5952125 47.376125
 12.5965496 47.374796
@@ -4730,7 +4730,7 @@ type=forest_way_1 label="Unterschwarzachbahn" count="8"
 12.6015645 47.3698112
 12.6018299 47.3695473
 
-type=forest_way_1 label="Furcela de Saslonch-Langkofelscharte" count="15"
+type=forest_way_1 label="Furcela de Saslonch-Langkofelscharte"
 11.7559296 46.5088903
 11.754462 46.5093828
 11.7527068 46.5099718
@@ -4747,7 +4747,7 @@ type=forest_way_1 label="Furcela de Saslonch-Langkofelscharte" count="15"
 11.7400597 46.5142821
 11.7394796 46.5144856
 
-type=forest_way_1 label="Jennerbahn" count="7"
+type=forest_way_1 label="Jennerbahn"
 13.0172195 47.5865401
 13.0178435 47.5856185
 13.0197717 47.5827708
@@ -4756,7 +4756,7 @@ type=forest_way_1 label="Jennerbahn" count="7"
 13.0236113 47.5771
 13.0242919 47.5761529
 
-type=forest_way_1 label="Berbahn Heideralm" count="19"
+type=forest_way_1 label="Berbahn Heideralm"
 10.5318498 46.7652777
 10.5314542 46.7652174
 10.5304129 46.7650585
@@ -4777,7 +4777,7 @@ type=forest_way_1 label="Berbahn Heideralm" count="19"
 10.5051644 46.7612054
 10.5046024 46.7611197
 
-type=forest_way_1 label="10er Somtgant" count="11"
+type=forest_way_1 label="10er Somtgant"
 9.571211 46.594223
 9.5703811 46.5938503
 9.5682358 46.5928867
@@ -4790,7 +4790,7 @@ type=forest_way_1 label="10er Somtgant" count="11"
 9.5543069 46.5866302
 9.553937 46.586464
 
-type=forest_way_1 label="Hochbifangbahn I" count="14"
+type=forest_way_1 label="Hochbifangbahn I"
 13.4272247 47.3615159
 13.4280418 47.3612549
 13.4304596 47.3604825
@@ -4806,7 +4806,7 @@ type=forest_way_1 label="Hochbifangbahn I" count="14"
 13.4538039 47.3530247
 13.4542457 47.3528836
 
-type=forest_way_1 label="Stubnerkogelbahn I" count="8"
+type=forest_way_1 label="Stubnerkogelbahn I"
 13.1315022 47.1105098
 13.13117 47.110525
 13.1306617 47.1105483
@@ -4816,7 +4816,7 @@ type=forest_way_1 label="Stubnerkogelbahn I" count="8"
 13.1231903 47.110891
 13.1121408 47.1113977
 
-type=forest_way_1 label="Höndle Bahn" count="7"
+type=forest_way_1 label="Höndle Bahn"
 10.0508014 47.5514321
 10.0510358 47.550852
 10.0516202 47.549406
@@ -4825,7 +4825,7 @@ type=forest_way_1 label="Höndle Bahn" count="7"
 10.0534022 47.5450177
 10.0539879 47.5435464
 
-type=forest_way_1 label="Telecabina Monte Lussari" count="27"
+type=forest_way_1 label="Telecabina Monte Lussari"
 13.5346391 46.5064945
 13.5345702 46.5063448
 13.534487 46.5061643
@@ -4854,29 +4854,29 @@ type=forest_way_1 label="Telecabina Monte Lussari" count="27"
 13.5210239 46.4822109
 13.5207827 46.4818561
 
-type=forest_way_1 label="Flying Mozart II" count="3"
+type=forest_way_1 label="Flying Mozart II"
 13.3209523 47.3298904
 13.3459503 47.3258591
 13.3468738 47.3257102
 
-type=forest_way_1 label="Rote 8er II" count="2"
+type=forest_way_1 label="Rote 8er II"
 13.3364107 47.3477723
 13.3467544 47.3285456
 
-type=forest_way_1 label="Ronchi-Valbona" count="3"
+type=forest_way_1 label="Ronchi-Valbona"
 11.6877826 46.3680939
 11.6875074 46.3672315
 11.6848972 46.3578616
 
-type=forest_way_1 label="Castelir-Le Fassane" count="2"
+type=forest_way_1 label="Castelir-Le Fassane"
 11.6880569 46.3131927
 11.6982838 46.3242362
 
-type=forest_way_1 label="Valbona -Le Cune" count="2"
+type=forest_way_1 label="Valbona-Le Cune"
 11.6848972 46.3578616
 11.6934904 46.3460734
 
-type=forest_way_1 label="Valisera I" count="16"
+type=forest_way_1 label="Valisera I"
 9.9645846 47.0221963
 9.9645231 47.0215912
 9.9643954 47.0203362
@@ -4894,7 +4894,7 @@ type=forest_way_1 label="Valisera I" count="16"
 9.9628546 47.0051841
 9.9628085 47.0047309
 
-type=forest_way_1 label="Grasjoch Bahn" count="22"
+type=forest_way_1 label="Grasjoch Bahn"
 9.9646721 47.0227916
 9.9649225 47.0230398
 9.966806 47.0249058
@@ -4918,7 +4918,7 @@ type=forest_way_1 label="Grasjoch Bahn" count="22"
 9.9916386 47.0495023
 9.9923352 47.0501921
 
-type=forest_way_1 label="Auenfeldjet" count="11"
+type=forest_way_1 label="Auenfeldjet"
 10.1267978 47.2456783
 10.126822 47.2453607
 10.1269547 47.2432366
@@ -4931,7 +4931,7 @@ type=forest_way_1 label="Auenfeldjet" count="11"
 10.1278865 47.2272539
 10.1279163 47.2267303
 
-type=forest_way_1 label="Cassana" count="8"
+type=forest_way_1 label="Cassana"
 10.1377335 46.5481443
 10.1374035 46.5481077
 10.1365508 46.548013
@@ -4941,7 +4941,7 @@ type=forest_way_1 label="Cassana" count="8"
 10.1270866 46.5469619
 10.1267811 46.546928
 
-type=forest_way_1 label="Verbindungsbahn Sektion 1" count="11"
+type=forest_way_1 label="Verbindungsbahn Sektion 1"
 11.9671298 47.3933201
 11.9667564 47.3927483
 11.9664383 47.3922449
@@ -4954,7 +4954,7 @@ type=forest_way_1 label="Verbindungsbahn Sektion 1" count="11"
 11.9575883 47.3791136
 11.9569914 47.378228
 
-type=forest_way_1 label="Verbindungsbahn Sektion 2" count="9"
+type=forest_way_1 label="Verbindungsbahn Sektion 2"
 11.9852216 47.3909416
 11.9846318 47.3910194
 11.982188 47.3913417
@@ -4965,7 +4965,7 @@ type=forest_way_1 label="Verbindungsbahn Sektion 2" count="9"
 11.9688466 47.3931014
 11.9671298 47.3933201
 
-type=forest_way_1 label="Palfriesbahn" count="9"
+type=forest_way_1 label="Palfriesbahn"
 9.393918 47.0721696
 9.3951681 47.072955
 9.4095766 47.0820066
@@ -4976,7 +4976,7 @@ type=forest_way_1 label="Palfriesbahn" count="9"
 9.420294 47.0887383
 9.4206275 47.0889478
 
-type=forest_way_1 label="20-Salvenbahn I" count="10"
+type=forest_way_1 label="20-Salvenbahn I"
 12.1623596 47.4468226
 12.163173 47.4471669
 12.1649475 47.447918
@@ -4988,7 +4988,7 @@ type=forest_way_1 label="20-Salvenbahn I" count="10"
 12.181836 47.4550659
 12.1852838 47.4565251
 
-type=forest_way_1 label="Pinzolo Campiglioexpress III" count="10"
+type=forest_way_1 label="Pinzolo Campiglioexpress III"
 10.8218189 46.2188276
 10.8211682 46.2197337
 10.8201939 46.2210903
@@ -5000,7 +5000,7 @@ type=forest_way_1 label="Pinzolo Campiglioexpress III" count="10"
 10.815372 46.2278038
 10.8151423 46.2281236
 
-type=forest_way_1 label="Gondelbahn" count="26"
+type=forest_way_1 label="Gondelbahn"
 14.085413 47.0989684
 14.0841047 47.0979428
 14.0834722 47.0974407
@@ -5028,7 +5028,7 @@ type=forest_way_1 label="Gondelbahn" count="26"
 14.0543379 47.076417
 14.0527835 47.0753762
 
-type=forest_way_1 label="Harschbichl II" count="13"
+type=forest_way_1 label="Harschbichl II"
 12.4258031 47.4953786
 12.4258642 47.4950992
 12.4259225 47.494799
@@ -5043,7 +5043,7 @@ type=forest_way_1 label="Harschbichl II" count="13"
 12.4278617 47.4851035
 12.4279427 47.4846708
 
-type=forest_way_1 label="Nockalmbahn" count="15"
+type=forest_way_1 label="Nockalmbahn"
 13.7633626 46.8309261
 13.7630915 46.8308839
 13.7622581 46.8307543
@@ -5060,7 +5060,7 @@ type=forest_way_1 label="Nockalmbahn" count="15"
 13.7431442 46.827782
 13.742653 46.8277056
 
-type=forest_way_1 label="Kals II" count="8"
+type=forest_way_1 label="Kals II"
 12.6107258 46.9973638
 12.6071735 46.9962431
 12.6001331 46.9940219
@@ -5070,7 +5070,7 @@ type=forest_way_1 label="Kals II" count="8"
 12.5965062 46.9928776
 12.5961327 46.9927598
 
-type=forest_way_1 label="Riegleralm" count="9"
+type=forest_way_1 label="Riegleralm"
 14.0609183 47.075857
 14.0596238 47.0747744
 14.0579187 47.0733769
@@ -5081,38 +5081,38 @@ type=forest_way_1 label="Riegleralm" count="9"
 14.047445 47.0647875
 14.0440563 47.0619882
 
-type=forest_way_1 label="Grubig II" count="4"
+type=forest_way_1 label="Grubig II"
 10.8688618 47.3921466
 10.8479724 47.385814
 10.8473731 47.3856345
 10.8469061 47.3854956
 
-type=forest_way_1 label="Santa Caterina-Plaghera" count="2"
+type=forest_way_1 label="Santa Caterina-Plaghera"
 10.4861909 46.4161074
 10.4824159 46.404099
 
-type=forest_way_1 label="Silverjet I" count="2"
+type=forest_way_1 label="Silverjet I"
 13.6890482 47.080276
 13.6732743 47.0703175
 
-type=forest_way_1 label="Stiergarten-Orto del Toro" count="3"
+type=forest_way_1 label="Stiergarten-Orto del Toro"
 12.3752051 46.696938
 12.3821692 46.6982614
 12.3969971 46.6946569
 
-type=forest_way_1 label="Grosseckbahn" count="2"
+type=forest_way_1 label="Grosseckbahn"
 13.6504281 47.1285895
 13.6630597 47.1418269
 
-type=forest_way_1 label="Versingbahn" count="2"
+type=forest_way_1 label="Versingbahn"
 10.4970994 47.0724964
 10.5195322 47.0617784
 
-type=forest_way_1 label="Drei Zinnen-Tre Cime" count="2"
+type=forest_way_1 label="Drei Zinnen-Tre Cime"
 12.381949 46.6804431
 12.3972445 46.6945094
 
-type=forest_way_1 label="Steinbergbahn II" count="9"
+type=forest_way_1 label="Steinbergbahn II"
 12.7308439 47.4204664
 12.7298614 47.4198594
 12.7281362 47.4187935
@@ -5123,11 +5123,11 @@ type=forest_way_1 label="Steinbergbahn II" count="9"
 12.7174411 47.4122113
 12.7150357 47.4106988
 
-type=forest_way_1 label="Panorama Bahn" count="13"
+type=forest_way_1 label="Panorama Bahn"
 9.9693232 47.0802033
 9.9694369 47.0798798
 9.9696232 47.0793359
-9.9704235 47.077
+9.9704235 47.07700
 9.9710381 47.0752057
 9.9716156 47.0735044
 9.9727441 47.0702351
@@ -5138,11 +5138,11 @@ type=forest_way_1 label="Panorama Bahn" count="13"
 9.9759774 47.0607857
 9.9760514 47.0605661
 
-type=forest_way_1 label="Pardoramabahn" count="2"
+type=forest_way_1 label="Pardoramabahn"
 10.3090729 46.9994916
 10.3240804 46.9912494
 
-type=forest_way_1 label="Donnerkogelbahn" count="117"
+type=forest_way_1 label="Donnerkogelbahn"
 13.4585032 47.5220545
 13.4585645 47.5222235
 13.4585958 47.5223092
@@ -5155,7 +5155,7 @@ type=forest_way_1 label="Donnerkogelbahn" count="117"
 13.4623322 47.5325794
 13.4624012 47.5327591
 
-type=forest_way_1 label="Donnerkogelbahn" count="7"
+type=forest_way_1 label="Donnerkogelbahn"
 13.4508781 47.518444
 13.45202 47.5189943
 13.4543572 47.520102
@@ -5164,32 +5164,32 @@ type=forest_way_1 label="Donnerkogelbahn" count="7"
 13.4582763 47.5219479
 13.4585032 47.5220545
 
-type=forest_way_1 label="Kabinenbahn Rosim-Cabinovia" count="2"
+type=forest_way_1 label="Kabinenbahn Rosim-Cabinovia"
 10.5954586 46.516222
 10.6103287 46.5239146
 
-type=forest_way_1 label="Cavalese-Fondovalle" count="2"
+type=forest_way_1 label="Cavalese-Fondovalle"
 11.4646986 46.2851559
 11.4715753 46.2831699
 
-type=forest_way_1 label="Borest" count="2"
+type=forest_way_1 label="Borest"
 11.8711381 46.548106
 11.8538981 46.549838
 
-type=forest_way_1 label="Isolaccia-Pian della Mota" count="2"
+type=forest_way_1 label="Isolaccia-Pian della Mota"
 10.3030837 46.4866572
 10.3001387 46.4738863
 
-type=forest_way_1 label="Plaghera-Cresta Sobretta" count="3"
+type=forest_way_1 label="Plaghera-Cresta Sobretta"
 10.4824159 46.404099
 10.4796192 46.3911672
 10.4787509 46.3872356
 
-type=forest_way_1 label="Nesselbahn" count="2"
+type=forest_way_1 label="Nesselbahn"
 11.6698439 46.8354568
 11.6840399 46.8462836
 
-type=forest_way_1 label="Planai West II" count="13"
+type=forest_way_1 label="Planai West II"
 13.6861548 47.3833642
 13.686563 47.3832551
 13.6866781 47.3832243
@@ -5204,7 +5204,7 @@ type=forest_way_1 label="Planai West II" count="13"
 13.7023615 47.379031
 13.7029567 47.3788719
 
-type=forest_way_1 label="(46) Grost 2 express" count="22"
+type=forest_way_1 label="(46) Grost 2 express"
 10.8761385 46.2262519
 10.8765674 46.2260584
 10.8766333 46.2260287
@@ -5228,7 +5228,7 @@ type=forest_way_1 label="(46) Grost 2 express" count="22"
 10.8978775 46.216445
 10.9001085 46.2152053
 
-type=forest_way_1 label="Valisera II" count="18"
+type=forest_way_1 label="Valisera II"
 9.9627978 47.0044876
 9.962934 47.0036945
 9.963043 47.0030598
@@ -5248,19 +5248,19 @@ type=forest_way_1 label="Valisera II" count="18"
 9.9656496 46.9878773
 9.9657276 46.987423
 
-type=forest_way_1 label="Ragnatsch-Hinterspina" count="2"
+type=forest_way_1 label="Ragnatsch-Hinterspina"
 9.4005896 47.0696735
 9.4091438 47.0766638
 
-type=forest_way_1 label="Hornbahn II" count="2"
+type=forest_way_1 label="Hornbahn II"
 12.4078122 47.4635978
 12.4292104 47.4667846
 
-type=forest_way_1 label="TirolS II" count="2"
+type=forest_way_1 label="TirolS II"
 12.5685002 47.4177073
 12.5782199 47.4176027
 
-type=forest_way_1 label="Mittelbergbahn" count="7"
+type=forest_way_1 label="Mittelbergbahn"
 10.8806591 46.9145322
 10.8802896 46.9144572
 10.8798306 46.9143639
@@ -5269,7 +5269,7 @@ type=forest_way_1 label="Mittelbergbahn" count="7"
 10.8704313 46.912455
 10.8647007 46.9112911
 
-type=forest_way_1 label="Ossi-Reichert-Bahn Sektion 1" count="8"
+type=forest_way_1 label="Ossi-Reichert-Bahn Sektion 1"
 10.2243800 47.5174397
 10.2240365 47.5166824
 10.2234440 47.5153763
@@ -5279,7 +5279,7 @@ type=forest_way_1 label="Ossi-Reichert-Bahn Sektion 1" count="8"
 10.2194716 47.5066188
 10.2193572 47.5063713
 
-type=forest_way_1 label="Kristbergbahn" count="6"
+type=forest_way_1 label="Kristbergbahn"
 9.9869068 47.1070426
 9.9854787 47.1042049
 9.9849028 47.1030604
@@ -5287,11 +5287,11 @@ type=forest_way_1 label="Kristbergbahn" count="6"
 9.9826262 47.0985362
 9.9806019 47.094513
 
-type=forest_way_1 label="8 EUB Panoramabahn Geols" count="2"
+type=forest_way_1 label="8 EUB Panoramabahn Geols"
 11.8065351 47.3116262
 11.7907453 47.3243892
 
-type=forest_way_1 label="Gletscherjet 4" count="8"
+type=forest_way_1 label="Gletscherjet 4"
 12.6810129 47.2006408
 12.6811128 47.2001744
 12.6811302 47.200093
@@ -5301,7 +5301,7 @@ type=forest_way_1 label="Gletscherjet 4" count="8"
 12.6831575 47.1906237
 12.6832363 47.1902557
 
-type=forest_way_1 label="Hartkaiserbahn" count="18"
+type=forest_way_1 label="Hartkaiserbahn"
 12.2931305 47.5078441
 12.2919558 47.5070084
 12.2886019 47.5046223
@@ -5321,15 +5321,15 @@ type=forest_way_1 label="Hartkaiserbahn" count="18"
 12.2733144 47.4937447
 12.2731480 47.4936263
 
-type=forest_way_1 label="408 Welschnofen Laurin 1" count="2"
+type=forest_way_1 label="408 Welschnofen Laurin 1"
 11.5458439 46.4322871
 11.5888346 46.4441953
 
-type=forest_way_1 label="Breitspitzbahn" count="2"
+type=forest_way_1 label="Breitspitzbahn"
 10.1126079 46.9679948
 10.1269875 46.956121
 
-type=forest_way_1 label="Alpen Connect" count="17"
+type=forest_way_1 label="Alpen Connect"
 11.9929243 46.7521124
 11.9925924 46.7519981
 11.9925187 46.751973
@@ -5348,7 +5348,7 @@ type=forest_way_1 label="Alpen Connect" count="17"
 11.9678829 46.7433965
 11.9674947 46.743268
 
-type=forest_way_1 label="Dantercepies I" count="15"
+type=forest_way_1 label="Dantercepies I"
 11.7679695 46.5556385
 11.7690184 46.5554289
 11.7702756 46.5552012
@@ -5365,17 +5365,17 @@ type=forest_way_1 label="Dantercepies I" count="15"
 11.7940737 46.5505461
 11.7946671 46.5504302
 
-type=forest_way_1 label="12er Express" count="2"
+type=forest_way_1 label="12er Express"
 12.5930397 47.374866
 12.5904225 47.3739284
 
-type=forest_way_1 label="" count="4"
+type=forest_way_1
 10.8824062 46.7144328
 10.8793271 46.7198951
 10.8788926 46.7206371
 10.8787357 46.720912
 
-type=forest_way_1 label="Waldalmbahn" count="14"
+type=forest_way_1 label="Waldalmbahn"
 12.9808524 47.2302842
 12.9804529 47.2302568
 12.9800161 47.2302268
@@ -5391,12 +5391,12 @@ type=forest_way_1 label="Waldalmbahn" count="14"
 12.9553407 47.2285457
 12.9547834 47.2285074
 
-type=forest_way_1 label="Dorfbahn" count="3"
+type=forest_way_1 label="Dorfbahn"
 12.0345405 47.2261816
 12.0382688 47.2358857
 12.0222828 47.2424233
 
-type=forest_way_1 label="zellamseeXpress" count="28"
+type=forest_way_1 label="zellamseeXpress"
 12.7312453 47.3664701
 12.7311095 47.3662007
 12.7309945 47.3659725
@@ -5426,7 +5426,7 @@ type=forest_way_1 label="zellamseeXpress" count="28"
 12.7430469 47.3393569
 12.7433046 47.3388974
 
-type=forest_way_1 label="Senderbahn II" count="8"
+type=forest_way_1 label="Senderbahn II"
 13.0818491 47.1250941
 13.0926816 47.1175388
 13.0957085 47.1154288
@@ -5436,7 +5436,7 @@ type=forest_way_1 label="Senderbahn II" count="8"
 13.0983666 47.1135761
 13.0986378 47.1133926
 
-type=forest_way_1 label="Stubnerkogelbahn II" count="9"
+type=forest_way_1 label="Stubnerkogelbahn II"
 13.1121408 47.1113977
 13.1052317 47.1116493
 13.1032415 47.1117224
@@ -5447,12 +5447,12 @@ type=forest_way_1 label="Stubnerkogelbahn II" count="9"
 13.0996218 47.1118565
 13.0991738 47.11188
 
-type=forest_way_1 label="SINALCObahn" count="3"
+type=forest_way_1 label="SINALCObahn"
 12.9388194 47.3870979
 12.9701226 47.3889102
 12.9843423 47.3896904
 
-type=forest_way_1 label="Gipfelbahn-Fulseck II" count="9"
+type=forest_way_1 label="Gipfelbahn-Fulseck II"
 13.1259122 47.2415926
 13.1396061 47.2373569
 13.1413954 47.2368084
@@ -5463,7 +5463,7 @@ type=forest_way_1 label="Gipfelbahn-Fulseck II" count="9"
 13.1471177 47.2350229
 13.1478838 47.2347963
 
-type=forest_way_1 label="Panoramabahn Groöarltal I" count="9"
+type=forest_way_1 label="Panoramabahn Groöarltal I"
 13.1950398 47.2415579
 13.1946314 47.2415416
 13.1936821 47.2415036
@@ -5474,7 +5474,7 @@ type=forest_way_1 label="Panoramabahn Groöarltal I" count="9"
 13.1848935 47.2411519
 13.1842998 47.2411281
 
-type=forest_way_1 label="Flexenbahn" count="14"
+type=forest_way_1 label="Flexenbahn"
 10.1800330 47.1386968
 10.1800259 47.1389087
 10.1800160 47.1392029
@@ -5490,7 +5490,7 @@ type=forest_way_1 label="Flexenbahn" count="14"
 10.1795324 47.1536205
 10.1795263 47.1538036
 
-type=forest_way_1 label="Trittkopfbahn II" count="8"
+type=forest_way_1 label="Trittkopfbahn II"
 10.1795864 47.1538723
 10.1796923 47.1540292
 10.1815536 47.1567856
@@ -5500,7 +5500,7 @@ type=forest_way_1 label="Trittkopfbahn II" count="8"
 10.1847883 47.1615757
 10.1849294 47.1617846
 
-type=forest_way_1 label="Trittkopfbahn I" count="25"
+type=forest_way_1 label="Trittkopfbahn I"
 10.1645554 47.1681046
 10.1649013 47.1677744
 10.1653359 47.1673597
@@ -5527,7 +5527,7 @@ type=forest_way_1 label="Trittkopfbahn I" count="25"
 10.1795800 47.1538684
 10.1795864 47.1538723
 
-type=forest_way_1 label="Albonabahn II" count="20"
+type=forest_way_1 label="Albonabahn II"
 10.1804640 47.1383287
 10.1803835 47.1380532
 10.1803188 47.1378319
@@ -5549,7 +5549,7 @@ type=forest_way_1 label="Albonabahn II" count="20"
 10.1751965 47.1203062
 10.1750914 47.1199466
 
-type=forest_way_1 label="Steinbergbahn I" count="12"
+type=forest_way_1 label="Steinbergbahn I"
 12.7330999 47.4395451
 12.7330088 47.4387657
 12.7328585 47.4374788
@@ -5563,28 +5563,28 @@ type=forest_way_1 label="Steinbergbahn I" count="12"
 12.7310342 47.4220763
 12.7308439 47.4204664
 
-type=forest_way_1 label="Asitzbahn II" count="5"
+type=forest_way_1 label="Asitzbahn II"
 12.7139344 47.4274817
 12.7139679 47.4264039
 12.7140036 47.4252569
 12.7140829 47.4227069
 12.7144534 47.4107907
 
-type=forest_way_1 label="Tirol S I" count="2"
+type=forest_way_1 label="Tirol S I"
 12.5782199 47.4176027
 12.5924638 47.4019946
 
-type=forest_way_1 label="Portados" count="3"
+type=forest_way_1 label="Portados"
 11.8739161 46.495274
 11.8685413 46.4861236
 11.8672333 46.4838043
 
-type=forest_way_1 label="Patscherkofelbahn" count="3"
+type=forest_way_1 label="Patscherkofelbahn"
 11.4267211 47.2220741
 11.441949 47.2113326
 11.4517236 47.2100596
 
-type=forest_way_1 label="Schlossalmbahn II" count="12"
+type=forest_way_1 label="Schlossalmbahn II"
 13.0825843 47.1651196
 13.0821726 47.1649323
 13.0812759 47.1645245
@@ -5598,11 +5598,11 @@ type=forest_way_1 label="Schlossalmbahn II" count="12"
 13.0603217 47.1555154
 13.0600084 47.1553807
 
-type=forest_way_1 label="Dorfbahn Warth" count="2"
+type=forest_way_1 label="Dorfbahn Warth"
 10.1823305 47.2580342
 10.1762072 47.2578357
 
-type=forest_way_1 label="Ifen I" count="6"
+type=forest_way_1 label="Ifen I"
 10.1369804 47.3429179
 10.1362139 47.3434025
 10.1340983 47.3447525
@@ -5610,7 +5610,7 @@ type=forest_way_1 label="Ifen I" count="6"
 10.1297625 47.3475813
 10.1278189 47.3488421
 
-type=forest_way_1 label="Ifen II" count="13"
+type=forest_way_1 label="Ifen II"
 10.1278189 47.3488421
 10.1261526 47.3494461
 10.1247438 47.3499245
@@ -5625,11 +5625,11 @@ type=forest_way_1 label="Ifen II" count="13"
 10.106421 47.3562283
 10.1057567 47.356449
 
-type=forest_way_1 label="Ganzer X-press" count="2"
+type=forest_way_1 label="Ganzer X-press"
 12.2865549 47.2956161
 12.2864154 47.2821706
 
-type=forest_way_1 label="Schlossalmbahn I" count="10"
+type=forest_way_1 label="Schlossalmbahn I"
 13.0982244 47.1678167
 13.0979205 47.1677643
 13.0967298 47.167559
@@ -5641,43 +5641,43 @@ type=forest_way_1 label="Schlossalmbahn I" count="10"
 13.0830404 47.1651982
 13.0825843 47.1651196
 
-type=forest_way_1 label="Kirchenkarbahn II" count="2"
+type=forest_way_1 label="Kirchenkarbahn II"
 11.0712437 46.9039698
 11.0779458 46.9042754
 
-type=forest_way_1 label="Höllental" count="2"
+type=forest_way_1 label="Höllental"
 10.5106413 46.8012596
 10.4955285 46.7955247
 
-type=forest_way_1 label="Haideralm Schöneben" count="3"
+type=forest_way_1 label="Haideralm Schöneben"
 10.5308014 46.7656454
 10.5224527 46.7726203
 10.5106484 46.8012422
 
-type=forest_way_1 label="Collegamento Son dei Prade-Cinque" count="3"
+type=forest_way_1 label="Collegamento Son dei Prade-Cinque"
 12.0984923 46.5230454
 12.0684405 46.5181523
 12.0389766 46.5187129
 
-type=forest_way_1 label="Möslbahn" count="4"
+type=forest_way_1 label="Möslbahn"
 11.8189316 47.205862
 11.8184659 47.2047334
 11.8168734 47.2028183
 11.8103409 47.1929885
 
-type=forest_way_1 label="Wimbachexpress" count="2"
+type=forest_way_1 label="Wimbachexpress"
 11.8534975 47.2619125
 11.826811 47.2582009
 
-type=forest_way_1 label="Natrunbahn" count="2"
+type=forest_way_1 label="Natrunbahn"
 12.9059699 47.4065178
 12.9207705 47.3984399
 
-type=forest_way_1 label="Sonnbergbahn" count="2"
+type=forest_way_1 label="Sonnbergbahn"
 12.9204127 47.3979952
 12.9091053 47.3899997
 
-type=forest_way_1 label="MK Maiskogelbahn" count="30"
+type=forest_way_1 label="MK Maiskogelbahn"
 12.7566677 47.2737408
 12.7556477 47.2737493
 12.7529647 47.2737717
@@ -5709,7 +5709,7 @@ type=forest_way_1 label="MK Maiskogelbahn" count="30"
 12.7157699 47.2582961
 12.7151884 47.2579319
 
-type=forest_way_1 label="3KK-onnection Kaprun Kitzsteinhorn" count="7"
+type=forest_way_1 label="3KK-onnection Kaprun Kitzsteinhorn"
 12.6993163 47.2210141
 12.6998591 47.2222322
 12.7016801 47.2263041
@@ -5718,18 +5718,18 @@ type=forest_way_1 label="3KK-onnection Kaprun Kitzsteinhorn" count="7"
 12.7145504 47.255074
 12.7154944 47.257693
 
-type=forest_way_1 label="Dantercepies II" count="5"
+type=forest_way_1 label="Dantercepies II"
 11.7946671 46.5504302
 11.7951812 46.5507625
 11.7970831 46.5519609
 11.7985302 46.5528925
 11.7997603 46.5536644
 
-type=forest_way_1 label="Piz Seteur 2" count="2"
+type=forest_way_1 label="Piz Seteur 2"
 11.7602769 46.5275514
 11.7611964 46.5229306
 
-type=forest_way_1 label="Frara" count="11"
+type=forest_way_1 label="Frara"
 11.8275033 46.5481633
 11.8257074 46.5490671
 11.8240357 46.5499084
@@ -5742,19 +5742,19 @@ type=forest_way_1 label="Frara" count="11"
 11.8137626 46.5550781
 11.8120320 46.5559489
 
-type=forest_way_1 label="10er Tigignas" count="2"
+type=forest_way_1 label="10er Tigignas"
 9.5917549 46.5966348
 9.5713568 46.5946024
 
-type=forest_way_1 label="Daolasa-Val Mastellina 1" count="2"
+type=forest_way_1 label="Daolasa-Val Mastellina 1"
 10.8367113 46.3032108
 10.8367528 46.3030373
 
-type=forest_way_1 label="Daolasa-Val Mastellina 2" count="2"
+type=forest_way_1 label="Daolasa-Val Mastellina 2"
 10.8367998 46.3027498
 10.8323412 46.2807009
 
-type=forest_way_1 label="Rittner Seilbahn-Funivia del" count="9"
+type=forest_way_1 label="Rittner Seilbahn-Funivia del"
 11.4050114 46.5277845
 11.4035755 46.5268050
 11.3959246 46.5215858
@@ -5765,7 +5765,7 @@ type=forest_way_1 label="Rittner Seilbahn-Funivia del" count="9"
 11.3710359 46.5046038
 11.3642502 46.4999729
 
-type=forest_way_1 label="Schaufeljochbahn" count="7"
+type=forest_way_1 label="Schaufeljochbahn"
 11.1145429 46.9870463
 11.1144112 46.9866970
 11.1139532 46.9854821
@@ -5774,19 +5774,19 @@ type=forest_way_1 label="Schaufeljochbahn" count="7"
 11.1118852 46.9800385
 11.1109121 46.9772051
 
-type=forest_way_1 label="3S Eisgrat 2" count="27"
+type=forest_way_1 label="3S Eisgrat 2"
 11.1409708 46.9969764
 11.1149974 46.9871135
 
-type=forest_way_1 label="Gamsgarten 2" count="2"
+type=forest_way_1 label="Gamsgarten 2"
 11.1404676 46.9971742
 11.1200542 46.9966501
 
-type=forest_way_1 label="Gamsgartenbahn I" count="2"
+type=forest_way_1 label="Gamsgartenbahn I"
 11.1549091 47.0107579
 11.1404676 46.9971742
 
-type=forest_way_1 label="3S Eisgrat 1" count="6"
+type=forest_way_1 label="3S Eisgrat 1"
 11.1621766 47.0132693
 11.1584319 47.0103925
 11.1560994 47.0086006
@@ -5794,7 +5794,7 @@ type=forest_way_1 label="3S Eisgrat 1" count="6"
 11.1435995 46.9989963
 11.1409708 46.9969764
 
-type=forest_way_1 label="Kreuzjochbahn" count="14"
+type=forest_way_1 label="Kreuzjochbahn"
 11.3435359 47.1552966
 11.3432305 47.1553291
 11.3424352 47.1554137
@@ -5810,16 +5810,16 @@ type=forest_way_1 label="Kreuzjochbahn" count="14"
 11.3310249 47.1557175
 11.3071179 47.1453872
 
-type=forest_way_1 label="Panoramabahn Elfer" count="2"
+type=forest_way_1 label="Panoramabahn Elfer"
 11.3123844 47.1109476
 11.3234386 47.0986227
 
-type=forest_way_1 label="Serlesbahn" count="3"
+type=forest_way_1 label="Serlesbahn"
 11.3800561 47.1635762
 11.3805455 47.1631305
 11.3950092 47.1499574
 
-type=forest_way_1 label="Zinsbergbahn" count="8"
+type=forest_way_1 label="Zinsbergbahn"
 12.2308949 47.4617896
 12.2351383 47.4675096
 12.2362093 47.4689648
@@ -5829,11 +5829,11 @@ type=forest_way_1 label="Zinsbergbahn" count="8"
 12.2391802 47.4730012
 12.2418742 47.4767867
 
-type=forest_way_1 label="Kombibahn Hoher Turm" count="2"
+type=forest_way_1 label="Kombibahn Hoher Turm"
 11.4538530 47.0764709
 11.4433096 47.0607595
 
-type=forest_way_1 label="Grünwaldkopfbahn" count="13"
+type=forest_way_1 label="Grünwaldkopfbahn"
 13.5437430 47.2509894
 13.5437378 47.2511914
 13.5437265 47.2514984
@@ -5848,7 +5848,7 @@ type=forest_way_1 label="Grünwaldkopfbahn" count="13"
 13.5434343 47.2592806
 13.5434212 47.2596997
 
-type=forest_way_1 label="Alpspitz-Kombibahn I" count="11"
+type=forest_way_1 label="Alpspitz-Kombibahn I"
 10.4971826 47.6069103
 10.4971841 47.6071493
 10.4971908 47.6081852
@@ -5861,7 +5861,7 @@ type=forest_way_1 label="Alpspitz-Kombibahn I" count="11"
 10.4971871 47.6173143
 10.4971875 47.6180775
 
-type=forest_way_1 label="Komblift Glungezer" count="28"
+type=forest_way_1 label="Komblift Glungezer"
 11.5426914 47.2424480
 11.5424923 47.2421984
 11.5419844 47.2415615
@@ -5891,7 +5891,7 @@ type=forest_way_1 label="Komblift Glungezer" count="28"
 11.5293845 47.2258407
 11.5293004 47.2257409
 
-type=forest_way_1 label="Panoramabahn" count="10"
+type=forest_way_1 label="Panoramabahn"
 13.8736152 46.9145753
 13.8734400 46.9146343
 13.8728373 46.9148373
@@ -5903,7 +5903,7 @@ type=forest_way_1 label="Panoramabahn" count="10"
 13.8665679 46.9169941
 13.8660994 46.9171471
 
-type=forest_way_1 label="Parsennbahn" count="14"
+type=forest_way_1 label="Parsennbahn"
 10.1774468 47.3550190
 10.1771371 47.3548886
 10.1765678 47.3546488
@@ -5919,7 +5919,7 @@ type=forest_way_1 label="Parsennbahn" count="14"
 10.1625279 47.3487306
 10.1620834 47.3485474
 
-type=forest_way_1 label="Weibermahd" count="11"
+type=forest_way_1 label="Weibermahd"
 10.1279163 47.2267303
 10.1276041 47.2262909
 10.1267833 47.2250830
@@ -5932,11 +5932,11 @@ type=forest_way_1 label="Weibermahd" count="11"
 10.1238351 47.2207439
 10.1234827 47.2202252
 
-type=forest_way_1 label="6CLD/8MGD Panorama" count="2"
+type=forest_way_1 label="6CLD/8MGD Panorama"
 11.3977829 46.9138307
 11.3875094 46.9146414
 
-type=forest_way_1 label="Alpspitz-Kombibahn II" count="9"
+type=forest_way_1 label="Alpspitz-Kombibahn II"
 10.4975359 47.6058778
 10.4978722 47.6053087
 10.4987087 47.6038937
@@ -5947,7 +5947,7 @@ type=forest_way_1 label="Alpspitz-Kombibahn II" count="9"
 10.5016091 47.5989869
 10.5017825 47.5986934
 
-type=forest_way_1 label="Sternstein Express" count="11"
+type=forest_way_1 label="Sternstein Express"
 14.2850061 48.5534107
 14.2846916 48.5535292
 14.2835625 48.5539546
@@ -5960,7 +5960,7 @@ type=forest_way_1 label="Sternstein Express" count="11"
 14.2697276 48.5591661
 14.2691973 48.5593659
 
-type=forest_way_1 label="Gletscherjet 3" count="16"
+type=forest_way_1 label="Gletscherjet 3"
 12.6880374 47.2086393
 12.6878864 47.2084673
 12.6877278 47.2082868
@@ -5978,11 +5978,11 @@ type=forest_way_1 label="Gletscherjet 3" count="16"
 12.6813909 47.2010712
 12.6810129 47.2006408
 
-type=forest_way_1 label="way 659527387" count="2"
+type=forest_way_1
 14.0353227 46.3677053
 14.0202455 46.3546976
 
-type=lift_drag label="Olperer 1" count="7"
+type=lift_drag label="Olperer 1"
 11.670104 47.0606288
 11.6698515 47.0605565
 11.6575587 47.0570383
@@ -6006,7 +6006,7 @@ type=lift_drag label="Orel"
 15.5084029 46.4963840
 15.5078313 46.4960713
 
-type=lift_drag label="RuÅ¡ka"
+type=lift_drag label="Ruka"
 15.5203906 46.5035546
 15.5082812 46.4964401
 15.507777 46.4961225
@@ -6028,7 +6028,7 @@ type=lift_drag label="3-Starnberglift 2"
 14.3297168 47.0526838
 14.3297234 47.0520866
 
-type=lift_drag label="4-Starnberglift 1" 
+type=lift_drag label="4-Starnberglift 1"
 14.3210362 47.0644681
 14.3220209 47.0643969
 14.3230792 47.0643075
@@ -6344,7 +6344,7 @@ type=lift_drag label="2000er Lift"
 14.1771338 47.6556953
 14.1772059 47.6549544
 
-type=lift_drag label="OstruÅ¡Ä�ica 1 in 2" 
+type=lift_drag label="Ostruica 1 in 2"
 15.3318376 46.4636214
 15.3284366 46.4593248
 15.3280614 46.4588602
@@ -6961,7 +6961,7 @@ type=lift_drag label="Seetäli"
 9.8151932 46.8537342
 9.8146406 46.8537525
 
-type=lift_drag label="Wartensteinerlift / Grosser Riegel"
+type=lift_drag label="Wartensteinerlift/Grosser Riegel"
 15.7928169 47.6188475
 15.7905697 47.6174505
 
@@ -7156,7 +7156,7 @@ type=lift_drag label="Pfaffenbühel II"
 11.7686659 47.2546168
 11.7691249 47.2541207
 
-type=lift_drag label="way/31020967"
+type=lift_drag
 10.141396 48.7151107
 10.1415062 48.7149226
 10.1431224 48.7119739
@@ -7896,7 +7896,7 @@ type=lift_drag label="1er Lift"
 14.803146 47.785947
 14.8033177 47.7858027
 
-type=lift_drag label="KÃ– 3"
+type=lift_drag label="K– 3"
 14.7920877 47.7858179
 14.7920988 47.7857646
 14.7921061 47.7857353
@@ -8368,7 +8368,7 @@ type=lift_drag label="Lämmerbichl"
 11.7480369 47.1839591
 11.7497503 47.180575
 
-type=lift_drag label="St. Leonhardlift"
+type=lift_drag label="St.Leonhardlift"
 12.3526383 46.9110917
 12.3526858 46.9110789
 12.3535089 46.9108565
@@ -8435,7 +8435,7 @@ type=lift_drag label="Hochhäderich I"
 9.9944855 47.4810136
 9.9947746 47.4806296
 
-type=lift_drag label="Skilift Raml, Molln"
+type=lift_drag label="Skilift Raml Molln"
 14.2549739 47.8819653
 14.2547655 47.8813425
 14.2543652 47.8801467
@@ -8473,7 +8473,7 @@ type=lift_drag label="Jochlift"
 10.8917081 47.3513622
 10.9016585 47.3498911
 
-type=lift_drag label="way/85197486"
+type=lift_drag
 10.6857511 47.4926818
 10.6904289 47.4918533
 
@@ -8790,7 +8790,7 @@ type=lift_drag label="Halsmarterlift"
 11.5509153 47.2528533
 11.5432433 47.2428933
 
-type=lift_drag label="Ã–tzlift"
+type=lift_drag label="Ätzlift"
 12.2906933 47.6336874
 12.2886019 47.6300965
 12.2876076 47.6283857
@@ -9871,7 +9871,7 @@ type=lift_drag label="Postalmlift"
 12.6839892 47.6017721
 12.6739747 47.6013052
 
-type=lift_drag label="Sattel-kurvenlift"
+type=lift_drag label="Sattel-Kurvenlift"
 12.6297683 47.6653403
 12.6204316 47.6645816
 12.6146407 47.6655661
@@ -11032,7 +11032,7 @@ type=lift_drag label="Beginnerlift Kleinarl"
 13.3162946 47.2832648
 13.3177189 47.283707
 
-type=lift_drag label="Skiclubs Tittling e.V."
+type=lift_drag label="Skiclubs Tittling"
 13.3896129 48.7332436
 13.3925418 48.733233
 
@@ -11080,7 +11080,7 @@ type=lift_drag label="Bergkristalllift"
 13.6499518 47.4318327
 13.6499152 47.4322383
 
-type=lift_drag label="way/464317668"
+type=lift_drag
 12.5165806 46.9195007
 12.5164371 46.9189911
 12.5161745 46.9180589

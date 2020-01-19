@@ -1,4 +1,4 @@
-
+﻿
 12.48477 41.89410 type=poi_custom5 label="Tempio di Venere Genetrix" icon_src="temple"
 12.48675 41.89232 type=poi_custom5 label="Templo di Antonino e Faustina" icon_src="temple"
 12.47962 41.89250 type=poi_custom5 label="Apollotempel des Sosianus" icon_src="temple"

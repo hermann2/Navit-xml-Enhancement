@@ -6,7 +6,8 @@ Icons are in folder - src - enclosed. The empty folder in (routing mask) can be 
 * *B - POI map dependent on demand*  
 * *C - At high zoom level, show a world map or /**  
 * *D - Center map to the cursor*  
-* *E - Layout street`_`day and street`_`night*
+* *E - Layout street`_`day and street`_`night*  
+* *F - Layout snow*  
 ### Installation:
 Path in Device Memory --> Folder navit; Add Sub Folder: maske, poi and txt;  
 Copy the files in the github to the respective folders in the device.  
@@ -189,4 +190,11 @@ Example for entry under **OSD**
 ### E - Layout street`_`day and street`_`night
 These two layouts are minimally created for routing by car.  
 To expand with additional functions, representations and adaptation to the personal imagination, these layouts form a manageable basis.  
-Gradually changes or additions can be created and tracked. Especially suitable for quick adaptation to a new device.
+Gradually changes or additions can be created and tracked. Especially suitable for quick adaptation to a new device.  
+
+### F - Layout snow
+OSD Button POI and then wintersport activates the layout snow.  
+This layout has been optimized to show the ski areas in the Navit standard.  
+For more details are required the files A Hütte.txt, A lift_station.txt, A lift_station1.txt, A lifte and A_pylon.csv.  
+These files are only created for the area Austria.  
+Better speed to viewing and search on the map, please deactivate GPS.
