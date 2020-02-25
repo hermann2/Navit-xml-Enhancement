@@ -1,7 +1,8 @@
 # Navit-xml-Enhancement
 ## Extension to Navit.xml  
-Created to 2560x1440 Galaxy S7 with navit-git 0.5.3+589c11d0  
-Icons are in folder - src - enclosed. The empty folder in (routing mask) can be replaced/fill with this or own.  
+**2560x1440 XML Normal** created to Galaxy S7 with navit-git 0.5.3  
+**1280x800 XML** created to Tablet with navit 0.5.4  
+
 * *A - Display of individual Point of Interrest*  
 * *B - POI map dependent on demand*  
 * *C - At high zoom level, show a world map or /**  
@@ -9,17 +10,18 @@ Icons are in folder - src - enclosed. The empty folder in (routing mask) can be 
 * *E - Layout street`_`day and street`_`night*  
 * *F - Layout snow*  
 ### Installation:
-Path in Device Memory --> Folder navit; Add Sub Folder: maske, poi and txt;  
-Copy the files in the github to the respective folders in the device.  
-Folder navit(all *.xml), Folder navit/maske-maske.png, Folder navit/poi-poi.png, Folder navit/txt-`*`.txt  
-Path in SDcard to Map --> Folder navit  
-If the map is in the device memory then change in Navit.xml the Path under
+Path Phone: Android/data/org.navitprojekt.navit/files/navit.xml also all other *.xml and create the three folder:  - maske - poi - txt -  
+The empty folders can be filled with Icons are in folder - src - in Github enclosed or replaced with your own icons.  
+
+You can in the device click bottom right on compass and download a Map.  
+Your own map (OSM) copy into the FOLDER /files
+Change in Navit.xml the Path under
 
 	<mapset>
 	map type="textfile" active="yes" data="$NAVIT_USER_DATADIR/Your_Map_Name.bin"
 	..........
 	</mapset>
-and you can in the device click bottom right on compass and download a Map.  
+
 
 To open the **GUI-Menu** click bottom right on the gear.  
 A small user Manual can be found in the Folder **ROUTE-DATA/Manual** (sorry, only spoken in German).  

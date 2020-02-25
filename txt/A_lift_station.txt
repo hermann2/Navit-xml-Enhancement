@@ -1,11 +1,11 @@
 ﻿
-10.001139 47.1218411 type=tundra label="Paluda"
+10.0011390 47.1218411 type=tundra label="Paluda"
 10.0014502 47.1155016 type=tundra label="Paluda"
 10.0060312 47.0480797 type=tundra label="Freda Bahn"
-10.006597 47.5072809 type=tundra
+10.0065970 47.5072809 type=tundra
 10.0069229 46.9848949 type=tundra label="Versettla Mittelstation"
 10.0071741 46.9849548 type=tundra label="Versettla Mittelstation"
-10.007558 47.5180207 type=tundra
+10.0075580 47.5180207 type=tundra
 10.0085031 47.3173254 type=tundra label="Diedamskopfbahn Talstation"
 10.0103584 47.0160676 type=tundra
 10.0160596 47.4873938 type=tundra
@@ -13,7 +13,7 @@
 10.0211782 47.4839472 type=tundra
 10.0218527 46.4299419 type=tundra label="Lagalb Bergstation"
 10.0244338 46.9840665 type=tundra label="Versettla Talstation"
-10.024705 47.3337462 type=tundra label="Diedamskopfbahn Mittelstation"
+10.0247050 47.3337462 type=tundra label="Diedamskopfbahn Mittelstation"
 10.0255264 47.3369479 type=tundra
 10.0276134 47.3467799 type=tundra label="Panoramabahn"
 10.0276792 47.3453385 type=tundra label="Diedamskopfbahn Bergstation"
@@ -34,21 +34,21 @@
 10.0503891 47.1059866 type=tundra label="Riedboden"
 10.0508014 47.5514321 type=tundra label="Hündle Bahn Talstation"
 10.0530659 47.5427528 type=tundra label="Kinderteller"
-10.053626 47.1105411 type=tundra label="Riedboden"
+10.0536260 47.1105411 type=tundra label="Riedboden"
 10.0539879 47.5435464 type=tundra label="Hündle Bahn Bergstation"
-10.054034 47.5464736 type=tundra label="Gratlift"
+10.0540340 47.5464736 type=tundra label="Gratlift"
 10.0540612 46.1893956 type=tundra label="Prato Valentino"
 10.0540714 46.9574223 type=tundra label="Vermuntbahn"
 10.0551347 47.1342356 type=tundra label="Materialseilbahn Kraftwerk Spullersee"
 10.0553186 47.1105311 type=tundra label="Sattelkopf"
-10.055448 47.5427903 type=tundra
+10.0554480 47.5427903 type=tundra
 10.0555977 47.1113199 type=tundra label="Sonnenkopfbahn"
 10.0556344 47.1111671 type=tundra label="Verbindungslift"
 10.0556544 47.542657 type=tundra
 10.0558342 47.1183962 type=tundra label="Sonnenkopfbahn"
 10.0559646 47.1439978 type=tundra label="Materialseilbahn Kraftwerk Spullersee"
 10.0561993 47.1285447 type=tundra label="Sonnenkopfbahn"
-10.056212 47.1091287 type=tundra label="Bettler Älpele"
+10.0562120 47.1091287 type=tundra label="Bettler Älpele"
 10.0564663 47.110386 type=tundra label="Verbindungslift"
 10.0567747 46.9685098 type=tundra label="Vermuntbahn"
 10.0568191 47.1091807 type=tundra label="Sattelkopf"
@@ -63,19 +63,19 @@
 10.0648107 47.5408273 type=tundra
 10.0672964 47.1996176 type=tundra label="Materialseilbahn Göppinger Hütte"
 10.0728118 46.5120235 type=tundra label="Federia"
-10.07352 47.1014281 type=tundra label="Obermuribahn"
-10.075576 47.105887 type=tundra label="Obermoosbahn"
+10.0735200 47.1014281 type=tundra label="Obermuribahn"
+10.0755760 47.105887 type=tundra label="Obermoosbahn"
 10.0762726 47.1069683 type=tundra label="Glattingratbahn"
 10.0806448 47.1014332 type=tundra label="Glattingratbahn"
 10.0857044 47.5329793 type=tundra
 10.0860277 47.1604968 type=tundra label="Materialseilbahn Ravensburger Hütte"
-10.08676 46.5161948 type=tundra label="Baby Lac Salin"
+10.0867600 46.5161948 type=tundra label="Baby Lac Salin"
 10.0867664 47.2449977 type=tundra label="Materialseilbahn Oberhorn"
 10.0870303 46.511506 type=tundra label="Federia"
 10.0873953 46.5140174 type=tundra label="Baby Lac Salin"
 10.0879609 46.5169066 type=tundra label="Lac Salin"
 10.0890092 47.2591348 type=tundra label="Materialseilbahn Oberwaldalpe"
-10.090665 46.5264444 type=tundra label="Blesaccia II"
+10.0906650 46.5264444 type=tundra label="Blesaccia II"
 10.0918583 47.4636326 type=tundra label="Gschwendlift" II"
 10.0919145 47.1675496 type=tundra label="Materialseilbahn Ravensburger Hütte"
 10.0925031 47.2572398 type=tundra label="Materialseilbahn Körbersee"
@@ -90,8 +90,8 @@
 10.1012117 47.2152349 type=tundra label="Steinmähderbahn"
 10.1012287 47.4598415 type=tundra label="Höflealplift"
 10.1022498 47.2261803 type=tundra label="Steinmähderbahn"
-10.102595 47.4623369 type=tundra label="Höflealplift"
-10.103563 47.2624315 type=tundra label="Materialseilbahn"
+10.1025950 47.4623369 type=tundra label="Höflealplift"
+10.1035630 47.2624315 type=tundra label="Materialseilbahn"
 10.1045182 47.4619718 type=tundra label="Schelpenbahn"
 10.1047415 47.4621229 type=tundra label="Gelbhansekopflift"
 10.1053113 47.2662721 type=tundra label="Materialseilbahn"
@@ -118,7 +118,7 @@
 10.1139707 47.2139539 type=tundra label="Kriegerhornbahn"
 10.1160904 46.5146127 type=tundra label="Palipert"
 10.1163421 46.5430214 type=tundra label="Valandrea"
-10.116671 47.258753 type=tundra label="Ski-Schaukel-Falken"
+10.1166710 47.258753 type=tundra label="Ski-Schaukel-Falken"
 10.1166946 46.5174988 type=tundra label="Amerikan"
 10.1170235 47.3519981 type=tundra
 10.1172014 47.1424011 type=tundra label="Materialseilbahn Blasegg"
@@ -143,7 +143,7 @@
 10.1235954 47.2439734 type=tundra label="Sonnen-Jet"
 10.1236045 47.2223786 type=tundra label="Rotschrofenbahn"
 10.1236791 47.2202714 type=tundra label="Weibermahd Bergstation"
-10.124527 46.527244 type=tundra label="Doss"
+10.1245270 46.527244 type=tundra label="Doss"
 10.1246908 47.4567131 type=tundra label="Schwarzenberglift"
 10.1254385 46.5245728 type=tundra label="San Rocco"
 10.1254595 46.5246265 type=tundra label="San Rocco"
@@ -158,10 +158,10 @@
 10.1278189 47.3488421 type=tundra
 10.1278211 46.5388025 type=tundra label="Pian della Volpe"
 10.1279163 47.2267303 type=tundra label="Auenfeldjet;Weibermahdbahn ele=1786"
-10.128381 47.3251282 type=tundra label="Walmendingerhorn Doppelsessellift"
+10.1283810 47.3251282 type=tundra label="Walmendingerhorn Doppelsessellift"
 10.1285924 47.3257027 type=tundra label="Walmendingerhornbahn"
 10.1287858 46.5457945 type=tundra label="Tagliede"
-10.128841 47.2665456 type=tundra label="Körblliftle"
+10.1288410 47.2665456 type=tundra label="Körblliftle"
 10.1295593 47.4573297 type=tundra label="Schwabenhoflift"
 10.1296362 47.2662208 type=tundra label="Märchenland"
 10.1299687 46.5368217 type=tundra label="Ski School Area"
@@ -174,7 +174,7 @@
 10.1310898 47.4561766 type=tundra label="Angerlift"
 10.1311366 47.2625606 type=tundra label="Kuchlbahn"
 10.1314096 46.543323 type=tundra label="Campo Scuola"
-10.13155 47.4571207 type=tundra label="Riedbergerhornbahn"
+10.1315500 47.4571207 type=tundra label="Riedbergerhornbahn"
 10.1316864 47.2652525 type=tundra label="Kuchlbahn"
 10.1317673 47.2675267 type=tundra label="Körblliftle"
 10.1327098 47.4562274 type=tundra label="Angerlift"
@@ -185,11 +185,11 @@
 10.1335306 46.5372785 type=tundra label="Pian della Volpe"
 10.1336115 47.459626 type=tundra label="Raubachlift"
 10.1336699 46.5452664 type=tundra label="Valandrea"
-10.133712 47.2552889 type=tundra label="Salober-Jet ele=2044"
+10.1337120 47.2552889 type=tundra label="Salober-Jet ele=2044"
 10.1346027 47.2553278 type=tundra label="Hochalpbahn ele=2038"
-10.135485 47.2084295 type=tundra
+10.1354850 47.2084295 type=tundra
 10.1358774 47.2166972 type=tundra label="Petersbodenbahn"
-10.135969 47.2211776 type=tundra label="Übungslift Oberlech"
+10.1359690 47.2211776 type=tundra label="Übungslift Oberlech"
 10.1360141 47.165431 type=tundra label="Muggengratbahn"
 10.1360199 46.5419314 type=tundra label="Campo Scuola"
 10.1360781 47.2170596 type=tundra label="Bergbahn Lech-Oberlech"
@@ -224,7 +224,7 @@
 10.1434705 46.5398135 type=tundra label="Pemont"
 10.1435559 47.208387 type=tundra
 10.1438306 47.258667 type=tundra label="Karhornbahn"
-10.143917 46.9670137 type=tundra label="Alpkogelbahn"
+10.1439170 46.9670137 type=tundra label="Alpkogelbahn"
 10.1440891 47.5531983 type=tundra
 10.1442802 47.3204502 type=tundra label="Maisäßlift"
 10.1445405 47.2070817 type=tundra label="Berghof"
@@ -253,7 +253,7 @@
 10.1558221 47.3427452 type=tundra label="Heubergmuldenlift"
 10.1558717 47.3261089 type=tundra label="Zafernabahn"
 10.1563423 47.3423615 type=tundra label="Heubergbahn"
-10.156935 47.34473 type=tundra label="Schöntallift"
+10.1569350 47.34473 type=tundra label="Schöntallift"
 10.1572592 47.2030046 type=tundra label="Schafalp"
 10.1575062 47.141271 type=tundra label="Anger"
 10.1577455 47.139776 type=tundra
@@ -269,13 +269,13 @@
 10.1613818 46.5247816 type=tundra label="Trepalle"
 10.1614697 46.5249855 type=tundra
 10.1615362 47.1760056 type=tundra label="Seekopfbahn"
-10.161854 47.1713567 type=tundra label="Zürserseebahn"
+10.1618540 47.1713567 type=tundra label="Zürserseebahn"
 10.1620834 47.3485474 type=tundra label="Parsennbahn"
 10.1621496 46.9662512 type=tundra label="Alpkogelbahn"
 10.1622322 46.964626 type=tundra label="Birkhahnbahn"
-10.162234 46.5270167 type=tundra label="Mottolino"
+10.1622340 46.5270167 type=tundra label="Mottolino"
 10.1622779 47.2080167 type=tundra label="Schafalp"
-10.162584 46.5281482 type=tundra label="Mottolino"
+10.1625840 46.5281482 type=tundra label="Mottolino"
 10.1626189 47.3389224 type=tundra label="Schlösslellift"
 10.1628451 47.173518 type=tundra label="Materialseilbahn Trittalpe"
 10.1628652 46.5282393 type=tundra label="Mottolino"
@@ -283,13 +283,13 @@
 10.1630236 47.1726726 type=tundra label="Hexenboden"
 10.1639068 47.1874208 type=tundra label="Schüttboden"
 10.1640036 47.2341158 type=tundra label="Materialseilbahn Bürstegg"
-10.164334 47.2345949 type=tundra label="Materialseilbahn Tristelleralpe"
+10.1643340 47.2345949 type=tundra label="Materialseilbahn Tristelleralpe"
 10.1645554 47.1681046 type=tundra label="Trittkopfbahn I"
 10.1647807 47.3310669 type=tundra label="Ahornlift"
 10.1648208 47.1682245 type=tundra label="Übungshangbahn"
 10.1654649 47.1669526 type=tundra label="Babylift"
 10.1655764 46.5378385 type=tundra label="Passo Eira"
-10.16596 47.1204416 type=tundra
+10.1659600 47.1204416 type=tundra
 10.1661753 47.3429191 type=tundra label="Heubergbahn"
 10.1663327 47.2023671 type=tundra label="Rüfikopfbahn I"
 10.1663699 47.3420649 type=tundra label="Schlösslellift"
@@ -300,7 +300,7 @@
 10.1693742 47.3401541 type=tundra
 10.1695843 47.1192325 type=tundra label="Albonagratbahn ele=2394"
 10.1698118 47.3487344 type=tundra label="Hubertuslift"
-10.170524 47.1900736 type=tundra label="Schüttboden"
+10.1705240 47.1900736 type=tundra label="Schüttboden"
 10.1709785 47.3510484 type=tundra label="Ski-Kuli Parsenn"
 10.1712318 47.3293679 type=tundra
 10.1719227 47.351467 type=tundra
@@ -318,10 +318,10 @@
 10.1762072 47.2578357 type=tundra label="Dorfbahn Warth"
 10.1764221 47.2597276 type=tundra label="Wannenkopfbahn"
 10.1774468 47.355019 type=tundra label="Parsennbahn"
-10.178065 47.2601346 type=tundra label="Kitzeliftle"
+10.1780650 47.2601346 type=tundra label="Kitzeliftle"
 10.1783329 47.1137149 type=tundra label="Albonagratbahn ele=2085"
 10.1784957 47.3436506 type=tundra
-10.178666 47.2354645 type=tundra label="Materialseilbahn Tristelleralpe"
+10.1786660 47.2354645 type=tundra label="Materialseilbahn Tristelleralpe"
 10.1792125 47.2606032 type=tundra label="Kitzeliftle"
 10.1792437 47.1391006 type=tundra label="Rauz"
 10.1795263 47.1538036 type=tundra label="Flexenbahn"
