@@ -12,7 +12,6 @@
 ### Installation:
 Path Phone: Android/data/org.navitprojekt.navit/files/navit.xml also all other *.xml and create the three folder:  - maske - poi - txt -  
 The empty folders can be filled with Icons are in folder - src - in Github enclosed or replaced with your own icons.  
-
 You can in the device click bottom right on compass and download a Map.  
 Your own map (OSM) copy into the FOLDER /files
 Change in Navit.xml the Path under
@@ -22,6 +21,8 @@ Change in Navit.xml the Path under
 	..........
 	</mapset>
 
+##Navit 0.5.4.##
+I can only use one layout with Navit. Activation of another *.xml does not work. e.g.: navit.layout=navit.layout[@name=="SNOWSPORT"] (snow.xml).  
 
 To open the **GUI-Menu** click bottom right on the gear.  
 A small user Manual can be found in the Folder **ROUTE-DATA/Manual** (sorry, only spoken in German).  
