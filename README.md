@@ -1,7 +1,8 @@
 # Navit-xml-Enhancement
 ## Extension to Navit.xml  
-**2560x1440 XML Normal** created to Galaxy S7 with navit-git 0.5.3  
+**2560x1440 XML Normal** created for Galaxy S7 with navit-git 0.5.3  
 **1280x800 XML** created to Tablet with navit 0.5.4  
+**1280x800 NO GPS XML** created for Tablet witout GPS Sensor with navit 0.5.4  
 
 * *A - Display of individual Point of Interrest*  
 * *B - POI map dependent on demand*  
@@ -21,9 +22,10 @@ Change in Navit.xml the Path under
 	..........
 	</mapset>
 
+### Routing without GPS-Sensor
+NO GPS navit.xml is optimized for use in devices without GPS sensor. Before entering the destination, the starting point/location must be entered. During routing, the current speed is set by TIPP on the corresponding button (0-130 km/h). The map view including the cursor is automatically guided to the specified speed.
 ##Navit 0.5.4.##
 I can only use one layout with Navit. Activation of another *.xml does not work. e.g.: navit.layout=navit.layout[@name=="SNOWSPORT"] (snow.xml).  
-
 To open the **GUI-Menu** click bottom right on the gear.  
 A small user Manual can be found in the Folder **ROUTE-DATA/Manual** (sorry, only spoken in German).  
 For other languages replace in the navit.xml the german text ("translate into your speech"). Search the lines under GUI as listed below.  
