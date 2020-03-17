@@ -24,6 +24,7 @@ Change in Navit.xml the Path under
 
 ### Routing without GPS-Sensor
 NO GPS navit.xml is optimized for use in devices without GPS sensor. Before entering the destination, the starting point/location must be entered. During routing, the current speed is set by TIPP on the corresponding button (0-130 km/h). The map view including the cursor is automatically guided to the specified speed.
+
 ##Navit 0.5.4.##
 I can only use one layout with Navit. Activation of another *.xml does not work. e.g.: navit.layout=navit.layout[@name=="SNOWSPORT"] (snow.xml).  
 To open the **GUI-Menu** click bottom right on the gear.  
@@ -38,27 +39,27 @@ For other languages replace in the navit.xml the german text ("translate into yo
 After own idea the POI as "universal layer" create, they can be used in all layouts.
 
 	<layer name="wintersport">
-	<itemgra item_types="piste_downhill_novice" order="16-">	<polyline color="#00A00040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skinovice" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#00A000"/><text text_size="36" color="#00A000"/></itemgra>
-	<itemgra item_types="piste_downhill_easy" order="16-">		<polyline color="#0000FF40" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skieasy" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#0000FF"/><text text_size="36" color="#0000FF"/></itemgra>
-	<itemgra item_types="piste_downhill_intermediate" order="16-">	<polyline color="#FF000040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skimediate" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#E00000"/><text text_size="36" color="#E00000"/></itemgra>
-	<itemgra item_types="piste_downhill_advanced" order="16-">	<polyline color="#00000040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skiadvanced" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#000000"/><text text_size="36" color="#000000"/></itemgra>
-	<itemgra item_types="piste_downhill_expert" order="16-">	<polyline color="#FFAA0040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skiexpert" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#FFAA00"/><text text_size="36" color="#FFAA00"/></itemgra>
-	<itemgra item_types="piste_downhill_freeride" order="16-">	<polyline color="#FFFF0060" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skifreeride" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#000000"/><text text_size="36" color="#000000"/></itemgra>
-	<itemgra item_types="piste_nordic" order="16-">			<polyline color="#CCFFFF" width="18"/><polyline color="#FFFFFF" width="10"/><polyline color="#CCFFFF90" width="5"/>	<text text_size="28" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/langlauf" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
-	<itemgra item_types="piste_nordic" order="16-">			<polyline color="#CCFFFF" width="30"/><polyline color="#FFFFFF" width="16"/><polyline color="#CCFFFF90" width="8"/>	<text text_size="36" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/langlauf" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
-	<itemgra item_types="footway_and_piste_nordic" order="16-">	<polyline color="#CCFFFF" width="30"/><polyline color="#FFFFFF" width="16"/><polyline color="#CCFFFF90" width="8"/>	<text text_size="36" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/walknordic" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/></itemgra>
-	<itemgra item_types="poi_skiing" order="16-">			<icon src="skiing" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#1A2A3A"/></itemgra>
-	<itemgra item_types="lift_chair" order="16-">			<polyline color="#003663" width="6"/><icon src="$NAVIT_USER_DATADIR/poi/chair" w="96" h="96" x="48" y="0"/>		<text text_size="38" color="#944C00" background_color="#944C00"/><circle text_size="38" color="#944C00"/></itemgra>
+	<itemgra item_types="piste_downhill_novice" order="16-">	<polyline color="#00A00040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skinovice" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#00A000"/><text text_size="36" color="#00A000"/>	</itemgra>
+	<itemgra item_types="piste_downhill_easy" order="16-">		<polyline color="#0000FF40" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skieasy" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#0000FF"/><text text_size="36" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="piste_downhill_intermediate" order="16-">	<polyline color="#FF000040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skimediate" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#E00000"/><text text_size="36" color="#E00000"/>	</itemgra>
+	<itemgra item_types="piste_downhill_advanced" order="16-">	<polyline color="#00000040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skiadvanced" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#000000"/><text text_size="36" color="#000000"/>	</itemgra>
+	<itemgra item_types="piste_downhill_expert" order="16-">	<polyline color="#FFAA0040" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skiexpert" w="64" h="64" x="32" y="32"/>	<circle text_size="36" color="#FFAA00"/><text text_size="36" color="#FFAA00"/>	</itemgra>
+	<itemgra item_types="piste_downhill_freeride" order="16-">	<polyline color="#FFFF0060" width="40"/><icon src="$NAVIT_USER_DATADIR/poi/skifreeride" w="64" h="64" x="32" y="-32"/>	<circle text_size="36" color="#000000"/><text text_size="36" color="#000000"/>	</itemgra>
+	<itemgra item_types="piste_nordic" order="16-">			<polyline color="#CCFFFF" width="18"/><polyline color="#FFFFFF" width="10"/><polyline color="#CCFFFF90" width="5"/>	<text text_size="28" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/langlauf" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/>	</itemgra>
+	<itemgra item_types="piste_nordic" order="16-">			<polyline color="#CCFFFF" width="30"/><polyline color="#FFFFFF" width="16"/><polyline color="#CCFFFF90" width="8"/>	<text text_size="36" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/langlauf" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/>	</itemgra>
+	<itemgra item_types="footway_and_piste_nordic" order="16-">	<polyline color="#CCFFFF" width="30"/><polyline color="#FFFFFF" width="16"/><polyline color="#CCFFFF90" width="8"/>	<text text_size="36" color="#8888FF"/><icon src="$NAVIT_USER_DATADIR/poi/walknordic" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#8888FF"/>	</itemgra>
+	<itemgra item_types="poi_skiing" order="16-">			<icon src="skiing" w="64" h="64" x="32" y="32"/><circle text_size="32" color="#1A2A3A"/>	</itemgra>
+	<itemgra item_types="lift_chair" order="16-">			<polyline color="#003663" width="6"/><icon src="$NAVIT_USER_DATADIR/poi/chair" w="96" h="96" x="48" y="0"/>		<text text_size="38" color="#944C00" background_color="#944C00"/><circle text_size="38" color="#944C00"/>	</itemgra>
 	.........
 	</layer>  
 
 In the respective **Layout**, the link to the "universal Layer" will be entered:
 
-	<layer name="wintersport" 	ref="wintersport" active="0"/>
+	<layer name="wintersport" 		ref="wintersport" active="0"/>
 	<layer name="Android-POI-Icons-full" 	ref="Android-POI-Icons-full" active="0"/>
-	<layer name="hikings" 		ref="hikings" active="0"/>
-	<layer name="leisure" 		ref="leisure" active="0"/>
-	<layer name="sport" 		ref="sport" active="0"/>
+	<layer name="hikings" 			ref="hikings" active="0"/>
+	<layer name="leisure" 			ref="leisure" active="0"/>
+	<layer name="sport" 			ref="sport" active="0"/>
 	............
 
 any **OSD Button "[POI]"**
