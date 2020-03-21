@@ -99,7 +99,7 @@
 16.8 -12.4 type=poi_customc label="Angola" icon_src="country_ao"
 0.0 -72.0 type=poi_customc label="A n t a r c t i c a" icon_src="$NAVIT_USER_DATADIR/maske/country_aq"
 -66.7 -35.6 type=poi_customc label="Argentina" icon_src="country_ar"
--170.8 -13.8 type=poi_customc label="American Samoa" icon_src="country_as"
+-169.8 -13.8 type=poi_customc label="American Samoa" icon_src="country_as"
 14.1 47.6 type=poi_customc label="Austria" icon_src="country_at"
 132.8 -25.1 type=poi_customc label="A u s t r a l i a" icon_src="country_au"
 -70.2 12.5 type=poi_customc label="Aruba" icon_src="country_aw"
@@ -377,7 +377,6 @@
 -26.0 -29.0 type=poi_customd label="S O U T H  A T L A N T I C  O C E A N"
 -50.0 38.7 type=poi_customd label="N O R T H  A T L A N T I C  O C E A N"
 14.0 43.0 type=poi_customd label="Adriatic Sea"
-
 24.6 37.2 type=poi_customd label="Aegean Sea"
 -2.4 36.0 type=poi_customd label="Alboran Sea"
 94.0 12.0 type=poi_customd label="Andaman Sea"
@@ -395,7 +394,7 @@
 49.0 42.0 type=poi_customd label="Caspian Sea"
 121.0 3.3 type=poi_customd label="Celebes Sea"
 -9.0 49.0 type=poi_customd label="Celtic Sea"
--174.5 71.0 type=poi_customd label="Chukchi Sea"
+-171.5 71.0 type=poi_customd label="Chukchi Sea"
 152.0 -19.0 type=poi_customd label="Coral Sea"
 123.0 29.0 type=poi_customd label="East China Sea"
 154.0 74.0 type=poi_customd label="East Siberian Sea"
@@ -462,6 +461,63 @@ type=water_line
 type=water_line
 -180.0 -66.33
 180.0 -66.33
+
+type=selected_line label="International Date Line [ Time RU +12 ]"
+-180.0 75.0
+-169.4 68.0
+-169.4 65.0
+-174.1 63.46
+-178.6 61.36
+-180.0 60.65
+type=selected_line label="International Date Line [ Time RU +12 ][ US -10 ]"
+180.0 60.65
+174.0 57.0
+170.0 53.0
+180.0 48.0
+type=selected_line label="Time Line [ +12 ][ +13 ]"
+-178.5 -1.6
+-178.5 -9.0
+-175.5 -12.0
+-175.5 -15.0
+-177.5 -15.0
+-177.5 -20.0
+-180.0 -24.5
+-172.5 -24.5
+type=selected_line label="International  Date Line [ Time NZ +12 ][ -12 ]"
+-172.5 -24.5
+-172.5 -44.5
+-180.0 -51.9
+type=selected_line label="Time Line KI [ +13 ][ +14 ]"
+-159.5 -1.6
+-159.5 -6.0
+type=selected_line label="International Date Line [ Time KI +13 ][ US -12 ]"
+-180.0 -1.6
+-173.0 -1.6
+type=selected_line label="International Date Line [ Time KI +13 ][ US -11 ]"
+-173.0 -1.6
+-159.5 -1.6
+type=selected_line label="International Date Line [ Time +13 ][ AS -11 ]"
+-159.5 -6.0
+-166.5 -6.0
+-172.0 -10.8
+type=selected_line label="Date Line [ Time + 13 ][ AS -11 ]"
+-172.0 -10.8
+-171.2 -12.5
+-171.2 -14.5
+-172.5 -15.0
+-172.5 -24.5
+type=selected_line label="Date Line [ KI +14 ][ US -11 ]"
+-159.5 -1.6
+-159.5 1.0
+-161.7 5.4
+type=selected_line label="Date Line [ Time KI +14 ][ PF -10 ]"
+-161.7 5.4
+-157.4 5.4
+-149.5 -10.3
+-149.5 -12.3
+-153.2 -12.3
+-156.3 -6.0
+-159.5 -6.0
 
 type=image label="$NAVIT_USER_DATADIR/maske/worldimage.png"
 -180.0 85.0511
