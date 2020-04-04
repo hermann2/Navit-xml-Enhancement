@@ -22336,7 +22336,7 @@
 17.817350 47.666414 type=poi_custom1 icon_src="cross"
 17.818472 47.333470 type=poi_custom1 label="Fakereszt" icon_src="cross"
 17.818675 46.506007 type=poi_custom1 icon_src="cross"
-17.818923 46.504777label="Kalvaria" type=poi_custom1 icon_src="cross"
+17.818923 46.504777 type=poi_custom1 label="Kalvaria" icon_src="cross"
 17.819468 47.264023 type=poi_custom1 icon_src="cross"
 17.819490 48.742610 type=poi_custom1 icon_src="cross"
 17.820376 47.009879 type=poi_custom1 icon_src="cross"

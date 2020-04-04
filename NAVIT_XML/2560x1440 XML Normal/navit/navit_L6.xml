@@ -1,5 +1,5 @@
-	
-	<layout name="TRUCKDARK" color="#191919" daylayout="TRUCK" order_delta="0" underground_alpha="150">
+<?xml version="1.0" encoding="UTF-8"?>	<!DOCTYPE layout	SYSTEM "navit.dtd">
+	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="TRUCKDARK" color="#191919" daylayout="TRUCK" order_delta="0" underground_alpha="150">
 	<cursor w="230" h="230">
 	<itemgra>	<icon src="$NAVIT_USER_DATADIR/maske/cursor_lkw" w="160" h="160"/>	</itemgra>
 	</cursor>
@@ -257,9 +257,9 @@
 	<itemgra item_types="city_wall" order="16">		<polyline color="#756868" width="14"/>	</itemgra>
 	<itemgra item_types="city_wall" order="17-">	<polyline color="#756868" width="22"/>	</itemgra>
 	</layer>
-	<layer name="POI Symbols" ref="POI Symbols"/>
+	<layer name="Symbols" ref="Symbols"/>
 	<layer name="wintersport" ref="wintersport" active="0"/>
-	<layer name="Android-POI-Icons-full" ref="Android-POI-Icons-full" active="0"/>
+	<layer name="Buildings" ref="Buildings" active="0"/>
 	<layer name="hikings" ref="hikings" active="0"/>
 	<layer name="leisure" ref="leisure" active="0"/>
 	<layer name="sport" ref="sport" active="0"/>

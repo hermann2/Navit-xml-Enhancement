@@ -1,5 +1,5 @@
-
-	<layout name="street_night" daylayout="street_day" color="#011001" font="Liberation Sans" order_delta="0" underground_alpha="0x77">
+<?xml version="1.0" encoding="UTF-8"?>	<!DOCTYPE layout	SYSTEM "navit.dtd">
+	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="street_night" daylayout="street_day" color="#011001" font="Liberation Sans" order_delta="0" underground_alpha="0x77">
 	<cursor w="230" h="230">
 	<itemgra>	<icon src="$NAVIT_USER_DATADIR/maske/cursor1" w="140" h="140"/> </itemgra>
 	</cursor>
@@ -170,7 +170,7 @@
 	<itemgra item_types="town_label_1e0,town_label_2e0,town_label_5e0,town_label_1e1,town_label_2e1,town_label_5e1" order="14-">	<circle color="#55c4bd" background_color="#000000" radius="3" text_size="38"/>	</itemgra>
 	</layer>
 
-	<layer name="POI Symbols">
+	<layer name="Symbols">
 	<itemgra item_types="poi_fuel" order="13-">	<icon src="fuel.png" w="64" h="64"/>	</itemgra>	</layer>
 	<layer name="Internal">
 	<itemgra item_types="route_end" order="5-">	<icon src="nav_destination_bk.png" w="64" h="64" x="6" y="32"/>	</itemgra>

@@ -1,5 +1,7 @@
-
-	<layout name="MOTORIST_1" nightlayout="DARKGLOW_1" color="#EEFFEE" order_delta="0" underground_alpha="150">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE layout
+	SYSTEM "navit.dtd">
+	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="MOTORIST_1" nightlayout="DARKGLOW_1" color="#EEFFEE" order_delta="0" underground_alpha="150">
 	<cursor w="230" h="230">
 	<itemgra speed_range="-2">	<icon src="cursor_still" w="96" h="96"/> </itemgra>
 	<itemgra speed_range="3-" angle_range="0-10">		<icon src="cursor" w="96" h="96"/> </itemgra>
@@ -39,9 +41,9 @@
 	<layer name="hiking_way" ref="hiking_way" active="0"/>
 	<layer name="up_street" ref="up_street" active="1"/>
 	<layer name="line" ref="line" active="0"/>
-	<layer name="POI Symbols" ref="POI Symbols"/>
+	<layer name="Symbols" ref="Symbols"/>
 	<layer name="wintersport" ref="wintersport" active="0"/>
-	<layer name="Android-POI-Icons-full" ref="Android-POI-Icons-full" active="0"/>
+	<layer name="Buildings" ref="Buildings" active="0"/>
 	<layer name="hikings" ref="hikings" active="0"/>
 	<layer name="leisure" ref="leisure" active="0"/>
 	<layer name="sport" ref="sport" active="0"/>

@@ -11,7 +11,7 @@
 * *E - Layout street`_`day and street`_`night*  
 * *F - Layout snow*  
 ### Installation:
-Path Phone: Android/data/org.navitprojekt.navit/files/navit.xml also all other *.xml and create the three folder:  - maske - poi - txt -  
+Path Phone: Android/data/org.navitprojekt.navit/files/navit.xml also all other *.xml and create the three folder:  - maske - poi - txt  
 The empty folders can be filled with Icons are in folder - src - in Github enclosed or replaced with your own icons.  
 You can in the device click bottom right on compass and download a Map.  
 Your own map (OSM) copy into the FOLDER /files
@@ -25,15 +25,14 @@ Change in Navit.xml the Path under
 ### Routing without GPS-Sensor
 NO GPS navit.xml is optimized for use in devices without GPS sensor. Before entering the destination, the starting point/location must be entered. During routing, the current speed is set by TIPP on the corresponding button (0-130 km/h). The map view including the cursor is automatically guided to the specified speed.
 
-##Navit 0.5.4.##
-I can only use one layout with Navit. Activation of another *.xml does not work. e.g.: navit.layout=navit.layout[@name=="SNOWSPORT"] (snow.xml).  
+#### Navit 0.5.4.
+I can only use one layout with Navit. Activation of another *.xml does not work. e.g.: navit.layout=navit.layout[@name=="SNOWSPORT"] (snow.xml).
+
+### Manual
 To open the **GUI-Menu** click bottom right on the gear.  
 A small user Manual can be found in the Folder **ROUTE-DATA/Manual** (sorry, only spoken in German).  
 For other languages replace in the navit.xml the german text ("translate into your speech"). Search the lines under GUI as listed below.  
-***<img src='communication' onclick='navit.say("translate into your speech")'<text>Enter destination</text</img>***
-
-![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/navit_map.jpg)
-
+<img src='communication' onclick='navit.say("***translate this into your speech***")' text> Enter destination  
 ### A - Display of individual *Point of Interrest:*  
 (see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)  
 After own idea the POI as "universal layer" create, they can be used in all layouts.
@@ -118,12 +117,19 @@ under (map.xml or Navit.xml)
 	...
 	</mapset>
 
-The file with the coordinates (*data="$NAVIT_USER_DATADIR/txt/pylon.csv"*) is stored for Austria in the folder *txt*   
-Any icon in a folder (*$NAVIT_USER_DATADIR/poi/pylon*) - to find under *src/poi*   
+#### POI OWN.txt
+![Image of GUI Menü "POI-Auswahl"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/GUI Auswahl.jpg)
+In the GUI menu the POI files and required POI levels are switched simultaneously. The file with the coordinates (*data="$NAVIT_USER_DATADIR/txt/pylon.csv"*) is stored for the area Austria in the folder *txt*  
+Any icon in a folder (*$NAVIT_USER_DATADIR/poi/pylon*) - to find under *src/poi*  
 A circuit in the *OSD* or as below in the *GUI*
 
 	<img cond='navit.layout.layer[@name=="wintersport"].active==0' src='gui_stop' onclick='navit.mapset.map[@name=="pylon"].active=1;	navit.toggle_layer("wintersport"); refresh()'> <text>Wintersport</text> </img>
 	<img cond='navit.layout.layer[@name=="wintersport"].active==1' src='gui_active'	onclick='navit.mapset.map[@name=="pylon"].active=0;	navit.toggle_layer("wintersport"); refresh()'> <text>Wintersport</text> </img>
+
+ For other countries the NAME.txt can be kept, otherwise change it in the GUI. The coordinates in the file can be exchanged with OWN, as well as the designation with label=" ". Note the *type=* assignment (for point, line or area) and adjust the entry in the layer in the Navit.xml if necessary.
+#### Search POI
+navit_L7.xml is optimised for displaying selectable POIs. Activation via button POI and POI SEARCH.  
+The setting - order delta="2" - allows better finding.
 
 ### C - At high zoom level, show a world map or /*:
 

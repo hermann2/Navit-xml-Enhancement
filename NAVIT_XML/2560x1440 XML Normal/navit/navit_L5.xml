@@ -1,5 +1,5 @@
-
-	<layout name="DARKGLOW_1" color="#191919" daylayout="MOTORIST_1" order_delta="0" underground_alpha="150">
+<?xml version="1.0" encoding="UTF-8"?>	<!DOCTYPE layout	SYSTEM "navit.dtd">
+	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="DARKGLOW_1" color="#191919" daylayout="MOTORIST_1" order_delta="0" underground_alpha="150">
 	<cursor w="230" h="230">
 	<itemgra speed_range="-2">	<icon src="cursor_still" w="96" h="96"/>	</itemgra>
 	<itemgra speed_range="3-">	<circle color="#FFFF0066" radius="110" width="16">	<coord x="115" y="115"/>	</circle>	</itemgra>
@@ -305,9 +305,9 @@
 	<itemgra item_types="poi_fountain" order="17">		<icon src="fountain" w="48" h="48" x="24" y="24"/>	</itemgra>
 	<itemgra item_types="poi_fountain" order="18-">		<icon src="fountain" w="64" h="64" x="32" y="32"/>	</itemgra>
 	</layer>
-	<layer name="POI Symbols" ref="POI Symbols"/>
+	<layer name="Symbols" ref="Symbols"/>
 	<layer name="wintersport" ref="wintersport" active="0"/>
-	<layer name="Android-POI-Icons-full" ref="Android-POI-Icons-full" active="0"/>
+	<layer name="Buildings" ref="Buildings" active="0"/>
 	<layer name="hikings" ref="hikings" active="0"/>
 	<layer name="leisure" ref="leisure" active="0"/>
 	<layer name="sport" ref="sport" active="0"/>
