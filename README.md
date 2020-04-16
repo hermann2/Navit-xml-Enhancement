@@ -32,7 +32,9 @@ I can only use one layout with Navit. Activation of another *.xml does not work.
 To open the **GUI-Menu** click bottom right on the gear.  
 A small user Manual can be found in the Folder **ROUTE-DATA/Manual** (sorry, only spoken in German).  
 For other languages replace in the navit.xml the german text ("translate into your speech"). Search the lines under GUI as listed below.  
+
 <img src='communication' onclick='navit.say("***translate this into your speech***")' text> Enter destination  
+
 ### A - Display of individual *Point of Interrest:*  
 (see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)  
 After own idea the POI as "universal layer" create, they can be used in all layouts.
@@ -67,7 +69,7 @@ any **OSD Button "[POI]"**
 
 open the **GUI Menu "POI_Icons"**
 
-![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/poi_auswahl.jpg)
+![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/GUI Auswahl.jpg)
 
 and allows the POI compilation or all POIs to be activated / deactivated.
 

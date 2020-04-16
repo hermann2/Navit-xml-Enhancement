@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE layout	SYSTEM "navit.dtd">
-	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="DARKGLOW" color="#191919" daylayout="MOTORIST" font="Gothic Bold" order_delta="0" underground_alpha="0x77">
+	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="DARKGLOW" color="#191919" daylayout="MOTORIST" font="Gothic Bold" order_delta="0">
 	<cursor w="230" h="230" interval="20000" sequence_range="-1">
 	<itemgra speed_range="-4">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_p" w="180" h="180"/>	</itemgra>
 	<itemgra sequence_range="0" speed_range="5-59">	<icon src="$NAVIT_USER_DATADIR/maske/cursor_pa" w="180" h="180"/>	</itemgra>
@@ -285,7 +285,6 @@
 	<itemgra item_types="city_wall" order="17-">	<polyline color="#756868" width="22"/>	</itemgra>
 	</layer>
 	<layer name="Symbols" ref="Symbols"/>
-	<layer name="wintersport" ref="wintersport" active="0"/>
 	<layer name="Buildings" ref="Buildings" active="0"/>
 	<layer name="hikings" ref="hikings" active="0"/>
 	<layer name="leisure" ref="leisure" active="0"/>

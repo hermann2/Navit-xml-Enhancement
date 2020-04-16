@@ -87,6 +87,7 @@
 -74.0445 40.68925 type=poi_customb label="The Statue Of Liberty" icon_src="liberty"
 25.851 -17.9234 type=poi_customb label="Victoria Falls" icon_src="victoria"
 100.493435 13.746435 type=poi_customb label="Wat Pho" icon_src="wat_pho"
+
 1.5 42.5 type=poi_customc label="Andorra" icon_src="country_ad"
 52.9 23.8 type=poi_customc label="United Arab Emirates" icon_src="country_ae"
 63.8 33.6 type=poi_customc label="Afghanistan" icon_src="country_af"
