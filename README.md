@@ -10,7 +10,7 @@
 * *D - Center map to the cursor*  
 * *E - Layout street`_`day and street`_`night*  
 * *F - Layout snow*  
-### Installation:
+### Installation 0.5.4:
 Path Phone: Android/data/org.navitprojekt.navit/files/navit.xml also all other *.xml and create the three folder:  - maske - poi - txt  
 The empty folders can be filled with Icons are in folder - src - in Github enclosed or replaced with your own icons.  
 You can in the device click bottom right on compass and download a Map.  
@@ -69,7 +69,7 @@ any **OSD Button "[POI]"**
 
 open the **GUI Menu "POI_Icons"**
 
-![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/GUI Auswahl.jpg)
+![Image of GUI Menü "POI_Icons"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/Navit_GUI_POI.jpg)
 
 and allows the POI compilation or all POIs to be activated / deactivated.
 
@@ -120,7 +120,7 @@ under (map.xml or Navit.xml)
 	</mapset>
 
 #### POI OWN.txt
-![Image of GUI Menü "POI-Auswahl"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/GUI Auswahl.jpg)
+
 In the GUI menu the POI files and required POI levels are switched simultaneously. The file with the coordinates (*data="$NAVIT_USER_DATADIR/txt/pylon.csv"*) is stored for the area Austria in the folder *txt*  
 Any icon in a folder (*$NAVIT_USER_DATADIR/poi/pylon*) - to find under *src/poi*  
 A circuit in the *OSD* or as below in the *GUI*
@@ -135,7 +135,7 @@ The setting - order delta="2" - allows better finding.
 
 ### C - At high zoom level, show a world map or /*:
 
-![](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/Worldimage.jpg)
+![Worldimage](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/worldimage.jpg)
 
 Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*).  
 The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for free design.  
