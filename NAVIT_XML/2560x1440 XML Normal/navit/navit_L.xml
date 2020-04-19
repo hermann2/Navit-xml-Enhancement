@@ -14,15 +14,6 @@
 	<itemgra item_types="poly_water" order="8-11">	<polygon color="#2E5C77"/>	</itemgra>
 	<itemgra item_types="poly_water" order="12-">	<polygon color="#2E5C77BB"/>	</itemgra>
 	<itemgra item_types="poly_town" order="11-">	<polygon color="#00664450"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="3">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="64" h="64"/> </itemgra>
-	<itemgra item_types="poi_customb" order="4">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="96" h="96"/> </itemgra>
-	<itemgra item_types="poi_customb" order="5-6">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="128" h="128"/> </itemgra>
-	<itemgra item_types="poi_customb" order="7-9">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/> </itemgra>
-	<itemgra item_types="poi_customb" order="10-13">	<circle color="#990099" radius="32" width="8"/> </itemgra>
-	<itemgra item_types="poi_customb" order="14">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/> <circle text_size="28" color="#990099"/> </itemgra>
-	<itemgra item_types="poi_customb" order="15">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="192" h="192"/> <circle text_size="32" color="#990099"/> </itemgra>
-	<itemgra item_types="poi_customb" order="16">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="256" h="256"/> <circle text_size="38" color="#990099"/> </itemgra>
-	<itemgra item_types="poi_customb" order="17-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/> </itemgra>
 
 	<itemgra item_types="poi_customc" order="3">	<icon src="%s" w="48" h="48"/>	</itemgra>
 	<itemgra item_types="poi_customc" order="4-5">	<icon src="%s" w="64" h="64" x="-30" y="130"/>		<circle text_size="34" color="" background_color="#B00000"/> </itemgra>
@@ -223,8 +214,8 @@
 	<itemgra item_types="poly_building" order="14">		<polygon color="#918383CC"/>	</itemgra>
 	<itemgra item_types="poly_building" order="15">		<polygon color="#918383BB"/>	<polyline color="#70705080" width="2"/>	</itemgra>
 	<itemgra item_types="poly_building" order="16">		<polygon color="#918383AA"/>	<polyline color="#70705090" width="3"/>	</itemgra>
-	<itemgra item_types="poly_building" order="17">		<polygon color="#91838390"/>	<polyline color="#70705090" width="4"/>	<text color="#FFFDBB" text_size="24"/>	</itemgra>
-	<itemgra item_types="poly_building" order="18-">	<polygon color="#91838380"/>	<polyline color="#70705090" width="5"/>	<text color="#FFFDBB" text_size="32"/>	</itemgra>
+	<itemgra item_types="poly_building" order="17">		<polygon color="#91838390"/>	<polyline color="#70705090" width="4"/>	</itemgra>
+	<itemgra item_types="poly_building" order="18-">	<polygon color="#91838380"/>	<polyline color="#70705090" width="5"/>	</itemgra>
 	<itemgra item_types="aeroway_taxiway" order="10">	<polyline color="#636370" width="2"/>	</itemgra>
 	<itemgra item_types="aeroway_taxiway" order="11">	<polyline color="#636370" width="6"/>	</itemgra>
 	<itemgra item_types="aeroway_taxiway" order="12">	<polyline color="#636370" width="10"/>	</itemgra>
@@ -296,30 +287,43 @@
 	<layer name="my" ref="my" active="0"/>
 	<layer name="Internal" ref="Internal"/>
 	<layer name="world_labels_bevore" active="0">
-	<itemgra item_types="town_label_5e4" order="6">		<circle text_size="32" color="#000000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="district_label_5e4" order="6">	<circle text_size="26" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="town_label_5e4" order="6">							<circle text_size="32" color="#000000" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="district_label_5e4" order="6">						<circle text_size="26" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="4-5">				<circle text_size="28" color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="4-5">	<circle text_size="24" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="town_label_1e6,town_label_2e6" order="4">			<circle text_size="32" color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_1e6,district_label_2e6" order="4">	<circle text_size="26" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="town_label_1e7" order="1-2">		<circle text_size="22" color="#000000" radius="12" width="3"/>	</itemgra>
-	<itemgra item_types="district_label_1e7" order="1-2">	<circle text_size="18" color="" background_color="#800000" radius="12" width="3"/>	</itemgra>
+	<itemgra item_types="town_label_1e7" order="1-2">						<circle text_size="22" color="#000000" radius="12" width="3"/>	</itemgra>
+	<itemgra item_types="district_label_1e7" order="1-2">					<circle text_size="18" color="" background_color="#800000" radius="12" width="3"/>	</itemgra>
 	</layer>
 	<layer name="world_labels">
+	<itemgra item_types="time_zone" order="0-4">	<polyline color="#BA00B840" width="4"/>	</itemgra>
+	<itemgra item_types="time_zone" order="5-7">	<polyline color="#BA00B840" width="8"/>		<text text_size="46" color="#FFFFFF" background_color="#BA00B8"/>	</itemgra>
+	<itemgra item_types="time_zone" order="8-11">	<polyline color="#BA00B840" width="16"/>	<text text_size="64" color="#FFFFFF" background_color="#BA00B8"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="3">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="4">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="96" h="96"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="5-6">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="128" h="128"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="7-9">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="10-13">	<circle color="#990099" radius="32" width="8"/>			<circle text_size="28" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="14">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/>	<circle text_size="28" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="15">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="192" h="192"/>	<circle text_size="32" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="16">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="256" h="256"/>	<circle text_size="38" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="17">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="18-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="512" h="512"/>	</itemgra>
 	<itemgra item_types="town_label_1e5,town_label_2e5" order="6">			<circle text_size="32" color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_1e5,district_label_2e5" order="6">	<circle text_size="26" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="town_label_5e5" order="6">		<circle text_size="32" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="district_label_5e5" order="6">	<circle text_size="26" color="" background_color="#800000"/>	</itemgra>
+	<itemgra item_types="town_label_5e5" order="6">			<circle text_size="32" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="district_label_5e5" order="6">		<circle text_size="26" color="" background_color="#800000"/>	</itemgra>
 	<itemgra item_types="town_label_1e6,town_label_2e6" order="5-6">			<circle text_size="38" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="district_label_1e6,district_label_2e6" order="5-6">	<circle text_size="32" color="" background_color="#800000"/>	</itemgra>
 	<itemgra item_types="town_label_5e6" order="4">			<circle text_size="38" color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_5e6" order="4">		<circle text_size="32" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="town_label_5e6" order="5-6">		<circle text_size="42" background_color="#000000" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="town_label_5e6" order="5-6">		<circle text_size="42" 			background_color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_5e6" order="5-6">	<circle text_size="36" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="town_label_1e7" order="3">			<circle text_size="28" color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="town_label_1e7" order="4">			<circle text_size="42" color="#000000" radius="10" width="3"/>	</itemgra>
 	<itemgra item_types="district_label_1e7" order="4-6">	<circle text_size="36" color="" background_color="#800000" radius="10" width="3"/>	</itemgra>
-	<itemgra item_types="town_label_1e7" order="5-6">		<circle text_size="48" background_color="#000000" radius="10" width="3"/>	</itemgra>
+	<itemgra item_types="town_label_1e7" order="5-6">		<circle text_size="48" 			background_color="#000000" radius="10" width="3"/>	</itemgra>
 	</layer>
 	<layer name="labels_bevore" active="0">
 	<itemgra item_types="house_number" order="16">		<circle text_size="22" background_color="#FF00FF"/>	</itemgra>
@@ -352,20 +356,12 @@
 	<itemgra item_types="district_label_5e4" order="7">		<circle text_size="26" color="#FFFFFF" background_color="#800000" radius="10" width="3"/>	</itemgra>
 	</layer>
 	<layer name="labels">
-	<itemgra item_types="poi_customb" order="3">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="64" h="64"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="4">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="96" h="96"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="5-6">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="128" h="128"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="7-9">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="10-13">	<circle color="#990099" radius="32" width="8"/>			<circle text_size="28" color="#990099"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="14">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/>	<circle text_size="28" color="#990099"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="15">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="192" h="192"/>	<circle text_size="32" color="#990099"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="16">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="256" h="256"/>	<circle text_size="38" color="#990099"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="17-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/>	</itemgra>
-	
-	<itemgra item_types="street_unkn" order="16">	<text text_size="26" color="#A90000"/>	</itemgra>
-	<itemgra item_types="street_unkn" order="17-">	<text text_size="32" color="#A90000"/>	</itemgra>
-	<itemgra item_types="house_number" order="17">	<circle text_size="26" color="#FF00FF"/>	</itemgra>
-	<itemgra item_types="house_number" order="18-">	<circle text_size="32" color="#FF00FF"/>	</itemgra>
+	<itemgra item_types="street_unkn" order="16">	<text text_size="28" color="#A90000"/>	</itemgra>
+	<itemgra item_types="street_unkn" order="17-">	<text text_size="34" color="#A90000"/>	</itemgra>
+	<itemgra item_types="house_number" order="17">	<circle text_size="28" color="#FF00FF"/>	</itemgra>
+	<itemgra item_types="house_number" order="18-">	<circle text_size="34" color="#FF00FF"/>	</itemgra>
+	<itemgra item_types="poly_building" order="17">		<circle text_size="34" color="#802000" background_color=""/>	<text text_size="36" color="#802000" background_color=""/>	</itemgra>
+	<itemgra item_types="poly_building" order="18-">	<circle text_size="42" color="#802000" background_color=""/>	<text text_size="42" color="#802000" background_color=""/>	</itemgra>
 	<itemgra item_types="place_label" order="15-">	<circle text_size="32" color="#00B3B3"/>	</itemgra>
 	<itemgra item_types="town_label,town_label_0e0" order="13-">			<circle text_size="32" color="#FFFFFF" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="district_label,district_label_0e0" order="13-14">	<circle text_size="28" color="#FFFFFF" background_color="#800000"/>	</itemgra>

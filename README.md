@@ -33,7 +33,7 @@ To open the **GUI-Menu** click bottom right on the gear.
 A small user Manual can be found in the Folder **ROUTE-DATA/Manual** (sorry, only spoken in German).  
 For other languages replace in the navit.xml the german text ("translate into your speech"). Search the lines under GUI as listed below.  
 
-<img src='communication' onclick='navit.say("***translate this into your speech***")' text> Enter destination  
+	<img src='communication' onclick='navit.say("***translate this into your speech***")' text> Enter destination  
 
 ### A - Display of individual *Point of Interrest:*  
 (see /NAVIT_XML/2560x1440 XML Normal/Navit/**Navit.xml**)  
@@ -135,9 +135,10 @@ The setting - order delta="2" - allows better finding.
 
 ### C - At high zoom level, show a world map or /*:
 
+Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*).
+
 ![Worldimage](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/worldimage.jpg)
 
-Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*).  
 The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for free design.  
 *worldimage.txt* (Create as UTF-8 and Line Delimiters to Unix LF) File with coordinates (icon_src="different image names" label="any text") possibly information such as:
 
