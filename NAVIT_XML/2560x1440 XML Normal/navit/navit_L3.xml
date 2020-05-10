@@ -454,7 +454,6 @@
 	<itemgra item_types="lift_cable_car" order="19-">	<polyline color="#6600FF" width="3"/>	<polyline color="#FFFFFF" width="1" dash="15,15"/>	<icon src="$NAVIT_USER_DATADIR/poi/seilbahn" w="128" h="128" x="64" y="0"/> <text text_size="42" color="#944C00" background_color="#944C00"/> <circle text_size="42" color="#944C00"/> </itemgra>
 	</layer>
 	<layer name="poly_icon_label" ref="poly_icon_label" active="0"/>
-	<layer name="my" ref="my" active="0"/>
 	<layer name="Internal">
 	<itemgra item_types="track" order="9-10">	<polyline color="#158000" width="4"/>	</itemgra>
 	<itemgra item_types="track" order="11-14">	<polyline color="#158000" width="4"/>	</itemgra>
@@ -506,7 +505,8 @@
 	<itemgra item_types="poi_customb" order="14">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/>	<circle text_size="28" color="#990099"/>	</itemgra>
 	<itemgra item_types="poi_customb" order="15">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="192" h="192"/>	<circle text_size="32" color="#990099"/>	</itemgra>
 	<itemgra item_types="poi_customb" order="16">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="256" h="256"/>	<circle text_size="38" color="#990099"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="17-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="17">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="18-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="512" h="512"/>	</itemgra>
 	
 	<itemgra item_types="house_number" order="19-">	<circle color="#000000" text_size="28" radius="8"/>	</itemgra>
 	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0,town_label_1e1,town_label_2e1,town_label_5e1,town_label_1e2,town_label_2e2,town_label_5e2" order="14-">

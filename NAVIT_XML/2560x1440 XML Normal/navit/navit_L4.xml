@@ -42,7 +42,6 @@
 	<layer name="up_street" ref="up_street" active="1"/>
 	<layer name="line" ref="line" active="0"/>
 	<layer name="Symbols" ref="Symbols"/>
-	<layer name="wintersport" ref="wintersport" active="0"/>
 	<layer name="Buildings" ref="Buildings" active="0"/>
 	<layer name="hikings" ref="hikings" active="0"/>
 	<layer name="leisure" ref="leisure" active="0"/>
@@ -51,7 +50,6 @@
 	<layer name="shop" ref="shop" active="0"/>
 	<layer name="stations" ref="stations" active="0"/>
 	<layer name="poly_icon_label" ref="poly_icon_label" active="0"/>
-	<layer name="my" ref="my" active="0"/>
 	<layer name="Internal" ref="Internal"/>
 	<layer name="world_labels_bevore" ref="world_labels_bevore" active="0"/>
 	<layer name="labels_bevore" ref="labels_bevore" active="0"/>

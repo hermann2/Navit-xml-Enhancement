@@ -306,7 +306,6 @@
 	<itemgra item_types="poi_fountain" order="18-">		<icon src="fountain" w="64" h="64" x="32" y="32"/>	</itemgra>
 	</layer>
 	<layer name="Symbols" ref="Symbols"/>
-	<layer name="wintersport" ref="wintersport" active="0"/>
 	<layer name="Buildings" ref="Buildings" active="0"/>
 	<layer name="hikings" ref="hikings" active="0"/>
 	<layer name="leisure" ref="leisure" active="0"/>
@@ -315,7 +314,6 @@
 	<layer name="shop" ref="shop" active="0"/>
 	<layer name="stations" ref="stations" active="0"/>
 	<layer name="poly_icon_label" ref="poly_icon_label" active="0"/>
-	<layer name="my" ref="my" active="0"/>
 	<layer name="Internal" ref="Internal"/>
 
 	<layer name="world_labels_bevore" active="0">
@@ -388,7 +386,8 @@
 	<itemgra item_types="poi_customb" order="14">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/>	<circle text_size="28" color="#990099"/>	</itemgra>
 	<itemgra item_types="poi_customb" order="15">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="192" h="192"/>	<circle text_size="32" color="#990099"/>	</itemgra>
 	<itemgra item_types="poi_customb" order="16">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="256" h="256"/>	<circle text_size="38" color="#990099"/>	</itemgra>
-	<itemgra item_types="poi_customb" order="17-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="17">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="18-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="512" h="512"/>	</itemgra>
 	<itemgra item_types="street_unkn" order="16">	<text text_size="26" color="#A90000"/>	</itemgra>
 	<itemgra item_types="street_unkn" order="17-">	<text text_size="32" color="#A90000"/>	</itemgra>
 	<itemgra item_types="house_number" order="17">	<circle text_size="26" color="#FF00FF"/>	</itemgra>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE layout
-	SYSTEM "navit.dtd">
+<!DOCTYPE layout	SYSTEM "navit.dtd">
 	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="CAR_DAY" color="#fef9ee" nightlayout="CAR_DARK" order_delta="0">
 	<cursor w="230" h="230">
 	<itemgra speed_range="-2">

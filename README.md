@@ -137,7 +137,7 @@ The setting - order delta="2" - allows better finding.
 
 Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*).
 
-![Image "Worldimage"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/worldimage.jpg)
+![Image "Worldimage"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/Worldimage.jpg)
 
 The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for free design.  
 *worldimage.txt* (Create as UTF-8 and Line Delimiters to Unix LF) File with coordinates (icon_src="different image names" label="any text") possibly information such as:
