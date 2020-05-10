@@ -9,7 +9,7 @@
 * *C - At high zoom level, show a world map or /**  
 * *D - Center map to the cursor*  
 * *E - Layout street`_`day and street`_`night*  
-* *F - Layout snow*  
+* *F - Layout snow*    
 ### Installation 0.5.4:
 Path Phone: Android/data/org.navitprojekt.navit/files/navit.xml also all other *.xml and create the three folder:  - maske - poi - txt  
 The empty folders can be filled with Icons are in folder - src - in Github enclosed or replaced with your own icons.  
@@ -137,7 +137,7 @@ The setting - order delta="2" - allows better finding.
 
 Required is an image (map) of maximum dimension 4096x4096 (*src/maske/worldimage.png*).
 
-![Worldimage](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/worldimage.jpg)
+![Image "Worldimage"](https://github.com/hermann2/Navit-xml-Enhancement/blob/master/src/screencapture/worldimage.jpg)
 
 The folder "src / poi`_`my / worldimage_EBENE.xcf" contains the world map for free design.  
 *worldimage.txt* (Create as UTF-8 and Line Delimiters to Unix LF) File with coordinates (icon_src="different image names" label="any text") possibly information such as:

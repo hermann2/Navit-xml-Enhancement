@@ -19,6 +19,7 @@
 	</plugins>
 
 	<navit center="13.5666 48.1333"
+	zoom="32"
 	zoom_max="262144"
 	zoom_min="0"
 	autozoom_active="0"

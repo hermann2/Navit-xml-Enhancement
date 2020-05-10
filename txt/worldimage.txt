@@ -244,7 +244,7 @@
 18.9 42.5 type=poi_customc label="Montenegro" icon_src="country_me"
 44.9 -18.6 type=poi_customc label="Madagascar" icon_src="country_mg"
 167.5 7.0 type=poi_customc label="Marshall Islands" icon_src="country_mh"
-21.0 41.5 type=poi_customc label="Macedonia" icon_src="country_mk"
+21.0 41.5 type=poi_customc label="North Macedonia" icon_src="country_mk"
 -4.3 16.6 type=poi_customc label="Mali" icon_src="country_ml"
 94.9 20.7 type=poi_customc label="Myanmar" icon_src="country_mm"
 100.5 45.6 type=poi_customc label="Mongolia" icon_src="country_mn"
@@ -360,6 +360,9 @@
 -178.8 -13.3 type=poi_customc label="Wallis and" icon_src="country_wf"
 -178.8 -13.5 type=poi_customc label="Futuna Islands"
 -173.8 -14.0 type=poi_customc label="Samoa" icon_src="country_ws"
+
+20.9 42.6 type=poi_customc label="Kosovo" icon_src="country_xk"
+
 47.0 15.5 type=poi_customc label="Yemen" icon_src="country_ye"
 44.8 -12.8 type=poi_customc label="Mayotte" icon_src="country_yt"
 22.1 -30.9 type=poi_customc label="South Africa" icon_src="country_za"
