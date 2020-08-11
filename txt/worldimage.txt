@@ -45,7 +45,6 @@
 2.29448 48.85837 type=poi_customb label="Eiffel Tower" icon_src="eiffel"
 19.0343 47.502 type=poi_customb label="Fishermans Bastion" icon_src="fischer"
 -122.4783 37.82 type=poi_customb label="Golden Gate Bridge" icon_src="goldengate"
-28.98 41.00855 type=poi_customb label="Hagia Sophia" icon_src="hagia"
 -21.9266 64.142 type=poi_customb label="Hallgrimskirkja" icon_src="hallgrim"
 24.95216 60.1704 type=poi_customb label="Helsinki Cathedral" icon_src="helsinki"
 -74.9858 78.5668 type=poi_customb label="Icebear" icon_src="icebear"

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<mapset xmlns:xi="http://www.w3.org/2001/XInclude">
+	<map type="binfile" enabled="yes" active="yes" description="Österreich" data="$NAVIT_USER_DATADIR/austria.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Deutschland" data="storage/3239-6132/Navit/deutschland.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Frankreich" data="/storage/3239-6132/Navit/frankreich.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Italien" data="storage/3239-6132/Navit/italien.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="BENELUX" data="storage/3239-6132/Navit/benelux.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Pölen" data="storage/3239-6132/Navit/polen.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Schweden Norwegen" data="storage/3239-6132/Navit/sweden_norge.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="USA Westen Alaska"data="storage/3239-6132/Navit/usa_W_alaska.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="USA Osten Florida" data="storage/3239-6132/Navit/usa_O.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Asien" data="storage/3239-6132/Navit/asien.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Afrika" data="storage/3239-6132/Navit/afrika.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Australien" data="storage/3239-6132/Navit/australia.bin"/>
+	<map type="binfile" enabled="yes" active="no" description="Mittel- und Südamerika" data="storage/3239-6132/Navit/M_S_amerika.bin"/>
+	<map type="textfile" name="symbols2" enabled="yes" active="no" description="A-Elektro-Ladestelle" data="$NAVIT_USER_DATADIR/txt/A_e_ladestelle.txt"/>
+	<map type="textfile" name="wandern"  enabled="yes" active="no" description="A-Almhütte" data="$NAVIT_USER_DATADIR/txt/A_wilderness_hut.txt"/>
+	<map type="textfile" name="gastro1" enabled="yes" active="no" description="A-Berghütte-Jausenstation" data="$NAVIT_USER_DATADIR/txt/A_hut.txt"/>
+	<map type="textfile" name="wandern1" enabled="yes" active="no" description="A-Wasserfall" data="$NAVIT_USER_DATADIR/txt/A_waterfall.txt"/>
+	<map type="textfile" name="wandern2" enabled="yes" active="no" description="A-Marterl" data="$NAVIT_USER_DATADIR/txt/A_shrine.txt"/>
+	<map type="textfile" name="wandern3" enabled="yes" active="no" description="A-Wegkreuz" data="$NAVIT_USER_DATADIR/txt/A_cross.txt"/>
+	<map type="textfile" name="wandern4" enabled="yes" active="no" description="A-Gipfelkreuz" data="$NAVIT_USER_DATADIR/txt/A_peakcross.txt"/>
+	<map type="textfile" name="wandern5" enabled="yes" active="no" description="A-Höhle" data="$NAVIT_USER_DATADIR/txt/A_cave.txt"/>
+	<map type="textfile" name="wandern6" enabled="yes" active="no" description="A-Kneippanlage" data="$NAVIT_USER_DATADIR/txt/A_kneipp.txt"/>
+	<map type="textfile" name="wandern7" enabled="yes" active="no" description="A-Wassermühle" data="$NAVIT_USER_DATADIR/txt/A_watermill.txt"/>
+	<map type="textfile" name="sport1" enabled="yes" active="no" description="A-Rennstecke" data="$NAVIT_USER_DATADIR/txt/A_raceway.txt"/>
+	<map type="textfile" name="sport2" enabled="yes" active="no" description="A-Klettergarten" data="$NAVIT_USER_DATADIR/txt/A_climbing_adventure.txt"/>
+	<map type="textfile" name="shop1" enabled="yes" active="no" description="A-Marktplatz" data="$NAVIT_USER_DATADIR/txt/A_marktplace.txt"/>
+	<map type="textfile" name="shop2" enabled="yes" active="no" description="WIEN Park and Ride" data="$NAVIT_USER_DATADIR/txt/Wien Park_ride_ticket.txt"/>
+	<map type="textfile" name="winter1" enabled="yes" active="no" description="A-Liftstation" data="$NAVIT_USER_DATADIR/txt/A_lift_station.txt"/>
+	<map type="textfile" name="symbols1" enabled="yes" active="no" description="A-Ergänzung Strasse" data="$NAVIT_USER_DATADIR/txt/A_strassendetail.txt"/>
+	<map type="textfile" name="symbols3" enabled="yes" active="no" description="D-Ergänzung Strasse" data="$NAVIT_USER_DATADIR/txt/D_strassendetail.txt"/>
+	<map type="textfile" name="symbols4" enabled="yes" active="no" description="Salzburg O-BUS Strecke" data="$NAVIT_USER_DATADIR/txt/A_obus_sbg.txt"/>
+	<map type="textfile" name="symbols5" enabled="yes" active="no" description="A-Mautstelle" data="$NAVIT_USER_DATADIR/txt/A_toll.txt"/>
+	<map type="textfile" name="leisure1" enabled="yes" active="no" description="A-Grenzlinie Bundesland" data="$NAVIT_USER_DATADIR/txt/A_bundesland.txt"/>
+	<map type="textfile" name="leisure2" enabled="yes" active="no" description="A-Kloster" data="$NAVIT_USER_DATADIR/txt/A_monastery.txt"/>
+	<map type="textfile" name="leisure3" enabled="yes" active="no" description="SK-Kloster" data="$NAVIT_USER_DATADIR/txt/SK_klastor.txt"/>
+	<map type="textfile" enabled="yes" active="no" data="$NAVIT_USER_DATADIR/Track_recording.txt"/>
+	<map type="textfile" enabled="yes" active="yes" description="zeige Weltkarte" data="$NAVIT_USER_DATADIR/txt/worldimage.txt"/>
+	<map type="textfile" enabled="yes" active="no" description="zeige Lesezeichen" data="$NAVIT_USER_DATADIR/bookmark.txt"/>
+	<map type="csv" enabled="yes" active="no"  description="zeige Geschwindigkeit" data="$NAVIT_USER_DATADIR/txt/speedcam.csv" item_type="tec_common" attr_types="position_longitude,position_latitude,tec_type,maxspeed,tec_dirtype,tec_direction"/>
+	<map type="csv" name="pylon" enabled="yes" active="no" description="A-Pfeiler Liftanlage" data="$NAVIT_USER_DATADIR/txt/A_pylon.csv" item_type="poi_wifi" attr_types="position_longitude,position_latitude"/>
+	<map type="csv" name="passing" enabled="yes" active="yes" description="A-Ausweichplatz schmale Strasse" data="$NAVIT_USER_DATADIR/txt/A_passing.csv" item_type="poi_custom2" attr_types="position_longitude,position_latitude"/>
+	</mapset>
+

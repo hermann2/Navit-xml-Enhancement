@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="SEARCH" color="#E6FFE6" font="Gothic Bold" order_delta="2" underground_alpha="0x77">
+	<cursor w="230" h="230">
+	<itemgra>	<icon src="mini_roundabout" w="100" h="100"/>	</itemgra>
+	</cursor>
+	<layer name="poly">
+	<itemgra item_types="image" order="0-11">	<image/>	</itemgra>
+	<itemgra item_types="poly_water_tiled" order="6-">	<polygon color="#8CCFFF"/>		</itemgra>
+	<itemgra item_types="poly_water" order="8-17">	<polygon color="#77CCEE"/>	</itemgra>
+	<itemgra item_types="poly_water" order="18-">	<polygon color="#77CCEE"/>	<text text_size="32" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="poly_land" order="10-16">		<polygon color="#D2C888BB"/>	</itemgra>
+	<itemgra item_types="poly_land" order="17-">		<polygon color="#D2C888DD"/>	<text text_size="32" color="#40006A"/>	</itemgra>
+	<itemgra item_types="poly_town" order="10-">		<polygon color="#98AA98"/>		</itemgra>
+	<itemgra item_types="poi_customc" order="4">	<icon src="%s" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_customc" order="5-6">	<icon src="%s" w="64" h="64" x="-30" y="130"/>		<circle text_size="34" color="" background_color="#B00000"/>	</itemgra>
+	<itemgra item_types="poi_customc" order="7">	<icon src="%s" w="96" h="96" x="-40" y="180"/>		<circle text_size="44" color="" background_color="#B00000"/>	</itemgra>
+	<itemgra item_types="poi_customc" order="8-9">	<icon src="%s" w="128" h="128" x="-60" y="220"/>	<circle text_size="62" color="" background_color="#B00000"/>	</itemgra>
+	<itemgra item_types="poi_customc" order="10-12">	<icon src="%s" w="192" h="192" x="-80" y="320"/>	<circle text_size="88" color="" background_color="#B00000"/>	</itemgra>
+	<itemgra item_types="poi_customd" order="2-4">	<circle text_size="28" color="#004466" background_color="#40CCFF"/>	</itemgra>
+	<itemgra item_types="poi_customd" order="5-6">	<circle text_size="36" color="#006699" background_color="#40CCFF"/>	</itemgra>
+	<itemgra item_types="poi_customd" order="7-8">	<circle text_size="42" color="#008CC8" background_color="#40CCFF"/>	</itemgra>
+	<itemgra item_types="poi_customd" order="9-12">	<circle text_size="50" color="#008CC8" background_color="#40CCFF"/>	</itemgra>
+	<itemgra item_types="poi_custome" order="1">	<circle text_size="36"	color="" background_color="#004411" />	</itemgra>
+	<itemgra item_types="poi_custome" order="2">	<circle text_size="50"	color="" background_color="#004411" />	</itemgra>
+	<itemgra item_types="poi_custome" order="3-4">	<circle text_size="98"	color="" background_color="#004411" />	</itemgra>
+	</layer>
+	<layer name="poly_1" ref="poly_1" active="0"/>
+	<layer name="poly_2" active="0">
+	<itemgra item_types="street_unkn" order="16-">	<polyline color="#AB6B6B" width="3"/>	</itemgra>
+	<itemgra item_types="water_drain" order="15-17">	<polyline color="#90D0D0" width="4"/>	</itemgra>
+	<itemgra item_types="water_drain" order="18">		<polyline color="#90D0D0BB" width="8"/>	<text text_size="28" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_drain" order="19">		<polyline color="#90D0D0AA" width="14"/>	<text text_size="32" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_drain" order="20-">		<polyline color="#90D0D090" width="22"/>	<text text_size="38" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_canal" order="13-15">	<polyline color="#66B0B0" width="4"/>	</itemgra>
+	<itemgra item_types="water_canal" order="16">		<polyline color="#66B0B0DD" width="6"/>	</itemgra>
+	<itemgra item_types="water_canal" order="17">		<polyline color="#66B0B0BB" width="10"/>	<text text_size="22" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_canal" order="18">		<polyline color="#66B0B0BB" width="14"/>	<text text_size="28" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_canal" order="19">		<polyline color="#66B0B0BB" width="22"/>	<text text_size="34" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_canal" order="20-">		<polyline color="#66B0B0BB" width="42"/>	<text text_size="42" color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_stream" order="14">	<polyline color="#4ABBEE" width="4"/>	</itemgra>
+	<itemgra item_types="water_stream" order="15">	<polyline color="#4ABBEE" width="6"/>	</itemgra>
+	<itemgra item_types="water_stream" order="16">	<polyline color="#4ABBEE" width="8"/>	</itemgra>
+	<itemgra item_types="water_stream" order="17">	<polyline color="#4ABBEEDD" width="12"/>	<text text_size="22" color="#007070" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_stream" order="18">	<polyline color="#4ABBEEDD" width="18"/>	<text text_size="28" color="#007070" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_stream" order="19">	<polyline color="#4ABBEEDD" width="30"/>	<text text_size="34" color="#007070" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_stream" order="20-">	<polyline color="#4ABBEEDD" width="50"/>	<text text_size="42" color="#007070" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_river" order="13">	<polyline color="#4AA5EE" width="4"/>	</itemgra>
+	<itemgra item_types="water_river" order="14">	<polyline color="#77CCEE" width="6"/>	</itemgra>
+	<itemgra item_types="water_river" order="15">	<polyline color="#77CCEE" width="8"/>	</itemgra>
+	<itemgra item_types="water_river" order="16">	<polyline color="#77CCEE" width="12"/>	</itemgra>
+	<itemgra item_types="water_river" order="17">	<polyline color="#77CCEE" width="18"/>	<text text_size="22" color="#007070" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_river" order="18">	<polyline color="#77CCEE" width="28"/>	<text text_size="28" color="#007070" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_river" order="19">	<polyline color="#77CCEE" width="40"/>	<text text_size="36" color="#007070" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="water_river" order="20-">	<polyline color="#77CCEE" width="76"/>	<text text_size="46" color="#007070" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="poly_basin" order="14-18">	<polygon color="#7AAFFF90"/>	<polyline color="#CC5FFE90" width="2"/>	</itemgra>
+	<itemgra item_types="poly_basin" order="19-">	<polygon color="#7AAFFFAA"/>	<polyline color="#CC5FFE90" width="4"/>	<text text_size="32" color="#40006A"/>	</itemgra>
+	<itemgra item_types="water_line" order="1-11">	<polyline color="#396999" width="1"/>	</itemgra>
+	<itemgra item_types="water_line" order="12-14">	<polyline color="#396999" width="2"/>	<circle text_size="26" color="#001428"/>	</itemgra>
+	<itemgra item_types="water_line" order="15-16">	<polyline color="#396999" width="4"/>	<circle text_size="32" color="#001428"/>	</itemgra>
+	<itemgra item_types="water_line" order="17-">	<polyline color="#396999" width="4"/>	<circle text_size="38" color="#001428"/><text text_size="38" color="#001428"/>	</itemgra>
+	<itemgra item_types="poly_reservoir" order="14-16">	<polygon color="#AFBEFFAA"/>	</itemgra>
+	<itemgra item_types="poly_reservoir" order="17-">	<polygon color="#AFBEFFBB"/>	<polyline color="#4470CCAA" width="6"/>	<text text_size="32" color="#150051"/>	</itemgra>
+	<itemgra item_types="ditch" order="15-16">	<polyline color="#4E4EBB" width="2"/>	</itemgra>
+	<itemgra item_types="ditch" order="17-18">	<polyline color="#8C6D5E" width="8"/>	<polyline color="#49C9C9" width="4"/>	</itemgra>
+	<itemgra item_types="ditch" order="19-">	<polyline color="#8C6D5E" width="12"/>	<polyline color="#49C9C9" width="6"/>	<text color="#005099" text_size="32"/>	</itemgra>
+	<itemgra item_types="point_unkn" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/punkt" w="48" h="48" x="24" y="24"/>	<circle text_size="36" color="#606060"/>	</itemgra>
+	<itemgra item_types="poly_building" order="14-17">	<polygon color="#888888BB"/>	</itemgra>
+	<itemgra item_types="poly_building" order="18">		<polygon color="#888888AA"/>	<polyline color="#992211" width="2"/>	<circle text_size="34" color="#FFFF00" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="poly_building" order="19-">	<polygon color="#88888890"/>	<polyline color="#992211" width="4"/>	<circle text_size="42" color="#FFFF00" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="poi_peak" order="11-12">	<icon src="$NAVIT_USER_DATADIR/poi/peak" w="32" h="32" x="16" y="16"/>	</itemgra>
+	<itemgra item_types="poi_peak" order="13-14">	<icon src="$NAVIT_USER_DATADIR/poi/peak" w="48" h="48" x="24" y="24"/>	</itemgra>
+	<itemgra item_types="poi_peak" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/peak" w="64" h="64" x="32" y="32"/>	</itemgra>
+	<itemgra item_types="poi_peak" order="17-18">	<icon src="$NAVIT_USER_DATADIR/poi/peak" w="96" h="96" x="48" y="48"/>	</itemgra>
+	<itemgra item_types="poi_peak" order="19-">		<icon src="$NAVIT_USER_DATADIR/poi/peak" w="128" h="128" x="64" y="64"/>	</itemgra>
+	</layer>
+	<layer name="nature_park" active="0">
+	<itemgra item_types="poly_nature_reserve" order="9-12">		<icon src="$NAVIT_USER_DATADIR/poi/n_reserve" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_nature_reserve" order="13-15">	<polyline color="#70E7C750" width="8"/>		<icon src="$NAVIT_USER_DATADIR/poi/n_reserve" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poly_nature_reserve" order="16-17">	<polyline color="#70E7C770" width="28"/>	<text text_size="32" color="#009155"/>	<circle text_size="36" color="#009155"/>	</itemgra>
+	<itemgra item_types="poly_nature_reserve" order="18-">		<polyline color="#70E7C770" width="48"/>	<text text_size="36" color="#009155"/>	<circle text_size="48" color="#009155"/>	</itemgra>
+	<itemgra item_types="poly_nature_park" order="9-12">		<icon src="$NAVIT_USER_DATADIR/poi/natur_park" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_nature_park" order="13-15">		<polyline color="#9A988950" width="8"/>		<icon src="$NAVIT_USER_DATADIR/poi/natur_park" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poly_nature_park" order="16-17">		<polyline color="#9A988950" width="28"/>	<text text_size="32" color="#590094"/>	<circle text_size="36" color="#590094"/>	</itemgra>
+	<itemgra item_types="poly_nature_park" order="18-">			<polyline color="#9A988970" width="48"/>	<text text_size="36" color="#590094"/>	<circle text_size="48" color="#590094"/>	</itemgra>
+	<itemgra item_types="poly_national_park" order="9-12">		<icon src="$NAVIT_USER_DATADIR/poi/n_park" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_national_park" order="13-15">		<polyline color="#40AA4050" width="8"/>		<icon src="$NAVIT_USER_DATADIR/poi/n_park" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poly_national_park" order="16-17">		<polyline color="#40AA4070" width="28"/>	<text text_size="32" color="#590094"/>	<circle text_size="36" color="#590094"/>	</itemgra>
+	<itemgra item_types="poly_national_park" order="18-">		<polyline color="#40AA4070" width="48"/>	<text text_size="36" color="#590094"/>	<circle text_size="48" color="#590094"/>	</itemgra>
+	<itemgra item_types="border_national_park" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/nb_park" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="border_national_park" order="13-15">	<polyline color="#3AABAB50" width="8"/>		<icon src="$NAVIT_USER_DATADIR/poi/nb_park" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="border_national_park" order="16-17">	<polyline color="#3AABAB70" width="28"/>	<text text_size="32" color="#009191"/>	<circle text_size="36" color="#009191"/>	</itemgra>
+	<itemgra item_types="border_national_park" order="18-">		<polyline color="#3AABAB70" width="48"/>	<text text_size="42" color="#009191"/>	<circle text_size="48" color="#009191"/>	</itemgra>
+	</layer>
+	<layer name="theme_park" active="0">
+	<itemgra item_types="poly_theme_park" order="9-12">		<circle radius="20" width="6" color="#FF0000"/>	</itemgra>
+	<itemgra item_types="poly_theme_park" order="13-15">	<polyline color="#AB6B6B50" width="6"/>		<icon src="$NAVIT_USER_DATADIR/poi/theme_park" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poly_theme_park" order="16-17">	<polyline color="#AB6B6B50" width="10"/>	<icon src="$NAVIT_USER_DATADIR/poi/theme_park" w="96" h="96" x="0" y="140"/>	<circle text_size="36" color="#FF0000"/>	</itemgra>
+	<itemgra item_types="poly_theme_park" order="18-">		<polyline color="#AB6B6B50" width="16"/>	<icon src="$NAVIT_USER_DATADIR/poi/theme_park" w="128" h="128" x="0" y="160"/>	<circle text_size="42" color="#FF0000"/>	</itemgra>
+	<itemgra item_types="poi_resort" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/resort" w="64" h="64" x="32" y="32"/>	</itemgra>
+	<itemgra item_types="poi_resort" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/resort" w="96" h="96" x="0" y="120"/>	</itemgra>
+	<itemgra item_types="poi_resort" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/resort" w="128" h="128" x="0" y="160"/>	<circle text_size="32" color="#FF0000"/>	</itemgra>
+	<itemgra item_types="poi_resort" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/resort" w="192" h="192" x="0" y="240"/>	<circle text_size="42" color="#FF0000"/>	</itemgra>
+	</layer>
+	<layer name="water_park" active="0">
+	<itemgra item_types="poly_water_park" order="9-12">		<circle radius="20" width="6" color="#006666"/>	</itemgra>
+	<itemgra item_types="poly_water_park" order="13-15">	<polyline color="#8C8CCC50" width="6"/>		<circle text_size="32" color="#006666" radius="20" width="6"/>	</itemgra>
+	<itemgra item_types="poly_water_park" order="16-17">	<polyline color="#8C8CCC50" width="10"/>	<icon src="$NAVIT_USER_DATADIR/poi/water_park" w="64" h="64" x="32" y="32"/>	<circle text_size="34" color="#006666"/>	</itemgra>
+	<itemgra item_types="poly_water_park" order="18-">		<polyline color="#8C8CCC50" width="16"/>	<icon src="$NAVIT_USER_DATADIR/poi/water_park" w="96" h="96" x="0" y="116"/>	<circle text_size="42" color="#006666"/>	</itemgra>
+	</layer>
+	<layer name="zoo" active="0">
+	<itemgra item_types="poi_zoo" order="9-12">		<circle radius="20" width="10" color="#B33B00"/>	</itemgra>
+	<itemgra item_types="poi_zoo" order="13-14">	<circle text_size="32" color="#B33B00" radius="20" width="6"/>	</itemgra>
+	<itemgra item_types="poi_zoo" order="15-16">	<icon src="zoo" w="64" h="64" x="32" y="32"/>	<circle text_size="32" color="#B33B00"/>	</itemgra>
+	<itemgra item_types="poi_zoo" order="17-">		<icon src="zoo" w="96" h="96" x="48" y="48"/>	<circle text_size="42" color="#B33B00"/>	</itemgra>
+	</layer>
+	<layer name="attractions" active="0">
+	<itemgra item_types="poi_attraction" order="9-11">	<icon src="attraction" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_attraction" order="12-14">	<icon src="attraction" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_attraction" order="15-16">	<icon src="attraction" w="64" h="64" x="64" y="32"/>	<circle text_size="36" color="#00BB00" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="poi_attraction" order="17-">	<icon src="attraction" w="96" h="96" x="96" y="48"/>	<circle text_size="42" color="#00BB00" background_color="#000000"/>	</itemgra>
+	</layer>
+	<layer name="land_feature" active="0">
+	<itemgra item_types="poi_land_feature" order="10-11">	<icon src="$NAVIT_USER_DATADIR/poi_my/%s" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_land_feature" order="12-13">	<icon src="$NAVIT_USER_DATADIR/poi_my/%s" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_land_feature" order="14">		<icon src="$NAVIT_USER_DATADIR/poi_my/%s" w="96" h="96"/>	</itemgra>
+	<itemgra item_types="poi_land_feature" order="15">		<icon src="$NAVIT_USER_DATADIR/poi_my/%s" w="128" h="128"/>	</itemgra>
+	</layer>
+	<layer name="stadium" active="0">
+	<itemgra item_types="poi_stadium" order="9-12">		<icon src="$NAVIT_USER_DATADIR/poi/stadium1" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_stadium" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/stadium1" w="96" h="96"/>	</itemgra>
+	<itemgra item_types="poi_stadium" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/stadium1" w="128" h="128" x="64" y="64"/>	<circle text_size="34" color="#107000"/>	</itemgra>
+	<itemgra item_types="poi_stadium" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/stadium1" w="192" h="192" x="96" y="96"/>	<circle text_size="48" color="#107000"/>	</itemgra>
+	</layer>
+	<layer name="soccer" active="0">
+	<itemgra item_types="poi_soccer" order="9-15">		<icon src="$NAVIT_USER_DATADIR/poi/stadium" w="48" h="48" x="24" y="24"/>	</itemgra>
+	<itemgra item_types="poi_soccer" order="16-17">		<icon src="$NAVIT_USER_DATADIR/poi/stadium" w="64" h="64" x="32" y="32"/>	<circle text_size="34" color="#107000"/>	</itemgra>
+	<itemgra item_types="poi_soccer" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/stadium" w="96" h="96" x="48" y="48"/>	<circle text_size="48" color="#107000"/>	</itemgra>
+	</layer>
+	<layer name="climbing" active="0">
+	<itemgra item_types="poly_commercial_center" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/climbing_a" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_commercial_center" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/climbing_a" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poly_commercial_center" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/climbing_a" w="96" h="96" x="0" y="140"/>	<circle text_size="34" color="#C40E00"/>	</itemgra>
+	<itemgra item_types="poly_commercial_center" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/climbing_a" w="128" h="128" x="0" y="160"/>	<circle text_size="42" color="#C40E00"/>	</itemgra>
+	<itemgra item_types="poi_climbing" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/climbing" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_climbing" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/climbing" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_climbing" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/climbing" w="96" h="96" x="0" y="140"/>		<circle text_size="34" color="#C40E00"/>	</itemgra>
+	<itemgra item_types="poi_climbing" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/climbing" w="128" h="128" x="0" y="160"/>	<circle text_size="42" color="#C40E00"/>	</itemgra>
+	</layer>
+	<layer name="swimming" active="0">
+	<itemgra item_types="poi_swimming" order="9-12">	<icon src="swimming" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_swimming" order="13-15">	<icon src="swimming" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_swimming" order="16-17">	<icon src="swimming" w="96" h="96" x="0" y="120"/>		<circle text_size="34" color="#0200CC"/>	</itemgra>
+	<itemgra item_types="poi_swimming" order="18-">		<icon src="swimming" w="128" h="128" x="0" y="160"/>	<circle text_size="42" color="#0200CC"/>	</itemgra>
+	</layer>
+	<layer name="golf" active="0">
+	<itemgra item_types="poly_golf_course" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/golf1" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poly_golf_course" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/golf1" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_golf_course" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/golf1" w="64" h="64" x="64" y="32"/>	<circle text_size="34" color="#009F9F"/>	</itemgra>
+	<itemgra item_types="poly_golf_course" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/golf1" w="96" h="96" x="96" y="120"/>	<circle text_size="42" color="#009F9F"/>	</itemgra>
+	<itemgra item_types="poi_golf" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/golf" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_golf" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/golf" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_golf" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/golf" w="64" h="64" x="64" y="80"/>	<circle text_size="34" color="#107000"/>	</itemgra>
+	<itemgra item_types="poi_golf" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/golf" w="96" h="96" x="96" y="120"/>	<circle text_size="42" color="#107000"/>	</itemgra>
+	</layer>
+	<layer name="fish" active="0">
+	<itemgra item_types="poi_fish" order="9-12">	<icon src="fish" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_fish" order="13-15">	<icon src="fish" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_fish" order="16-17">	<icon src="fish" w="96" h="96" x="48" y="48"/>		<circle text_size="34" color="#107000"/>	</itemgra>
+	<itemgra item_types="poi_fish" order="18-">		<icon src="fish" w="128" h="128" x="64" y="64"/>	<circle text_size="42" color="#107000"/>	</itemgra>
+	</layer>
+	<layer name="way_2" active="0">
+	<itemgra item_types="forest_way_2" order="8-9">		<icon src="$NAVIT_USER_DATADIR/poi/motor" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="forest_way_2" order="10-13">	<polyline color="#B0AA90" width="6"/>	<icon src="$NAVIT_USER_DATADIR/poi/motor" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="forest_way_2" order="14-15">	<polyline color="#B0AA90" width="10"/>	<icon src="$NAVIT_USER_DATADIR/poi/motor" w="64" h="64" x="32" y="32"/>	</itemgra>
+	<itemgra item_types="forest_way_2" order="16">		<polyline color="#B0AA90" width="22"/>	<icon src="$NAVIT_USER_DATADIR/poi/motor" w="96" h="96" x="48" y="48"/>	</itemgra>
+	<itemgra item_types="forest_way_2" order="17">		<polyline color="#B0AA90" width="34"/>	<text text_size="28" color="#775000"/>	<circle text_size="34" color="#775000"/>	</itemgra>
+	<itemgra item_types="forest_way_2" order="18-">		<polyline color="#B0AA90" width="64"/>	<text text_size="36" color="#775000"/>	<circle text_size="42" color="#775000"/>	</itemgra>
+	</layer>
+	<layer name="camp_site" active="0">
+	<itemgra item_types="poly_camp_site" order="9-12">		<icon src="$NAVIT_USER_DATADIR/poi/zelt" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poly_camp_site" order="13-15">		<icon src="$NAVIT_USER_DATADIR/poi/zelt" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_camp_site" order="16-17">		<icon src="$NAVIT_USER_DATADIR/poi/zelt" w="64" h="64" x="0" y="64"/>	<circle text_size="32" color="#005B5B" background_color=""/>	</itemgra>
+	<itemgra item_types="poly_camp_site" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/zelt" w="96" h="96" x="0" y="140"/>	<circle text_size="42" color="#005B5B" background_color=""/>	</itemgra>
+	<itemgra item_types="poi_camp_rv" order="9-12">			<circle radius="20" width="10" color="#008000"/>	</itemgra>
+	<itemgra item_types="poi_camp_rv" order="13-15">		<icon src="$NAVIT_USER_DATADIR/poi/camping" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_camp_rv" order="16-17">		<icon src="$NAVIT_USER_DATADIR/poi/camping" w="64" h="64" x="0" y="64"/>	<circle text_size="32" color="#008000" background_color=""/>	</itemgra>
+	<itemgra item_types="poi_camp_rv" order="18-">			<icon src="$NAVIT_USER_DATADIR/poi/camping" w="96" h="96" x="0" y="140"/>	<circle text_size="42" color="#008000" background_color=""/>	</itemgra>
+	<itemgra item_types="poly_caravan_site" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poly_caravan_site" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="96" h="96" x="48" y="48"/>	</itemgra>
+	<itemgra item_types="poly_caravan_site" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="96" h="96" x="48" y="48"/>	<circle text_size="32" color="#005B5B" background_color=""/>	</itemgra>
+	<itemgra item_types="poly_caravan_site" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/camper" w="128" h="128" x="64" y="64"/>	<circle text_size="42" color="#005B5B" background_color=""/>	</itemgra>
+	</layer>
+	<layer name="guesthouse" active="0">
+	<itemgra item_types="poi_guesthouse" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="32" h="32" x="32" y="16"/>	</itemgra>
+	<itemgra item_types="poi_guesthouse" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="48" h="48" x="48" y="24"/>	</itemgra>
+	<itemgra item_types="poi_guesthouse" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="64" h="64" x="64" y="32"/>	<circle text_size="34" color="#000070"/>	</itemgra>
+	<itemgra item_types="poi_guesthouse" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/zimmer" w="96" h="96" x="64" y="48"/>	<circle text_size="42" color="#000070"/>	</itemgra>
+	</layer>
+	<layer name="restaurant" active="0">
+	<itemgra item_types="poi_restaurant" order="9-12">	<icon src="restaurant" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_restaurant" order="13-15">	<icon src="restaurant" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_restaurant" order="16-17">	<icon src="restaurant" w="96" h="96" x="25" y="140"/>	<circle text_size="36" color="#000070"/>	</itemgra>
+	<itemgra item_types="poi_restaurant" order="18-">	<icon src="restaurant" w="128" h="128" x="25" y="180"/>	<circle text_size="42" color="#000070"/>	</itemgra>
+	<itemgra item_types="poi_dining" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/dining" w="48" h="48" x="12" y="24"/>	</itemgra>
+	<itemgra item_types="poi_dining" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/dining" w="64" h="64" x="16" y="96"/>	</itemgra>
+	<itemgra item_types="poi_dining" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/dining" w="96" h="96" x="25" y="140"/>	<circle text_size="36" color="#000070"/>	</itemgra>
+	<itemgra item_types="poi_dining" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/dining" w="128" h="128" x="25" y="180"/>	<circle text_size="42" color="#000070"/>	</itemgra>
+	</layer>
+	<layer name="hotel" active="0">
+	<itemgra item_types="poi_hotel" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/hotel" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_hotel" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/hotel" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_hotel" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/hotel" w="64" h="64" x="-64" y="110"/>	<circle text_size="34" color="#000070"/>	</itemgra>
+	<itemgra item_types="poi_hotel" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/hotel" w="96" h="96" x="-96" y="160"/>	<circle text_size="42" color="#000070"/>	</itemgra>
+	</layer>
+	<layer name="motel" active="0">
+	<itemgra item_types="poi_motel" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/motel" w="32" h="32"/>		</itemgra>
+	<itemgra item_types="poi_motel" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/motel" w="48" h="48"/>		</itemgra>
+	<itemgra item_types="poi_motel" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/motel" w="64" h="64" x="-52" y="110"/>	<circle text_size="34" color="#000070"/>	</itemgra>
+	<itemgra item_types="poi_motel" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/motel" w="96" h="96" x="-96" y="160"/>	<circle text_size="42" color="#000070"/>	</itemgra>
+	</layer>
+	<layer name="hostel" active="0">
+	<itemgra item_types="poi_hostel" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/hostel" w="32" h="32" x="16" y="16"/>	</itemgra>
+	<itemgra item_types="poi_hostel" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/hostel" w="48" h="48" x="24" y="24"/>	</itemgra>
+	<itemgra item_types="poi_hostel" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/hostel" w="64" h="64" x="-64" y="110"/>	<circle text_size="34" color="#000070"/>	</itemgra>
+	<itemgra item_types="poi_hostel" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/hostel" w="96" h="96" x="-96" y="160"/>	<circle text_size="42" color="#000070"/>	</itemgra>
+	</layer>
+	<layer name="mall" active="0">
+	<itemgra item_types="poi_mall" order="9-12">	<circle radius="20" width="8" color="#006A60"/>	</itemgra>
+	<itemgra item_types="poi_mall" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/mall" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_mall" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/mall" w="64" h="64" x="0" y="64"/>	<circle text_size="32" color="#006A60"/>	</itemgra>
+	<itemgra item_types="poi_mall" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/mall" w="96" h="96" x="0" y="120"/>	<circle text_size="42" color="#006A60"/>	</itemgra>
+	</layer>
+	<layer name="shop_apparel" active="0">
+	<itemgra item_types="poi_shop_apparel" order="9-12">	<circle radius="20" width="8" color="#006A60"/>	</itemgra>
+	<itemgra item_types="poi_shop_apparel" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/shop_apparel" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_shop_apparel" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/shop_apparel" w="64" h="64" x="0" y="64"/>	<circle text_size="32" color="#006A60"/>	</itemgra>
+	<itemgra item_types="poi_shop_apparel" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/shop_apparel" w="96" h="96" x="0" y="120"/>	<circle text_size="42" color="#006A60"/>	</itemgra>
+	</layer>
+	<layer name="car_dealer" active="0">
+	<itemgra item_types="poi_car_dealer_parts" order="9-12">	<circle radius="20" width="8" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_car_dealer_parts" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/car_dealer" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_car_dealer_parts" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/car_dealer" w="64" h="64" x="0" y="64"/>	<circle text_size="32" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_car_dealer_parts" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/car_dealer" w="96" h="96" x="0" y="120"/>	<circle text_size="42" color="#854500"/>	</itemgra>
+	</layer>
+	<layer name="repair_service" active="0">
+	<itemgra item_types="poi_repair_service" order="9-12">	<circle radius="20" width="8" color="#00BBCC"/>	</itemgra>
+	<itemgra item_types="poi_repair_service" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/car_repair" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_repair_service" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/car_repair" w="64" h="64" x="0" y="90"/>		<circle text_size="32" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_repair_service" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/car_repair" w="96" h="96" x="0" y="140"/>	<circle text_size="42" color="#854500"/>	</itemgra>
+	</layer>
+	<layer name="car_sharing" active="0">
+	<itemgra item_types="poi_car_sharing" order="9-12">		<circle radius="20" width="8" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_car_sharing" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/car_sharing" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_car_sharing" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/car_sharing" w="64" h="64" x="0" y="64"/>	<circle text_size="32" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_car_sharing" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/car_sharing" w="96" h="96" x="0" y="120"/>	<circle text_size="42" color="#854500"/>	</itemgra>
+	</layer>
+	<layer name="car_rent" active="0">
+	<itemgra item_types="poi_car_rent" order="9-12">		<circle radius="20" width="8" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_car_rent" order="13-15">		<icon src="car_rent" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_car_rent" order="16-17">		<icon src="car_rent" w="64" h="64" x="0" y="64"/>	<circle text_size="32" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_car_rent" order="18-">			<icon src="car_rent" w="96" h="96" x="0" y="120"/>	<circle text_size="42" color="#854500"/>	</itemgra>
+	</layer>
+	<layer name="bicycle_rental" active="0">
+	<itemgra item_types="poi_bicycle_rental" order="9-12">	<circle radius="20" width="8" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_bicycle_rental" order="12-15">	<icon src="bicycle_rental" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_bicycle_rental" order="16-17">	<icon src="bicycle_rental" w="64" h="64" x="0" y="64"/>		<circle text_size="32" color="#854500"/>	</itemgra>
+	<itemgra item_types="poi_bicycle_rental" order="18-">	<icon src="bicycle_rental" w="96" h="96" x="0" y="120"/>	<circle text_size="42" color="#854500"/>	</itemgra>
+	</layer>
+	<layer name="toll_booth" active="0">
+	<itemgra item_types="poi_toll_booth" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="32" h="32" x="16" y="16"/>	</itemgra>
+	<itemgra item_types="poi_toll_booth" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="48" h="48" x="24" y="24"/>	</itemgra>
+	<itemgra item_types="poi_toll_booth" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="64" h="64" x="32" y="32"/>	<circle text_size="34" color="#FFFFFF" background_color="#FF0000"/>	</itemgra>
+	<itemgra item_types="poi_toll_booth" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="96" h="96" x="48" y="96"/>	<circle text_size="42" color="#FFFFFF" background_color="#FF0000"/>	</itemgra>
+	</layer>
+	<layer name="archaeological" active="0">
+	<itemgra item_types="poly_archaeological_site" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/archaeologie" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_archaeological_site" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/archaeologie" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poly_archaeological_site" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/archaeologie" w="96" h="96" x="0" y="120"/>		<circle text_size="34" color="#6B5B00"/>	</itemgra>
+	<itemgra item_types="poly_archaeological_site" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/archaeologie" w="128" h="128" x="0" y="160"/>	<circle text_size="42" color="#6B5B00"/>	</itemgra>
+	<itemgra item_types="poly_battlefield" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poly_battlefield" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_battlefield" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="64" h="64" x="64" y="80"/>	<circle text_size="34" color="#6B5B00"/>	</itemgra>
+	<itemgra item_types="poly_battlefield" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/battlefield" w="96" h="96" x="96" y="120"/>	<circle text_size="42" color="#6B5B00"/>	</itemgra>
+	</layer>
+	<layer name="tower" active="0">
+	<itemgra item_types="poi_tower" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/tower" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_tower" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/tower" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_tower" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/tower" w="64" h="64" x="32" y="64"/>	<circle text_size="34" color="#004000"/>	</itemgra>
+	<itemgra item_types="poi_tower" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/tower" w="96" h="96" x="48" y="96"/>	<circle text_size="42" color="#004000"/>	</itemgra>
+	</layer>
+	<layer name="castle" active="0">
+	<itemgra item_types="poi_castle" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="48" h="48" x="24" y="24"/>	</itemgra>
+	<itemgra item_types="poi_castle" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="64" h="64" x="32" y="32"/>	</itemgra>
+	<itemgra item_types="poi_castle" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="96" h="96" x="48" y="140"/>	<circle text_size="34" color="#004000"/>	</itemgra>
+	<itemgra item_types="poi_castle" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/castle" w="128" h="128" x="0" y="180"/>	<circle text_size="42" color="#004000"/>	</itemgra>
+	</layer>
+	<layer name="museum" active="0">
+	<itemgra item_types="poly_museum" order="9-12">		<icon src="museum" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poly_museum" order="13-15">	<icon src="museum" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poly_museum" order="16-17">	<icon src="museum" w="96" h="96" x="0" y="140"/>	<circle text_size="34" color="#4B3E2E"/>	</itemgra>
+	<itemgra item_types="poly_museum" order="18-">		<icon src="museum" w="128" h="128" x="0" y="180"/>	<circle text_size="42" color="#4B3E2E"/>	</itemgra>
+	<itemgra item_types="poi_museum_history" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/museum" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_museum_history" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/museum" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_museum_history" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/museum" w="96" h="96" x="48" y="48"/>	<circle text_size="34" color="#4B3E2E"/>	</itemgra>
+	<itemgra item_types="poi_museum_history" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/museum" w="128" h="128" x="64" y="64"/>	<circle text_size="42" color="#4B3E2E"/>	</itemgra>
+	</layer>
+	<layer name="ruins" active="0">
+	<itemgra item_types="poi_ruins" order="9-12">	<polyline color="#966666" width="4"/>	<icon src="ruins" w="64" h="64" x="32" y="32"/>	</itemgra>
+	<itemgra item_types="poi_ruins" order="13-15">	<polyline color="#966666" width="4"/>	<icon src="ruins" w="64" h="64" x="32" y="32"/>	</itemgra>
+	<itemgra item_types="poi_ruins" order="16-17">	<polyline color="#966666" width="8"/>	<icon src="ruins" w="96" h="96" x="48" y="48"/>		<circle text_size="34" color="#004000"/>	</itemgra>
+	<itemgra item_types="poi_ruins" order="18-">	<polyline color="#966666" width="16"/>	<icon src="ruins" w="128" h="128" x="64" y="64"/>	<circle text_size="42" color="#004000"/>	</itemgra>
+	</layer>
+	<layer name="ferrys" active="0">
+	<itemgra item_types="ferry" order="9-10">	<polyline color="#0090CC" width="1"/>	<icon src="$NAVIT_USER_DATADIR/poi/fähre" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="ferry" order="11-12">	<polyline color="#0090CC" width="2"/>	<icon src="$NAVIT_USER_DATADIR/poi/fähre" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="ferry" order="13-14">	<polyline color="#0090CC" width="3"/>	<icon src="$NAVIT_USER_DATADIR/poi/fähre" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="ferry" order="15-16">	<polyline color="#0090CCCC" width="4"/>	<icon src="$NAVIT_USER_DATADIR/poi/fähre" w="96" h="96" x="48" y="48"/>		<text text_size="28" color="#FF2800" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="ferry" order="17-">	<polyline color="#0090CC90" width="6"/>	<icon src="$NAVIT_USER_DATADIR/poi/fähre" w="128" h="128" x="64" y="64"/>	<text text_size="38" color="#FF2800" background_color="#000000"/>	</itemgra>
+	</layer>
+	<layer name="marine" active="0">
+	<itemgra item_types="poi_marine" order="9-12">		<circle radius="20" width="6" color="#00CC00"/>	</itemgra>
+	<itemgra item_types="poi_marine" order="13-15">		<icon src="$NAVIT_USER_DATADIR/poi/marina" w="64" h="64" x="32" y="64"/>	</itemgra>
+	<itemgra item_types="poi_marine" order="16-17">		<icon src="$NAVIT_USER_DATADIR/poi/marina" w="96" h="96" x="48" y="96"/>	<circle text_size="32" color="#000033"/></itemgra>
+	<itemgra item_types="poi_marine" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/marina" w="128" h="128" x="64" y="128"/>	<circle text_size="42" color="#000033"/>	</itemgra>
+	</layer>
+	<layer name="portable_water" active="0">
+	<itemgra item_types="poi_potable_water" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_potable_water" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_potable_water" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_potable_water" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/potable_water" w="96" h="96" x="48" y="48"/>	<circle text_size="42" color="#005099" background_color="#005099"/>	</itemgra>
+	</layer>
+	<layer name="shelter" active="0">
+	<itemgra item_types="poi_shelter" order="9-14">		<icon src="$NAVIT_USER_DATADIR/poi/shelter" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_shelter" order="15-18">	<icon src="$NAVIT_USER_DATADIR/poi/shelter" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_shelter" order="19">		<icon src="$NAVIT_USER_DATADIR/poi/shelter" w="64" h="64" x="32" y="32"/>	<circle text_size="34" color="#000B99"/>	</itemgra>
+	<itemgra item_types="poi_shelter" order="20-">		<icon src="$NAVIT_USER_DATADIR/poi/shelter" w="96" h="96" x="48" y="48"/>	<circle text_size="42" color="#000B99"/>	</itemgra>
+	</layer>
+	<layer name="plantations" active="0">
+	<itemgra item_types="plantation" order="9-12">		<circle radius="20" width="8" color="#854500"/>	</itemgra>
+	<itemgra item_types="plantation" order="12-15">		<icon src="$NAVIT_USER_DATADIR/poi/marktplace" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="plantation" order="16-17">		<icon src="$NAVIT_USER_DATADIR/poi/marktplace" w="64" h="64" x="0" y="64"/>		<circle text_size="32" color="#854500"/>	</itemgra>
+	<itemgra item_types="plantation" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/marktplace" w="96" h="96" x="0" y="120"/>	<circle text_size="42" color="#854500"/>	</itemgra>
+	</layer>
+	<layer name="plantations" active="0">
+	<itemgra item_types="plantation" order="9-12">	<icon src="$NAVIT_USER_DATADIR/poi/monastery" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="plantation" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/monastery" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="plantation" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/monastery" w="96" h="96" x="0" y="160"/>		<circle text_size="34" color="#854500"/>	</itemgra>
+	<itemgra item_types="plantation" order="18-">	<icon src="$NAVIT_USER_DATADIR/poi/monastery" w="128" h="128" x="0" y="180"/>	<circle text_size="42" color="#854500"/>	</itemgra>
+	</layer>
+	<layer name="custom3" active="0">
+	<itemgra item_types="poi_custom3" order="9-12">		<icon src="$NAVIT_USER_DATADIR/poi/%s" w="48" h="48" x="24" y="48"/>	</itemgra>
+	<itemgra item_types="poi_custom3" order="13-15">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="64" h="64" x="32" y="64"/>	</itemgra>
+	<itemgra item_types="poi_custom3" order="16-17">	<icon src="$NAVIT_USER_DATADIR/poi/%s" w="96" h="96" x="48" y="96"/>	<circle color="#0F0FFF" text_size="34"/>	</itemgra>
+	<itemgra item_types="poi_custom3" order="18-">		<icon src="$NAVIT_USER_DATADIR/poi/%s" w="128" h="128" x="64" y="160"/>	<circle color="#0F0FFF" text_size="42"/>	</itemgra>
+	</layer>
+	<layer name="custom5" active="0">
+	<itemgra item_types="poi_custom5" order="16">		<icon src="$NAVIT_USER_DATADIR/poi_my/%s" w="128" h="128" x="0" y="128"/>	<circle text_size="36" color="#930093"/>	</itemgra>
+	<itemgra item_types="poi_custom5" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi_my/%s" w="192" h="192" x="0" y="192"/>	<circle text_size="46" color="#930093"/>	</itemgra>
+	</layer>
+	<layer name="emergency" active="0">
+	<itemgra item_types="poi_hospital" order="11-12">	<icon src="hospital" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_hospital" order="13-15">	<icon src="hospital" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_hospital" order="16-17">	<icon src="hospital" w="64" h="64" x="0" y="120"/>	<circle text_size="34" color="#FF0000" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="poi_hospital" order="18-">		<icon src="hospital" w="96" h="96" x="0" y="160"/>	<circle text_size="44" color="#FF0000" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="poi_police" order="11-12">		<icon src="police" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_police" order="13-15">		<icon src="police" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_police" order="16-17">		<icon src="police" w="64" h="64" x="0" y="120"/>	<circle text_size="34" color="#004000" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="poi_police" order="18-">		<icon src="police" w="96" h="96" x="0" y="160"/>	<circle text_size="44" color="#004000" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="poi_firebrigade" order="11-12">	<icon src="firebrigade" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poi_firebrigade" order="13-15">	<icon src="firebrigade" w="48" h="48"/>	</itemgra>
+	<itemgra item_types="poi_firebrigade" order="16-17">	<icon src="firebrigade" w="64" h="64" x="0" y="120"/>	<circle text_size="34" color="#710000" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="poi_firebrigade" order="18-">		<icon src="firebrigade" w="96" h="96" x="0" y="160"/>	<circle text_size="44" color="#710000" background_color="#000000"/>	</itemgra>
+	</layer>
+	<layer name="Internal">
+	<itemgra item_types="bookmark" order="7-8">		<icon src="$NAVIT_USER_DATADIR/poi/lesezeichen" w="48" h="64" x="32" y="64"/>	</itemgra>
+	<itemgra item_types="bookmark" order="9-13">	<icon src="$NAVIT_USER_DATADIR/poi/lesezeichen" w="48" h="64" x="32" y="86"/>	<circle text_size="34" color="#000000"/>	</itemgra>
+	<itemgra item_types="bookmark" order="13-16">	<icon src="$NAVIT_USER_DATADIR/poi/lesezeichen" w="96" h="96" x="48" y="116"/>	<circle text_size="42" color="#000000"/>	</itemgra>
+	<itemgra item_types="bookmark" order="17-">		<icon src="$NAVIT_USER_DATADIR/poi/lesezeichen" w="128" h="128" x="64" y="150"/>	<circle text_size="48" color="#000000"/>	</itemgra>
+	<itemgra item_types="waypoint" order="3-5">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="48" h="48" x="24" y="48"/>		<circle text_size="42" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="waypoint" order="6-8">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="96" h="96" x="48" y="96"/>		<circle text_size="52" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="waypoint" order="9-12">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="128" h="128" x="64" y="128"/>	<circle text_size="62" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="waypoint" order="13-16">	<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="160" h="160" x="80" y="160"/>	<circle text_size="72" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="waypoint" order="17-">		<icon src="$NAVIT_USER_DATADIR/maske/nav_destination" w="192" h="192" x="96" y="192"/>	<circle text_size="82" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="route_end" order="3-6">	<icon src="$NAVIT_USER_DATADIR/maske/flag" w="64" h="64" x="4" y="64"/>		<circle text_size="42" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="route_end" order="7-13">	<icon src="$NAVIT_USER_DATADIR/maske/flag" w="96" h="96" x="8" y="96"/>		<circle text_size="52" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="route_end" order="7-13">	<icon src="$NAVIT_USER_DATADIR/maske/flag" w="128" h="128" x="16" y="128"/>	<circle text_size="62" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="route_end" order="14-17">	<icon src="$NAVIT_USER_DATADIR/maske/flag" w="160" h="160" x="26" y="160"/>	<circle text_size="72" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	<itemgra item_types="route_end" order="18-">	<icon src="$NAVIT_USER_DATADIR/maske/flag" w="192" h="192" x="32" y="192"/>	<circle text_size="82" color="#0000FF" background_color="#0000FF"/>	</itemgra>
+	</layer>
+	<layer name="labels_bevore" active="0">
+	<itemgra item_types="house_number" order="17-18">	<circle color="#000000" text_size="26" radius="8"/>	</itemgra>
+	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0,district_label_1e1,district_label_2e1,district_label_5e1,district_label_1e2,district_label_2e2,district_label_5e2" order="12-13">
+	<circle color="#824242" text_size="22" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0,town_label_1e1,town_label_2e1,town_label_5e1,town_label_1e2,town_label_2e2,town_label_5e2" order="13">
+	<circle color="#000000" text_size="22" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e3,place_label" order="12-14"> <circle color="#000000" text_size="28" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_2e3" order="11-13">	<circle color="#000000" text_size="32" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_5e3" order="10-11">	<circle color="#000000" text_size="24" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e4" order="10">	<circle color="#000000" text_size="24" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="6-7">	<circle color="#000000" text_size="28" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6,town_label_1e7" order="-4">	<circle color="#000000" text_size="28" radius="8"/>	</itemgra>
+	</layer>
+	<layer name="labels">
+	<itemgra item_types="time_zone" order="0-4">	<polyline color="#BA00B840" width="4"/>	</itemgra>
+	<itemgra item_types="time_zone" order="5-7">	<polyline color="#BA00B840" width="8"/>		<text text_size="46" color="#FFFFFF" background_color="#BA00B8"/>	</itemgra>
+	<itemgra item_types="time_zone" order="8-11">	<polyline color="#BA00B840" width="16"/>	<text text_size="64" color="#FFFFFF" background_color="#BA00B8"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="3">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="64" h="64"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="4">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="96" h="96"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="5-6">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="128" h="128"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="7-9">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="10-13">	<circle color="#990099" radius="32" width="8"/>			<circle text_size="28" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="14">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="160" h="160"/>	<circle text_size="28" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="15">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="192" h="192"/>	<circle text_size="32" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="16">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="256" h="256"/>	<circle text_size="38" color="#990099"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="17">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="342" h="342"/>	</itemgra>
+	<itemgra item_types="poi_customb" order="18-">	<icon src="$NAVIT_USER_DATADIR/maske/%s" w="512" h="512"/>	</itemgra>
+	<itemgra item_types="house_number" order="19-">	<circle color="#000000" text_size="32" radius="12"/>	</itemgra>
+	<itemgra item_types="town_label,town_label_0e0,town_label_1e0,town_label_2e0,town_label_5e0,town_label_1e1,town_label_2e1,town_label_5e1,town_label_1e2,town_label_2e2,town_label_5e2" order="14-">
+	<circle color="#000000" text_size="34" radius="16" width="6"/>	</itemgra>
+	<itemgra item_types="town_label_1e3,place_label" order="15-">	<circle color="#000000" text_size="36" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_2e3" order="14-">	<circle color="#000000" text_size="36" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_5e3" order="12-14">	<circle color="#000000" text_size="36" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e4" order="11-13">	<circle color="#000000" text_size="38" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_5e3,town_label_1e4,town_label_2e4,town_label_5e4" order="15-18">	<circle color="#000000" text_size="40" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_2e4,town_label_5e4" order="9-10">	<circle color="#000000" text_size="32" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_2e4,town_label_5e4" order="11-13">	<circle color="#000000" text_size="36" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="8-9">		<circle color="#000000" text_size="32" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e5,town_label_2e5,town_label_5e5" order="10-17">	<circle color="#000000" text_size="42" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6,town_label_1e7" order="5-7">		<circle color="#000000" text_size="32" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6,town_label_1e7" order="8-9">		<circle color="#000000" text_size="38" radius="8"/>	</itemgra>
+	<itemgra item_types="town_label_1e6,town_label_2e6,town_label_5e6,town_label_1e7" order="10-16">	<circle color="#000000" text_size="48" radius="8"/>	</itemgra>
+	<itemgra item_types="district_label,district_label_0e0,district_label_1e0,district_label_2e0,district_label_5e0,district_label_1e1,district_label_2e1,district_label_5e1,district_label_1e2,district_label_2e2,district_label_5e2" order="14-">
+	<circle color="#824242" text_size="34" radius="16" width="6"/>	</itemgra>
+	<itemgra item_types="district_label_1e3,district_label_2e3,district_label_5e3" order="14-">		<circle color="#824242" text_size="34" radius="8"/>	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="13">		<circle color="#824242" text_size="28" radius="8"/>	</itemgra>
+	<itemgra item_types="district_label_1e4,district_label_2e4,district_label_5e4" order="14-">		<circle color="#824242" text_size="36" radius="8"/>	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="12-13">	<circle color="#824242" text_size="32" radius="8"/>	</itemgra>
+	<itemgra item_types="district_label_1e5,district_label_2e5,district_label_5e5" order="14-">		<circle color="#824242" text_size="38" radius="8"/>	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6,district_label_1e7" order="11-13">	<circle color="#824242" text_size="34" radius="8"/>	</itemgra>
+	<itemgra item_types="district_label_1e6,district_label_2e6,district_label_5e6,district_label_1e7" order="14-17">	<circle color="#824242" text_size="42" radius="8"/>	</itemgra>
+	<itemgra item_types="found_item" order="12-13">	<circle color="#FF00BB" radius="20" width="4"/>	</itemgra>
+	<itemgra item_types="found_item" order="14-16">	<circle color="#FF00BB" radius="28" width="4"/>	</itemgra>
+	<itemgra item_types="found_item" order="17-18">	<circle text_size="24" color="#660044" background_color="#FF00BB" radius="46" width="4"/>	</itemgra>
+	<itemgra item_types="found_item" order="19-">	<circle text_size="32" color="#660044" background_color="#FF00BB" radius="72" width="4"/>	</itemgra>
+	</layer>
+	</layout>
