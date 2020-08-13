@@ -1,8 +1,8 @@
 # Navit-xml-Enhancement
 ## Extension to Navit.xml  
-**2560x1440 XML Normal** created for Galaxy S7 with navit-git 0.5.3  
-**1280x800 XML** created to Tablet with navit 0.5.4  
-**1280x800 NO GPS XML** created for Tablet witout GPS Sensor with navit 0.5.4  
+**2560x1440 XML 0.5.5** navit-git 0.5.5 and tested with Android on Galaxy S7  
+**1280x800 XML** created to Tablet with navit 0.5.5  
+**1280x800 NO GPS XML** created for Tablet witout GPS Sensor with navit 0.5.5  
 
 * *A - Display of individual Point of Interrest*  
 * *B - POI map dependent on demand*  
@@ -10,7 +10,7 @@
 * *D - Center map to the cursor*  
 * *E - Layout street`_`day and street`_`night*  
 * *F - Layout snow*    
-### Installation 0.5.4:
+### Installation 0.5.5:
 Path Phone: Android/data/org.navitprojekt.navit/files/navit.xml also all other *.xml and create the three folder:  - maske - poi - txt  
 The empty folders can be filled with Icons are in folder - src - in Github enclosed or replaced with your own icons.  
 You can in the device click bottom right on compass and download a Map.  
@@ -24,9 +24,6 @@ Change in Navit.xml the Path under
 
 ### Routing without GPS-Sensor
 NO GPS navit.xml is optimized for use in devices without GPS sensor. Before entering the destination, the starting point/location must be entered. During routing, the current speed is set by TIPP on the corresponding button (0-130 km/h). The map view including the cursor is automatically guided to the specified speed.
-
-#### Navit 0.5.4.
-I can only use one layout with Navit. Activation of another *.xml does not work. e.g.: navit.layout=navit.layout[@name=="SNOWSPORT"] (snow.xml).
 
 ### Manual
 To open the **GUI-Menu** click bottom right on the gear.  

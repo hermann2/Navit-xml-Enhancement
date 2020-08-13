@@ -25,6 +25,7 @@
 	pitch="52"
 	orientation="0"
 	tracking="1"
+	orientation="-1"
 	recent_dest="30"
 	waypoints_flag="1"
 	timeout="86400"
@@ -414,15 +415,15 @@
 			?(get_int_var("zoom_gt")==0	
 				?(set_int_var("is_pitch",pitch),pitch=0,set_int_var("is_orientation",orientation),orientation=0,set_int_var("zoom_gt",1)):"")
 			:(get_int_var("zoom_gt")==1 ?(pitch=get_int_var("is_pitch"),orientation=get_int_var("is_orientation"),set_int_var("zoom_gt",0)):""))'/>
-	<osd x="0" y="0" w="2370" h="85"		font_size="960"		type="text" label="${navit.messages}" enable_expression="osd_configuration&amp;1&amp;&amp;navigation.nav_status&gt;=3" background_color="#E9F2F2BB" align="5" text_color="#000000"/>
-	<osd x="0" y="85" w="2370" h="85"		font_size="1000"	type="text" label="${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}" enable_expression="navigation.nav_status&gt;=3" background_color="#E9F2F2BB" align="4" text_color="#000000"/>
-	<osd x="0" y="0" w="2370" h="85"		font_size="960"		type="text" label='Pos deg: ${vehicle.position_coord_geo[pos_deg]}' background_color="#E9F2F2BB" align="4" text_color="#000000" enable_expression="osd_configuration&amp;2"/>
+	<osd x="0" y="0" w="100%" h="85"		font_size="960"		type="text" label="${navit.messages}" enable_expression="osd_configuration&amp;1&amp;&amp;navigation.nav_status&gt;=3" background_color="#E9F2F2BB" align="5" text_color="#000000"/>
+	<osd x="0" y="85" w="100%" h="85"		font_size="1000"	type="text" label="${navigation.item[1].street_name_systematic} ${navigation.item[1].street_name} ❷${navigation.item[2].street_name_systematic} ${navigation.item[2].street_name}" enable_expression="navigation.nav_status&gt;=3" background_color="#E9F2F2BB" align="4" text_color="#000000"/>
+	<osd x="0" y="0" w="100%" h="85"		font_size="960"		type="text" label='Pos deg: ${vehicle.position_coord_geo[pos_deg]}' background_color="#E9F2F2BB" align="4" text_color="#000000" enable_expression="osd_configuration&amp;2"/>
 	<osd x="0" y="170" w="264" h="90"		font_size="1800"	type="text" label="${navigation.item[1].length[value]}" enable_expression="navigation.nav_status&gt;=3" background_color="#E9F2F2BB" align="8" text_color="#C1282C"/>
 	<osd x="264" y="170" w="132" h="90"		font_size="1300"	type="text" label="${navigation.item[1].length[unit]}" enable_expression="navigation.nav_status&gt;=3" background_color="#E9F2F2BB" align="4" text_color="#C1282C"/>
 	<osd x="0" y="260" w="264" h="264"		type="navigation_next_turn" icon_src="%s_bk_260_260.png" command='(get_int_var("set_osd")==0 ?(tracking=0,pitch=0):""); say("ganze Strecke"); follow=80000; zoom_to_route()' enable_expression="navigation.nav_status&gt;=3" background_color="#E9F2F2BB"/>
 	<osd x="-240" y="0" w="240" h="140"		font_size="650"		type="text" label="TOWN" command='say("i"); toggle_layer("labels_bevore"); toggle_layer("world_labels_bevore")' background_color="" align="0" text_color="#DDAA00"/>
 	<osd x="0" y="0" w="240" h="140"		font_size="650"		type="text" label="POI" command='gui.menu("#POI_Icons",1)' background_color="" align="0" text_color="#DDAA00"/>
-	<osd x="8" y="-567" w="290" h="290"		font_size="2800"	type="text" label="⚙" command="follow=1; zoom=4; set_center_cursor()" enable_expression="follow&gt;1&amp;&amp;vehicle.position_valid" background_color="" align="4"/>
+	<osd x="8" y="-567" w="290" h="290"		font_size="2900"	type="text" label="⚙" command="follow=1; zoom=4; set_center_cursor()" enable_expression="follow&gt;1&amp;&amp;vehicle.position_valid" background_color="" align="4"/>
 	<osd x="0" y="-565" w="290" h="290"		font_size="1600"	type="speed_warner" label="images" speed_exceed_limit_offset="5" speed_exceed_limit_percent="10" announce_on="1" enable_expression="navigation.nav_status&gt;=3" background_color="#00000090"/>
 	<osd x="0" y="-277" w="290" h="125"		font_size="2100"	type="text" label="${vehicle.position_speed[value]}" enable_expression="navigation.nav_status&gt;=3" background_color="#E9F2F2BB" align="0" text_color="#C1282C"/>
 	<osd x="0" y="-150" w="290" h="150" 	font_size="1000"	type="text" label="➤${navigation.item.destination_length[named]}\n⏲${navigation.item.destination_time[remaining]}" enable_expression="navigation.nav_status&gt;=3" background_color="#797988BB" align="4" text_color="#FFFFFF"/>
@@ -441,6 +442,9 @@
 	<osd x="-264" y="-625" w="264" h="325"	font_size="1000"	type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid" background_color="#797988BB" destination_dir_color="#FFFFFF" north_color="#000000"/>
 	<!-- <osd x="-264" y="-625" w="264" h="325"	font_size="940"		type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090" destination_dir_color="#000000" north_color="#FFFFFF"/>
 	 -->
+
+	<traffic type="traff_android"/>
+
 	<vehicle name="Local GPS" profilename="car" enabled="yes" active="1" follow="1" follow_cursor="1" lag="15" source="android:">	</vehicle>
 
 	<tracking cdf_histsize="0" route_pref="1000"/>
@@ -1200,8 +1204,10 @@
 	<itemgra item_types="poly_common" order="16">	<icon src="$NAVIT_USER_DATADIR/poi/p_common" w="96" h="96" x="48" y="48"/>	</itemgra>
 	<itemgra item_types="poly_common" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/p_common" w="128" h="128" x="64" y="64"/>	</itemgra>
 	<itemgra item_types="poly_marsh" order="15">	<icon src="$NAVIT_USER_DATADIR/poi/p_marsh" w="48" h="48" x="24" y="24"/>	</itemgra>
+	
 	<itemgra item_types="poly_marsh" order="16">	<icon src="$NAVIT_USER_DATADIR/poi/p_marsh" w="96" h="96" x="48" y="48"/>	</itemgra>
 	<itemgra item_types="poly_marsh" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/p_marsh" w="128" h="128" x="64" y="64"/>	</itemgra>
+
 	<itemgra item_types="poly_mud" order="15">	<icon src="$NAVIT_USER_DATADIR/poi/p_mud" w="48" h="48" x="24" y="24"/>	</itemgra>
 	<itemgra item_types="poly_mud" order="16">	<icon src="$NAVIT_USER_DATADIR/poi/p_mud" w="96" h="96" x="48" y="48"/>	</itemgra>
 	<itemgra item_types="poly_mud" order="17-">	<icon src="$NAVIT_USER_DATADIR/poi/p_mud" w="128" h="128" x="64" y="64"/>	</itemgra>
@@ -1270,9 +1276,13 @@
 	<itemgra item_types="poly_airport" order="11-14">	<polygon color="#AAAAAA"/>		</itemgra>
 	<itemgra item_types="poly_airport" order="15-16">	<polygon color="#AAAAAA"/>		<polyline color="#AB6B6B" width="3"/>	</itemgra>
 	<itemgra item_types="poly_airport" order="17-">		<polygon color="#AAAAAA"/>		<polyline color="#AB6B6B" width="6"/>	<text text_size="34" color="#606069"/>	</itemgra>
-	<itemgra item_types="poly_military" order="11-">	<polygon color="#E77D8040"/>	</itemgra>
-	<itemgra item_types="poly_airfield" order="12-16">	<polygon color="#94849460"/>	</itemgra>
-	<itemgra item_types="poly_airfield" order="17-">	<polygon color="#94849480"/>	<text color="#700000" text_size="32"/>	</itemgra>
+
+	<itemgra item_types="poly_military_zone,poly_military" order="11-">	<polygon color="#E77D8040" src="diagonal-stripes-gray.png" w="16" h="16"/>	</itemgra>
+
+
+	<itemgra item_types="poly_airfield" order="12-16">	<polygon color="#94849460" src="diagonal-stripes-gray.png" w="16" h="16"/>	</itemgra>
+	<itemgra item_types="poly_airfield" order="17-">	<polygon color="#94849480" src="diagonal-stripes-gray.png" w="16" h="16"/>	<text color="#700000" text_size="32"/>	</itemgra>
+
 	<itemgra item_types="poly_industry" order="12-14">	<polygon color="#A8867750"/>	</itemgra>
 	<itemgra item_types="poly_industry" order="15-16">	<polygon color="#A8867770"/>	<polyline color="#66666690" width="2"/>	</itemgra>
 	<itemgra item_types="poly_industry" order="17-">	<polygon color="#A8867780"/>	<polyline color="#66666690" width="4"/>	<text text_size="32" color="#5E5000"/>	</itemgra>
@@ -1293,8 +1303,11 @@
 	<itemgra item_types="poly_naval_base" order="15-">		<polygon color="#E8BCFF80"/>	<polyline color="#66666690" width="6"/>	<text text_size="32" color="#340069"/>	</itemgra>
 	<itemgra item_types="poly_landfill" order="13-16">		<polygon color="#9D9C6C60"/>	</itemgra>
 	<itemgra item_types="poly_landfill" order="17-">		<polygon color="#9D9C6C80"/>	<polyline color="#FF9000" width="4"/>	<text text_size="32" color="#340069"/>	</itemgra>
-	<itemgra item_types="poly_danger_area" order="12-14">	<polygon color="#FFA99A30"/>	<polyline color="#FF0000" width="4"/>	</itemgra>
-	<itemgra item_types="poly_danger_area" order="15-">		<polygon color="#FFA99A40"/>	<polyline color="#FF0000" width="8"/>	<text text_size="38" color="#700000"/>	</itemgra>
+	<itemgra item_types="poly_danger_area" order="12-14">	<polygon color="#FFA99A30" src="diagonal-stripes.png" w="16" h="16"/>	<polyline color="#FF0000" width="4"/>	</itemgra>
+	<itemgra item_types="poly_danger_area" order="15-">		<polygon color="#FFA99A40" src="diagonal-stripes.png" w="16" h="16"/>	<polyline color="#FF0000" width="8"/>	<text text_size="38" color="#700000"/>	</itemgra>
+
+
+
 	<itemgra item_types="poly_recreation_ground" order="13-16">	<polygon color="#63A66A60"/>	</itemgra>
 	<itemgra item_types="poly_recreation_ground" order="17-">	<polygon color="#6BA07080"/>	<text text_size="32" color="#003311" background_color=""/>	</itemgra>
 	<itemgra item_types="poly_construction" order="14-16">	<polygon color="#B8B8A870"/>	</itemgra>
@@ -1319,12 +1332,19 @@
 	<itemgra item_types="poly_meadow" order="11-14">	<polygon color="#DDFF9FAA"/>	</itemgra>
 	<itemgra item_types="poly_meadow" order="15-16">	<polygon color="#DDFF9FBB"/>	</itemgra>
 	<itemgra item_types="poly_meadow" order="17-">		<polygon color="#DDFF9FDD"/>	</itemgra>
-	<itemgra item_types="poly_scrub" order="12-16">		<polygon color="#74997480"/>	</itemgra>
-	<itemgra item_types="poly_scrub" order="17-">		<polygon color="#749974AA"/>	<text text_size="32" color="#4B005E"/>	</itemgra>
-	<itemgra item_types="poly_wood" order="10-16">		<polygon color="#038811AA"/>	</itemgra>
-	<itemgra item_types="poly_wood" order="17-">		<polygon color="#038811AA"/>	<text text_size="34" color="#290029"/>	</itemgra>
-	<itemgra item_types="poly_quarry" order="13-16">	<polygon color="#CCCCCC90"/>	<polyline color="#EDDAC7" width="4"/>	</itemgra>
-	<itemgra item_types="poly_quarry" order="17-">		<polygon color="#CCCCCCBB"/>	<polyline color="#EDDAC7" width="6"/>	<text text_size="32" color="#340069"/>	</itemgra>
+
+
+	<itemgra item_types="poly_scrub" order="12-16">		<polygon color="#74997480" src="scrub.png" w="50" h="50"/>	</itemgra>
+	<itemgra item_types="poly_scrub" order="17-">		<polygon color="#749974AA" src="scrub.png" w="50" h="50"/>	<text text_size="32" color="#4B005E"/>	</itemgra>
+
+	<itemgra item_types="poly_wood" order="10-16">		<polygon color="#038811AA" src="wood.png" w="100" h="100"/>	</itemgra>
+	<itemgra item_types="poly_wood" order="17-">		<polygon color="#038811AA" src="wood.png" w="100" h="100"/>	<text text_size="34" color="#290029"/>	</itemgra>
+
+
+	<itemgra item_types="poly_quarry" order="13-16">	<polygon color="#CCCCCC90" src="quarry.png" w="50" h="50"/>	<polyline color="#EDDAC7" width="4"/>	</itemgra>
+	<itemgra item_types="poly_quarry" order="17-">		<polygon color="#CCCCCCBB" src="quarry.png" w="50" h="50"/>	<polyline color="#EDDAC7" width="6"/>	<text text_size="32" color="#340069"/>	</itemgra>
+
+
 	<itemgra item_types="poly_scree" order="11-16">		<polygon color="#80997790"/>	</itemgra>
 	<itemgra item_types="poly_scree" order="17-">		<polygon color="#809977BB"/>	<text text_size="32" color="#4B005E"/>	</itemgra>
 	<itemgra item_types="poly_marina" order="12-16">	<polyline color="#BB99FF" width="6"/>	<polygon color="#90BBFF60"/>	</itemgra>
@@ -1344,10 +1364,14 @@
 	<itemgra item_types="poly_greenhouse" order="13-15">	<polygon color="#BDDB9990"/>	<polyline color="#7E7E7E" width="2"/>	</itemgra>
 	<itemgra item_types="poly_greenhouse" order="16">		<polygon color="#BDDB99AA"/>	<polyline color="#7E7E7E" width="4"/>	</itemgra>
 	<itemgra item_types="poly_greenhouse" order="17-">		<polygon color="#BDDB99BB"/>	<polyline color="#7E7E7E" width="6"/>	<text text_size="32" color="#749944"/>	</itemgra>
-	<itemgra item_types="poly_marsh" order="12-16">		<polygon color="#D2DD7990"/>	</itemgra>
-	<itemgra item_types="poly_marsh" order="17-">		<polygon color="#D2DD79AA"/>	<text text_size="32" color="#4B005E"/>	</itemgra>
-	<itemgra item_types="poly_mud" order="12-16">		<polygon color="#E5D6C770"/>	</itemgra>
-	<itemgra item_types="poly_mud" order="17-">			<polygon color="#E5D6C790"/>	<text text_size="32" color="#4B005E"/>	</itemgra>
+	<itemgra item_types="poly_marsh" order="12-16">		<polygon color="#D2DD7990" src="wetland.png" w="50" h="50"/>	</itemgra>
+	<itemgra item_types="poly_marsh" order="17-">		<polygon color="#D2DD79AA" src="wetland.png" w="50" h="50"/>	<text text_size="32" color="#4B005E"/>	</itemgra>
+
+
+	<itemgra item_types="poly_mud" order="12-16">		<polygon color="#E5D6C770" src="wetland.png" w="50" h="50"/>	</itemgra>
+	<itemgra item_types="poly_mud" order="17-">			<polygon color="#E5D6C790" src="wetland.png" w="50" h="50"/>	<text text_size="32" color="#4B005E"/>	</itemgra>
+
+
 	<itemgra item_types="poly_camp_site" order="12-16">	<polygon color="#A2BAA280"/>	</itemgra>
 	<itemgra item_types="poly_camp_site" order="17-">	<polygon color="#A2BAA2AA"/>	<polyline color="#B999BB" width="6"/>	<text text_size="32" color="#340069"/>	</itemgra>
 	<itemgra item_types="poly_caravan_site" order="12-16">	<polygon color="#55A55570"/>	<polyline color="#FBE2FF" width="4"/>	</itemgra>
@@ -1368,8 +1392,13 @@
 	<itemgra item_types="poly_station" order="17-">		<polygon color="#B65FFF90"/>	<text text_size="32" color="#5E5000"/>	</itemgra>
 	<itemgra item_types="poly_depot" order="12-15">		<polygon color="#8C778CBB"/>	</itemgra>
 	<itemgra item_types="poly_depot" order="16-">		<polygon color="#8C778CBB"/>	<polyline color="#870087" width="4"/>	<text text_size="34" color="#5E5000"/>	</itemgra>
-	<itemgra item_types="poly_cemetery" order="12-16">	<polygon color="#91BA9160"/>	</itemgra>
-	<itemgra item_types="poly_cemetery" order="17-">	<polygon color="#91BA9180"/>	<polyline color="#70704090" width="4"/>	<text text_size="32" color="#755818"/>	</itemgra>
+
+
+	<itemgra item_types="poly_cemetery" order="12-16">	<polygon color="#91BA9160" src="cemetery.png" w="32" h="32"/>	</itemgra>
+	<itemgra item_types="poly_cemetery" order="17-">	<polygon color="#91BA9180" src="cemetery.png" w="32" h="32"/>	<polyline color="#70704090" width="4"/>	<text text_size="32" color="#755818"/>	</itemgra>
+
+
+
 	<itemgra item_types="poly_garden" order="10-16">	<polygon color="#9FFF9F80"/>	</itemgra>
 	<itemgra item_types="poly_garden" order="17-">		<polygon color="#9FFF9FAA"/>	<polyline color="#FFD8AA" width="4"/>	<text text_size="32" color="#40006A"/>	</itemgra>
 	<itemgra item_types="poly_allotments" order="12-16">	<polygon color="#E8E88A60"/>	</itemgra>
@@ -1421,8 +1450,8 @@
 	<itemgra item_types="street_unkn" order="15-16">	<polyline color="#AA9090" width="2"/>	</itemgra>
 	<itemgra item_types="street_unkn" order="17-">		<polyline color="#AA9090" width="4"/>	</itemgra>
 	<itemgra item_types="street_construction" order="12-14">	<polyline color="#FF9999" width="6"/>	<icon src="$NAVIT_USER_DATADIR/poi/road_works" w="32" h="32"/>	</itemgra>
-	<itemgra item_types="street_construction" order="15-16">	<polyline color="#FF9999" width="16"/>	<text text_size="28" color="#000000"/>	<icon src="$NAVIT_USER_DATADIR/poi/road_works" w="48" h="48" x="24" y="24"/>	</itemgra>
-	<itemgra item_types="street_construction" order="17-">		<polyline color="#FF9999" width="32"/>	<text text_size="38" color="#000000"/>	<icon src="$NAVIT_USER_DATADIR/poi/road_works" w="64" h="64" x="32" y="32"/>	</itemgra>
+	<itemgra item_types="street_construction" order="15-16">	<polyline color="#FF9999" width="16"/>	<text text_size="28" color="#000000"/>	<icon src="$NAVIT_USER_DATADIR/poi/road_works" w="64" h="64" x="32" y="32"/>	</itemgra>
+	<itemgra item_types="street_construction" order="17-">		<polyline color="#FF9999" width="32"/>	<text text_size="38" color="#000000"/>	<icon src="$NAVIT_USER_DATADIR/poi/road_works" w="96" h="96" x="48" y="48"/>	</itemgra>
 	</layer>
 	<layer name="heightlines">
 	<itemgra item_types="height_line_1" order="10-11">	<polyline color="#90600090" width="1"/>	</itemgra>
@@ -1458,16 +1487,23 @@
 	<itemgra item_types="water_stream" order="16">		<polyline color="#4ABBEEDD" width="18"/>	<text text_size="26" color="#0000AA" background_color="#000044"/>	</itemgra>
 	<itemgra item_types="water_stream" order="17">		<polyline color="#4ABBEEDD" width="32"/>	<text text_size="32" color="#0000AA" background_color="#000044"/>	</itemgra>
 	<itemgra item_types="water_stream" order="18-">		<polyline color="#4ABBEEDD" width="50"/>	<text text_size="38" color="#0000AA" background_color="#000044"/>	</itemgra>
-	<itemgra item_types="water_river" order="9-11">		<polyline color="#4AA5EE" width="2"/>	</itemgra>
-	<itemgra item_types="water_river" order="12">		<polyline color="#77CCEE" width="6"/>	</itemgra>
-	<itemgra item_types="water_river" order="13">		<polyline color="#77CCEE" width="8"/>	</itemgra>
-	<itemgra item_types="water_river" order="14">		<polyline color="#77CCEE" width="12"/>	</itemgra>
-	<itemgra item_types="water_river" order="15">		<polyline color="#77CCDD" width="18"/>	</itemgra>
-	<itemgra item_types="water_river" order="16">		<polyline color="#77CCDD" width="28"/>	<text text_size="26" color="#0000AA" background_color="#000044"/>	</itemgra>
-	<itemgra item_types="water_river" order="17">		<polyline color="#77CCDD" width="42"/>	<text text_size="32" color="#0000AA" background_color="#000044"/>	</itemgra>
-	<itemgra item_types="water_river" order="18-">		<polyline color="#77CCDD" width="76"/>	<text text_size="38" color="#0000AA" background_color="#000044"/>	</itemgra>
+	<itemgra item_types="water_river" order="9-11">		<polyline color="#55AADDDD" width="2"/>	</itemgra>
+	<itemgra item_types="water_river" order="12">		<polyline color="#55AADDCC" width="6"/>	</itemgra>
+	<itemgra item_types="water_river" order="13">		<polyline color="#55AADDBB" width="8"/>	</itemgra>
+	<itemgra item_types="water_river" order="14">		<polyline color="#55AADDAA" width="12"/>	</itemgra>
+	<itemgra item_types="water_river" order="15">		<polyline color="#55AADDAA" width="18"/>	</itemgra>
+	<itemgra item_types="water_river" order="16">		<polyline color="#55AADDAA" width="28"/>	<text text_size="28" color="#0000AA" background_color="#000044"/>	</itemgra>
+	<itemgra item_types="water_river" order="17">		<polyline color="#55AADDBB" width="42"/>	<text text_size="36" color="#0000AA" background_color="#000044"/>	</itemgra>
+	<itemgra item_types="water_river" order="18-">		<polyline color="#55AADDBB" width="76"/>	<text text_size="42" color="#0000AA" background_color="#000044"/>	</itemgra>
 	<itemgra item_types="poly_basin" order="12-16">		<polygon color="#7AAFFF90"/>	<polyline color="#CC5FFE90" width="2"/>	</itemgra>
 	<itemgra item_types="poly_basin" order="17-">		<polygon color="#7AAFFFAA"/>	<polyline color="#CC5FFE90" width="4"/>	<text text_size="32" color="#40006A"/>	</itemgra>
+
+
+	<itemgra item_types="poly_swimming_pool" order="12-16">	<polygon color="#2FBBFF"/>	<polyline color="#00AAFF" width="2"/>	</itemgra>
+	<itemgra item_types="poly_swimming_pool" order="17-">	<polygon color="#2FBBFF"/>	<polyline color="#00AAFF" width="6"/>	</itemgra>
+
+
+
 	<itemgra item_types="water_line" order="-11">		<polyline color="#396999" width="1" dash="20"/>	</itemgra>
 	<itemgra item_types="water_line" order="12-14">		<polyline color="#396999" width="2"/>	<circle text_size="26" color="#001428"/>	</itemgra>
 	<itemgra item_types="water_line" order="15-16">		<polyline color="#396999" width="2"/>	<circle text_size="32" color="#001428"/>	</itemgra>
@@ -1574,7 +1610,8 @@
 	<itemgra item_types="street_pedestrian" order="17">		<polyline color="#EEDD22" width="54"/>	</itemgra>
 	<itemgra item_types="street_pedestrian" order="18-">	<polyline color="#EEDD22" width="104"/>	</itemgra>
 	<itemgra item_types="street_service" order="14">	<polyline color="#C77777" width="14"/>	</itemgra>
-	<itemgra item_types="street_service" order="15-16">	<polyline color="#C77777" width="26"/>	</itemgra>
+	<itemgra item_types="street_service" order="15">	<polyline color="#C77777" width="18"/>	</itemgra>
+	<itemgra item_types="street_service" order="16">	<polyline color="#C77777" width="26"/>	</itemgra>
 	<itemgra item_types="street_service" order="17">	<polyline color="#C77777" width="42"/>	</itemgra>
 	<itemgra item_types="street_service" order="18-">	<polyline color="#C77777" width="84"/>	</itemgra>
 	<itemgra item_types="living_street" order="14">		<polyline color="#EECC00" width="18"/>	</itemgra>
@@ -1632,10 +1669,10 @@
 	<itemgra item_types="street_n_lanes" order="12">	<polyline color="#12BB12" width="14"/>	</itemgra>
 	<itemgra item_types="street_n_lanes" order="13">	<polyline color="#7B7B9B" width="18"/>	</itemgra>
 	<itemgra item_types="street_n_lanes" order="14">	<polyline color="#7B7B9B" width="24"/>	</itemgra>
-	<itemgra item_types="street_n_lanes" order="15">	<polyline color="#FFFFFF" width="38"/>	<polyline color="#7B7B9B" width="36"/>	<polyline color="#FFFFFF" width="1" dash="20"/>	</itemgra>
-	<itemgra item_types="street_n_lanes" order="16">	<polyline color="#FFFFFF" width="52"/>	<polyline color="#7B7B9B" width="50"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<text text_size="32" color="#FFFFFF" background_color="#00CC44"/>	</itemgra>
-	<itemgra item_types="street_n_lanes" order="17">	<polyline color="#FFFFFF" width="70"/>	<polyline color="#7B7B9B" width="66"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<text text_size="42" color="#FFFFFF" background_color="#00CC44"/>	</itemgra>
-	<itemgra item_types="street_n_lanes" order="18-">	<polyline color="#FFFFFF" width="132"/>	<polyline color="#7B7B9B" width="126"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<text text_size="62" color="#FFFFFF" background_color="#00CC44"/>	</itemgra>
+	<itemgra item_types="street_n_lanes" order="15">	<polyline color="#FFFFFF" width="38"/>	<polyline color="#7B7B9B" width="36"/>	<polyline color="#FFFFFF" width="1" dash="20"/>	<arrows color="#E70103" width="34" oneway="1"/>	</itemgra>
+	<itemgra item_types="street_n_lanes" order="16">	<polyline color="#FFFFFF" width="52"/>	<polyline color="#7B7B9B" width="50"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<arrows color="#E70103" width="40" oneway="1"/>	<text text_size="32" color="#FFFFFF" background_color="#00CC44"/>	</itemgra>
+	<itemgra item_types="street_n_lanes" order="17">	<polyline color="#FFFFFF" width="70"/>	<polyline color="#7B7B9B" width="66"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<arrows color="#E70103" width="60" oneway="1"/>	<text text_size="42" color="#FFFFFF" background_color="#00CC44"/>	</itemgra>
+	<itemgra item_types="street_n_lanes" order="18-">	<polyline color="#FFFFFF" width="132"/>	<polyline color="#7B7B9B" width="126"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<arrows color="#E70103" width="80" oneway="1"/>	<text text_size="62" color="#FFFFFF" background_color="#00CC44"/>	</itemgra>
 	<itemgra item_types="poi_custom2" order="12-14">	<icon src="$NAVIT_USER_DATADIR/poi/8" w="32" h="32" x="16" y="16"/>	</itemgra>
 	<itemgra item_types="poi_custom2" order="15-16">	<icon src="$NAVIT_USER_DATADIR/poi/8" w="64" h="64" x="32" y="32"/>	</itemgra>
 	<itemgra item_types="poi_custom2" order="17">		<icon src="$NAVIT_USER_DATADIR/poi/8" w="96" h="96" x="48" y="48"/>	</itemgra>
@@ -1707,45 +1744,49 @@
 	<itemgra item_types="track_paved" order="13">		<polyline color="#CCCEEE" width="8"/>	</itemgra>
 	<itemgra item_types="track_paved" order="14">		<polyline color="#CCCEEE" width="10"/>	</itemgra>
 	<itemgra item_types="track_paved" order="15-16">	<polyline color="#CCCEEE" width="18"/>	</itemgra>
-	<itemgra item_types="track_paved" order="17">		<polyline color="#CCCEEE" width="36"/>	<text text_size="32" color="#008778" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="track_paved" order="18-">		<polyline color="#CCCEEE" width="76"/>	<text text_size="42" color="#008778" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="track_paved" order="17">		<polyline color="#CCCEEE" width="36"/>	<arrows color="#E70103" width="36" oneway="1"/>	<text text_size="32" color="#008778" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="track_paved" order="18-">		<polyline color="#CCCEEE" width="76"/>	<arrows color="#E70103" width="66" oneway="1"/>	<text text_size="42" color="#008778" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="street_parking_lane" order="13">	<polyline color="#707EFF" width="4"/>	</itemgra>
 	<itemgra item_types="street_parking_lane" order="14">	<polyline color="#CCCEEE" width="6"/>	</itemgra>
 	<itemgra item_types="street_parking_lane" order="15">	<polyline color="#CCCEEE" width="10"/>	</itemgra>
-	<itemgra item_types="street_parking_lane" order="16">	<polyline color="#CCCEEE" width="16"/>	</itemgra>
-	<itemgra item_types="street_parking_lane" order="17">	<polyline color="#CCCEEE" width="32"/>	<text text_size="32" background_color="#707EFF"/>	</itemgra>
-	<itemgra item_types="street_parking_lane" order="18-">	<polyline color="#CCCEEE" width="68"/>	<text text_size="42" background_color="#707EFF"/>	</itemgra>
+	<itemgra item_types="street_parking_lane" order="16">	<polyline color="#CCCEEE" width="16"/>	<arrows color="#E70103" width="34" oneway="1"/>	</itemgra>
+	<itemgra item_types="street_parking_lane" order="17">	<polyline color="#CCCEEE" width="32"/>	<arrows color="#E70103" width="34" oneway="1"/>	<text text_size="32" background_color="#707EFF"/>	</itemgra>
+	<itemgra item_types="street_parking_lane" order="18-">	<polyline color="#CCCEEE" width="68"/>	<arrows color="#E70103" width="58" oneway="1"/>	<text text_size="42" background_color="#707EFF"/>	</itemgra>
+
 	<itemgra item_types="street_service" order="12">	<polyline color="#C79999" width="4"/>	</itemgra>
 	<itemgra item_types="street_service" order="13">	<polyline color="#C79999" width="6"/>	</itemgra>
 	<itemgra item_types="street_service" order="14">	<polyline color="#CCCEEE" width="8"/>	</itemgra>
-	<itemgra item_types="street_service" order="15-16">	<polyline color="#CCCEEE" width="18"/>	</itemgra>
-	<itemgra item_types="street_service" order="17">	<polyline color="#CCCEEE" width="36"/>	<text text_size="32" color="#C77777" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="street_service" order="18-">	<polyline color="#CCCEEE" width="76"/>	<text text_size="46" color="#C77777" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="street_pedestrian" order="12">	<polyline color="#999900" width="4"/>	</itemgra>
-	<itemgra item_types="street_pedestrian" order="13">	<polyline color="#999900" width="6"/>	</itemgra>
-	<itemgra item_types="street_pedestrian" order="14">	<polyline color="#CCCEEE" width="10"/>	</itemgra>
-	<itemgra item_types="street_pedestrian" order="15-16">	<polyline color="#CCCEEE" width="22"/>	<icon src="$NAVIT_USER_DATADIR/poi/zone" w="32" h="32" x="16" y="16"/>	<text text_size="32" background_color="#707000"/>	</itemgra>
-	<itemgra item_types="street_pedestrian" order="17">		<polyline color="#CCCEEE" width="44"/>	<icon src="$NAVIT_USER_DATADIR/poi/zone" w="48" h="48" x="24" y="24"/>	<text text_size="32" background_color="#707000"/>	</itemgra>
-	<itemgra item_types="street_pedestrian" order="18-">	<polyline color="#CCCEEE" width="92"/>	<icon src="$NAVIT_USER_DATADIR/poi/zone" w="64" h="64" x="32" y="32"/>	<text text_size="46" background_color="#707000"/>	</itemgra>
+	<itemgra item_types="street_service" order="15">	<polyline color="#CCCEEE" width="14"/>	</itemgra>
+	<itemgra item_types="street_service" order="16">	<polyline color="#CCCEEE" width="18"/>	<arrows color="#E70103" width="34" oneway="1"/>	</itemgra>
+	<itemgra item_types="street_service" order="17">	<polyline color="#CCCEEE" width="36"/>	<arrows color="#E70103" width="38" oneway="1"/>	<text text_size="32" color="#C77777" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="street_service" order="18-">	<polyline color="#CCCEEE" width="76"/>	<arrows color="#E70103" width="66" oneway="1"/>	<text text_size="46" color="#C77777" background_color="#000000"/>	</itemgra>
+
+	<itemgra item_types="street_pedestrian" order="12">		<polyline color="#999900" width="4"/>	</itemgra>
+	<itemgra item_types="street_pedestrian" order="13">		<polyline color="#999900" width="6"/>	</itemgra>
+	<itemgra item_types="street_pedestrian" order="14">		<polyline color="#CCCEEE" width="10"/>	</itemgra>
+	<itemgra item_types="street_pedestrian" order="15">		<polyline color="#CCCEEE" width="16"/>	</itemgra>
+	<itemgra item_types="street_pedestrian" order="16">		<polyline color="#CCCEEE" width="22"/>	<arrows color="#E70103" width="34" oneway="1"/>	<icon src="$NAVIT_USER_DATADIR/poi/zone" w="32" h="32" x="16" y="16"/>	<text text_size="32" background_color="#707000"/>	</itemgra>
+	<itemgra item_types="street_pedestrian" order="17">		<polyline color="#CCCEEE" width="44"/>	<arrows color="#E70103" width="44" oneway="1"/>	<icon src="$NAVIT_USER_DATADIR/poi/zone" w="48" h="48" x="24" y="24"/>	<text text_size="32" background_color="#707000"/>	</itemgra>
+	<itemgra item_types="street_pedestrian" order="18-">	<polyline color="#CCCEEE" width="92"/>	<arrows color="#E70103" width="80" oneway="1"/>	<icon src="$NAVIT_USER_DATADIR/poi/zone" w="64" h="64" x="32" y="32"/>	<text text_size="46" background_color="#707000"/>	</itemgra>
 	<itemgra item_types="ramp" order="9-10">	<polyline color="#8080AA" width="4"/>	</itemgra>
 	<itemgra item_types="ramp" order="11">		<polyline color="#9999BB" width="6"/>	</itemgra>
 	<itemgra item_types="ramp" order="12">		<polyline color="#9999BB" width="8"/>	</itemgra>
 	<itemgra item_types="ramp" order="13-14">	<polyline color="#9999BB" width="12"/>	</itemgra>
-	<itemgra item_types="ramp" order="15">		<polyline color="#9999BB" width="22"/>	</itemgra>
-	<itemgra item_types="ramp" order="16">		<polyline color="#9999BB" width="32"/>	<text text_size="28" color="#E0E0E0"/>	</itemgra>
-	<itemgra item_types="ramp" order="17">		<polyline color="#9999BB" width="44"/>	<text text_size="32" color="#E0E0E0"/>	</itemgra>
-	<itemgra item_types="ramp" order="18-">		<polyline color="#9999BB" width="86"/>	<text text_size="46" color="#E0E0E0"/>	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="6">		<polyline color="#777788" width="4"/>	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="7">		<polyline color="#777788" width="6"/>	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="8-9">	<polyline color="#777788" width="8"/>	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="10-11">	<polyline color="#777788" width="12"/>	</itemgra>
+	<itemgra item_types="ramp" order="15">		<polyline color="#9999BB" width="22"/>	<arrows color="#E70103" width="34" oneway="1"/>	</itemgra>
+	<itemgra item_types="ramp" order="16">		<polyline color="#9999BB" width="32"/>	<arrows color="#E70103" width="34" oneway="1"/>	</itemgra>
+	<itemgra item_types="ramp" order="17">		<polyline color="#9999BB" width="44"/>	<arrows color="#E70103" width="50" oneway="1"/>	<text text_size="38" color="#FFFFFF" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="ramp" order="18-">		<polyline color="#9999BB" width="86"/>	<arrows color="#E70103" width="76" oneway="1"/>	<text text_size="48" color="#FFFFFF" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="6">		<polyline color="#8C8CBB" width="4"/>	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="7">		<polyline color="#8C8CBB" width="6"/>	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="8-9">	<polyline color="#8C8CBB" width="8"/>	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="10-11">	<polyline color="#8C8CBB" width="12"/>	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="12">		<polyline color="#777788" width="16"/>	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="13">		<polyline color="#777788" width="22"/>	</itemgra>
 	<itemgra item_types="highway_land,highway_city" order="14">		<polyline color="#777788" width="26"/>	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="15">		<polyline color="#FFFFFF" width="40"/>	<polyline color="#777788" width="38"/>	<polyline color="#FFFFFF" width="1" dash="20"/>	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="16">		<polyline color="#FFFFFF" width="54"/>	<polyline color="#777788" width="52"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<text text_size="32" color="#FFFFFF"/>	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="17">		<polyline color="#FFFFFF" width="72"/>	<polyline color="#777788" width="68"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<text text_size="46" color="#FFFFFF"/>	</itemgra>
-	<itemgra item_types="highway_land,highway_city" order="18-">	<polyline color="#FFFFFF" width="144"/>	<polyline color="#777788" width="138"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<text text_size="62" color="#FFFFFF"/>	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="15">		<polyline color="#FFFFFF" width="40"/>	<polyline color="#777788" width="38"/>	<polyline color="#FFFFFF" width="1" dash="20"/>	<arrows color="#E70103" width="40" oneway="1"/>	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="16">		<polyline color="#FFFFFF" width="54"/>	<polyline color="#777788" width="52"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<arrows color="#E70103" width="50" oneway="1"/>	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="17">		<polyline color="#FFFFFF" width="72"/>	<polyline color="#777788" width="68"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<arrows color="#E70103" width="60" oneway="1"/>	<text text_size="46" color="#FFFFFF" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="highway_land,highway_city" order="18-">	<polyline color="#FFFFFF" width="144"/>	<polyline color="#777788" width="138"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<arrows color="#E70103" width="80" oneway="1"/>	<text text_size="62" color="#FFFFFF" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="turning_circle" order="14">	<circle color="#CCCEEE" radius="18" width="8"/>	</itemgra>
 	<itemgra item_types="turning_circle" order="15-16">	<circle color="#CCCEEE" radius="26" width="12"/>	</itemgra>
 	<itemgra item_types="turning_circle" order="17">	<circle color="#CCCEEE" radius="40" width="24"/>	</itemgra>
@@ -1757,47 +1798,47 @@
 	<itemgra item_types="street_0" order="12">		<polyline color="#BDCCDB" width="4"/>	</itemgra>
 	<itemgra item_types="street_0" order="13">		<polyline color="#CCCEEE" width="8"/>	</itemgra>
 	<itemgra item_types="street_0" order="14">		<polyline color="#CCCEEE" width="12"/>	</itemgra>
-	<itemgra item_types="street_0" order="15-16">	<polyline color="#CCCEEE" width="22"/>	<text text_size="32" color="#7A7AFF" background_color="#5055BB"/>	</itemgra>
-	<itemgra item_types="street_0" order="17">		<polyline color="#CCCEEE" width="44"/>	<text text_size="32" color="#7A7AFF" background_color="#5055BB"/>	</itemgra>
-	<itemgra item_types="street_0" order="18-">		<polyline color="#CCCEEE" width="84"/>	<text text_size="46" color="#7A7AFF" background_color="#5055BB"/>	</itemgra>
+	<itemgra item_types="street_0" order="15-16">	<polyline color="#CCCEEE" width="22"/>	<arrows color="#E70103" width="34" oneway="1"/>	<text text_size="32" color="#7A7AFF" background_color="#5055BB"/>	</itemgra>
+	<itemgra item_types="street_0" order="17">		<polyline color="#CCCEEE" width="44"/>	<arrows color="#E70103" width="44" oneway="1"/>	<text text_size="32" color="#7A7AFF" background_color="#5055BB"/>	</itemgra>
+	<itemgra item_types="street_0" order="18-">		<polyline color="#CCCEEE" width="84"/>	<arrows color="#E70103" width="60" oneway="1"/>	<text text_size="46" color="#7A7AFF" background_color="#5055BB"/>	</itemgra>
 	<itemgra item_types="street_1_land,street_1_city" order="12">		<polyline color="#B8B4DD" width="6"/>	</itemgra>
 	<itemgra item_types="street_1_land,street_1_city" order="13">		<polyline color="#CCCEEE" width="8"/>	</itemgra>
 	<itemgra item_types="street_1_land,street_1_city" order="14">		<polyline color="#CCCEEE" width="12"/>	</itemgra>
-	<itemgra item_types="street_1_land,street_1_city" order="15-16">	<polyline color="#CCCEEE" width="24"/>	<text text_size="32" color="#5154AA" background_color="#888AAA"/>	</itemgra>
-	<itemgra item_types="street_1_land,street_1_city" order="17">		<polyline color="#CCCEEE" width="46"/>	<text text_size="32" color="#5154AA" background_color="#888AAA"/>	</itemgra>
-	<itemgra item_types="street_1_land,street_1_city" order="18-">		<polyline color="#CCCEEE" width="94"/>	<text text_size="46" color="#5154AA" background_color="#888AAA"/>	</itemgra>
+	<itemgra item_types="street_1_land,street_1_city" order="15-16">	<polyline color="#CCCEEE" width="24"/>	<arrows color="#E70103" width="34" oneway="1"/>	<text text_size="32" color="#5154AA" background_color="#888AAA"/>	</itemgra>
+	<itemgra item_types="street_1_land,street_1_city" order="17">		<polyline color="#CCCEEE" width="46"/>	<arrows color="#E70103" width="46" oneway="1"/>	<text text_size="32" color="#5154AA" background_color="#888AAA"/>	</itemgra>
+	<itemgra item_types="street_1_land,street_1_city" order="18-">		<polyline color="#CCCEEE" width="94"/>	<arrows color="#E70103" width="60" oneway="1"/>	<text text_size="46" color="#5154AA" background_color="#888AAA"/>	</itemgra>
 	<itemgra item_types="living_street" order="12">		<polyline color="#CCCEEE" width="6"/>	</itemgra>
 	<itemgra item_types="living_street" order="13">		<polyline color="#CCCEEE" width="8"/>	</itemgra>
 	<itemgra item_types="living_street" order="14">		<polyline color="#CCCEEE" width="12"/>	</itemgra>
-	<itemgra item_types="living_street" order="15-16">	<polyline color="#CCCEEE" width="24"/>	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="48" h="48" x="24" y="24"/>	</itemgra>
-	<itemgra item_types="living_street" order="17">		<polyline color="#CCCEEE" width="46"/>	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="64" h="64" x="32" y="32"/>	<text text_size="32" color="#000000" background_color="#FFFF00"/>	</itemgra>
-	<itemgra item_types="living_street" order="18-">	<polyline color="#CCCEEE" width="94"/>	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="96" h="96" x="48" y="48"/>	<text text_size="46" color="#000000" background_color="#FFFF00"/>	</itemgra>
+	<itemgra item_types="living_street" order="15-16">	<polyline color="#CCCEEE" width="24"/>	<arrows color="#E70103" width="34" oneway="1"/>	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="48" h="48" x="24" y="24"/>	</itemgra>
+	<itemgra item_types="living_street" order="17">		<polyline color="#CCCEEE" width="46"/>	<arrows color="#E70103" width="46" oneway="1"/>	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="64" h="64" x="32" y="32"/>	<text text_size="32" color="#000000" background_color="#FFFF00"/>	</itemgra>
+	<itemgra item_types="living_street" order="18-">	<polyline color="#CCCEEE" width="94"/>	<arrows color="#E70103" width="60" oneway="1"/>	<icon src="$NAVIT_USER_DATADIR/poi/play_street" w="96" h="96" x="48" y="48"/>	<text text_size="46" color="#000000" background_color="#FFFF00"/>	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="10">		<polyline color="#C488C4" width="4"/>	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="11">		<polyline color="#C488C4" width="6"/>	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="12">		<polyline color="#C488C4" width="12"/>	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="13">		<polyline color="#BCBCDE" width="14"/>	</itemgra>
 	<itemgra item_types="street_2_land,street_2_city" order="14">		<polyline color="#BCBCDE" width="18"/>	</itemgra>
-	<itemgra item_types="street_2_land,street_2_city" order="15-16">	<polyline color="#BCBCDE" width="30"/>	<polyline color="#FFFFFF" width="1" dash="20"/>	<text text_size="32" color="#997733" background_color="#400020"/>	</itemgra>
-	<itemgra item_types="street_2_land,street_2_city" order="17">		<polyline color="#BCBCDE" width="56"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<text text_size="42" color="#997733" background_color="#400020"/>	</itemgra>
-	<itemgra item_types="street_2_land,street_2_city" order="18-">		<polyline color="#BCBCDE" width="114"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<text text_size="54" color="#997733" background_color="#400020"/>	</itemgra>
+	<itemgra item_types="street_2_land,street_2_city" order="15-16">	<polyline color="#BCBCDE" width="30"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<arrows color="#E70103" width="34" oneway="1"/>	<text text_size="32" color="#997733" background_color="#400020"/>	</itemgra>
+	<itemgra item_types="street_2_land,street_2_city" order="17">		<polyline color="#BCBCDE" width="56"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<arrows color="#E70103" width="50" oneway="1"/>	<text text_size="42" color="#997733" background_color="#400020"/>	</itemgra>
+	<itemgra item_types="street_2_land,street_2_city" order="18-">		<polyline color="#BCBCDE" width="114"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<arrows color="#E70103" width="80" oneway="1"/>	<text text_size="54" color="#997733" background_color="#400020"/>	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="9">		<polyline color="#FFFF00" width="4"/>	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="10-11">	<polyline color="#FFFF00" width="8"/>	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="12">		<polyline color="#FFFF00" width="12"/>	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="13">		<polyline color="#9191AA" width="16"/>	</itemgra>
 	<itemgra item_types="street_3_land,street_3_city" order="14">		<polyline color="#9191AA" width="22"/>	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="15">		<polyline color="#9191AA" width="34"/>	<polyline color="#FFFFFF" width="1" dash="20"/>	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="16">		<polyline color="#9191AA" width="46"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<text text_size="32" color="#FFD000" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="17">		<polyline color="#9191AA" width="60"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<text text_size="44" color="#FFD000" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="street_3_land,street_3_city" order="18-">		<polyline color="#9191AA" width="124"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<text text_size="58" color="#FFD000" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="15">		<polyline color="#9191AA" width="34"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<arrows color="#E70103" width="34" oneway="1"/>	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="16">		<polyline color="#9191AA" width="46"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<arrows color="#E70103" width="46" oneway="1"/>	<text text_size="32" color="#FFD000" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="17">		<polyline color="#9191AA" width="60"/>	<polyline color="#FFFFFF" width="1" dash="50"/>	<arrows color="#E70103" width="60" oneway="1"/>	<text text_size="44" color="#FFD000" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="street_3_land,street_3_city" order="18-">		<polyline color="#9191AA" width="124"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<arrows color="#E70103" width="80" oneway="1"/>	<text text_size="58" color="#FFD000" background_color="#000000"/>	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="8-9">		<polyline color="#FF9600" width="6"/>	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="10-11">	<polyline color="#FF9600" width="10"/>	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="12">		<polyline color="#FF9600" width="14"/>	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="13">		<polyline color="#9797B3" width="18"/>	</itemgra>
 	<itemgra item_types="street_4_land,street_4_city" order="14">		<polyline color="#9797B3" width="24"/>	</itemgra>
-	<itemgra item_types="street_4_land,street_4_city" order="15">		<polyline color="#9797B3" width="36"/>	<polyline color="#FFFFFF" width="1" dash="20"/>	</itemgra>
-	<itemgra item_types="street_4_land,street_4_city" order="16">		<polyline color="#9797B3" width="50"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<text text_size="32" color="#FF9600" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="street_4_land,street_4_city" order="17">		<polyline color="#9797B3" width="64"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<text text_size="44" color="#FF9600" background_color="#000000"/>	</itemgra>
-	<itemgra item_types="street_4_land,street_4_city" order="18-">		<polyline color="#9797B3" width="128"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<text text_size="58" color="#FF9600" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="street_4_land,street_4_city" order="15">		<polyline color="#9797B3" width="36"/>	<polyline color="#FFFFFF" width="1" dash="30"/>	<arrows color="#E70103" width="36" oneway="1"/>	</itemgra>
+	<itemgra item_types="street_4_land,street_4_city" order="16">		<polyline color="#9797B3" width="50"/>	<polyline color="#FFFFFF" width="1" dash="40"/>	<arrows color="#E70103" width="50" oneway="1"/>	<text text_size="32" color="#FF9600" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="street_4_land,street_4_city" order="17">		<polyline color="#9797B3" width="64"/>	<polyline color="#FFFFFF" width="1" dash="50"/>	<arrows color="#E70103" width="60" oneway="1"/>	<text text_size="44" color="#FF9600" background_color="#000000"/>	</itemgra>
+	<itemgra item_types="street_4_land,street_4_city" order="18-">		<polyline color="#9797B3" width="128"/>	<polyline color="#FFFFFF" width="1" dash="60"/>	<arrows color="#E70103" width="80" oneway="1"/>	<text text_size="58" color="#FF9600" background_color="#000000"/>	</itemgra>
 	</layer>
 	<layer name="line">
 	<itemgra item_types="poly_attraction" order="13-14">	<polyline color="#CA66CAAA" width="6"/>	</itemgra>
@@ -2292,10 +2333,9 @@
 	<!-- snow for wintersport -->
 	<xi:include href="$NAVIT_USER_DATADIR/snow.xml"/>
 
-
 	<layout name="Route">
 		<layer name="streets">
-		<itemgra item_types="street_route_occluded" order="0-">	<polyline color="#0000a0" width="20"/>	</itemgra>
+		<itemgra item_types="street_route_occluded" order="0-">	<polyline color="#0000a0" width="40"/>	</itemgra>
 		</layer>
 	</layout>
 	</navit>
