@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="SEARCH" color="#E6FFE6" font="Gothic Bold" order_delta="2" underground_alpha="0x77">
+	<layout order_delta="2" font="Gothic Bold" color="#E6FFE6" name="SEARCH" underground_alpha="0x77" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<cursor w="230" h="230">
 	<itemgra>	<icon src="mini_roundabout" w="100" h="100"/>	</itemgra>
 	</cursor>

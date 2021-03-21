@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="SNOWSPORT" color="#F3F3F3" font="Gothic Bold" order_delta="0" underground_alpha="0x77">
+	<layout order_delta="0" font="Gothic Bold" color="#F3F3F3" name="SNOWSPORT" underground_alpha="0x77" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<cursor w="230" h="230">
 	<itemgra>	<icon src="$NAVIT_USER_DATADIR/maske/cursor1" w="140" h="140"/>	</itemgra>
 	</cursor>

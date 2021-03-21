@@ -1,6 +1,6 @@
 # Navit-xml-Enhancement
 ## Extension to Navit.xml  
-**2560x1440 XML 0.5.5** navit-git 0.5.5 and tested with Android on Galaxy S7  
+**2560x1440 XML 0.5.6** tested with Android on Galaxy S7  
 **1280x800 XML** created to Tablet with navit 0.5.5  
 **1280x800 NO GPS XML** created for Tablet witout GPS Sensor with navit 0.5.5  
 
@@ -10,17 +10,27 @@
 * *D - Center map to the cursor*  
 * *E - Layout street`_`day and street`_`night*  
 * *F - Layout snow*    
-### Installation 0.5.5:
-Path Phone: Android/data/org.navitprojekt.navit/files/navit.xml also all other *.xml and create the three folder:  - maske - poi - txt  
-The empty folders can be filled with Icons are in folder - src - in Github enclosed or replaced with your own icons.  
-You can in the device click bottom right on compass and download a Map.  
-Your own map (OSM) copy into the FOLDER /files
-Change in Navit.xml the Path under
+### Installation 0.5.6:
+After installation of Navit on Smartphon the XML extension can be activated.  
+Create in internal memory a folder **navit** and copy there navit.xml also all other *.xml.  
+Create in folder navit the three folder:  **maske** and  **poi** and  **txt**. The empty folders can be filled with Icons are here in in Github folder - **src** -  enclosed or replaced with your own icons. 
 
+If Navit is active you can click bottom right on compass and download a Map. Or you can use **Navit Planet Extractor** from the Internet.   
+In Smartphone go to "**settings->apps->Navit->permissions**" and grant permissions for storage and location.
+
+The Map(s) can also be stored in the memory expansion (SD card). Correctly enter the path in the map.xml.
+
+	Example:
 	<mapset>
-	map type="textfile" active="yes" data="$NAVIT_USER_DATADIR/Your_Map_Name.bin"
-	..........
+		<map type="binfile"
+			enabled="yes"
+			active="yes"
+			description="Österreich"
+			data="storage/3239-6132/Navit/austria.bin"
+		/>
+		..........
 	</mapset>
+if navit says in Set map location  "directory empty" try /sdcard/navit
 
 ### Routing without GPS-Sensor
 NO GPS navit.xml is optimized for use in devices without GPS sensor. Before entering the destination, the starting point/location must be entered. During routing, the current speed is set by TIPP on the corresponding button (0-130 km/h). The map view including the cursor is automatically guided to the specified speed.
@@ -197,7 +207,12 @@ Enter the world map in a <layout name=" order="any".
 
 Example for entry under **OSD**
 
-	<osd x="0" y="-560" w="290" h="290" font_size="940" type="text" label="CENTER\nCURSOR" command="follow=1; zoom=4; set_center_cursor()" enable_expression="follow&gt;1&amp;&amp;vehicle.position_valid" background_color="#56FF00BB" align="4" text_color="#000000"/>
+	<osd x="0" y="-560" w="290" h="290"
+	font_size="940"
+	type="text" label="CENTER\nCURSOR"
+	command="follow=1; zoom=4; set_center_cursor()" enable_expression="follow&gt;1&amp;&amp;vehicle.position_valid" background_color="#56FF00BB"
+	align="4"
+	text_color="#000000"/>
 
 ### E - Layout street`_`day and street`_`night
 These two layouts are minimally created for routing by car.  

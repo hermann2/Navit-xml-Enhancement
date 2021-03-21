@@ -103,7 +103,7 @@
 12.48126 41.89624 type=poi_land_feature label="Museo di Palazzo Venezia" icon_src="museum"
 <!--
 12.45446 41.90304 type=poi_land_feature label="Capella Sistina" icon_src="church"
-12.45332 41.90254 type=poi_land_feature label="San Pietro in Vaticano (Peterskirche)" icon_src="cathedral"
+12.45332 41.90254 type=poi_land_feature label="Basilica Sancti Petri" icon_src="cathedral"
 12.45727 41.90224 type=poi_land_feature label="Piazza San Pietro" icon_src="place"
 12.45389 41.90713 type=poi_land_feature label="Collezione d Arte Reliiosa Moderna" icon_src="gallery"
 12.45462 41.90489 type=poi_land_feature label="Biblioteca Apostolica Vaticano" icon_src="library"

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>	<!DOCTYPE layout	SYSTEM "navit.dtd">
-	<layout xmlns:xi="http://www.w3.org/2001/XInclude" name="street_night" daylayout="street_day" color="#011001" font="Liberation Sans" order_delta="0" underground_alpha="0x77">
+	<layout order_delta="0" font="Liberation Sans" color="#011001" name="street_night" daylayout="street_day" underground_alpha="0x77" xmlns:xi="http://www.w3.org/2001/XInclude">
 	<cursor w="230" h="230">
 	<itemgra>	<icon src="$NAVIT_USER_DATADIR/maske/cursor1" w="140" h="140"/> </itemgra>
 	</cursor>
-			
+
 	<layer name="polygons">
 	<itemgra item_types="image" order="0-7">	<image/>	</itemgra>
 	<itemgra item_types="poly_farm" order="10-11">		<polygon color="#20180880"/>	<polyline color="#101010"/>	</itemgra>

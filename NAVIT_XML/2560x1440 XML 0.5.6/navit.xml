@@ -26,12 +26,12 @@
 	tracking="1"
 	zoom_max="262144"
 	zoom="64"
-	center="13.5666 48.1333"
 	autozoom="32"
 	pitch="52"
 	waypoints_flag="1"
 	radius="28"
-	osd_configuration="1">
+	osd_configuration="1"
+	center="13.5666 48.1333">
 	<graphics type="android"/>
 	<gui type="internal"
 	keyboard="false"
@@ -493,7 +493,7 @@ navit.say("Sprache an");	back_to_map()'>
 	<!-- <osd x="-264" y="-625" w="264" h="325"	font_size="940"		type="compass" command="graphics.menu()" enable_expression="vehicle.position_valid||!has_menu_button" background_color="#00000090" destination_dir_color="#000000" north_color="#FFFFFF"/>
 	 -->
 
-	<!-- <traffic type="traff_android"/> -->
+	<traffic type="traff_android"/>
 
 	<vehicle name="Local GPS" profilename="car" enabled="yes" active="1" follow="1" follow_cursor="1" source="android:" lag="15">	</vehicle>
 
@@ -1426,8 +1426,8 @@ navit.say("Sprache an");	back_to_map()'>
 	<itemgra item_types="poly_scrub" order="12-16">		<polygon color="#74997480"/>	</itemgra>
 	<itemgra item_types="poly_scrub" order="17-">		<polygon color="#749974AA"/>	<text text_size="32" color="#4B005E"/>	</itemgra>
 
-	<itemgra item_types="poly_wood" order="10-16">		<polygon color="#038811AA"/>	</itemgra>
-	<itemgra item_types="poly_wood" order="17-">		<polygon color="#038811AA"/>	<text text_size="34" color="#290029"/>	</itemgra>
+	<itemgra item_types="poly_wood" order="10-16">		<polygon color="#038811AA" h="200" w="200" src="wood.png"/>	</itemgra>
+	<itemgra item_types="poly_wood" order="17-">		<polygon color="#038811AA" h="200" w="200" src="wood.png"/>	<text text_size="34" color="#290029"/>	</itemgra>
 
 	<itemgra item_types="poly_quarry" order="13-16">	<polygon color="#CCCCCC90"/>	<polyline color="#EDDAC7" width="4"/>	</itemgra>
 	<itemgra item_types="poly_quarry" order="17-">		<polygon color="#CCCCCCBB"/>	<polyline color="#EDDAC7" width="6"/>	<text text_size="34" color="#340069"/>	</itemgra>
@@ -2432,7 +2432,7 @@ navit.say("Sprache an");	back_to_map()'>
 
 	<layout name="Route">
 		<layer name="streets">
-		<itemgra item_types="street_route_occluded" order="0-">	<polyline color="#0000a0" width="40"/>	</itemgra>
+		<itemgra item_types="street_route_occluded" order="6-">	<polyline color="#0000a0" width="40"/>	</itemgra>
 		</layer>
 	</layout>
 	</navit>
